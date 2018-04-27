@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<script src="script/mui.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/layout.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+        	<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+	        <span class="f34">登录</span>
+        	<span class="iconfont icon-gengduo f35 top_navri"></span>
+    	</div>-->
+		<div class="reg_box bg_colorf shop_bo padd_reg" id="foget_possword">
+			<div style="position: relative;" class="form_item clearfix">
+				<label for="" class="fl f28" type="">手机号</label>
+				<input type="number" name="phone" class="fl f28" maxlength="11" id="phone" placeholder="请输入11位手机号" style="height: 0.53333rem;line-height: 0.53333rem;">
+				<div id="cansel_phone_number" class="fr"><i class="iconfont icon-close"></i></div>
+			</div>
+			<div style="position: relative;border: none;" class="form_item clearfix" id="code_for_forget">
+				<label for="" class="fl f28">验证码</label>
+				<input type="text" class="fl f28" id="yanzhengma" name="code" maxlength="6" id="" placeholder="请输入验证码" style="height: 0.53333rem;line-height: 0.53333rem;">
+					<span id="send_codes" class="get_code f28">获取验证码</span>
+				<span id="time" class="get_ver" style="color: #fff"></span>
+			</div>
+			<!--<div class="form_item new_password_for_forget f28" style="border-bottom: none;">
+				<div class="newpassword_for_forget_input">
+					<label for="" class="">新密码</label>
+					<input type="password" id="newpassword_for_forget_input" class="newpassword" name="newpassword" maxlength="22" id="" placeholder="由6-20位数字、字母构成" style="height: 0.53333rem;line-height: 0.53333rem;">
+				</div>
+				<div class="" id="ifseen">
+					<i class="iconfont icon-biyan f36 color_grey"></i>
+				</div>
+			</div>-->
+		</div>
+		<div class="submit_btn f34" id="save" style="margin-top: 1.30666rem;">提交</div>
+		<div id="tishi" class="floating_layer">手机号码有误</div>
+	</body>
+</html>
+<script>
+	var btncolor = 0;
+	$("#phone").on("change", function() {
+		btncolorcheck()
+	})
+	$("#yanzhengma").on("change", function() {
+		btncolorcheck()
+	})
+	$("#newpassword_for_forget_input").on("change", function() {
+		btncolorcheck();
+		var passWord = document.getElementById("passWord");
+		var passyanzheng = /^[a-zA-Z]\w{5,19}$/;
+		var falg = passWord.value.search(passyanzheng);
+		if(falg == -1) {
+			document.getElementById("tishi").innerHTML="密码错误";
+			$("#tishi").show();
+			setTimeout(function(){
+				$("#tishi").hide();
+			},400)
+			return;
+		}
+	})
+
+	function btncolorcheck() {
+		var cellPhone = document.getElementById("phone");
+		var RegCellPhone = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+		var falg = cellPhone.value.search(RegCellPhone);
+		if(falg == -1) {
+			//			alert("手机号不合法!");
+			document.getElementById("save").style.backgroundColor = "#ffd399";
+			return;
+		}
+		var yan = $("#yanzhengma").val();
+		if(yan == "111111" && document.getElementById("phone").value.length == 11 && document.getElementById("newpassword_for_forget_input").value.length != 0) {
+			document.getElementById("save").style.backgroundColor = "#ffad2d";
+			btncolor = 1;
+		} else {
+			document.getElementById("save").style.backgroundColor = "#ffd399";
+			btncolor = 0;
+		}
+	}
+	//	var passwordType = $('#newpassword_for_forget_input'),
+	//		ifSee = $('#ifseen').find('i');
+	//	mui('.new_password_for_forget').on('tap', '#ifseen', function(event) {
+	//		if(ifSee.hasClass('icon-yanjing1')) {
+	//			ifSee.removeClass('icon-yanjing1').addClass('icon-yanjing')
+	//			passwordType.attr('type', 'text');
+	//		} else {
+	//			ifSee.removeClass('icon-yanjing').addClass('icon-yanjing1')
+	//			passwordType.attr('type', 'password');
+	//		}
+	//	});
+
+	$('#send_codes').click(resetCode)
+	//发送验证码后的倒计时
+	function resetCode() {
+		if(document.getElementById("phone").value.length == 11) {
+			var cellPhone = document.getElementById("phone");
+			var RegCellPhone = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+			var falg = cellPhone.value.search(RegCellPhone);
+			if(falg == -1) {
+				$("#tishi").show();
+				setTimeout(function(){
+					$("#tishi").hide();
+				},400)
+				return;
+			}
+			$('#time').empty();
+			$('#send_codes').hide();
+			// $('#wait_second').html('59');
+			$('#time').show();
+			var second = 60;
+			$('#time').html(second + 's后重发');
+			var timer = null;
+			timer = setInterval(function() {
+				second -= 1;
+				if(second > 0) {
+					$('#time').html(second + 's后重发');
+				} else {
+					clearInterval(timer);
+					$('#time').hide();
+					$('#send_codes').show();
+				}
+			}, 1000);
+		}else{
+			$("#tishi").show();
+			setTimeout(function(){
+				$("#tishi").hide();
+			},400)
+		}
+	}
+	///密码眼睛
+	var passwordType = $('#newpassword_for_forget_input'),
+		ifSee = $('#ifseen').find('i');
+	mui('.new_password_for_forget').on('tap', '#ifseen', function(event) {
+		if(ifSee.hasClass('icon-biyan')) {
+			ifSee.removeClass('icon-biyan').addClass('icon-kaiyan')
+			passwordType.attr('type', 'text');
+		} else {
+			ifSee.removeClass('icon-kaiyan').addClass('icon-biyan')
+			passwordType.attr('type', 'password');
+		}
+	});
+	$("#yzmlogin").on("tap", function() {
+		mui.openWindow("login.html", {
+			waiting: {
+				autoShow: false,
+			}
+		})
+	});
+
+	$("#save").on("tap", function() {
+		btncolorcheck();
+		if(btncolor == 1) {
+			mui.back();
+		}
+	})
+</script>

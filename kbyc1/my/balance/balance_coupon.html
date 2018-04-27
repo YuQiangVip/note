@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>代金券</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts_new/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">代金券</span>
+		</div>-->
+		<!-- 占位div -->
+		<!--<div class="store_top"></div>-->
+		<!-- 代金券部分 -->
+		<div class="djq_null" style="display: none;">
+			<p class="f28 djq_p_name">暂无代金券</p>
+			<p class="f28 djq_p_login">您可登录<span class="djq_shop f28" id="yidong">中国移动积分商城</span>领取</p>
+		</div>
+		<div>
+			<!-- 代金券部分 -->
+			<div class="couponts_main">
+				<div class="couponts_top">
+					<div class="couponts_top_left">
+						<p class="f37">￥200</p>
+					</div>
+					<div style="margin-left: 0.66666rem;float: left;">
+						<p class="f32 couponts_top_right_p1" style="white-space: nowrap;">中移动代金券</p>
+						<p class="f28 couponts_top_right_p2" style="white-space: nowrap;">余额:￥180.00</p>
+						<p class="f24 couponts_top_right_p3" style="white-space: nowrap;">2017-5-29至2017-8-28</p>
+					</div>
+					<div class="" style="float: left;">
+						<span class="f22" style="padding: 0 0.20333rem;background: #FFAD2D;border-radius: 0.06666rem;color: #fff;float: right;margin-right: 2rem;white-space: nowrap;margin-top: -0.85rem;">服务类</span>
+					</div>
+				</div>
+				<div class="couponts_down" style="border-top: 1px solid #E5E5E5;">
+					<div class="couponts_down_cha f28" id="see_detail">查看详情&nbsp;<i class="iconfont icon-qianjin" style="font-size: 0.30666rem;"></i></div>
+					<div class="couponts_down_use f28" id="shiyong">使用此券</div>
+				</div>
+			</div>
+			<!-- 已使用 -->
+			<div class="couponts_main">
+				<div class="couponts_top">
+					<div class="couponts_top_left couponts_color couponts_bj">
+						<p class="f37">￥200</p>
+					</div>
+					<div style="margin-left: 0.66666rem;float: left;">
+						<p class="f32 couponts_top_right_p1" style="white-space: nowrap;">中移动代金券</p>
+						<p class="f28 couponts_top_right_p2" style="white-space: nowrap;">余额:￥180.00</p>
+						<p class="f24 couponts_top_right_p3" style="white-space: nowrap;">2017-5-29至2017-8-28</p>
+					</div>
+					<div class="" style="float: left;">
+						<span class="f22" style="padding: 0 0.20333rem;background: #D4B3FF;border-radius: 0.06666rem;color: #fff;float: right;margin-right: 2rem;white-space: nowrap;margin-top: -0.85rem;">服务类</span>
+					</div>
+					<div class="couponts_top_null couponts_top_r" style="float: right;">
+						<img src="../img/djq/yyw.png" alt="">
+					</div>
+                 </div>
+                 
+                 <div class="couponts_down" style="border-top: 1px solid #E5E5E5;">
+                        <div class="couponts_down_cha f28">查看详情&nbsp;<i class="iconfont icon-qianjin" style="font-size: 0.30666rem;"></i></div>
+                       <!--  <div class="couponts_down_use f28">使用此券</div> -->
+                 </div>    
+           </div>
+           <!-- 已转让 -->
+           <div class="couponts_main">
+                 <div class="couponts_top">
+                     <div class="couponts_top_left couponts_color couponts_bj">
+                           <p class="f37">￥200</p>
+                     </div>
+                      <div class="couponts_top_right couponts_mr">
+                            <p class="f32 couponts_top_right_p1">中移动代金券</p>
+                             <p class="f28 couponts_top_right_p2">余额:￥180.00</p>
+                             <p  class="f24 couponts_top_right_p3">2017-5-29至2017-8-28</p>
+                             <span class="f22 couponts_top_right_span couponts_color">服务类</span>
+                      </div>
+                      <div class="couponts_top_null couponts_top_r">
+                            <img src="../img/djq/yzr.png" alt="">
+                      </div>
+
+				</div>
+				<div class="couponts_down" style="border-top: 1px solid #E5E5E5;">
+					<div class="couponts_down_cha f28">查看详情&nbsp;<i class="iconfont icon-qianjin" style="font-size: 0.30666rem;"></i></div>
+					<!--  <div class="couponts_down_use f28">使用此券</div> -->
+				</div>
+			</div>
+			<!-- 已过期 -->
+			<div class="couponts_main">
+				<div class="couponts_top">
+					<div class="couponts_top_left couponts_color couponts_bj">
+						<p class="f37">￥200</p>
+					</div>
+					<div class="couponts_top_right couponts_mr">
+						<p class="f32 couponts_top_right_p1">中移动代金券</p>
+						<p class="f28 couponts_top_right_p2">余额:￥180.00</p>
+						<p class="f24 couponts_top_right_p3">2017-5-29至2017-8-28</p>
+						<span class="f22 couponts_top_right_span couponts_color">服务类</span>
+					</div>
+					<div class="couponts_top_null couponts_top_r">
+						<img src="../img/djq/ygq.png" alt="">
+					</div>
+
+				</div>
+				<div class="couponts_down" style="border-top: 1px solid #E5E5E5;">
+					<div class="couponts_down_cha f28">查看详情&nbsp;<i class="iconfont icon-qianjin" style="font-size: 0.30666rem;"></i></div>
+					<!--  <div class="couponts_down_use f28">使用此券</div> -->
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		$('#see_detail').on('tap', function() {
+			mui.openWindow('balance_coupon_details.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		$("#yidong").on("tap",function(){
+			mui.openWindow("http://jf.10086.cn/");
+		})
+		
+		$("#shiyong").on("tap",function(){
+			mui.openWindow("../../home/Move_Topic.html");
+		})
+	</script>
+
+</html>
+
+

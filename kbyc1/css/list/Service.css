@@ -1,0 +1,54 @@
+
+
+
+html{width: 100%; height:auto;}
+body{width: 100%; height: 100%;}
+
+#header{background-color:#ffad2d; color: #FFFFFF;}
+#header a{color: #FFFFFF;}
+#header .mui-title{color: #FFFFFF;}
+#header #hander_left{margin-left: 80%;}
+
+
+/*hander*/
+
+
+#header{background-color:#ffad2d; color: #FFFFFF; border: none; width: 100%; height: 1.173333rem;
+line-height: 1.173333rem;}
+#header .mui-action-back{float: left;height: 100%; color: #FFFFFF;font-size:0.866666rem; font-weight: 300;}
+.mui-action-back{margin: 0; padding: 0;}
+#header .mui-title{float: left;  font-weight: 500;height: 100%;text-align: center;line-height: 1.173333rem;}
+.mui-bar .mui-icon{float: left;font-size: 0.866666rem;}
+
+
+
+/*body*/
+.mui-bar-nav~.mui-content{ background-color: #f4f4f4; width: 100%; height: 100%; overflow: hidden;
+padding-top: 1.173333rem; padding-bottom: 1.306666rem;}
+.service_list1{float: left; width: 100%; height:7.84rem ; background-color: #ffffff; margin-bottom: 0.266666rem;}
+.mui-content h6{float: left;width: 100%; height: 0.906666rem;  font-weight: 500; text-indent: 0.4rem;
+  text-align:justify; color: #111111; line-height: 1.4rem;}
+.list1_ul{float: left; width: 100%;height: 6.666666rem; padding: 0.266666rem 0.4rem;}
+.list1_ul li{float: left;width: 25%;height: 33%;}
+.list1_ul li img{width: 0.746666rem; height: 0.746666rem;margin: auto; margin-top: 0.606666rem;}
+.list1_ul li span{display: block; margin-top: 0.306666rem; text-align: center;  
+ color: #666666;}
+
+
+.service_list2{float: left; width: 100%;height: auto; background-color: #ffffff;margin-bottom: 0.266666rem;}
+.list2_ul{float: left; width: 100%;height: auto; padding: 0.266666rem 0.4rem;}
+.list2_ul li{float: left;width: 25%;}
+.list2_ul li img{width: 0.746666rem; height: 0.746666rem;margin: auto; margin-top: 0.666666rem;}
+.list2_ul li span{display: block; margin-top: 0.306666rem; text-align: center; 
+ color: #666666;}
+
+
+.service_list3{float: left; width: 100%;height: 3.746666rem; background-color: #ffffff;margin-bottom: 0.266666rem;}
+.list3_ul{float: left; width: 100%;height: 6.666666rem; padding: 0.266666rem 0.4rem;}
+.list3_ul li{float: left;width: 25%;}
+.list3_ul li img{width: 0.746666rem; height: 0.746666rem;margin: auto; margin-top: 0.666666rem;}
+.list3_ul li span{display: block; margin-top: 0.306666rem; text-align: center;  
+ color: #666666;}
+ 
+ 
+#footer{height: 1.306666rem;}

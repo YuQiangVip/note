@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/zepin.css">
+		<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="js/flexible_css.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script type="text/javascript" src="js/mui.js"></script>
+		<link rel="stylesheet" href="../../shopping/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../shopping/font_diy/iconfont.css" />
+		<title>选排量与生产年份</title>
+	</head>
+	<style type="text/css">
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">选排量</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+
+		<header class="time_header">
+			<p class="time_p"> 请选择排量与生产年份<img src="images/mark.png" alt="" id="descr_on" class="header_img"></p>
+		</header>
+		<div class="mui-content" style="background: #F4F4F4;">
+			<!-- 请选择排量与生产年份 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">1.4T (35TFSI)</a>
+					<div class="mui-collapse-content ">
+						<div class="tiem_div">
+							<div class="time_text">
+								<p class="time_tp" id="oh_maycar">
+									<a  class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- 请选择排量与生产年份 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">1.8T (35TFSI)</a>
+					<div class="mui-collapse-content ">
+						<div class="tiem_div">
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+							<div class="time_text">
+								<p class="time_tp">
+									<a href="" class="tiem_li">2015年生产</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.time_text').on("click", function() {
+			$(this).css("border", "1px solid #ffad2d");
+		})
+		$('#descr_on').on('tap', function() {
+			mui.openWindow('../../shopping/election_displacement.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#oh_maycar').on('tap', function() {
+			mui.openWindow('../../my/add_car/add_car_list.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+	</script>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索结果</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/topic.css" />
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">搜索结果</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<!--筛选遮罩-->
+		<div class="zhe_acce" style="display: none;"></div>
+		<div class="acce_shai" style="display: none;">
+			<div class="acce_jia">
+				价格区间
+			</div>
+			<div class="acee_num">
+				<span style="position: relative;"><input type="text" placeholder="最低价" /></span>
+				<i>-</i>
+				<span style="position: relative;"><input type="text" placeholder="最高价" /></span>
+			</div>
+			<div class="acce_jia">
+				商家类型
+			</div>
+			<div class="acce_btn">
+				<span>全部</span>
+				<span>开呗自营</span>
+				<span>厂家自营</span>
+			</div>
+			<div class="acce_jia">
+				活动类型
+			</div>
+			<div class="acce_btn" style="display: block;">
+				<span style=" margin-right: 0.64rem;" id="acce_btro">全部</span>
+				<span class="acce_bt2d">促销</span>
+			</div>
+			<div class="acce_jia">
+				品牌
+			</div>
+			<div class="acce_btn acce_img">
+				<span>全部</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+			</div>
+
+			<div class="acce_sm">
+				<span>重置</span>
+				<span id="queding">确定</span>
+			</div>
+		</div>
+
+		<div class="log_bgcolor">
+			<div class="brand_input">
+				<img style="left: 34%;z-index: 100;" id="search_img" src="../img/shouye/serooh_03.png" />
+				<div class="log_bgcolor acee_spca pad_brand">
+					<input style="width: 8rem;" type="search" id="brand_search" placeholder="搜索商品" />
+					<i class="f37 iconfont icon-pingpu1" id="xuanze"></i>
+				</div>
+			</div>
+
+			<!--商品排序-->
+			<div class="sort_good acce_top">
+				<div class="sort_list acee_li" id="xuanze0" onclick="xuanzes(0)" style="color: #FFAD2D;">
+					综合
+				</div>
+				<div class="sort_list acee_li" id="xuanze1" onclick="xuanzes(1)">
+					<span>销量由高到低</span>
+					<span class="acce_imgbox">
+	    			<!--<i class="iconfont img_top f16 icon-sanjiao-shangla"></i>-->
+	    			<i class="iconfont img_bot f16 icon-sanjiao-xiala" id="xljiantou"></i>
+	    		</span>
+				</div>
+				<div class="sort_list acee_li" id="xuanze2" onclick="xuanzes(2)">
+					<span>价格由高到低</span>
+					<span class="acce_imgbox">
+	    			<!--<i class="iconfont img_top f16 icon-sanjiao-shangla"></i>-->
+	    			<i class="iconfont acce_bot f16 icon-sanjiao-xiala" id="pricejt"></i>
+	    		</span>
+				</div>
+				<div class="sort_list acee_li" id="shaixuan">
+					<span>筛选</span>
+					<i class="f37 iconfont icon-shaixuan"></i>
+				</div>
+			</div>
+			
+			<div id="zhezhao" style="position: fixed;background: #000000;width: 100%;height: 100%;opacity: .6;z-index: 99; display: none;"></div>
+			<div id="xlpx" style="width: 100%;height: 2.33666rem;position: fixed;z-index: 100;top: 2.6rem;left: 0;z-index: 111; display: none; background: #fff;display: none;">
+				<div style=" width: 95%;height: 1.17333rem;border-bottom: 1px solid #E5E5E5;margin-left: 5%;line-height: 1.17333rem;color: #FFAD2D;" id="xlxz0" onclick="xlxz(0)">销量由高到低<i class="iconfont icon-gou" id="xlgou0" style="float: right;margin-right: 0.4rem;font-size: 0.34666rem;color: #FFAD2D;"></i></div>
+				<div style="width: 95%;height: 1.17333rem;margin-left: 5%;line-height: 1.17333rem;color: #666666;" id="xlxz1" onclick="xlxz(1)">销量由低到高<i class="iconfont" id="xlgou1" style="float: right;margin-right: 0.4rem;font-size: 0.34666rem;color: #FFAD2D;"></i></div>
+			</div>
+			<div id="pricepx" style="width: 100%;height: 2.33666rem;position: fixed;z-index: 100;top: 2.6rem;left: 0;background: #fff;display: none;">
+				<div style="width: 95%;height: 1.17333rem;border-bottom: 1px solid #E5E5E5;margin-left: 5%;line-height: 1.17333rem;color: #FFAD2D;" id="pricexz0" onclick="pricexz(0)">价格由高到低<i class="iconfont icon-gou" id="pricegou0" style="float: right;margin-right: 0.4rem;font-size: 0.34666rem;color: #FFAD2D;"></i></div>
+				<div style="width: 95%;height: 1.17333rem;margin-left: 5%;line-height: 1.17333rem;color: #666666;" id="pricexz1" onclick="pricexz(1)">价格由低到高<i class="iconfont" id="pricegou1" style="float: right;margin-right: 0.4rem;font-size: 0.34666rem;color: #FFAD2D;"></i></div>
+			</div>
+			<div id="lbxq" style="display: none;">
+				<div class="bg_colorf fl  " style="margin-top: 0.26666rem;" onclick="goodslist()">
+					<div class="home_img fl">
+						<img class="home_liimg" src="img/bran_pro.png" alt="">
+						<img class="home_img2" src="img/tyree.png" alt="">
+					</div>
+					<div class="right_text fl">
+						<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+						<div class="goods_car_handle_wrapper">
+							<span class="tex_num f34">￥89.00</span>
+						</div>
+						<div class="bran_bot">
+							<span class="f24">100%好评</span>
+							<span class="f24">已售123件</span>
+						</div>
+					</div>
+				</div>
+				<div class="bg_colorf fl " onclick="goodslist()">
+					<div class="home_img fl">
+						<img class="home_liimg" src="img/bran_pro.png" alt="">
+						<img class="home_img2" src="img/tyree.png" alt="">
+					</div>
+					<div class="right_text fl">
+						<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+						<div class="goods_car_handle_wrapper">
+							<span class="tex_num f34">￥89.00</span>
+						</div>
+						<div class="bran_bot">
+							<span class="f24">100%好评</span>
+							<span class="f24">已售123件</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="peomo_hei" id="lbdt">
+				<div class="promo_list">
+					<div class="promo_listitem" onclick="goodslist()">
+						<div class="promo_tion">
+							<img class="promo_min" src="img/bran_pro.png" alt="" />
+							<img class="promo_im" src="img/tyree.png" alt="" />
+						</div>
+						<div class="promo_text">
+							<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+							<span class="promo_txt2">￥89.00</span>
+							<span class="promo_txt3">100%好评</span>
+							<span class="promo_txt4">已售123件</span>
+						</div>
+					</div>
+					<div class="promo_listitem" onclick="goodslist()">
+						<div class="promo_tion">
+							<img class="promo_min" src="img/bran_pro.png" alt="" />
+							<img class="promo_im" src="img/tyree.png" alt="" />
+						</div>
+						<div class="promo_text">
+							<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+							<span class="promo_txt2">￥89.00</span>
+							<span class="promo_txt3">100%好评</span>
+							<span class="promo_txt4">已售123件</span>
+						</div>
+					</div>
+
+				</div>
+				<div class="promo_list prolist_max">
+					<div class="promo_listitem">
+						<div class="promo_tion">
+							<img class="promo_min" src="img/bran_pro.png" alt="" />
+							<img class="promo_im" src="img/tyree.png" alt="" />
+						</div>
+						<div class="promo_text">
+							<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+							<span class="promo_txt2">￥89.00</span>
+							<span class="promo_txt3">100%好评</span>
+							<span class="promo_txt4">已售123件</span>
+						</div>
+					</div>
+					<div class="promo_listitem">
+						<div class="promo_tion">
+							<img class="promo_min" src="img/bran_pro.png" alt="" />
+							<img class="promo_im" src="img/tyree.png" alt="" />
+						</div>
+						<div class="promo_text">
+							<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+							<span class="promo_txt2">￥89.00</span>
+							<span class="promo_txt3">100%好评</span>
+							<span class="promo_txt4">已售123件</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="shanghua" style="position: fixed;z-index: 100;width: 1.17333rem;height: 1.17333rem;bottom: 1.73333rem;right: 0.4rem;border-radius: 1.33333rem;color: #fff;text-align: center;line-height: 1.33333rem;opacity:.8 ;display: none;" onclick="scrollTo()">
+			<img src="../shopping/img/icon.png" alt="" />
+		</div>
+	</body>
+	<script src="../js/zhiding.js"></script>
+	<script>
+		$(function() {
+			var clientHeight = $(window).height();
+			$('body').css('height', clientHeight + 'px');
+			createTabs('.tabs', 'div', 'current_show');
+			starEvaluate('.stars_box', '.star_evaluate_area');
+			showDeleteBtn('.collect_goods_areas', '.for_position');
+			$(".add_to_car").on("tap", function() {
+				mui.openWindow({
+					url: 'shopping_cart_full.html',
+					id: 'shopping_cart_full'
+				})
+			});
+
+			$("#brand_search").focus(function() {
+				$("#search_img").css({
+					'left': '5%'
+				});
+				$("#brand_search").attr('placeholder', " ")
+			});
+			$("#brand_search").blur(function() {
+				$("#search_img").css({
+					'left': '20%'
+				});
+				$("#brand_search").attr('placeholder', "输入搜索本店商品")
+				$("#brand_search").val("")
+			});
+
+		})
+
+		$("#shaixuan").on("tap", function() {
+			$(".zhe_acce").show();
+			$(".acce_shai").show();
+		})
+		$(".zhe_acce").on("tap", function() {
+			$(".zhe_acce").hide();
+			$(".acce_shai").hide();
+		})
+		$("#queding").on("tap", function() {
+			$(".zhe_acce").hide();
+			$(".acce_shai").hide();
+		})
+		$("#xuanze").on("tap", function() {
+			if(document.getElementById("lbxq").style.display == "none") {
+				document.getElementById("lbxq").style.display = "block";
+				document.getElementById("lbdt").style.display = "none";
+			} else {
+				document.getElementById("lbxq").style.display = "none";
+				document.getElementById("lbdt").style.display = "block";
+			}
+		})
+
+		function goodslist() {
+			mui.openWindow("../home/Commodity_details.html")
+		}
+		
+		var xlstate = 0;
+		var pricestate = 0;
+		function xuanzes(id){
+			for (var i=0;i<3;i++) {
+				if(id==i){
+					document.getElementById("xuanze"+i).style.color="#ffad2d";
+					if(id==1){
+						document.getElementById("pricejt").style.color="#666666";
+						document.getElementById("xljiantou").style.color="#ffad2d";
+						$("#pricejt").addClass("icon-sanjiao-xiala");
+						$("#pricejt").removeClass("icon-sanjiao-shangla");
+						if(xlstate == 0){
+							$("#xljiantou").removeClass("icon-sanjiao-xiala");
+							$("#xljiantou").addClass("icon-sanjiao-shangla");
+							$("#xlpx").show();
+							$("#pricepx").hide();
+							//遮罩
+							$('#zhezhao').show();
+							xlstate =1;
+						}else{
+							$("#xljiantou").addClass("icon-sanjiao-xiala");
+							$("#xljiantou").removeClass("icon-sanjiao-shangla");
+							$("#xlpx").hide();
+							$("#pricepx").hide();
+							xlstate =0;
+							//遮罩
+							$('#zhezhao').hide();
+						}
+						pricestate = 0;
+					}else if(id==2){
+						document.getElementById("xljiantou").style.color="#666666";
+						document.getElementById("pricejt").style.color="#ffad2d";
+						$("#xljiantou").addClass("icon-sanjiao-xiala");
+						$("#xljiantou").removeClass("icon-sanjiao-shangla");
+						$("#pricejt").removeClass("icon-sanjiao-xiala");
+						$("#pricejt").addClass("icon-sanjiao-shangla");
+						if(pricestate == 0){
+							$("#pricejt").removeClass("icon-sanjiao-xiala");
+							$("#pricejt").addClass("icon-sanjiao-shangla");
+							$("#xlpx").hide();
+							$("#pricepx").show();
+							//遮罩
+							$('#zhezhao').show();
+							pricestate =1;
+						}else{
+							$("#pricejt").addClass("icon-sanjiao-xiala");
+							$("#pricejt").removeClass("icon-sanjiao-shangla");
+							$("#xlpx").hide();
+							$("#pricepx").hide();
+							//遮罩
+							$('#zhezhao').hide();
+							pricestate =0;
+						}
+						xlstate = 0;
+					}else{
+						$("#xlpx").hide();
+						$("#pricepx").hide();
+						//遮罩
+						$('#zhezhao').hide();
+					}
+					
+					
+				}else{
+					document.getElementById("xuanze"+i).style.color="#666666";
+				}
+			}
+		}
+		
+		function xlxz(id){
+			for (var i=0;i<2;i++) {
+				if(id==i){
+					$("#xlgou"+i).addClass("icon-gou");
+					document.getElementById("xlxz"+i).style.color="#ffad2d";
+				}else{
+					$("#xlgou"+i).removeClass("icon-gou");
+					document.getElementById("xlxz"+i).style.color="#666666";
+				}
+			}
+		}
+		function pricexz(id){
+			for (var i=0;i<2;i++) {
+				if(id==i){
+					$("#pricegou"+i).addClass("icon-gou");
+					document.getElementById("pricexz"+i).style.color="#ffad2d";
+				}else{
+					$("#pricegou"+i).removeClass("icon-gou");
+					document.getElementById("pricexz"+i).style.color="#666666";
+				}
+			}
+		}
+	</script>
+
+</html>

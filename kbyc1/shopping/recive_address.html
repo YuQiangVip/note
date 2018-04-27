@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址 </title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">收货地址</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="recive_address_box">
+			<div id="deldata0">
+				<div class="reciver_info select_reciver_info bg_colorf">
+					<div class="recive_address_item color_lgrey">收货人<span class="reciver_name">开呗</span>联系方式<span class="reciver_tell">13723724748</span>
+					</div>
+					<div class="reciver_address">
+						<span class="icon color_lgrey iconfont f32 icon-dingwei"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+					</div>
+				</div>
+				<div class="reciver_address_handle_box bg_colorf">
+					<div class="left_flex" onclick="checkaddress(0)">
+						<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan0" class="icon iconfont icon-checkbox-copy f40" style="display: block;"></i>
+                            <i id="weixuan0" class="icon iconfont icon-checkboxblank f40" style="font-size: 22px;display: none;"></i>
+                            </label></span>
+						<span>设为默认</span>
+					</div>
+					<div class="right_flex">
+						<span class="iconfont icon-bianji f34" onclick="bianjiaddress()"></span>
+						<span class="iconfont icon-delete1 f36" onclick="deletedata(0)"></span>
+					</div>
+				</div>
+			</div>
+			<div id="deldata1">
+				<div class="reciver_info select_reciver_info bg_colorf">
+					<div class="recive_address_item color_lgrey">收货人<span class="reciver_name">开呗</span>联系方式<span class="reciver_tell">13723724748</span>
+					</div>
+					<div class="reciver_address">
+						<span class="color_lgrey iconfont icon-dingwei f32"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+					</div>
+				</div>
+				<div class="reciver_address_handle_box bg_colorf">
+					<div class="left_flex" onclick="checkaddress(1)">
+						<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan1" class=" iconfont icon-checkbox-copy f40" style="display: none;"></i>
+                            <i id="weixuan1" class="icon iconfont icon-checkboxblank f40" style="font-size: 22px;"></i>
+                            </label></span>
+						<span>设为默认</span>
+					</div>
+					<div class="right_flex">
+						<span class="iconfont icon-bianji f34" onclick="bianjiaddress()"></span>
+						<span class="iconfont icon-delete1 f36" onclick="deletedata(1)"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="add_address_save_wrapper">
+			<div class="f34" id="add_address_save">添加收货地址</div>
+		</div>
+		<div id="motai" class="modal_con"></div>
+		<div id="tanchuang" class="modal_box">
+			<div class="modal_mian">
+				<div class="modal_title f32">
+					删除收货地址
+				</div>
+				<div class="modal_ter">
+					确定要删除吗？
+				</div>
+			</div>
+			<div id="queren" class="determine fr f32">
+				确认
+			</div>
+			<div id="quxiao" class="modal_cancle fl f32">
+				取消
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	var clientHeight = $(window).height();
+	$('body').css('height', clientHeight + 'px');
+	//	$('.checkbox_item').checkbox();
+
+	$("#add_address_save").on("tap", function() {
+		mui.openWindow("add_recive_address.html", {
+			waiting: {
+				autoShow: false
+			}
+		})
+	});
+
+	function bianjiaddress() {
+		mui.openWindow("add_recive_address.html", {
+			waiting: {
+				autoShow: false
+			}
+		})
+	}
+
+	var removelist;
+
+	function deletedata(id) {
+		removelist = id;
+		$("#motai").show();
+		$("#tanchuang").show();
+	}
+
+	function checkaddress(id) {
+		for(var i = 0; i < 2; i++) {
+			if(i == id) {
+				document.getElementById("yixuan" + i).style.display = "block";
+				document.getElementById("weixuan" + i).style.display = "none";
+			} else {
+				document.getElementById("yixuan" + i).style.display = "none";
+				document.getElementById("weixuan" + i).style.display = "block";
+			}
+		}
+	}
+
+	$("#quxiao").on("tap", function() {
+		removelist = "";
+		$("#motai").hide();
+		$("#tanchuang").hide();
+	})
+	$("#queren").on("tap", function() {
+		$("#deldata" + removelist).remove()
+		$("#motai").hide();
+		$("#tanchuang").hide();
+	})
+</script>

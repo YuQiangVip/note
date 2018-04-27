@@ -1,0 +1,996 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "H58F270DE",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "kbyc",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.0",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "测试",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+			"description": "访问加速度感应器"
+		},
+		"Audio": {
+			"description": "访问麦克风"
+		},
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+		"Camera": {
+			"description": "访问摄像头"
+		},
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+		"Contacts": {
+			"description": "访问系统联系人信息"
+		},
+		"Device": {
+			"description": "访问设备信息"
+		},
+		"Downloader": {
+			"description": "文件下载管理"
+		},
+		"Events": {
+			"description": "应用扩展事件"
+		},
+		"File": {
+			"description": "访问本地文件系统"
+		},
+		"Gallery": {
+			"description": "访问系统相册"
+		},
+		"Geolocation": {
+			"description": "访问位置信息"
+		},
+		"Invocation": {
+			"description": "使用Native.js能力"
+		},
+		"Messaging": {
+			"description": "访问通讯能力"
+		},
+		"Orientation": {
+			"description": "访问方向感应器"
+		},
+		"Proximity": {
+			"description": "访问距离感应器"
+		},
+		"Storage": {
+			"description": "管理应用本地数据"
+		},
+
+		"Uploader": {
+			"description": "管理文件上传任务"
+		},
+		"Runtime": {
+			"description": "访问运行期环境"
+		},
+		"XMLHttpRequest": {
+			"description": "跨域网络访问"
+		},
+		"Zip": {
+			"description": "文件压缩与解压缩"
+		},
+		"Barcode": {
+			"description": "管理二维码扫描插件"
+		},
+
+		"Speech": {
+			"description": "管理语音识别插件"
+		},
+		"Webview": {
+			"description": "窗口管理"
+		},
+		"NativeUI": {
+			"description": "原生UI控件"
+		},
+		"Navigator": {
+			"description": "浏览器信息"
+		},
+		"NativeObj": {
+			"description": "原生对象"
+		}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>"
+				]
+			},
+			"orientation": ["portrait-primary","portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": ""
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": ""
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": ""
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": ""
+				}
+			},
+			"debug": false
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"css/style.css",
+					"css/public.css",
+					"img/标签栏-未选中/首页-未选中@2x.png",
+					"css/swiper-3.4.2.min.css",
+					"js/index/index.js",
+					"img/标签栏-未选中/我@2x.png",
+					"js/flexible_css.js",
+					"home/home.html",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"css/mui.min.css",
+					"img/标签栏-未选中/门店@2x.png",
+					"js/flexible.js",
+					"js/swiper-3.4.2.jquery.min.js",
+					"img/标签栏-未选中/购物车@2x.png",
+					"img/unchecked/index.png",
+					"img/unchecked/store.png",
+					"img/unchecked/my.png",
+					"img/unchecked/shopping_car.png",
+					"img/checked/store.png",
+					"img/checked/index.png"
+				],
+				"refer": [
+					"store/store.html",
+					"shopping/shopping_cart_full.html",
+					"shopping/my_login.html"
+				],
+				"priority": 0
+			},
+			"home/Service.html": {
+				"resources": [
+					"img/标签栏-未选中/我@2x.png",
+					"css/list/Service.css",
+					"img/服务分类_01_03.png",
+					"img/标签栏-未选中/门店@2x.png",
+					"img/标签栏-未选中/首页-未选中@2x.png",
+					"img/标签栏-未选中/购物车@2x.png",
+					"img/fw03.png",
+					"js/list/city.js",
+					"js/zepto.js",
+					"fonts/mui.ttf",
+					"css/public.css",
+					"img/unchecked/index.png",
+					"img/unchecked/store.png",
+					"img/unchecked/my.png",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"css/mui.min.css",
+					"img/unchecked/shopping_car.png",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/home.html": {
+				"resources": [
+					"css/list/home.css",
+					"img/首页/首页_yhq_02.png",
+					"img/首页/header-1_03.png",
+					"img/首页/车载电器@2x.png",
+					"img/首页/维修保养@2x.png",
+					"img/首页/首页_11.png",
+					"img/首页/机油@2x.png",
+					"img/首页/汽车装饰@2x.png",
+					"img/首页/轮胎@2x.png",
+					"img/首页/首页_hot_03.png",
+					"img/首页/雨刷@2x.png",
+					"img/首页/首页_hot_07.png",
+					"img/首页/首页_hot_11.png",
+					"img/首页/首页_car.png",
+					"img/我的/3.png",
+					"img/我的/4.png",
+					"img/首页/首页_16.png",
+					"img/我的/1.png",
+					"img/首页/首页_15.png",
+					"img/首页/body_buying_03.png",
+					"img/首页/首页_12.png",
+					"img/首页/首页_05.png",
+					"fonts/mui.ttf",
+					"img/我的/body_tuijian3_55.png",
+					"img/首页/首页_serooh_03.png",
+					"img/bady_tuijian2_03.png",
+					"img/首页/首页_hot_05.png",
+					"img/首页/首页_07.png",
+					"img/首页/电瓶@2x.png",
+					"img/首页/首页_hot_09.png",
+					"img/首页/首页_zgyd.png",
+					"img/我的/body_tuijian3_49.png",
+					"img/首页/记录仪@2x.png",
+					"img/我的/2.png",
+					"img/首页/首页_消息.png",
+					"img/我的/body_tuijian3_52.png",
+					"js/list/home.js",
+					"img/首页/美容清洗@2x.png",
+					"img/首页/更多@2x.png",
+					"img/my/3.png",
+					"img/shouye/weixby.png",
+					"img/shouye/xx.png",
+					"img/my/2.png",
+					"img/my/4.png",
+					"img/shouye/chezdq.png",
+					"img/shouye/serooh_03.png",
+					"img/my/1.png",
+					"img/shouye/qczs.png",
+					"img/shouye/daibdj.png",
+					"img/shouye/gg2.png",
+					"img/shouye/cx6.png",
+					"img/shouye/baoyang.png",
+					"img/shouye/lt.png",
+					"img/shouye/header-1_03.png",
+					"img/shouye/gg1.png",
+					"img/shouye/cx4.png",
+					"img/shouye/cx2.png",
+					"img/shouye/ys.png",
+					"img/shouye/body_buying_03.png",
+					"img/shouye/mrqx.png",
+					"img/shouye/cx3.png",
+					"img/shouye/dianp.png",
+					"img/my/body_tuijian3_52.png",
+					"img/shouye/more.png",
+					"img/my/body_tuijian3_49.png",
+					"img/shouye/sy_car.png",
+					"img/shouye/jly.png",
+					"img/my/body_tuijian3_55.png",
+					"img/shouye/jy.png",
+					"img/shouye/cx1.png",
+					"img/shouye/mrfw.png",
+					"img/shouye/anzhuang.png",
+					"css/public.css",
+					"css/swiper-3.4.2.min.css",
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"js/flexible.js",
+					"js/swiper-3.4.2.jquery.min.js"
+				],
+				"refer": [
+					"home/Service.html",
+					"home/Flash_sale.html",
+					"home/my_car.html",
+					"home/City.html",
+					"home/Classified_list.html",
+					"home/Commodity_details.html",
+					"store/store.html",
+					"shopping/shopping_cart_full.html",
+					"home/zepin/indexesList.html",
+					"home/Move_Topic.html",
+					"home/Coupon_Center.html"
+				],
+				"priority": 0
+			},
+			"home/Flash_sale.html": {
+				"resources": [
+					"img/标签栏-未选中/我@2x.png",
+					"img/flash_10.png",
+					"css/list/flash_sale.css",
+					"img/抢购背景@2x.png",
+					"img/抢购状态/未开始@2x.png",
+					"img/标签栏-未选中/门店@2x.png",
+					"img/标签栏-未选中/首页-未选中@2x.png",
+					"img/标签栏-未选中/购物车@2x.png",
+					"img/限时抢购-今日开抢_02.png",
+					"img/flash_04.png",
+					"img/qgbj.png",
+					"img/falsh/meiks.png",
+					"img/falsh02.png"
+				],
+				"refer": [
+					"store/store.html",
+					"shopping/shopping_cart_full.html",
+					"index.html"
+				],
+				"priority": 0
+			},
+			"home/my_car.html": {
+				"resources": [
+					"css/list/my_car.css",
+					"img/添加爱车-空白页_03.png",
+					"img/mycar-add03.png",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/City.html": {
+				"resources": [
+					"css/list/City.css",
+					"img/首页/首页_serooh_03.png",
+					"js/list/city.js",
+					"js/zepto.js",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"img/shouye/serooh_03.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/flexible.js",
+					"fonts/icon/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/Classified_list.html": {
+				"resources": [
+					"css/list/Classified_list.css",
+					"img/classification/07.png",
+					"img/classification/05.png",
+					"img/fl_top_03.png",
+					"img/classification/03.png",
+					"fonts/mui.ttf",
+					"css/public.css",
+					"img/unchecked/index.png",
+					"img/unchecked/store.png",
+					"img/unchecked/my.png",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"img/shouye/jly.png",
+					"css/mui.min.css",
+					"img/unchecked/shopping_car.png",
+					"js/flexible.js",
+					"fonts/icon/iconfont.woff",
+					"fonts/icon/iconfont.css"
+				],
+				"refer": [
+					"home/search.html"
+				],
+				"priority": 0
+			},
+			"home/Commodity_details.html": {
+				"resources": [
+					"img/sp/shop.png",
+					"img/sercive/mian.png",
+					"img/sp/tup01.png",
+					"img/star_1.png",
+					"img/sp/star.png",
+					"img/sercive/zheng.png",
+					"img/sercive/fahuo.png",
+					"img/sp/tup_02.png",
+					"css/list/Commodity_details.css",
+					"img/sp/sp_02.png",
+					"img/sp/user.png",
+					"img/sp/cart.png",
+					"fonts/mui.ttf",
+					"css/public.css",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"css/mui.min.css",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"store/store.html": {
+				"resources": [
+					"img/dianz.png",
+					"fonts/mui.ttf",
+					"css/public.css",
+					"img/mendian/miandian01.png",
+					"img/unchecked/index.png",
+					"img/unchecked/store.png",
+					"img/unchecked/my.png",
+					"js/flexible_css.js",
+					"css/store/store.css",
+					"img/mendian/mendian-jiantou.png",
+					"img/star_1.png",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"css/mui.min.css",
+					"img/mendian/mendian05.png",
+					"img/unchecked/shopping_car.png",
+					"js/store/store.js",
+					"js/flexible.js",
+					"fonts/icon/iconfont.css",
+					"fonts/icon/iconfont.woff"
+				],
+				"refer": [
+					"home/home.html",
+					"index.html",
+					"shopping/shopping_cart_full.html",
+					"home/City.html"
+				],
+				"priority": 0
+			},
+			"shopping/shopping_cart_full.html": {
+				"resources": [
+					"shopping/script/jquery-2.0.3.js",
+					"shopping/font_diy/iconfont.css",
+					"shopping/css/normalize.css",
+					"shopping/css/reg.css",
+					"shopping/script/common.js",
+					"shopping/css/layout.css",
+					"shopping/css/shopping_cart.css",
+					"shopping/fonts/mui.ttf",
+					"shopping/css/mui.css",
+					"shopping/script/mui.js",
+					"shopping/img/tyre.png",
+					"shopping/script/flexible.js",
+					"shopping/script/flexible_css.js",
+					"shopping/font_diy/iconfont.woff"
+				],
+				"refer": [
+					"shopping/order_wait_pay.html"
+				],
+				"priority": 0
+			},
+			"home/zepin/indexesList.html": {
+				"resources": [
+					"home/zepin/js/mui.js",
+					"home/zepin/css/mui.min.css",
+					"home/zepin/js/jquery-2.0.3.js",
+					"home/zepin/js/jquery.charfirst.pinyin.js",
+					"home/zepin/images/img.png",
+					"home/zepin/css/zepin.css",
+					"home/zepin/fonts/mui.ttf",
+					"home/zepin/css/Indexes.css",
+					"home/zepin/js/sort.js",
+					"home/zepin/js/flexible.js",
+					"home/zepin/js/flexible_css.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/my_login.html": {
+				"resources": [
+					"shopping/img/login_server.png",
+					"shopping/img/login_avatar.png",
+					"shopping/img/log_collection.png",
+					"shopping/img/login_payment.png",
+					"shopping/img/login_concat.png",
+					"shopping/img/retr_addr.png",
+					"shopping/css/topic.css",
+					"shopping/img/login_bac.png",
+					"shopping/fonts/mui.ttf",
+					"shopping/font_diy/iconfont.woff"
+				],
+				"refer": [
+					"shopping/order_wait_pay.html",
+					"shopping/recive_address.html",
+					"shopping/order_evaluate.html",
+					"shopping/my_collect.html",
+					"shopping/pick_linkman.html",
+					"shopping/set_up.html"
+				],
+				"priority": 0
+			},
+			"home/Move_Topic.html": {
+				"resources": [
+					"img/ydzq//top_cart1.png",
+					"img/ydzq/topic_use2.png",
+					"img/ydzq/topic_img.png",
+					"shopping/script/checkbox.js",
+					"css/list/topic.css",
+					"img/ydzq/top_cart.png",
+					"img/ydzq/topic_use.png",
+					"js/list/city.js",
+					"img/ydzq/topic_bac.png",
+					"js/zepto.js",
+					"img/ydzq/top_cart1.png",
+					"img/ydzq/topic_btn.png",
+					"shopping/font_diy/iconfont.css",
+					"shopping/css/normalize.css",
+					"shopping/css/layout.css",
+					"shopping/css/shopping_cart.css",
+					"js/flexible_css.js",
+					"shopping/fonts/mui.ttf",
+					"shopping/css/mui.css",
+					"js/mui.min.js",
+					"shopping/script/mui.js",
+					"js/jquery-2.0.3.js",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/Coupon_Center.html": {
+				"resources": [
+					"img/Coupon_Center_02.png",
+					"img/falsh/yqg.png",
+					"css/list/coupon_center.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/search.html": {
+				"resources": [
+					"css/list/search.css",
+					"js/flexible_css.js",
+					"fonts/icon/iconfont.css",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/icon/iconfont.woff",
+					"css/public.css",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/order_wait_pay.html": {
+				"resources": [
+					"shopping/img/goods_nopay.png",
+					"shopping/css/mine.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/order_evaluate.html": {
+				"resources": [
+					"shopping/img/add_voucher.png",
+					"shopping/img/notice.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/my_collect.html": {
+				"resources": [
+					"shopping/img/store_img.png",
+					"shopping/img/tyree.png",
+					"shopping/img/collect_brand.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/set_up.html": {
+				"resources": [
+					"shopping/fonts/mui.ttf",
+					"shopping/css/mui.css",
+					"shopping/script/jquery-2.0.3.js",
+					"shopping/script/mui.js",
+					"shopping/css/reg.css",
+					"shopping/css/normalize.css",
+					"shopping/css/layout.css",
+					"shopping/script/flexible.js",
+					"shopping/script/flexible_css.js"
+				],
+				"refer": [
+					"shopping/password_change.html",
+					"shopping/about_us.html"
+				],
+				"priority": 0
+			},
+			"shopping/about_us.html": {
+				"resources": [
+					"shopping/img/map.png",
+					"shopping/img/item01.png",
+					"shopping/img/item04.png",
+					"shopping/img/item03.png",
+					"shopping/img/item02.png",
+					"shopping/img/company_info.png",
+					"shopping/css/brand_info.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/search_result.html": {
+				"resources": [
+					"img/search_screen_03.png",
+					"js/flexible_css.js",
+					"js/mui.min.js",
+					"js/jquery-2.0.3.js",
+					"css/list/search_result.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/flexible.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home/zepin/brandIndexes.html": {
+				"resources": [
+					"home/zepin/js/mui.js",
+					"home/zepin/css/mui.min.css",
+					"home/zepin/js/jquery-2.0.3.js",
+					"home/zepin/js/jquery.charfirst.pinyin.js",
+					"home/zepin/images/img.png",
+					"home/zepin/css/zepin.css",
+					"home/zepin/css/Indexes.css",
+					"home/zepin/js/sort.js",
+					"home/zepin/js/flexible.js",
+					"home/zepin/js/flexible_css.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shopping/goods_lists.html": {
+				"resources": [
+					"shopping/script/jquery-2.0.3.js",
+					"shopping/script/checkbox.js",
+					"shopping/font_diy/iconfont.css",
+					"shopping/css/normalize.css",
+					"shopping/css/reg.css",
+					"shopping/css/layout.css",
+					"shopping/css/shopping_cart.css",
+					"shopping/fonts/mui.ttf",
+					"shopping/css/mui.css",
+					"shopping/script/mui.js",
+					"shopping/img/tyre.png",
+					"shopping/script/flexible.js",
+					"shopping/script/flexible_css.js",
+					"shopping/font_diy/iconfont.woff"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"shopping/order_detail.html",
+				"img/门店/门店_下箭头_03.png",
+				"img/抢购状态/已抢光@2x.png",
+				"img/我的/images/首页_hot_10.png",
+				"shopping/flex/lib-flexible/assets/makeGrid.less",
+				"img/star_1@2x.png",
+				"shopping/img/proof02.jpg",
+				"img/抢购状态/已结束@2x.png",
+				"shopping/flex/lib-flexible/build/combo.js",
+				"img/彩带@2x.png",
+				"img/首页/body_buying_03_03.gif",
+				"img/我的/images/商品详情_dp_04.png",
+				"img/我的/images/商品详情_dp_02.png",
+				"img/商品详情页/商品详情_02.png",
+				"img/商品标签/自营-标签@2x.png",
+				"img/服务保障/24小时发货@2x.png",
+				"shopping/img/password_hide.png",
+				"img/我的/images/商品详情_dp_07.png",
+				"img/移动专题/top_polishing.png",
+				"img/我的/images/商品详情_dp_01.png",
+				"img/标签栏-已选中/门店-选中@2x.png",
+				"shopping/shopping_cart.html",
+				"img/缺省/缺省.png",
+				"img/我的/images/首页_hot_03.png",
+				"img/消息/系统消息@2x.png",
+				"img/移动专题/使用说明-背景.png",
+				"shopping/img/second.png",
+				"img/商品详情页/商品详情_01_03.png",
+				"img/移动专题/topic_bac.png",
+				"shopping/flex/lib-flexible/build/package.json",
+				"shopping/img/proof01.jpg",
+				"img/分类列表_05.png",
+				"shopping/font_diy/iconfont.ttf",
+				"shopping/font_diy/iconfont.eot",
+				"shopping/guidance/guidance.css",
+				"shopping/img/sina@2x.png",
+				"img/按钮/立即抢购_bottom@2x.png",
+				"img/移动专题/top_cart.png",
+				"img/我的/images/首页_serooh_05.png",
+				"img/分类/分类列表_07.png",
+				"shopping/test-demo/start_page.html",
+				"img/我的/images/首页_hot_06.png",
+				"img/我的/images/商品详情_01_03.png",
+				"shopping/apply_refund.html",
+				"shopping/font_diy/demo_unicode.html",
+				"img/标签栏-已选中/我的-选中@2x.png",
+				"img/我的/成功绑定.png",
+				"img/按钮/加入购物车_bottom@2x.png",
+				"shopping/img/first_logo.png",
+				"shopping/flex/lib-flexible/README.md",
+				"shopping/css/muii.css",
+				"shopping/img/raido_seclect@2x.png",
+				"img/我的/images/首页_serooh_03.png",
+				"img/首页/保养服务@2x.png",
+				"img/登录注册/形状-10@2x.png",
+				"img/我的/images/首页_hot_01.png",
+				"img/形状-1159@2x.png",
+				"shopping/img/info.png",
+				"img/优惠券/优惠券BG_小@2x.png",
+				"shopping/order_evaluate_complate.html",
+				"shopping/flex/lib-flexible/assets/flexible.less",
+				"img/下箭头_03.png",
+				"shopping/flex/lib-flexible/build/flexible.debug.js",
+				"img/我的/待评价@2x.png",
+				"img/编辑@2x.png",
+				"shopping/flex/lib-flexible/build/makegrid.debug.js",
+				"img/电话1@2x.png",
+				"img/我的/联系人@2x.png",
+				"img/移动专题/使用代金券-背景.png",
+				"shopping/font_diy/demo.css",
+				"img/star_2@2x.png",
+				"img/形状-1557@2x.png",
+				"img/我的/images/商品详情_user_01.png",
+				"img/我的/images/首页_hot_11.png",
+				"shopping/images/app-我的33_01.gif",
+				"img/优惠券/优惠券_领券中心@2x.png",
+				"shopping/font_diy/iconfont.svg",
+				"shopping/img/page1.png",
+				"img/导航@2x.png",
+				"img/我的/余额背景.png",
+				"img/我的/矩形-12@2x.png",
+				"img/抢购价_标签@2x.png",
+				"img/缺省/缺省-代金券@2x.png",
+				"img/我的/images/首页_hot_07.png",
+				"shopping/images/app-我的33_02.gif",
+				"img/控件/-@2x.png",
+				"shopping/img/site.png",
+				"img/标签栏-已选中/首页-选中@2x.png",
+				"img/移动专题/topic_btn.png",
+				"shopping/flex/lib-flexible/grid.jpg",
+				"img/u13961.png",
+				"img/我的/开呗头像占位图@2x.png",
+				"img/移动专题/top_plating.png",
+				"img/移动专题/top_clean.png",
+				"img/门店/门店_img_05.png",
+				"shopping/material_track.html",
+				"img/我的/images/首页_hot_13.png",
+				"img/首页/安装服务@2x.png",
+				"img/点赞@2x.png",
+				"img/筛选@2x.png",
+				"img/分类列表_03.png",
+				"shopping/guidance/guidance_page.html",
+				"shopping/flex/lib-flexible/build/flexible_css.debug.js",
+				"img/我的/images/首页_serooh_01.png",
+				"img/缺省/缺省2@2x.png",
+				"img/商品标签/促销标签2@2x.png",
+				"shopping/img/delete_proof.png",
+				"img/首页/body_djquan_02.png",
+				"img/商品标签/赠品@2x.png",
+				"img/我的/images/商品详情_user_02.png",
+				"shopping/font_diy/demo_symbol.html",
+				"img/商品详情页/cart.png",
+				"shopping/flex/lib-flexible/build/flexible.js",
+				"img/我的/images/商品详情_dp_03.png",
+				"img/添加@2x.png",
+				"shopping/flex/lib-flexible/src/flexible.js",
+				"img/门店/门店_img_02.png",
+				"shopping/修改的.txt",
+				"img/分类/分类列表_03.png",
+				"img/我的/images/首页_hot_14.png",
+				"shopping/img/brand.png",
+				"img/我的/images/首页_hot_04.png",
+				"img/我的/收货地址@2x.png",
+				"shopping/select_recive_address.html",
+				"shopping/flex_for_uc.html",
+				"img/首页/广告图1.png",
+				"img/移动专题/topic_use.png",
+				"shopping/img/cross@3x.png",
+				"shopping/img/logo_03.png",
+				"img/商品标签/自营_标签@2x.png",
+				"shopping/img/page2.png",
+				"img/选择按钮-拷贝-4@2x.png",
+				"img/我的/组-85111-拷贝-3@2x.png",
+				"img/关于-文本/关于  说明.png",
+				"shopping/flex/lib-flexible/build/flexible_css.js",
+				"img/分类列表_top_03.png",
+				"img/移动专题/top_cart1.png",
+				"img/我的/待收货@2x.png",
+				"img/我的/images/商品详情_user_03.png",
+				"shopping/img/empty_box.png",
+				"img/我的/images/首页_hot_17.png",
+				"js/mui.js",
+				"img/首页/限时抢购BG@2x.png",
+				"img/我的/代金券@2x.png",
+				"img/登录注册/闭眼@2x.png",
+				"shopping/img/duihao.png",
+				"img/优惠券/优惠券bg@2x.png",
+				"shopping/images/app-我的33_04.gif",
+				"img/登录注册/形状-11@2x.png",
+				"img/优惠券/优惠券BG-小_灰@2x.png",
+				"shopping/confirm_order.html",
+				"img/我的/收藏@2x.png",
+				"shopping/flex/lib-flexible/src/makegrid.js",
+				"img/缺省/缺省-网络失败@2x.png",
+				"img/优惠券/优惠券0_领券中心@2x.png",
+				"img/我的/images/首页_hot_09.png",
+				"shopping/font_diy/demo_fontclass.html",
+				"shopping/start_page.html",
+				"shopping/apply_involve.html",
+				"img/星星-拷贝-3@2x.png",
+				"img/控件/+@2x.png",
+				"bady_tuijian2_03.png",
+				"img/服务保障/免@2x.png",
+				"img/搜索@2x.png",
+				"img/我的/组-8511-拷贝-2@2x.png",
+				"img/分类/分类列表_05.png",
+				"img/客服@2x.png",
+				"img/flash_08.png",
+				"img/移动专题/top_la.png",
+				"img/移动专题/top_glass.png",
+				"img/登录注册/背景.png",
+				"shopping/flex/lib-flexible/build/flexible.debug.css",
+				"img/我的/images/商品详情_01_04.png",
+				"shopping/images/app-我的33_05.gif",
+				"img/我的/images/商品详情_01_02.png",
+				"shopping/add_recive_address.html",
+				"shopping/flex/lib-flexible/build/combo.debug.js",
+				"shopping/service_track.html",
+				"img/我的/images/商品详情_01_05.png",
+				"shopping/flex/lib-flexible/package.json",
+				"shopping/add_linkman.html",
+				"img/我的/images/首页_hot_12.png",
+				"img/移动专题/topic_use2.png",
+				"img/移动专题/topic_img.png",
+				"shopping/flex/lib-flexible/build/flexible.css",
+				"img/我的/images/首页_serooh_04.png",
+				"img/商品详情页/商品详情_user_03.png",
+				"img/首页/代办代缴@2x.png",
+				"img/我的/待付款@2x.png",
+				"img/flash_06.png",
+				"img/消息/活动促销@2x.png",
+				"shopping/img/password_show.png",
+				"shopping/img/service.png",
+				"img/提交成功@2x.png",
+				"img/移动专题/top_engine.png",
+				"img/登录注册/眼睛@2x.png",
+				"img/消息/订单消息@2x.png",
+				"shopping/forget_password.html",
+				"shopping/flex/lib-flexible/grid.psd",
+				"img/商品详情页/star.png",
+				"img/首页/美容服务@2x.png",
+				"img/服务保障/正@2x.png",
+				"img/登录注册/形状-12@2x.png",
+				"img/我的/images/商品详情_01_01.png",
+				"img/我的/头像背景.png",
+				"img/抢购BG@2x.png",
+				"shopping/flex/lib-flexible/build/makegrid.js",
+				"img/定位@2x.png",
+				"img/我的/images/商品详情_user_04.png",
+				"img/删除@2x.png",
+				"shopping/img/weizhi.png",
+				"img/标签栏-已选中/购物车-选中@2x.png",
+				"img/我的/images/商品详情_user_05.png",
+				"css/mui.css",
+				"img/更换@2x.png",
+				"img/移动专题/top_tires.png",
+				"shopping/flex/lib-flexible/index.html",
+				"shopping/flex/lib-flexible/Gruntfile.js",
+				"shopping/img/qq@2x.png",
+				"img/商品标签/sale@2x.png",
+				"img/我的/images/商品详情_dp_06.png",
+				"shopping/404.html",
+				"img/商品标签/促销_标签@2x.png",
+				"img/首页/广告图2.png",
+				"img/商品详情页/shop.png",
+				"img/我的/客服电话@2x.png",
+				"shopping/img/page3.png",
+				"shopping/reg.html",
+				"new_file.html",
+				"shopping/apply_involved_form.html",
+				"img/我的/images/首页_serooh_02.png",
+				"img/我的/images/首页_hot_05.png",
+				"img/我的/待服务@2x.png",
+				"shopping/img/two_code.png",
+				"img/关于-文本/关于-logo.png",
+				"shopping/img/page4.png",
+				"shopping/font_diy/iconfont.js",
+				"shopping/img/404.png",
+				"shopping/test-demo/flex_for_uc.html",
+				"shopping/img/page5.png",
+				"shopping/my_collect_store.html",
+				"shopping/test-demo/start_page2.html",
+				"shopping/img/navigation_icon.png",
+				"img/分类列表_07.png",
+				"img/倒计时背景@2x.png",
+				"shopping/img/weixin@2x.png",
+				"img/商品标签/加盟-标签@2x.png",
+				"shopping/img/reg_login.png",
+				"img/我的/images/首页_hot_16.png",
+				"img/down@2x.png",
+				"img/我的/images/首页_hot_15.png",
+				"img/我的/images/首页_hot_02.png",
+				"img/我的/images/首页_hot_08.png"
+			]
+		}
+	},
+	"fullscreen": true
+}

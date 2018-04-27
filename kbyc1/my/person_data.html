@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人资料</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="js/flexible_css.js"></script>
+		<script src="js/flexible.js"></script>
+		<script src="js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/news.css">
+		<link rel="stylesheet" type="text/css" href="../shopping/css/LArea.css"/>
+		<script src="js/mui.js"></script>
+		<link rel="stylesheet" type="text/css" href="../shopping/font_diy/iconfont.css"/>
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">
+        个人资料
+        </span>
+		</div>-->
+		<!-- 个人资料列表 -->
+		<ul class="mui-table-view person_top">
+			<li class="mui-table-view-cell person_data" onClick="onFile(0)" style="padding-left: 0.386667rem;">
+				<a class=" f28">头像</a>
+				<div id="inImgs" class="person_img" style="border-radius: 2.66666rem;">
+					<img src="img/top.png">
+				</div>
+				<input type="file" id="file_input" style="display: none;" />
+				<span class="iconfont icon-qianjin fr" style="margin-right: 0.4rem;font-size: 0.34666rem; color: #999;display: inline-block;margin-top: -1.31444rem;"></span>
+			</li>
+			<li class="mui-table-view-cell person_data person_h" id="nicheng" style="padding-left: 0.386667rem;">
+				<a class="">昵称</a>
+				<label class="person_name f28">小开呗</label>
+				<span class="iconfont icon-qianjin fr" style="margin-right: 0.4rem;font-size: 0.34666rem; color: #999;display: inline-block;margin-top: -1.21333rem;"></span>
+			</li>
+			<li class="mui-table-view-cell person_data person_h" id="bandphone" style="padding-left: 0.386667rem;">
+				<a class="">绑定手机号</a>
+				<label class="person_name f28">未绑定</label>
+				<span class="iconfont icon-qianjin fr" style="margin-right: 0.4rem;font-size: 0.34666rem; color: #999;display: inline-block;margin-top: -1.21333rem;"></span>
+			</li>
+			<li class=" person_data person_h" style="height: 1.17333rem;">
+				<span>性别</span>
+				<span class="iconfont icon-qianjin fr" style="margin-right: 0.4rem;font-size: 0.34666rem; color: #999;"></span>
+				<span class="fr" id="personaddress" style="float: right;margin-right: 0.13333rem;">未选择</span>
+				<input id="value1" type="hidden">
+				
+			</li>
+		</ul>
+	</body>
+	<script src="js/tanchangxb.js"></script>
+	<script src="js/tanchangxbData.js"></script>
+	<script src="js/jquery-2.0.3.js"></script>
+	<script>
+		var area1 = new LArea();
+		area1.init({
+			'trigger': '#personaddress',
+			'valueTo': '#value1',
+			'keys': {
+				id: 'id',
+				name: 'name'
+			},
+			'type': 1,
+			'data': LAreaData
+		});
+		area1.value = [1];
+		
+		$("#nicheng").on("tap", function() {
+			mui.openWindow("../shopping/data_modification.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		$("#bandphone").on("tap", function() {
+			mui.openWindow("bandphone.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		
+		function onFile() {
+			document.getElementById('file_input').click();
+			var input = document.getElementById("file_input");
+			if(typeof FileReader === 'undefined') {
+				
+				input.setAttribute('disabled', 'disabled');
+			} else {
+				input.addEventListener('change', readFile, false);
+			}
+		}
+
+		function readFile() {
+			var file = this.files[0];
+			var fsize = parseInt((file.size) / 1024);
+			if(!/image\/\w+/.test(file.type)) {
+				alert("请确保文件为图像类型");
+				return false;
+			}
+			var reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = function(e) {
+				var inImgs = document.getElementById("inImgs");
+				inImgs.innerHTML = '<img src="' + this.result + '" alt="" style="border-radius: 2.66666rem;"/>'; //显示图片  
+				//var arr = input.value.split('\\'); //分割图片路径  
+				//取数组最后部分 - 图片名字.jpg  document.getElementById('txtImgSrc').innerHTML = arr[arr.length - 1]; 
+				//显示图片名字加图片大小  document.getElementById('txtImgSrc').innerHTML = arr[arr.length - 1] + "<br/>(" + fsize + "kb)"; 
+			}
+		}
+	</script>
+
+</html>

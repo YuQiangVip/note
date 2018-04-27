@@ -1,0 +1,55 @@
+
+
+/*header*/
+
+
+#header{background-color:#ffad2d; color: #FFFFFF;}
+#header a{color: #FFFFFF;}
+#header .mui-title{color: #FFFFFF;}
+.mui-ios {height: 110%;}
+.mui-content{width: 100%; height: 100%;}
+.mui-content .mui-content_ul{width: 100%; height: 1.2rem; background: #ffffff;}
+.mui-content .mui-content_ul li{float: left;width: 33%; height: 100%;text-align: center;line-height: 1.2rem;}
+.mui-content .mui-content_ul li:hover{color: orange;border-bottom: 2px solid orange;}
+
+/*轮播图*/
+#slider{height: 3.733333rem;width: 100%;}
+#slider .mui-slider-item{width: 100%; height: 100%;}
+.mui-slider .mui-slider-group .mui-slider-item img{width: 100%; height: 100%;}
+
+/*优惠券*/
+#Coupon{width: 100%; height: 100%;background-color: #f4f4f4;}
+.mui-content_Coupon{width: 100%; height: 100%;}
+.mui-content_Coupon li{float: left; width: 9.2rem;height: 2.933333rem;background: #FFFFFF; margin: 0.4rem;position: relative;}
+#Coupon .Coupon_left{float: left; width: 3.066666rem;height: 2.933333rem;background-image:
+ linear-gradient(to left, #ffba36, #ff9d29);text-align: center; line-height: 2.933333rem; color: #FFFFFF;}
+#Coupon .Coupon_left span{font-size:0.866666rem ;}
+#Coupon .Coupon_right{float: left; width:6.133333rem;height: 2.933333rem;background-color: #ffffff;}
+.Coupon_right_left{float: left; width: 2.8rem;height: 1.866666rem;margin: 0.533333rem 0.666666rem;  }
+.Coupon_right_left h3{height: 0.453333rem;font-size: 0.48rem;font-weight: 500;color: #111111;}
+.Coupon_right_left h4{font-size:0.16rem ; color: #999999;margin: 0.266666rem 0;}
+.Coupon_right_left h5{width: 2.613333rem;height: 0.533333rem;border-radius: 0.08rem;background-color: #cccccc;text-align: center; line-height:0.533333rem ;}
+.Coupon_right_right {float: left; width: 1.866666rem;height:100%;font-size:0.426666rem;
+text-align: center;color: #ffad2d;}
+.Coupon_right_right span{display: block;  width: 1.066666rem;height: 1.066666rem;font-size: 0.426666rem;text-align: center;color: #ffad2d; margin:1.04rem 0.4rem;}
+
+
+
+/*list2*/
+#Coupon .Coupon_list2 .Coupon_left{background-image: linear-gradient(to left, #cccccc 0%, #999999);}
+ .Coupon_right_right img{display: block; width:1.786666rem;
+  height: 1.786666rem; margin: 0.533333rem 0;}
+
+
+/*圆角虚线*/
+.yj1,.yj2{width: 0.373333rem; height: 0.293333rem; background-color: #f4f4f4; border-radius:50%}
+.yj1{position: absolute;top:-0.133333rem ; left:6.88rem ;}
+.yj2{position: absolute;top:2.746666rem ; left:6.88rem ;}
+.Line{ height: 2.4rem; border-right: 1px dashed  #e5e5e5 ; position: absolute;top:0.24rem ; left:7.053333rem;}
+
+
+.page_1{position: absolute;width: 100%; height: 80%;background-color: #f4f4f4;}
+
+
+
+.mui-slider-indicator .mui-indicator{margin: 0;}

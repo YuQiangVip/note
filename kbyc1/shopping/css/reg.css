@@ -1,0 +1,235 @@
+body{
+	background-color: #F4F4F4 !important;
+	position: relative;
+}
+.input_posi{
+	position: relative;
+}
+.header{
+	display: block;
+	width: 100%;
+	height: 4.8rem;
+	position: relative;
+	text-align: center;
+	background: url(../img/reg_login.png);
+	background-size: cover;
+}
+#cross{
+	width: 0.38667rem;
+	height: 0.38667rem;
+	position: absolute;
+	left: 0.53333rem;
+	top:0.85333rem;
+	top:16.7%;
+}
+#logo{
+	vertical-align: middle;
+	width: 4.8rem;
+	height: 1.50667rem;
+	margin-top: 1.65rem;
+}
+#bottom_box{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 1.57333rem;
+	margin-top: 0.90667rem;
+	color: #fff;
+	font-size: 0.37333rem;
+}
+#bottom_box span{
+	padding-bottom:  0.48rem;
+	position: relative;
+}
+.ss:after{
+	position: absolute;
+	content: '';
+	width: 0;
+    height: 0;
+    border-left: 0.22rem solid transparent;
+    border-right: 0.22rem solid transparent;
+    border-bottom: 0.21rem solid #fff;
+	bottom: -1px;
+	left: 50%;
+	margin-left: -.2rem;
+}
+/*注册登录*/
+.login_switch{
+	display: none;
+
+}
+.reg_box_show{
+	display: block !important;
+}
+.reg_box>div{
+	/*box-sizing: content-box;*/
+}
+#reg_info{
+	margin-top: 0.307rem;
+	color: #999;
+	border: none;
+}
+
+
+#xieyi{text-align: center;
+	margin-top: 0.533rem;
+	color: #999;
+}
+#xieyi span{
+	color: #ffad2d;
+}
+#third_party_box{
+	text-align: center;
+	width: 100%;
+	margin-top: 3.44rem;
+	padding-bottom: 1.26667rem;
+}
+.third_party_info{
+	color:#999;
+}
+.third_party_brand_box{
+	height: 0.66667rem;
+	margin-top: 0.72rem;
+}
+#brand_qq{
+	margin: 0 2.26667rem;
+	width: 0.53333rem;
+}
+#brand_sina{
+	width: 0.69333rem;
+}
+#brand_weixin{
+	width: 0.72rem;
+}
+.send_code{
+	height: 0.37333rem;
+	margin-left: .1rem;
+	/*overflow: hidden;*/
+}
+#send_code{
+	color: #ffad2d;
+}
+#reg_info{
+	text-indent: 0.4rem;
+}
+#time{
+	display: none;
+}
+#cansel_phone_number{
+	display: none;
+}
+#cansel_phone_number{
+	width: 0.4rem;
+	font-size: 90%;
+}
+#foget_possword{
+	display: block;
+}
+.reg_box>div{
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+#code_for_forget{
+	position: relative;
+}
+#ifseen img{
+	width: 0.48rem;
+}
+.setup_lists{
+	width: 100%;
+	padding-left: 0.4rem;
+	margin-top: 0.26666rem;
+}
+/*29边*/
+.right_ahead{
+	margin-right: 0.38666rem;
+}
+.setup_lists .list{
+	height: 1.17333rem;
+	line-height: 1.17333rem;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+.setup_lists .fr{
+	width: 0.34667rem;
+	height: 1.17333rem;
+	font-size: 0.5rem;
+}
+.single_wrapper{
+	width: 100%;
+	height: 1.17333rem;
+	line-height: 1.17333rem;
+	text-align: center;
+	margin-top: 0.26666rem;
+}
+#esc_account{
+	color: #ff2e2e;
+}
+/*手机号码错误时样式*/
+.tel_error{
+	color: red !important;}
+	/**/
+.form_item{
+	display: flex;
+	height: 1.17333rem;
+	align-items: center;
+    padding-right:0.4rem;
+	position: relative;
+}
+.cansel_phone_number{
+	/*position: absolute;*/
+}
+.shop_bo{
+	/*30px*/
+	margin-top: 0.4rem;
+}
+/*验证码登录*/
+.log_ly{
+	display: inline-block;
+	padding: 0.48rem 0 0 0.38666rem;
+	color: #666;
+}
+.form_item .icon-dingtongchahao{
+	font-size: 0.32rem !important;
+}
+.between_code{
+	justify-content: space-between;
+}
+.between_code div:first-child{
+	display: flex;
+	align-items: center;
+}
+.between_code .send_code{
+	/*margin-right: 0.4rem;*/
+}
+.cansel_phone_number{
+	display: none;
+}
+.new_password_for_forget{
+	justify-content: space-between;
+}
+.newpassword_for_forget_input{
+	display: flex;
+	align-items: center;
+	height: 
+}
+#ifseen .icon-kaiyan{
+	color: #ffad2d;
+}
+/*控制input框长度*/
+.between_code input{
+	max-width: 3.5rem;
+}
+/*用户协议*/
+.agreen_nav{
+	text-align: center;
+	font-weight: 500;
+	margin: 0.74666rem 0 0.77333rem 0;
+}
+.text_argee{
+	color: #666;
+}
+.text_argee p{
+	margin: 0;
+	font-size: 0.32rem;
+	line-height: 0.48rem;
+}

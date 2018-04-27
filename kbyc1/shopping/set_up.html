@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<!--<link rel="stylesheet" href='font/iconfont.css'>-->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<!-- <link rel="stylesheet" href="css/mui.css"> -->
+		<link rel="stylesheet" href="css/layout.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">设置</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="setup_lists picks_box bg_colorf">
+			<div class="list clearfix" id="possword"><span class="fl">密码管理</span>
+				<div class="fr right_ahead color_grey"><span class="iconfont icon-qianjin f26"></span></div>
+			</div>
+			<div class="list clearfix" id="about"><span class="fl">关于我们</span>
+				<div class="fr color_grey right_ahead"><span class="iconfont icon-qianjin f26"></span></div>
+			</div>
+			<!--<div class="list clearfix" id="yypinfen"><span class="fl">应用评分</span>
+				<div class="fr right_ahead color_grey"><span class="iconfont icon-qianjin f26"></span></div>
+			</div>-->
+			<div class="clearfix" id="yinsism" style="line-height: 1.17333rem;"><span class="fl">隐私声明</span>
+				<div class="fr right_ahead color_grey"><span class="iconfont icon-qianjin f26"></span></div>
+			</div>
+		</div>
+		<div class="single_wrapper bg_colorf" id="esc_account"><span>退出登录</span></div>
+
+		<div id="motai" class="modal_con"></div>
+		<div id="tanchuang" class="modal_box">
+			<div class="modal_mian">
+				<div class="modal_title f32">
+					退出登录
+				</div>
+				<div class="modal_ter">
+					确定要退出吗？
+				</div>
+			</div>
+			<div id="queren" class="determine fr f32">
+				确认
+			</div>
+			<div id="quxiao" class="modal_cancle fl f32">
+				取消
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	$(function() {
+
+		$("#about").on("tap", function() {
+			mui.openWindow({
+				url: 'about_us.html',
+				id: 'about',
+				waiting: {
+					autoShow: false,
+					title: '正在加载...'
+				}
+			})
+		});
+
+		$("#possword").on("tap", function() {
+			mui.openWindow({
+				url: 'password_change.html',
+				id: 'possword',
+				waiting: {
+					autoShow: false,
+					title: '正在加载...'
+				}
+			})
+		});
+		$("#yinsism").on("tap", function() {
+			mui.openWindow({
+				url: 'yinsishengming.html',
+				id: 'yinsishengming',
+				waiting: {
+					autoShow: false,
+					title: '正在加载...'
+				}
+			})
+		});
+
+	})
+
+	$("#esc_account").on("tap", function() {
+		$("#motai").show();
+		$("#tanchuang").show();
+	})
+	$("#quxiao").on("tap", function() {
+		$("#motai").hide();
+		$("#tanchuang").hide();
+	})
+	$("#queren").on("tap", function() {
+		//		var win = plus.webview.getWebviewById('../index.html');
+		//		if(win) {
+		//			window.setTimeout(function() {
+		//				win.close();
+		//			}, 200);
+		//		}
+		$("#motai").hide();
+		$("#tanchuang").hide();
+		mui.openWindow('login.html', Math.random(), {
+			show: {
+				autoShow: true,
+				aniShow: 'slide-in-left',
+				duration: 100
+			},
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		}, false)
+	})
+</script>

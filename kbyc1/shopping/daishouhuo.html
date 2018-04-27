@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情-待收货</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body class="order_submit">
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">订单详情</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="waitpay_counttime_box common_box bg_colorf">
+			<div class="waitpay_counttime_text clearfix">
+				<div class="fl">待收货</div>
+			</div>
+			<div><span style="color: #999;" class="iconfont icon-qianjin f24"></span></div>
+		</div>
+		<div class="confirm_reciver_info bg_colorf store_site_linkman">
+			<div>
+				<div><span class="color_lgrey">收货人</span><span class="color_darker">开呗</span><span class="reciver_tel color_lgrey">联系方式</span><span class="color_darker">13723724748</span></div>
+				<div class="confirm_reciver_address">
+					<span class="f35 color_lgrey iconfont icon-weizhi2 mui-icon-location"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+				</div>
+			</div>
+			<span style="color: #999;" class="iconfont icon-qianjin f24"></span>
+			<div class="colours_line_wrapper">
+				<div class="colours_wrapper">
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+				</div>
+			</div>
+		</div>
+		<div class="waitpay_brandstore_box common_box bg_colorf">
+			<div class="waitpay_brandstore_text clearfix">
+				<div class="fl">轲轲西里品牌旗舰店</div>
+			</div>
+			<div><span style="color: #999;" class="iconfont icon-qianjin f24"></span></div>
+		</div>
+		<div class="waitpay_goods_lists bg_colorf">
+			<div class="waitpay_goods_list">
+				<div class="img"><img src="img/goods_nopay.png" alt=""></div>
+				<div class="waitpay_goods_info">
+					<div class="goods_name">盯盯拍 mini智能行车记录仪无线</div>
+					<!--<div class="detail_wrapper">-->
+					<div>
+						<div class="goods_count color_grey"><span class="f26">16G卡， X1</span></div>
+						<div class="goods_detail color_lgrey f26">服务：倒车影像安装</div>
+						<div><span class="f26 color_g">￥490.00</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="waitpay_goods_list">
+				<div class="img"><img src="img/goods_nopay.png" alt=""></div>
+				<div class="waitpay_goods_info">
+					<div class="goods_name">
+						<span class="wait_btn">赠品</span> 盯盯拍 mini智能行车记录仪无线</div>
+					<!--<div class="detail_wrapper">-->
+					<div>
+						<div class="goods_count clearfix color_grey"><span class="fl f26">16G卡， X1</span></div>
+						<div><span class="f26 color_g">￥490.00</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="waitpay_order_lists_box bg_colorf">
+			<div class="common_box2"><span>订单编号</span><span>112144477441113</span></div>
+			<div class="common_box2"><span>订单时间</span><span>2017-6-11  10:37:35</span></div>
+			<div class="common_box2"><span>支付方式</span><span>在线支付</span></div>
+			<div class="common_box2">
+				<span>物流</span>
+				<div class="waitpay_order_express"><span class="color_dark">顺丰快递</span><span class="color_g" id="material_track">物流跟踪</span>
+					<span style="color: #999;" class="iconfont icon-qianjin f24"></span>
+				</div>
+			</div>
+			<div class="common_box2" id="invoice_message"><span>发票</span><span>不开发票</span></div>
+			<div class="common_box2"><span id="leave_info">买家留言</span>
+				<textarea name="buyer_board" class="f28 color_dark" id="buyer_board" placeholder='模糊概念和主观的评价逐渐减少。'></textarea>
+			</div>
+		</div>
+		<div class="waitpay_order_lists_box shop_po bg_colorf">
+			<div class="common_box2 store_goods"><span>商品总价</span><span>￥150.00</span></div>
+			<div class="common_box2 store_goods"><span>物流费用</span><span>￥50.00</span></div>
+			<div class="common_box2 store_goods"><span>活动优惠</span><span>减￥50.00</span></div>
+			<div class="common_box2 store_goods"><span>优惠券</span><span>减￥50.00</span></div>
+			<div class="common_box2 store_goods"><span>兑换券</span><span>￥0.00</span></div>
+			<div class="common_box2 store_goods"><span>余额</span><span>减￥0</span></div>
+			<div class="common_box2"><span>实付金额</span><span class="color_g">￥210.00</span></div>
+		</div>
+		<div class="waitpay_order_pay_box common_box">
+			<div class="total">
+				<span class="color_lgrey f24">合计</span>
+				<span class="total_money color_g f24">￥<span class="f36">210.00</spa></span>
+			</div>
+			<div class="clearfix">
+				<div class="fl submit_order_btn">确认收货</div>
+			</div>
+		</div>
+
+</html>
+<script>
+	$("#material_track").on("tap", function() {
+		mui.openWindow({
+			url: 'material_track.html',
+			id: 'material_track'
+		})
+	});
+	$('#invoice_message').on('tap', function() {
+		mui.openWindow({
+			url: 'invoice.html',
+			id: 'invoice_message'
+		})
+	})
+	$(".submit_order_btn").on("tap", function() {
+		mui.openWindow({
+			url: 'order_evaluate_complate.html',
+			id: 'shopping_cart_full'
+		})
+	});
+</script>

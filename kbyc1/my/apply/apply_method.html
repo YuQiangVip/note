@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>在线支付</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../../shopping/font_diy/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">
+        在线支付
+        </span>
+		</div>-->
+		<!-- 支付方式 -->
+		<div class="apply_main">
+			<div class="apply_div">
+				<div class="apply_wechat">
+					<div class="wechat_img"><img src="../img/my/18.png" alt=""></div>
+					<div class="wechat_name f28">微信</div>
+					<label class="apply_label" onclick="checkfp(0)"><i id="xuanze0" class="icon iconfont icon-checkbox-copy-copy apply_color"></i></label>
+				</div>
+				<div class="apply_wechat">
+					<div class="yl_yl"><img src="../img/my/19.png" alt=""></div>
+					<div class="yl_ylname">
+						<p class="f28 yl_p1">银联支付</p>
+						<p class="f24 yl_p2">单笔限额 ：10000元</p>
+					</div>
+					<label class="yl_label" onclick="checkfp(1)"><i id="xuanze1" class="icon iconfont icon-checkboxblank apply_color"></i></label>
+				</div>
+				<div class="apply_wechat">
+					<div class="zf_zf f28">需支付:<span class="f34 span_color">￥589.00</span></div>
+
+				</div>
+			</div>
+		</div>
+		<div class="apply_btn">
+			确认支付
+		</div>
+	</body>
+	<script>
+		var state = 1;
+		window.onload=function(){
+			var get = window.location.href;
+			var tem1 = get.split("?")[1];
+			var tem2 = tem1.split("&")[0];
+			var tem3 = tem2.split("=")[1];
+			state = tem3;
+		}
+		
+		function checkfp(id) {
+			for(var i = 0; i < 2; i++) {
+				if(id == i) {
+					$("#xuanze" + i).addClass("icon-checkbox-copy-copy");
+					$("#xuanze" + i).removeClass("icon-checkboxblank");
+				} else {
+					$("#xuanze" + i).removeClass("icon-checkbox-copy-copy");
+					$("#xuanze" + i).addClass("icon-checkboxblank");
+				}
+
+			}
+		}
+		
+		$(".apply_btn").on("tap",function(){
+			var url = "";
+			if(state==0){
+				url = "../../shopping/goodspayresult.html";
+			}else{
+				url = "../../shopping/payresult.html";
+			}
+			mui.openWindow(url,{
+				wait:{
+					autoShow:false
+				}
+			})
+		})
+	</script>
+
+</html>

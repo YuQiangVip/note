@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>申请介入</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/jquery-2.0.3.js"></script>
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<style>
+			.apply_involve_other_reason {}
+			
+			.apply_involve_other {
+				height: 1.17333rem;
+			}
+			
+			.apply_involve_other i {
+				line-height: 1.17333rem;
+				padding-left: 0.4rem;
+				font-size: 22px;
+			}
+			
+			.apply_involve_other .color_dark {
+				line-height: 1.17333rem;
+			}
+			
+			.info_area_box {
+				width: 100%;
+				padding-right: 0.4rem;
+				padding-left: 0.8rem;
+				height: 3.33333rem !important;
+				/*margin-bottom: 0.96rem;*/
+				margin: 0;
+			}
+			
+			.refund_voucher_area {
+				padding-left: 0.4rem;
+				height: 3.97333rem !important;
+			}
+			
+			.refund_voucher_area_text {
+				height: 1.17333rem;
+				line-height: 1.17333rem;
+				padding-top: 0.13333rem;
+			}
+			
+			.voucher_area {
+				height: 2.8rem;
+				/*margin-top: 0.24rem;*/
+				/*margin-bottom: 0.53333rem;*/
+			}
+			
+			.voucher_area .voucher {}
+		</style>
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">申请介入</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div id="chenggong" class="submit_success" style="display: none;">
+			<div class="submit_success_title clearfix"><img src="img/duihao.png" alt="" class="fl"><span class="fl f32">提交成功</span></div>
+			<div class="submit_success_text">工作人员会在3个工作日内进行处理，请保持电话畅通！</div>
+		</div>
+		<div id="tianxie" style="display: block;">
+			<div class="apply_involved_reason_box bg_colorf">
+				<div class="color_lgrey">申请介入原因</div>
+				<div class="clearfix" onclick="checkedbox(0)">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan0" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+                            <i id="weixuan0" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">商家拒不退款</span>
+				</div>
+				<div class="clearfix" onclick="checkedbox(1)">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan1" class="icon f40 iconfont icon-checkbox-copy" style="display: none;"></i>
+                            <i id="weixuan1" class="icon f40 iconfont icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+                            </label>
+            </span>
+					<span class="color_dark">商家存在虚假销售</span>
+				</div>
+				<div class="clearfix" onclick="checkedbox(2)">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan2" class="icon f40 iconfont icon-checkbox-copy" style="display: none;"></i>
+                            <i id="weixuan2" class="icon f40 iconfont icon-checkboxblank" style="font-size: 22px; color: #e0e0e0;"></i>
+                            </label>
+            </span>
+					<span class="color_dark">商家产品存在质量问题</span>
+				</div>
+				<div class="clearfix" onclick="checkedbox(3)">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan3" class="icon f40 iconfont icon-checkbox-copy" style="display: none;"></i>
+                            <i id="weixuan3" class="icon f40 iconfont icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+                            </label>
+            </span>
+					<span class="color_dark">商家服务不好</span>
+				</div>
+			</div>
+			<div class="apply_involve_other_reason">
+				<div class="apply_involve_other clearfix bg_colorf" onclick="checkedbox(4)">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="yixuan4" class="icon f40 iconfont icon-checkbox-copy" style="display: none;"></i>
+                            <i id="weixuan4" class="icon f40 iconfont icon-checkboxblank" style="font-size: 22px; color: #e0e0e0;"></i>
+                            </label>
+            </span>
+					<span class="color_dark">其他</span>
+				</div>
+				<div class="info_area_box bg_colorf" id="yuanyindiv" style="display: none;">
+					<textarea id="yuanyininput" class="info_area f28" placeholder="如选择其他，请填写申请介入原因"></textarea>
+				</div>
+			</div>
+			<div class="refund_voucher_area bg_colorf store_site_linkman">
+				<div class="refund_voucher_area_text"><span class="color_reset">上传凭证（最多3张）</span></div>
+				<!--H5点击添加图片 -->
+				<div class="voucher_area">
+					<div id="inImgs0" class='voucher' style="display: block;" onClick="onFile(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs1" class='voucher' style="display: none;" onClick="onFile(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs2" class='voucher' style="display: none;" onClick="onFile(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<input type="file" name="file" id="doc" multiple="multiple" onchange="javascript:setImagePreviews();" accept="image/*" style="display: none;" />
+					<!--<input type="file" id="file_input" style="display: none;" />-->
+				</div>
+				<!--app点击添加图片 -->
+				<div class="voucher_area" style="display: none;">
+					<div id="imagesnum0" class='voucher' style="display: block;" onclick="resultapp(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum1" class='voucher' style="display: none;" onclick="resultapp(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum2" class='voucher' style="display: none;" onclick="resultapp(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="submit_btn f34" id="voucher_submit">提交</div>
+		</div>
+	</body>
+
+</html>
+<script src="js/uploadingImage.js"></script>
+<script>
+	var btncolor = 0;
+	//点击进行星级评价
+	var evaluateStar = function() {
+		var index = $(this).index();
+		var starBox = $(this).parents('.star_evaluate_area');
+		var i = 0,
+			_thisStars = starBox.find('.evaluate_star');
+		_thisStars.each(function() {
+			$(this).css({
+				'color': "#ccc"
+			})
+		})
+		_thisStars.each(function() {
+			if(i <= index) {
+				$(this).css({
+					'color': "#ffad2d"
+				})
+				i += 1;
+			}
+			return;
+		})
+	}
+	mui(".evaluate_star_box").on('tap', '.evaluate_star', evaluateStar)
+	$("#voucher_submit").on("tap", function() {
+		if(btncolor == 1) {
+			document.getElementById("chenggong").style.display = (btncolor == 1 ? "block" : "none");
+			document.getElementById("tianxie").style.display = (btncolor == 0 ? "block" : "none");
+			setTimeout(function() {
+				mui.back();
+			}, 5000)
+		}
+	});
+
+	function checkedbox(id) {
+		for(var i = 0; i < 5; i++) {
+			if(i == id) {
+				if(document.getElementById("yixuan" + i).style.display == "block") {
+					document.getElementById("yixuan" + i).style.display = "none";
+					document.getElementById("weixuan" + i).style.display = "block";
+					document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+					btncolor = 0;
+					if(id == 4) {
+						$("#yuanyindiv").hide();
+					}
+				} else {
+					document.getElementById("yixuan" + i).style.display = "block";
+					document.getElementById("weixuan" + i).style.display = "none";
+					if(id == 4) {
+						$("#yuanyindiv").show();
+						$("#yuanyininput").on("change", function() {
+							textyuanyindiv();
+						})
+					} else {
+						document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+						btncolor = 1;
+					}
+				}
+			} else {
+				document.getElementById("yixuan" + i).style.display = "none";
+				document.getElementById("weixuan" + i).style.display = "block";
+				$("#yuanyindiv").hide();
+			}
+		}
+	}
+
+	function textyuanyindiv() {
+		var a = document.getElementById("yuanyininput").value.length;
+		if(a > 0) {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+			btncolor = 1;
+		} else {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+			btncolor = 0;
+		}
+	}
+</script>

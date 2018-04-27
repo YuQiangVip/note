@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>完成的评价服务</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			mui.init({
+				gestureConfig: {
+					tap: true, //默认为true
+					doubletap: true, //默认为false
+					longtap: true, //默认为false
+					swipe: true, //默认为true
+					drag: true, //默认为true
+					hold: false, //默认为false，不监听
+					release: false //默认为false，不监听
+				}
+			});
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">订单评价</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="evaluate_star_box bg_colorf">
+			<div class="clearfix">
+				<div class="fl notice f28" id="zititle0"></div>
+				<div class="fl star_evaluate_area" id="checkxing0">
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+				</div>
+			</div>
+			<div class="clearfix">
+				<div class="fl notice f28" id="zititle1"></div>
+				<div class="fl star_evaluate_area" id="checkxing1">
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+				</div>
+			</div>
+			<div class="clearfix">
+				<div class="fl notice f28" id="zititle2"></div>
+				<div class="fl star_evaluate_area" id="checkxing2">
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="refund_info_area">
+			<div class="refund_title bg_colorf padd_oder">
+				<span class="color_reset">上传凭证（最多3张）</span>
+
+			</div>
+			<div class="voucher_area bg_colorf padd_oder">
+				<!--H5点击添加图片 -->
+				<div class="voucher_area" style="padding: 0;">
+					<div id="inImgs0" class='voucher' style="display: block;" onClick="onFile(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs1" class='voucher' style="display: none;" onClick="onFile(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs2" class='voucher' style="display: none;" onClick="onFile(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<input type="file" name="file" id="doc" multiple="multiple" onchange="javascript:setImagePreviews();" accept="image/*" style="display: none;" />
+					<!--<input type="file" id="file_input" style="display: none;" />-->
+				</div>
+				<!--app点击添加图片 -->
+				<div class="voucher_area" style="display: none;">
+					<div id="imagesnum0" class='voucher' style="display: block;" onclick="resultapp(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum1" class='voucher' style="display: none;" onclick="resultapp(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum2" class='voucher' style="display: none;" onclick="resultapp(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+				</div>
+            <!--<div class="voucher" id="close0"><img src="img/proof01.jpg" alt=""><div class="delete_proof" onclick="closeimg(0)"></div></div>
+            <div class="voucher" id="close1"><img src="img/proof02.jpg" alt=""><div class="delete_proof" onclick="closeimg(1)"></div></div>-->
+        </div>
+        <div class="bg_colorf padd_oder refund_title"><span class="color_reset">我想要说</span></div>
+        <div class="order_evaluate_area bg_colorf  padd_oder" style="padding-top: 0.04rem;padding-bottom: 0.69333rem;">
+        <textarea id="info_area" class="f28" placeholder="请填写说明"></textarea>
+        </div>
+    </div>
+    <div class="submit_btn" id="voucher_submit">提交</div>
+    <div id="tishi" class="floating_layer">评价成功</div>
+</html>
+
+<!--图片上传js-->
+<script src="js/uploadingImage.js"></script>
+<script>
+	var canshu = 0;
+	window.onload = function() {
+		document.getElementById("zititle0").innerText = (canshu == 0 ? "服务态度" : "商家评价");
+		document.getElementById("zititle1").innerText = (canshu == 0 ? "门店环境" : "商品评价");
+		document.getElementById("zititle2").innerText = (canshu == 0 ? "服务质量" : "物流评价");
+	}
+	//点击进行星级评价
+	var fwtd = 0,
+		mdzl = 0,
+		fwzl = 0,
+		panduan = 0;
+	mui("#checkxing0").on('tap', '.evaluate_star', function() {
+		fwtd = 0;
+		var index = $(this).index();
+		var starBox = $(this).parents('.star_evaluate_area');
+		var i = 0,
+			_thisStars = starBox.find('.evaluate_star');
+		_thisStars.each(function() {
+			$(this).css({
+				'color': "#ccc"
+			})
+		})
+		_thisStars.each(function() {
+			if(i <= index) {
+				$(this).css({
+					'color': "#ffad2d"
+				})
+				i += 1;
+				fwtd++;
+			}
+			return;
+		})
+		if(fwtd != 0 && mdzl != 0 && fwzl != 0) {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+			panduan = 1;
+		} else {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+			panduan = 0;
+		}
+	})
+	mui("#checkxing1").on('tap', '.evaluate_star', function() {
+		mdzl = 0;
+		var index = $(this).index();
+		var starBox = $(this).parents('.star_evaluate_area');
+		var i = 0,
+			_thisStars = starBox.find('.evaluate_star');
+		_thisStars.each(function() {
+			$(this).css({
+				'color': "#ccc"
+			})
+		})
+		_thisStars.each(function() {
+			if(i <= index) {
+				$(this).css({
+					'color': "#ffad2d"
+				})
+				i += 1;
+				mdzl++;
+			}
+			return;
+		})
+		if(fwtd != 0 && mdzl != 0 && fwzl != 0) {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+			panduan = 1;
+		} else {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+			panduan = 0;
+		}
+	})
+	mui("#checkxing2").on('tap', '.evaluate_star', function() {
+		fwzl = 0;
+		var index = $(this).index();
+		var starBox = $(this).parents('.star_evaluate_area');
+		var i = 0,
+			_thisStars = starBox.find('.evaluate_star');
+		_thisStars.each(function() {
+			$(this).css({
+				'color': "#ccc"
+			})
+		})
+		_thisStars.each(function() {
+			if(i <= index) {
+				$(this).css({
+					'color': "#ffad2d"
+				})
+				i += 1;
+				fwzl++;
+			}
+			return;
+		})
+		if(fwtd != 0 && mdzl != 0 && fwzl != 0) {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+			panduan = 1;
+		} else {
+			document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+			panduan = 0;
+		}
+	})
+
+	function closeimg(id) {
+		$("#close" + id).hide();
+	}
+
+	$(".submit_btn").on("tap", function() {
+		if(panduan == 1) {
+			$("#tishi").show();
+			setTimeout(function() {
+				$("#tishi").hide();
+				mui.back();
+			}, 400);
+		}
+	})
+</script>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>优惠券</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">优惠券</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="sub_nav tabs bg_colorf">
+			<div class="current_show f32 color_lgrey" id="tab0" onclick="checklist(0)">未使用</div>
+			<div class="f32 color_lgrey" id="tab1" onclick="checklist(1)">已使用</div>
+			<div class="f32 color_lgrey" id="tab2" onclick="checklist(2)">已过期</div>
+		</div>
+		<div class="collect_goods_areas tab_areas">
+			<div id="0" style="display: block;">
+				<div class="" style="display: block;">
+					<div class="cou_use f24" id="cou_shi">
+						使用说明
+					</div>
+
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img1.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_ad2d f28" id="to_use" onclick="shiyong()">去使用</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img1.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_ad2d f28" onclick="shiyong()">去使用</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="1">
+
+				<div class="collect_area">
+					<div class="cou_use f24" id="cou_shi">
+						使用说明
+					</div>
+
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img2.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_grey f28">已使用</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img2.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_grey f28">已使用</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="2">
+				<div class="goods_box" style="display: block;">
+					<div class="cou_use f24" id="cou_shi">
+						使用说明
+					</div>
+
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img2.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_grey f28">已过期</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img2.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_grey f28">已过期</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	function checklist(id) {
+		for(var i = 0; i < 3; i++) {
+			document.getElementById("tab" + i).style.color = (i == id ? '#ffad2d' : '#000');
+			document.getElementById("tab" + i).style.borderBottom = (i == id ? '2px solid #ffad2d' : 'none');
+			document.getElementById(i).style.display = (i == id ? 'block' : 'none');
+		}
+	}
+	$("#goodscar").on("tap", function() {
+		mui.openWindow("shopping_cart_full.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+
+	$("#goodslist").on("tap", function() {
+		mui.openWindow("../index.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+	$("#cou_shi").on("tap", function() {
+		mui.openWindow("../my/yhq/yhq_example.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+	
+	function shiyong(){
+		mui.openWindow("brand_home.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	}
+</script>

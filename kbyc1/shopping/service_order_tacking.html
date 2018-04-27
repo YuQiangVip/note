@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>服务订单跟踪</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">订单跟踪</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="material_info_box bg_colorf">
+			<div class="clearfix"><span class="fl">订单编号</span><span class="fr color_dark">112144477441113</span></div>
+			<div class="clearfix"><span class="fl">物流</span><span class="fr color_dark">顺丰快递</span></div>
+		</div>
+		<div class="material_timeline_box_h bg_colorf">
+			<ul class="material_timeline_box_hul">
+				<li class="service_timeline_item">
+					<div class="material_timeline_item_wrapper_h service_active f26 color_grey">
+						提交订单
+						<div class="material_timeline_item_before">
+							<div class="special_core_h">
+								<div class="special_core_inner_h"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="service_timeline_item">
+					<div class="material_timeline_item_wrapper_h color_grey f26">
+						客服审核
+						<div class="material_timeline_item_before">
+							<div class="special_core_h">
+								<div class="special_core_inner_h"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="service_timeline_item">
+					<div class="material_timeline_item_wrapper_h color_grey f26">
+						待收货
+						<div class="material_timeline_item_before">
+							<div class="special_core_h ">
+								<div class="special_core_inner_h"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="service_timeline_item">
+					<div class="material_timeline_item_wrapper_h color_grey f26">
+						到店服务
+						<div class="material_timeline_item_before">
+							<div class="special_core_h">
+								<div class="special_core_inner_h"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="service_timeline_detail bg_colorf store_site_linkman" style="padding-top: 0.66666rem;">
+			<div class="service_timeline_detail_lists">
+				<div class="service_time">
+					<div class="f30">13:19</div>
+					<div class="f22">2017-06-12</div>
+				</div>
+				<div class="color_ser">到店服务完成，待评价</div>
+			</div>
+			<div class="service_timeline_detail_line"></div>
+			<div class="service_timeline_detail_lists">
+				<div class="service_time">
+					<div class="f30">13:19</div>
+					<div class="f22">2017-06-12</div>
+				</div>
+				<div class="service_text">到店服务完成，待评价</div>
+			</div>
+			<div class="service_timeline_detail_line"></div>
+			<div class="service_timeline_detail_lists">
+				<div class="service_time">
+					<div class="f30">13:19</div>
+					<div class="f22">2017-06-12</div>
+				</div>
+				<div class="service_text">客服审核完毕，待到店服务</div>
+			</div>
+			<div class="service_timeline_detail_line"></div>
+			<div class="service_timeline_detail_lists">
+				<div class="service_time">
+					<div class="f30">13:19</div>
+					<div class="f22">2017-06-12</div>
+				</div>
+				<div class="service_text">您已付款成功，待客服审核</div>
+			</div>
+			<div class="service_timeline_detail_line"></div>
+			<div class="service_timeline_detail_lists">
+				<div class="service_time">
+					<div class="f30">13:19</div>
+					<div class="f22">2017-06-12</div>
+				</div>
+				<div class="service_text">您提交了订单</div>
+			</div>
+			<!--<div class="service_timeline_detail_line"></div>-->
+		</div>
+	</body>
+
+</html>
+<script>
+	// 物流跟踪竖线
+	function aroundWidth() {
+		var boxWidth = $('.material_timeline_box_hul').width(),
+			i = 0;
+		console.log(boxWidth);
+		$('.material_timeline_box_hul li').each(function() {
+			boxWidth -= $(this).width()
+			i += 1
+		})
+		var aroundGap = boxWidth / (2 * i);
+		return aroundGap;
+	}
+	var lastItem = $('.service_timeline_item:last'),
+		firstItem = $('.service_timeline_item:first'),
+		parent = $('.material_timeline_box_hul'),
+		afterLine = $('<div class="decorate_line_bot"></div>'),
+		beforeLine = $('<div class="decorate_line_top"></div>'),
+		beforeLineH = firstItem.width() / 2;
+	afterLineH = lastItem.width() / 2;
+	console.log(aroundWidth());
+	console.log(beforeLineH);
+	firstItem.find('.special_core_inner_h').addClass('before_special_color');
+	beforeLine.css({ "width": (aroundWidth() - 0) + (beforeLineH - 0) + "px" });
+	parent.append(beforeLine);
+	afterLine.css({ "width": (aroundWidth() - 0) + (afterLineH - 0) + "px" })
+	parent.append(afterLine);
+	//服务流程横线
+</script>

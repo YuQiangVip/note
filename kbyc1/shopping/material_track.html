@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>物流跟踪</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">物流跟踪</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="material_info_box bg_colorf">
+			<div class="clearfix"><span class="fl">订单状态</span><span class="fr color_g">已完成</span></div>
+			<div class="clearfix"><span class="fl">物流</span><span class="fr color_dark">顺丰快递</span></div>
+			<div class="clearfix" style="border-bottom: none;"><span class="fl">物流单号</span><span class="fr color_dark">38477738393933</span></div>
+		</div>
+		<div class="material_timeline_box bg_colorf">
+			<ul>
+				<li class="material_timeline_item">
+					<div class="material_timeline_item_wrapper">
+						<div class="material_timeline_text"><span class="material_complate">您的订单已签收，欢迎再次光临！</span></div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="material_timeline_item">
+					<div class="material_timeline_item_wrapper">
+						<div class="material_timeline_text color_lgrey">客户签收人：<span class="color_g">本人签收</span>已签收，感谢使用顺丰快递，期待再次为您服务</div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="material_timeline_item">
+					<div class="material_timeline_item_wrapper">
+						<div class="material_timeline_text color_lgrey">广东省深圳市宝安区龙华公司（派件员: 林海）</div>
+						<div class="material_timeline_text"><span class="color_g">派件中</span>&nbsp;&nbsp;<span class="color_lgrey">电话： </span><span class="color_g">13309013900</span></div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="material_timeline_item">
+					<div class="material_timeline_item_wrapper color_lgrey">
+						<div class="material_timeline_text">广东深圳市南头公司已收入</div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="material_timeline_item">
+					<div class="material_timeline_item_wrapper color_lgrey">
+						<div class="material_timeline_text">您的订单已支付</div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li>
+					<div class="material_timeline_item_wrapper color_lgrey">
+						<div class="material_timeline_text">您的订单已提交，等待付款</div>
+						<div class="material_timeline_time f26">2017-06-18 22:30:18</div>
+						<div class="material_timeline_item_before">
+							<div class="special_core">
+								<div class="special_core_inner"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</body>
+
+</html>
+<script>
+	// 物流跟踪竖线
+	var lastItem = $('.material_timeline_item:last'),
+		firstItem = $('.material_timeline_item:first'),
+		afterLine = $('<div class="decorate_line_after"></div>'),
+		beforeLine = $('<div class="decorate_line_before"></div>'),
+		lastLineH1 = $('.material_timeline_item_wrapper:last').height() / 2,
+		beforeLineH = $('.material_timeline_item_wrapper:first').height() / 2;
+	lastLineAfter = lastItem.outerHeight() - lastLineH1;
+	firstItem.find('.special_core_inner').addClass('before_special_color');
+	lastItem.append(afterLine);
+	afterLine.css({ "height": (lastLineAfter) + "px" })
+	firstItem.append(beforeLine);
+	beforeLine.css({ "height": (beforeLineH) + "px" })
+</script>

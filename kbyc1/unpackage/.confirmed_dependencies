@@ -1,0 +1,498 @@
+{
+  "index.html": {
+    "resources": [
+      "css/style.css",
+      "css/public.css",
+      "img/\u0007~\u000f-*\t-/ýu-*\t-@2x.png",
+      "css/swiper-3.4.2.min.css",
+      "js/index/index.js",
+      "img/\u0007~\u000f-*\t-/\u0011@2x.png",
+      "js/flexible_css.js",
+      "home/home.html",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "css/mui.min.css",
+      "img/\u0007~\u000f-*\t-/ý@2x.png",
+      "js/flexible.js",
+      "js/swiper-3.4.2.jquery.min.js",
+      "img/\u0007~\u000f-*\t-/-if@2x.png",
+      "img/unchecked/index.png",
+      "img/unchecked/store.png",
+      "img/unchecked/my.png",
+      "img/unchecked/shopping_car.png",
+      "img/checked/store.png",
+      "img/checked/index.png"
+    ],
+    "refer": [
+      "home/home.html",
+      "store/store.html",
+      "shopping/shopping_cart_full.html",
+      "shopping/my_login.html"
+    ]
+  },
+  "home/Service.html": {
+    "resources": [
+      "img/\u0007~\u000f-*\t-/\u0011@2x.png",
+      "css/list/Service.css",
+      "img/\rý\u0006{_01_03.png",
+      "img/\u0007~\u000f-*\t-/ý@2x.png",
+      "img/\u0007~\u000f-*\t-/ýu-*\t-@2x.png",
+      "img/\u0007~\u000f-*\t-/-if@2x.png",
+      "img/fw03.png",
+      "js/list/city.js",
+      "js/zepto.js",
+      "fonts/mui.ttf",
+      "css/public.css",
+      "img/unchecked/index.png",
+      "img/unchecked/store.png",
+      "img/unchecked/my.png",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "css/mui.min.css",
+      "img/unchecked/shopping_car.png",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "home/home.html": {
+    "resources": [
+      "css/list/home.css",
+      "img/ýu/ýu_yhq_02.png",
+      "img/ýu/header-1_03.png",
+      "img/ýu/f}5h@2x.png",
+      "img/ýu/ýýý{@2x.png",
+      "img/ýu/ýu_11.png",
+      "img/ýu/:ý@2x.png",
+      "img/ýu/}fýp@2x.png",
+      "img/ýu/ný@2x.png",
+      "img/ýu/ýu_hot_03.png",
+      "img/ýu/ý7@2x.png",
+      "img/ýu/ýu_hot_07.png",
+      "img/ýu/ýu_hot_11.png",
+      "img/ýu/ýu_car.png",
+      "img/\u0011ý/3.png",
+      "img/\u0011ý/4.png",
+      "img/ýu/ýu_16.png",
+      "img/\u0011ý/1.png",
+      "img/ýu/ýu_15.png",
+      "img/ýu/body_buying_03.png",
+      "img/ýu/ýu_12.png",
+      "img/ýu/ýu_05.png",
+      "fonts/mui.ttf",
+      "img/\u0011ý/body_tuijian3_55.png",
+      "img/ýu/ýu_serooh_03.png",
+      "img/bady_tuijian2_03.png",
+      "img/ýu/ýu_hot_05.png",
+      "img/ýu/ýu_07.png",
+      "img/ýu/5ý@2x.png",
+      "img/ýu/ýu_hot_09.png",
+      "img/ýu/ýu_zgyd.png",
+      "img/\u0011ý/body_tuijian3_49.png",
+      "img/ýu/ýUý@2x.png",
+      "img/\u0011ý/2.png",
+      "img/ýu/ýu_ýo.png",
+      "img/\u0011ý/body_tuijian3_52.png",
+      "js/list/home.js",
+      "img/ýu/ýý\u0005\u0017@2x.png",
+      "img/ýu/ý\u001a@2x.png",
+      "img/my/3.png",
+      "img/shouye/weixby.png",
+      "img/shouye/xx.png",
+      "img/my/2.png",
+      "img/my/4.png",
+      "img/shouye/chezdq.png",
+      "img/shouye/serooh_03.png",
+      "img/my/1.png",
+      "img/shouye/qczs.png",
+      "img/shouye/daibdj.png",
+      "img/shouye/gg2.png",
+      "img/shouye/cx6.png",
+      "img/shouye/baoyang.png",
+      "img/shouye/lt.png",
+      "img/shouye/header-1_03.png",
+      "img/shouye/gg1.png",
+      "img/shouye/cx4.png",
+      "img/shouye/cx2.png",
+      "img/shouye/ys.png",
+      "img/shouye/body_buying_03.png",
+      "img/shouye/mrqx.png",
+      "img/shouye/cx3.png",
+      "img/shouye/dianp.png",
+      "img/my/body_tuijian3_52.png",
+      "img/shouye/more.png",
+      "img/my/body_tuijian3_49.png",
+      "img/shouye/sy_car.png",
+      "img/shouye/jly.png",
+      "img/my/body_tuijian3_55.png",
+      "img/shouye/jy.png",
+      "img/shouye/cx1.png",
+      "img/shouye/mrfw.png",
+      "img/shouye/anzhuang.png",
+      "css/public.css",
+      "css/swiper-3.4.2.min.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "js/flexible.js",
+      "js/swiper-3.4.2.jquery.min.js"
+    ],
+    "refer": [
+      "home/Service.html",
+      "home/Flash_sale.html",
+      "home/my_car.html",
+      "home/City.html",
+      "home/Classified_list.html",
+      "home/Commodity_details.html",
+      "store/store.html",
+      "shopping/shopping_cart_full.html",
+      "home/zepin/indexesList.html",
+      "home/Move_Topic.html",
+      "home/Coupon_Center.html"
+    ]
+  },
+  "home/Flash_sale.html": {
+    "resources": [
+      "img/\u0007~\u000f-*\t-/\u0011@2x.png",
+      "img/flash_10.png",
+      "css/list/flash_sale.css",
+      "img/ý-ýo@2x.png",
+      "img/ý-ý\u0001/*\u0000ý@2x.png",
+      "img/\u0007~\u000f-*\t-/ý@2x.png",
+      "img/\u0007~\u000f-*\t-/ýu-*\t-@2x.png",
+      "img/\u0007~\u000f-*\t-/-if@2x.png",
+      "img/Pýý--ýý\u0000ý_02.png",
+      "img/flash_04.png",
+      "img/qgbj.png",
+      "img/falsh/meiks.png",
+      "img/falsh02.png"
+    ],
+    "refer": [
+      "store/store.html",
+      "shopping/shopping_cart_full.html",
+      "index.html"
+    ]
+  },
+  "home/my_car.html": {
+    "resources": [
+      "css/list/my_car.css",
+      "img/ý1f-z}u_03.png",
+      "img/mycar-add03.png",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/public.css",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "home/City.html": {
+    "resources": [
+      "css/list/City.css",
+      "img/ýu/ýu_serooh_03.png",
+      "js/list/city.js",
+      "js/zepto.js",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "img/shouye/serooh_03.png",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/public.css",
+      "js/flexible.js",
+      "fonts/icon/iconfont.css"
+    ],
+    "refer": []
+  },
+  "home/Classified_list.html": {
+    "resources": [
+      "css/list/Classified_list.css",
+      "img/classification/07.png",
+      "img/classification/05.png",
+      "img/fl_top_03.png",
+      "img/classification/03.png",
+      "fonts/mui.ttf",
+      "css/public.css",
+      "img/unchecked/index.png",
+      "img/unchecked/store.png",
+      "img/unchecked/my.png",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "img/shouye/jly.png",
+      "css/mui.min.css",
+      "img/unchecked/shopping_car.png",
+      "js/flexible.js",
+      "fonts/icon/iconfont.woff",
+      "fonts/icon/iconfont.css"
+    ],
+    "refer": [
+      "home/search.html"
+    ]
+  },
+  "home/Commodity_details.html": {
+    "resources": [
+      "img/sp/shop.png",
+      "img/sercive/mian.png",
+      "img/sp/tup01.png",
+      "img/star_1.png",
+      "img/sp/star.png",
+      "img/sercive/zheng.png",
+      "img/sercive/fahuo.png",
+      "img/sp/tup_02.png",
+      "css/list/Commodity_details.css",
+      "img/sp/sp_02.png",
+      "img/sp/user.png",
+      "img/sp/cart.png",
+      "fonts/mui.ttf",
+      "css/public.css",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "css/mui.min.css",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "store/store.html": {
+    "resources": [
+      "img/dianz.png",
+      "fonts/mui.ttf",
+      "css/public.css",
+      "img/mendian/miandian01.png",
+      "img/unchecked/index.png",
+      "img/unchecked/store.png",
+      "img/unchecked/my.png",
+      "js/flexible_css.js",
+      "css/store/store.css",
+      "img/mendian/mendian-jiantou.png",
+      "img/star_1.png",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "css/mui.min.css",
+      "img/mendian/mendian05.png",
+      "img/unchecked/shopping_car.png",
+      "js/store/store.js",
+      "js/flexible.js",
+      "fonts/icon/iconfont.css",
+      "fonts/icon/iconfont.woff"
+    ],
+    "refer": [
+      "home/home.html",
+      "index.html",
+      "shopping/shopping_cart_full.html",
+      "home/City.html"
+    ]
+  },
+  "shopping/shopping_cart_full.html": {
+    "resources": [
+      "shopping/script/jquery-2.0.3.js",
+      "shopping/font_diy/iconfont.css",
+      "shopping/css/normalize.css",
+      "shopping/css/reg.css",
+      "shopping/script/common.js",
+      "shopping/css/layout.css",
+      "shopping/css/shopping_cart.css",
+      "shopping/fonts/mui.ttf",
+      "shopping/css/mui.css",
+      "shopping/script/mui.js",
+      "shopping/img/tyre.png",
+      "shopping/script/flexible.js",
+      "shopping/script/flexible_css.js",
+      "shopping/font_diy/iconfont.woff"
+    ],
+    "refer": [
+      "shopping/order_wait_pay.html"
+    ]
+  },
+  "home/zepin/indexesList.html": {
+    "resources": [
+      "home/zepin/js/mui.js",
+      "home/zepin/css/mui.min.css",
+      "home/zepin/js/jquery-2.0.3.js",
+      "home/zepin/js/jquery.charfirst.pinyin.js",
+      "home/zepin/images/img.png",
+      "home/zepin/css/zepin.css",
+      "home/zepin/fonts/mui.ttf",
+      "home/zepin/css/Indexes.css",
+      "home/zepin/js/sort.js",
+      "home/zepin/js/flexible.js",
+      "home/zepin/js/flexible_css.js"
+    ],
+    "refer": []
+  },
+  "shopping/my_login.html": {
+    "resources": [
+      "shopping/img/login_server.png",
+      "shopping/img/login_avatar.png",
+      "shopping/img/log_collection.png",
+      "shopping/img/login_payment.png",
+      "shopping/img/login_concat.png",
+      "shopping/img/retr_addr.png",
+      "shopping/css/topic.css",
+      "shopping/img/login_bac.png",
+      "shopping/fonts/mui.ttf",
+      "shopping/font_diy/iconfont.woff"
+    ],
+    "refer": [
+      "shopping/order_wait_pay.html",
+      "shopping/recive_address.html",
+      "shopping/order_evaluate.html",
+      "shopping/my_collect.html",
+      "shopping/pick_linkman.html",
+      "shopping/set_up.html"
+    ]
+  },
+  "home/Move_Topic.html": {
+    "resources": [
+      "img/ydzq//top_cart1.png",
+      "img/ydzq/topic_use2.png",
+      "img/ydzq/topic_img.png",
+      "shopping/script/checkbox.js",
+      "css/list/topic.css",
+      "img/ydzq/top_cart.png",
+      "img/ydzq/topic_use.png",
+      "js/list/city.js",
+      "img/ydzq/topic_bac.png",
+      "js/zepto.js",
+      "img/ydzq/top_cart1.png",
+      "img/ydzq/topic_btn.png",
+      "shopping/font_diy/iconfont.css",
+      "shopping/css/normalize.css",
+      "shopping/css/layout.css",
+      "shopping/css/shopping_cart.css",
+      "js/flexible_css.js",
+      "shopping/fonts/mui.ttf",
+      "shopping/css/mui.css",
+      "js/mui.min.js",
+      "shopping/script/mui.js",
+      "js/jquery-2.0.3.js",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "home/Coupon_Center.html": {
+    "resources": [
+      "img/Coupon_Center_02.png",
+      "img/falsh/yqg.png",
+      "css/list/coupon_center.css"
+    ],
+    "refer": []
+  },
+  "home/search.html": {
+    "resources": [
+      "css/list/search.css",
+      "js/flexible_css.js",
+      "fonts/icon/iconfont.css",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon/iconfont.woff",
+      "css/public.css",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "shopping/order_wait_pay.html": {
+    "resources": [
+      "shopping/img/goods_nopay.png",
+      "shopping/css/mine.css"
+    ],
+    "refer": []
+  },
+  "shopping/order_evaluate.html": {
+    "resources": [
+      "shopping/img/add_voucher.png",
+      "shopping/img/notice.png"
+    ],
+    "refer": []
+  },
+  "shopping/my_collect.html": {
+    "resources": [
+      "shopping/img/store_img.png",
+      "shopping/img/tyree.png",
+      "shopping/img/collect_brand.png"
+    ],
+    "refer": []
+  },
+  "shopping/set_up.html": {
+    "refer": [
+      "shopping/password_change.html",
+      "shopping/about_us.html"
+    ],
+    "resources": [
+      "shopping/fonts/mui.ttf",
+      "shopping/css/mui.css",
+      "shopping/script/jquery-2.0.3.js",
+      "shopping/script/mui.js",
+      "shopping/css/reg.css",
+      "shopping/css/normalize.css",
+      "shopping/css/layout.css",
+      "shopping/script/flexible.js",
+      "shopping/script/flexible_css.js"
+    ]
+  },
+  "shopping/about_us.html": {
+    "resources": [
+      "shopping/img/map.png",
+      "shopping/img/item01.png",
+      "shopping/img/item04.png",
+      "shopping/img/item03.png",
+      "shopping/img/item02.png",
+      "shopping/img/company_info.png",
+      "shopping/css/brand_info.css"
+    ],
+    "refer": []
+  },
+  "home/search_result.html": {
+    "resources": [
+      "img/search_screen_03.png",
+      "js/flexible_css.js",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.js",
+      "css/list/search_result.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/public.css",
+      "js/flexible.js"
+    ],
+    "refer": []
+  },
+  "home/zepin/brandIndexes.html": {
+    "resources": [
+      "home/zepin/js/mui.js",
+      "home/zepin/css/mui.min.css",
+      "home/zepin/js/jquery-2.0.3.js",
+      "home/zepin/js/jquery.charfirst.pinyin.js",
+      "home/zepin/images/img.png",
+      "home/zepin/css/zepin.css",
+      "home/zepin/css/Indexes.css",
+      "home/zepin/js/sort.js",
+      "home/zepin/js/flexible.js",
+      "home/zepin/js/flexible_css.js"
+    ],
+    "refer": []
+  },
+  "shopping/goods_lists.html": {
+    "resources": [
+      "shopping/script/jquery-2.0.3.js",
+      "shopping/script/checkbox.js",
+      "shopping/font_diy/iconfont.css",
+      "shopping/css/normalize.css",
+      "shopping/css/reg.css",
+      "shopping/css/layout.css",
+      "shopping/css/shopping_cart.css",
+      "shopping/fonts/mui.ttf",
+      "shopping/css/mui.css",
+      "shopping/script/mui.js",
+      "shopping/img/tyre.png",
+      "shopping/script/flexible.js",
+      "shopping/script/flexible_css.js",
+      "shopping/font_diy/iconfont.woff"
+    ],
+    "refer": []
+  }
+}

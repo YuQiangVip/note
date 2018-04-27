@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改密码</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../shopping/script/flexible_css.js"></script>
+		<script src="../shopping/script/flexible.js"></script>
+		<script src="../shopping/script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="../shopping/css/reg.css">
+		<link href="../shopping/css/mui.css" rel="stylesheet">
+		<script src="../shopping/script/mui.js"></script>
+		<link rel="stylesheet" href="../shopping/css/layout.css">
+		<link rel="stylesheet" href="../shopping/font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">绑定手机号</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="reg_box reg_box_show shop_bo bg_colorf padd_reg" id="change_password">
+			<div style="position: relative;" class="form_item clearfix">
+				<label for="" class="fl f28" type="">手机号</label>
+				<input type="number" name="phone" class="fl f28" maxlength="11" id="phone" placeholder="请输入11位手机号" style="height: 0.53333rem;line-height: 0.53333rem;">
+				<div id="cansel_phone_number" class="fr"><i class="iconfont icon-close"></i></div>
+			</div>
+			<div class="form_item clearfix" style="position: relative;">
+				<label for="" class="fl f28">验证码</label>
+				<input type="number" class="fl f28" name="code" maxlength="6" id="security_code_space" placeholder="请输入验证码" style="height: 0.53333rem;line-height: 0.53333rem;margin-top: 2px;">
+				<span id="send_codes" class="get_code f28">获取验证码</span>
+				<span id="time" class="get_ver" style="color: #fff"></span>
+			</div>
+		</div>
+		<div class="submit_btn btn_top f34" id="save">提交</div>
+		<div id="tishi" class="floating_layer">手机号码有误</div>
+	</body>
+
+</html>
+<script>
+	var btncolor = 0;
+	$("#phone").on("change", function() {
+		btncolorcheck()
+	})
+	$("#yanzhengma").on("change", function() {
+		btncolorcheck()
+	})
+	function btncolorcheck() {
+		var cellPhone = document.getElementById("phone");
+		var RegCellPhone = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+		var falg = cellPhone.value.search(RegCellPhone);
+		if(falg == -1) {
+			document.getElementById("save").style.backgroundColor = "#ffd399";
+			return;
+		}
+		var yan = $("#security_code_space").val();
+		if(yan == "111111" && document.getElementById("phone").value.length == 11) {
+			document.getElementById("save").style.backgroundColor = "#ffad2d";
+			btncolor = 1;
+		} else {
+			document.getElementById("save").style.backgroundColor = "#ffd399";
+			btncolor = 0;
+		}
+	}
+	
+	$('#send_codes').click(resetCode)
+	//发送验证码后的倒计时
+	function resetCode() {
+		if(document.getElementById("phone").value.length == 11) {
+			var cellPhone = document.getElementById("phone");
+			var RegCellPhone = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+			var falg = cellPhone.value.search(RegCellPhone);
+			if(falg == -1) {
+				$("#tishi").show();
+				setTimeout(function() {
+					$("#tishi").hide();
+				}, 400)
+				return;
+			}
+			$('#time').empty();
+			$('#send_codes').hide();
+			// $('#wait_second').html('59');
+			$('#time').show();
+			var second = 60;
+			$('#time').html(second + 's后重发');
+			var timer = null;
+			timer = setInterval(function() {
+				second -= 1;
+				if(second > 0) {
+					$('#time').html(second + 's后重发');
+				} else {
+					clearInterval(timer);
+					$('#time').hide();
+					$('#send_codes').show();
+				}
+			}, 1000);
+		} else {
+			$("#tishi").show();
+			setTimeout(function() {
+				$("#tishi").hide();
+			}, 400)
+		}
+	}
+	
+	$("#save").on("tap", function() {
+		btncolorcheck();
+		if(btncolor == 1) {
+			mui.back();
+		}
+	})
+</script>

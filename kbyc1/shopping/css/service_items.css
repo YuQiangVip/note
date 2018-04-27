@@ -1,0 +1,302 @@
+.items_top{
+	width: 100%;
+	/* height: 1.866667rem; */
+	background:#ffad2d !important;
+	padding-bottom: 0.386667rem;
+}
+.items_top_p1{
+	padding-top: 0.293333rem   !important;
+	text-align: center !important;
+	color: #fffefe !important;
+}
+.items_top_p1_l{
+	color: #fffefe !important;
+}
+.items_top_p2{
+	/* margin-top: 0.426667rem !important; */
+	text-align: center !important;
+	color: #fffefe !important;
+}
+.items_top_p2_l{
+	margin-left:0.213333rem;
+}
+.items_nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 1.173333rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.reciver_address_handle_box .left_flex span:first-child {
+    font-size: 0.53333rem;
+}
+.itmes_select{
+	/*margin-left:0.68rem;*/
+	display: inline-block;
+	line-height: 1.173333rem;
+	height: 0.373333rem;
+
+
+}
+.left_flex{
+	position: absolute;
+	margin-top: -0.306667rem;
+	margin-left: -0.813333rem;
+}
+.items_nav_s1{
+	color: #666;
+}
+.items_nav_s2{
+	color: #ffad2d;
+}
+.items_nav_s3{
+	color: #666;
+}
+.items_nav_sc{
+	margin-left: 1.2rem;
+	width: 100%;
+	display: flex;
+	/*justify-content: space-between;*/
+	align-items: center;
+	padding-top: 0.413333rem;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 0.386667rem;
+}
+.items_nav_sc_img img{
+	width: 100%;
+	height: 100%;
+
+}
+.items_nav_content{
+	background: #fff;
+	width: 100%;
+	/*border-bottom: 0.266667rem solid #eee;*/
+	margin-bottom: 0.26666rem;
+}
+.items_nav_sc_con{
+	margin-left: 0.28rem;
+	padding-right:1.2rem;
+}
+.items_nav_s_p1{
+	color: #ffad2d;
+}
+.items_top_p_x{
+/* 	margin-left:2.133333rem; */
+	float: right;
+	margin-right: 0.8rem;
+}
+.items_nav_s_p2{
+	color: #999;
+}
+.items_content_items{
+	width: 100%;
+	height: 1.173333rem;
+	line-height: 1.173333rem;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+.items_content_items_c{
+	color: #111111;
+	margin-left:1.2rem;
+
+}
+.kt_yh{
+	width: 100%;
+	height: 1.36rem;
+	text-align: center;
+}
+.kt_yh p{
+	padding-top: 0.666667rem;
+	color: #666;
+}
+.footer_items_left_span{
+	color: #ffad2d;
+}
+.footer_items{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 1.306667rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+}
+.footer_items_right{
+	width: 2.933333rem;
+	background: #ff4b2d;
+	height: 1.306667rem;
+	text-align: center;
+	line-height: 1.306667rem;
+	color: #fff;
+}
+.footer_items_mid{
+	width: 2.933333rem;
+	height: 1.306667rem;
+	line-height: 1.306667rem;
+	text-align: center;
+	background: #ffad2d;
+	color: #fff !important;
+}
+.f44{
+	font-size: 0.586667rem !important;
+	color: #fff !important;
+}
+.footer_items_mid_p{
+	color: #fff !important;
+	margin-left:0.16rem;
+}
+.footer_items_kf{
+	margin-left:0.16rem;
+}
+.footer_items_left_p_p{
+	color: #ffad2d;
+	margin-left: 0.4rem;
+}
+.footer_items_left{
+	width: 4.133333rem;
+	height: 1.306667rem;
+	line-height: 1.306667rem;
+}
+.motai_cou{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	opacity: .5;
+	z-index: 99;
+	display: none;
+}
+.coupon_window{
+	width: 100%;
+	height: 9.73333rem;
+	position: fixed;
+	bottom: 0;
+	background: #F4F4F4;
+	z-index: 111;
+	border-bottom: 1px solid #E5E5E5;
+	display: none;
+}
+.mo_title{
+	width: 100%;
+	height: 1.17333rem;
+	line-height: 1.17333rem;
+	text-align: center;
+	background: #fff;
+	font-size: 0.37333rem;
+	color: #666;
+}
+
+.cou_use{
+	width: 100%;
+	height: 0.89333rem;
+	text-align: right;
+	padding-right: 0.4rem;
+	line-height: 0.89333rem;
+	color: #5675d6;
+}
+.coupon_title{
+	margin: 0.26666rem 0.4rem 0.13333rem 0.4rem;
+}
+.coupon_box{
+	display: flex;
+	flex-direction: row;
+}
+.coupon_box img{
+	width: 3.06666rem;
+	height: 2.93333rem;
+	margin-right: 0.65333rem;
+}
+.coupon_text{
+	display: flex;
+	flex-direction: column;
+}
+.coupon_text p{
+	color: #111;
+	font-weight: 500;
+	margin-top: 0.6rem;
+}
+.coupon_content{
+	margin-top: 0.10666rem;
+	color: #999;
+}
+.coupon_content span:last-child{
+	display: inline-block;
+	padding-left: 1.05333rem;
+}
+.cou_btn{
+	width: 2.61333rem;
+	height: 0.53333rem;
+	background: #ccc;
+	border-radius: 0.08rem;
+	color: #fff;
+	line-height: 0.53333rem;
+	text-align: center;
+	font-size: 0.29333rem;
+	margin-top: 0.2rem;
+}
+.motai_btn{
+	width: 100%;
+	height: 1.17333rem;
+	line-height: 1.17333rem;
+	color: #fff;
+	text-align: center;
+	font-size: 0.42666rem;
+	background: #FFAD2D;
+	position: fixed;
+	bottom: 0;
+}
+/*加减编辑*/
+.plus_content{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.plus_box{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 2.90666rem;
+	margin-left: 0.32rem;
+}
+.plus_box input{
+	width: 1.38666rem;
+	height: 0.56rem;
+	line-height: 0.56rem;
+	color: #FFAD2D;
+	font-size: 0.37333rem;
+	text-align: center;
+	border: 2px solid #ccc;
+	margin: 0 0.24rem;
+	border-radius: 0.08rem;
+}
+.plus_box img{
+	width: 0.56rem;
+	height: 0.56rem;
+}
+.plus_right{
+	display: flex;
+	margin-left: 0.66666rem;
+}
+.plus_right i{
+	color: #666;
+	text-align: center;
+	align-items: center;
+}
+.plus_right p{
+	color: #999;
+	font-size: 0.29333rem;
+	margin-top: 0.18666rem;
+}
+.pl_min{
+	width: 0.8rem;
+	height: 1.06666rem;
+}
+.pl_max{
+	width: 0.8rem;
+	height: 1.06666rem;
+	margin-left: 0.85333rem;
+}

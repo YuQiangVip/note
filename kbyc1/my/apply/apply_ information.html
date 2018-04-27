@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发票信息</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts/icon/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return"></span>
+			<span class="f37">
+        发票信息
+        </span>
+		</div>-->
+		<!-- 发票信息 -->
+		<div class="apply_main main_border">
+			<div class="apply_div div_h">
+				<div class="apply_wechat information_h">
+					<div class="information f30">发票信息</div>
+				</div>
+				<div class="apply_wechat information_h">
+					<div class="no_information f30">不开发票</div>
+					<div class="kai_information f30">纸质发票</div>
+				</div>
+			</div>
+		</div>
+		<!-- 发票信息 -->
+		<div class="apply_main main_border">
+			<div class="apply_div1 div_h">
+				<div class="apply_wechat information_h">
+					<div class="information f30">发票抬头</div>
+				</div>
+				<div class="apply_info information_h">
+					<label class="info_label"><i class="icon iconfont icon-dagou1 icon_color"></i></label><span class="info_span f30">单位</span>
+					<label for="" class="info_label2"><i class="icon iconfont icon-yuanxing"></i></label><span class="info_span f30">个人</span>
+
+				</div>
+				<div class="common_box2"><span id="leave_info" class="f30">发票抬头</span>
+					<input name="buyer_board" class="f30" id="buyer_board" placeholder='请输入单位名称或真实姓名'>
+				</div>
+			</div>
+		</div>
+		<!-- 发票信息 -->
+		<div class="apply_main main_border">
+			<div class="apply_div1 div_h">
+				<div class="apply_wechat information_h">
+					<div class="information f30">发票内容</div>
+				</div>
+				<div class="apply_info information_h">
+					<label class="info_label"><i class="icon iconfont icon-dagou1 icon_color"></i></label><span class="info_span f30">明细发票</span>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="apply_btn">
+			确认
+		</div>
+
+	</body>
+	<script>
+		$(".no_information").on("click", function() {
+			$(".no_information").css({ "background": "#ffad2d", "color": "#fff" });
+			$(".kai_information").css({ "background": "#fff", "color": " #111111", "border": "2px solid #cccccc" });
+		})
+		$(".kai_information").on("click", function() {
+			$(".no_information").css({ "background": "#fff", "color": " #111111", "border": "2px solid #cccccc" });
+			$(".kai_information").css({ "background": "#ffad2d", "color": "#fff", "border": "none" });
+
+		})
+	</script>
+
+</html>

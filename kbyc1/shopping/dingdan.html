@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<script src="script/mui.js"></script>
+		<script src='script/common.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar" id="hander">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34" id="title"></span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div style="width: 100%;height: 1.17333rem;display: table;line-height: 1.17333rem;font-size: 0.37333rem;color: #666666;">
+			<div style="display: table-cell;text-align: center;" onclick="qiehuan(0)"><span id="qiehuan0">全部</span><hr id="qiehuanxian0" style="width: 100%;height: 3px;background: #FFAD2D;border: none;display: none;" /></div>
+			<div style="display: table-cell;text-align: center;" onclick="qiehuan(1)"><span id="qiehuan1">待付款</span><hr id="qiehuanxian1" style="width: 100%;height: 3px;background: #FFAD2D;border: none;display: none;" /></div>
+			<div style="display: table-cell;text-align: center;" onclick="qiehuan(2)"><span id="qiehuan2">待收货</span><hr id="qiehuanxian2" style="width: 100%;height: 3px;background: #FFAD2D;border: none;display: none;" /></div>
+			<div style="display: table-cell;text-align: center;" onclick="qiehuan(3)"><span id="qiehuan3">待服务</span><hr id="qiehuanxian3" style="width: 100%;height: 3px;background: #FFAD2D;border: none;display: none;" /></div>
+			<div style="display: table-cell;text-align: center;" onclick="qiehuan(4)"><span id="qiehuan4">待评价</span><hr id="qiehuanxian4" style="width: 100%;height: 3px;background: #FFAD2D;border: none;display: none;" /></div>
+		</div>
+		<div id="page0" style="width: 100%;">
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待付款</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+						<span style="font-size: 0.29333rem;padding: 0.04rem 0.13333rem;background: #FFAD2D;border-radius: 0.10666rem;color: #FFFFFF;margin-left: 0.37333rem;">到店服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #FFAD2D;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #FFAD2D;" onclick="querenpay()"><span>立即付款</span></div>
+					<div id="quxiaopay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="quxiaopay()"><span>取消订单</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待审核</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="tuikuan" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;"><span>申请退款</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待收货</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+						<span style="font-size: 0.29333rem;padding: 0.04rem 0.13333rem;background: #FFAD2D;border-radius: 0.10666rem;color: #FFFFFF;margin-left: 0.37333rem;">到店服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待评价</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="pingjia()"><span>评价</span></div>
+					<div id="chakanwuliu" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待服务</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="jixubuy()"><span>再次购买</span></div>
+					<div id="chakanwuliu" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">已取消</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="jixubuy()"><span>再次购买</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">退款中</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="tuihuo()"><span>退货</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">退款完成</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">退款失败</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="jieru" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;"><span>申请介入</span></div>
+				</div>
+			</div>
+		</div>
+		<div id="page1" style="width: 100%;display: none;">
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待付款</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;" onclick="shoppinggoods()">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+						<span style="font-size: 0.29333rem;padding: 0.04rem 0.13333rem;background: #FFAD2D;border-radius: 0.10666rem;color: #FFFFFF;margin-left: 0.37333rem;">到店服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #FFAD2D;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #FFAD2D;" onclick="querenpay()"><span>立即付款</span></div>
+					<div id="quxiaopay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="quxiaopay()"><span>取消订单</span></div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待付款</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;" onclick="goodsdaishouhuo()">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+						<span style="font-size: 0.29333rem;padding: 0.04rem 0.13333rem;background: #FFAD2D;border-radius: 0.10666rem;color: #FFFFFF;margin-left: 0.37333rem;">到店服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #FFAD2D;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #FFAD2D;" onclick="querenpay()"><span>立即付款</span></div>
+					<div id="quxiaopay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="quxiaopay()"><span>取消订单</span></div>
+				</div>
+			</div>
+		</div>
+		<div id="page2" style="width: 100%;display: none;">
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待收货</span>
+				</div>
+				<div onclick="daishouhuo()" style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+						<span style="font-size: 0.29333rem;padding: 0.04rem 0.13333rem;background: #FFAD2D;border-radius: 0.10666rem;color: #FFFFFF;margin-left: 0.37333rem;">到店服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+		</div>
+		<div id="page3" style="width: 100%;display: none;">
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待服务</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="jixubuy()"><span>再次购买</span></div>
+					<div id="chakanwuliu" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+		</div>
+		<div id="page4" style="width: 100%;display: none;">
+			<div style="width: 100%;height: 4.90666rem;background: #FFFFFF;margin-bottom: 0.26666rem;">
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">订单号：1234120161134123</span>
+					<span style="float: right;">待评价</span>
+				</div>
+				<div style="width: 100%;height: 2.53333rem;font-size: 0.37333rem;padding: 0.26666rem 0.38666rem;line-height: 1.17333rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;">
+					<img style="width: 2rem;height: 2rem;float: left;" />
+					<div style="float: left;margin:0.25rem 0 0 0.4rem;color: #111111;height: 0.4rem;line-height: 0.4rem;width: 4rem;">
+						<span style="float: left;">汽车服务</span>
+					</div>
+					<div style="float: left;color: #666666;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>共一项服务</span>
+					</div>
+					<div style="float: left;color: #FFAD2D;height: 0.4rem;line-height: 0.4rem;width: 4rem;margin-left: 0.4rem;margin-top: 0.25rem;">
+						<span>合计：￥1000.00</span>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #111111;padding: 0 0.38666rem;line-height: 1.17333rem;">
+					<span style="float: left;">2017-10-10</span>
+					<div id="querenpay" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin-top: 0.26666rem;color: #666666;" onclick="pingjia()"><span>评价</span></div>
+					<div id="chakanwuliu" style="width: 1.86666rem;height: 0.64rem;border: 1px solid #cccccc;border-radius: 0.10666rem;line-height: 0.64rem;text-align: center;float: right;font-size: 0.33333rem;margin: 0.26666rem 0.4rem 0 0;color: #666666;" onclick="wuliu()"><span>查看物流</span></div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var get = window.location.href;
+				var tem1 = get.split("?")[1];
+				var tem2 = tem1.split("&")[0];
+				var tem3 = tem2.split("=")[1];
+				qiehuan(tem3);
+			}
+			
+			function querenpay() {
+				var id=0;
+				var url = "../my/apply/apply_method.html" + "?" + "link=" + id;
+				window.location.assign(url);
+			}
+
+			function quxiaopay() {
+				mui.openWindow("cancel_order.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+
+			function qiehuan(id) {
+				for(var i = 0; i < 5; i++) {
+					if(id == i) {
+						document.getElementById("qiehuan"+i).style.color="#ffad2d";
+						$("#page" + i).show();
+						$("#qiehuanxian"+i).show();
+					} else {
+						document.getElementById("qiehuan"+i).style.color="#666666";
+						$("#page" + i).hide();
+						$("#qiehuanxian"+i).hide();
+					}
+				}
+			}
+
+			$("#jieru").on("tap", function() {
+				mui.openWindow("apply_involved_form.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			$("#tuikuan").on("tap", function() {
+				mui.openWindow("apply_refund.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			function wuliu() {
+				mui.openWindow("material_track.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+
+			function goumai() {
+				mui.openWindow("service_track.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+			
+			function pingjia(){
+				mui.openWindow("order_evaluate_complate.html",{
+					waiting:{
+						autoShow:false
+					}
+				})
+			}
+			
+			function shoppinggoods(){
+				mui.openWindow("order_detail.html",{
+					waiting:{
+						autoShow:false
+					}
+				})
+			}
+			
+			function goodsdaishouhuo(){
+				mui.openWindow("order_wait_pay.html",{
+					waiting:{
+						autoShow:false
+					}
+				})
+			}
+			
+			function daishouhuo(){
+				mui.openWindow("daishouhuo.html",{
+					waiting:{
+						autoShow:false
+					}
+				})
+			}
+			
+			function jixubuy(){
+				mui.openWindow("../home/Commodity_details.html")
+			}
+			function tuihuo(){
+				mui.openWindow("return_of_good.html")
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>所有评价</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<script src="script/mui.js"></script>
+		<script src='script/common.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="../css/list/home.css" />
+		<style>
+.spic a img{-moz-opacity:0.5; filter:alpha(opacity=50);border:0px;}
+.spic a:hover{font-size:9px;}
+.spic a:hover img{-moz-opacity:0.5; filter:alpha(opacity=100);cursor:hand;}
+</style>
+	</head>
+
+	<body>
+		<script>
+			var clientHeight= $(window).height();
+			 $('body').css('min-height',clientHeight+'px');
+		</script>
+		<!--<div class="nav_bar" id="hander">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">所有评价</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div style="width: 100%;height: auto; overflow: hidden; margin-top: 0.26666rem; background: #FFFFFF;">
+			<div  style=" margin: 0.36rem 0.4rem 0 0.4rem;height: 0.88rem;float: left;">
+				<img style="width: 0.88rem;height: 0.88rem;border-radius: 0.88rem;float: left;" src="img/user.png" />
+				<div style="width: 4rem;height: 0.74666rem;margin-left:0.30666rem;float: left;">
+					<div style="width: 100%;height: 0.44rem;float: left;line-height: 0.44rem;"><span style="font-size: 0.37333rem;color: #111111;">吴先生</span></div>
+					<div style="width: 100%;height: 0.44rem;float: left;line-height: 0.44rem;"><span style="font-size: 0.32rem;color: #999999;">2017-10-10</span></div>
+				</div>
+				<div class="fl star_evaluate_area" id="checkxing0" style="float: right;">
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+				</div>
+			</div>
+			<div style="margin: 0.53333rem 0.41333rem 0.48rem 0.41333rem;line-height: 0.61333rem;font-size: 0.37333rem;color: #111111;float: left;">
+				<span>这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价</span>
+			</div>
+			<span style="font-size: 0.32rem;color: #999999;margin: 0rem 0px 0.42666rem 0.38666rem;float: left;">全合成</span>
+		</div>
+		<div style="width: 100%;height: auto; overflow: hidden; margin-top: 0.26666rem; background: #FFFFFF;">
+			<div  style=" margin: 0.36rem 0.4rem 0 0.4rem;height: 0.88rem;float: left;">
+				<img style="width: 0.88rem;height: 0.88rem;border-radius: 0.88rem;float: left;" src="img/user.png" />
+				<div style="width: 4rem;height: 0.74666rem;margin-left:0.30666rem;float: left;">
+					<div style="width: 100%;height: 0.44rem;float: left;line-height: 0.44rem;"><span style="font-size: 0.37333rem;color: #111111;">吴先生</span></div>
+					<div style="width: 100%;height: 0.44rem;float: left;line-height: 0.44rem;"><span style="font-size: 0.32rem;color: #999999;">2017-10-10</span></div>
+				</div>
+				<div class="fl star_evaluate_area" id="checkxing0" style="float: right;">
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+					<div class="evaluate_star"><i class="icon f30 iconfont icon-star-copy"></i></div>
+				</div>
+			</div>
+			<div style="margin: 0.53333rem 0.41333rem 0.48rem 0.41333rem;line-height: 0.61333rem;font-size: 0.37333rem;color: #111111;float: left;">
+				<span>这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价这是个评价</span>
+			</div>
+			<div style="margin: 0.53333rem 0.41333rem 0.48rem 0.41333rem;">
+				<img src="img/add_voucher.png" style="width: 1.73333rem;height: 1.73333rem;margin-right: 0.26666rem;border: 1px solid #E0E0E0;" onclick="fangda(this)"/>
+				<img src="img/brand_img_06.png" style="width: 1.73333rem;height: 1.73333rem;margin-right: 0.26666rem;border: 1px solid #E0E0E0;" onclick="fangda(this)"/>
+				<img src="img/first_logo.png" style="width: 1.73333rem;height: 1.73333rem;margin-right: 0.26666rem;border: 1px solid #E0E0E0;" onclick="fangda(this)"/>
+			</div>
+			<span style="font-size: 0.32rem;color: #999999;margin: 0rem 0px 0.42666rem 0.38666rem;float: left;">全合成</span>
+		</div>
+		<div id="zhedang" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 100;background: #000000;display: none;text-align: center;padding-top: 3.33333rem;">
+			<img style="width: auto;height: auto;" id="bigimage" />
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui("#checkxing0").on('tap', '.evaluate_star', function() {
+				fwtd = 0;
+				var index = $(this).index();
+				var starBox = $(this).parents('.star_evaluate_area');
+				var i = 0,
+					_thisStars = starBox.find('.evaluate_star');
+				_thisStars.each(function() {
+					$(this).css({
+						'color': "#ccc"
+					})
+				})
+				_thisStars.each(function() {
+					if(i <= index) {
+						$(this).css({
+							'color': "#ffad2d"
+						})
+						i += 1;
+					}
+					return;
+				})
+			})
+			
+			function fangda(th){
+				$("#zhedang").show();
+				document.getElementById("bigimage").src=th.src;
+			}
+			$("#zhedang").on("tap",function(){
+				$("#zhedang").hide();
+			})
+		</script>
+	</body>
+
+</html>

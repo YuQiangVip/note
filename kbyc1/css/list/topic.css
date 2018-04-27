@@ -1,0 +1,149 @@
+/*移动专题*/
+
+/*.nav_bar{position: absolute;top: 0; left: 0; background: rgba(255,255,255,0);}*/
+.bac_topic{
+	background-image:linear-gradient(90deg,#2ba4dd,#3d43ad ,#ab21c6);
+}
+
+.mui-ios{margin: 0; padding: 0;}
+.topic_top{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	width: 100%;
+	height: 10rem;
+}
+.topic_img{
+	width:100%;
+	height:100%;
+	background: url(../../img/ydzq/topic_bac.png);
+	background-size: 100%;
+}
+.topic_img img{
+	width: 100%;
+	height: 8.86666rem;
+	
+}
+.topic_bac{
+	background: #43239b;
+	
+}
+.topic_box{
+	display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 0.4rem;
+}
+.topic_box img{
+	width: 7.57333rem;
+	height: 2.53333rem;
+}
+.topic_box span{
+	position: absolute;
+	top: 1.06666rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.45333rem;
+}
+.top_h{
+	display: flex;
+	align-items: center;
+}
+.top_h h3{
+	margin: 0 auto;
+	color: #fff;
+	font-size: 0.34666rem;
+	padding: 0.2rem 0;
+}
+.topic_use,.topic_use2{
+	display: flex;
+	align-items: center;
+}
+.topic_use img,.topic_use2 img{
+	width: 8.08rem;
+	height: 0.42666rem;
+	margin: 0 auto;
+	padding-bottom: 0.04rem;
+}
+.topic_use2{
+	padding-top: 1.2rem;
+	padding-bottom: 0.4rem;
+}
+.topic_content{
+	background: #563aa7;
+	margin: 0.13333rem 0.4rem;
+	border-radius: 0.06666rem;
+	border: 1px solid #563aa7;
+}
+.topic_text{
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-around;*/
+}
+.topic_text img{
+	width: 1.06666rem;
+	height: 1.06666rem;
+}
+.topic_list,.topic_list1{
+	text-align: center;
+	padding:0.4rem 0.44rem;
+	font-size: 0.32rem;
+}
+.topic_list1{
+	padding-top: 0.53333rem;
+}
+.topic_list1>div,.topic_list>div{
+	color: #d4b3ff;
+	padding-top: 0.26666rem;
+}
+.topic_footer{
+	padding: 0.53333rem 0.33333rem;
+}
+.footer_text>div{
+	color: #d4b3ff;
+	font-size: 0.32rem;
+	padding: 0.13333rem 0.06666rem;
+	line-height: 0.48rem;
+}
+.top_viod{
+	padding-bottom: 0.26666rem;
+}
+
+/*已登录*/
+.login_header{
+	display: block;
+	width: 100%;
+	height: 5.33333rem;
+	text-align: center;
+	position: relative;
+	background: url(../img/login_bac.png);
+	
+}
+.log_avatar{
+	width: 1.46666rem;
+	height: 1.46666rem;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	position: absolute;
+	top: 1.70666rem;
+	left: 0.4rem;
+}
+.log_avatar img{
+	width: 1.46666rem;
+	height: 1.46666rem;
+	border-radius: 50%;
+}
+.login_name{
+	width: 1.6rem;
+	height: auto;
+	position: absolute;
+	top: 0.52rem;
+	left: 1.88rem;
+	font-size: 0.45333rem;
+	font-weight: 6.66666rem;
+	color: #fff;
+}
+
+#last{padding-left: 0.266666rem;}

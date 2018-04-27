@@ -1,0 +1,60 @@
+.article_brand_info{
+  padding: 0 0.4rem;
+}
+.article_brand_info .height{
+	padding: 1.10667rem 0;
+	margin: 0 auto;
+}
+.article_brand_info .logo_wrapper img{
+	width: 4.8rem;
+	height: 1.50667rem;
+}
+.logo_wrapper{
+	text-align: center;
+	padding: 1.10667rem 0;
+}
+.logo_wrapper img{
+	width: 4.56rem;
+	height: 1.34666rem;
+}
+.article_brand_info .paragraph{
+   line-height: 1.71;
+  text-align: justify;
+  text-indent:2em;
+}
+#map_wrapper{
+   text-align: center;
+   padding: 0.53333rem 0;
+}
+#map_wrapper img{
+	width: 8.32rem;
+	height: 5.6rem;
+}
+.info_logo_box{
+	display: flex;
+	justify-content: space-around;
+	padding: 1.06667rem 0;
+}
+.info_logo_box>div{
+	/*height: 2.13333rem;*/
+	/*padding: 1.13333rem 0;*/
+	text-align: center;
+	padding: 0 0.483rem;
+	font-size: smaller;
+}
+.info_logo_box>div .text{
+	/*height: 2.13333rem;*/
+	padding-top: 0.4rem;
+}
+.info_logo_box img{
+	width: 1.33333rem
+	height: 1.33333rem
+}
+.info_logo_box img{
+	width: 1.33333rem;
+	height: 1.33333rem;
+}
+/**/
+#brand_info{
+	padding-bottom: 1.06667rem;
+}

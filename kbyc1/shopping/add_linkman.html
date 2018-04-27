@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加联系人</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="script/flexible_css.js"></script>
+    <script src="script/flexible.js"></script>
+    <script src="script/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/reg.css"> 
+    <meta content="maximum-dpr=2" name="flexible" />
+    <link href="css/mui.css" rel="stylesheet" />
+    <script src="script/mui.js"></script>
+    <script src='script/checkbox.js'></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/shopping_cart.css">
+    <link rel="stylesheet" href="font_diy/iconfont.css">
+</head>
+
+<body>
+	<script>
+	var clientHeight = $(window).height();
+	$('body').css('min-height', clientHeight + 'px');
+	</script>
+   		<!--<div class="nav_bar">
+        	<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+	        <span class="f34">添加联系人</span>
+        	<span class="iconfont icon-gengduo f35 top_navri"></span>
+    	</div>-->
+    <form action="" id="add_linkman" class="refund_layout bg_colorf">
+        <div class="clearfix" style="position: relative;"><span class="fl color_reset">真实姓名</span>
+            <input type="text" class="fl f28  input_refund_layout" id="personname" placeholder="请输入真实姓名" style="height: 0.53333rem;margin-top: 0.29333rem; line-height: 0.53333rem;">
+        </div>
+        <div class="clearfix" style="position: relative;"><span class="fl color_reset">手机号码</span>
+            <input type="number" class="fl f28 input_refund_layout" id="personphone" maxlength="11" placeholder="请输入11位手机号码" style="height: 0.53333rem;line-height: 0.53333rem; margin-top: 0.29333rem;">
+        </div>
+        <div class="clearfix ifdefault"><span class="fl color_reset">设为默认</span>
+            <div class="mui-switch mui-switch-mini fr" id="mui-switch-reset">
+                <div class="mui-switch-handle" id="mui-switch-handle-reset"></div>
+            </div>
+        </div>
+    </form>
+    <div class="submit_btn f32" id="add_linkman_save">保存</div>
+</body>
+</html>
+<script>
+     var btncolor = 0;
+	$("#personname").on("change", function() {
+		btncolorcheck();
+	})
+	$("#personphone").on("change", function() {
+		btncolorcheck();
+	})
+	function btncolorcheck() {
+		var cellPhone = document.getElementById("personphone");
+		var RegCellPhone = /^0{0,1}(1[3-9][0-9])[0-9]{8}$/;
+		var falg = cellPhone.value.search(RegCellPhone);
+		if(falg == -1) {
+			document.getElementById("add_linkman_save").style.backgroundColor = "#ffd399";
+			return;
+		}
+		if(document.getElementById("personphone").value.length == 11 && document.getElementById("personname").value.length != 0) {
+			document.getElementById("add_linkman_save").style.backgroundColor = "#ffad2d";
+			btncolor = 1;
+		} else {
+			document.getElementById("add_linkman_save").style.backgroundColor = "#ffd399";
+			btncolor = 0;
+		}
+	}
+	$("#add_linkman_save").on("tap", function() {
+		btncolorcheck();
+		if(btncolor == 1) {
+			mui.back();
+		}
+	});
+
+</script>

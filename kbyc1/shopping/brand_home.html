@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轲轲西里品牌旗舰店</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/topic.css" />
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="../css/swiper-3.4.2.min.css" />
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<!--置顶-->
+		<script src="../js/zhiding.js"></script>
+		<style type="text/css">
+			input ::-webkit-input-placeholder {
+				font-size: 0.37333rem!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">品牌列表</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+
+		<div class="log_bgcolor">
+			<div class="brand_input">
+				<img id="search_img" src="../img/shouye/serooh_03.png" />
+				<div class="log_bgcolor pad_brand">
+					<input type="search" id="brand_search" placeholder="搜索本店商品" />
+				</div>
+			</div>
+
+			<div class="brand_store_list brand_heh log_bgc for_position">
+				<div class="img"><img src="img/collect_brand.png" alt=""></div>
+				<div class=" brand_der brand_wid">
+					<div class="brand_store_name f32 brand_wid">轲轲西里品牌旗舰店</div>
+					<div class="brand_store_parade f24">官方自营</div>
+					<div class="stars_box clearfix brand_wid">
+						<div class="star_evaluate_area fl">
+							<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+							<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+							<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+							<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+							<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+						</div>
+						<div class="fl color_g"><span class="start_count">5.0</span>分</div>
+					</div>
+
+				</div>
+				<div class="brand_collec">
+					<div class="brand_btn" id="brand_btn1">收藏</div>
+					<div class="brand_num" id="bran_num">3428人</div>
+				</div>
+				<div class="delet_btn cansel_collect">取消收藏</div>
+			</div>
+
+			<div class="sub_nav tabs log_bgc brand_bor" style="margin: 0;">
+				<div class="current_show f32">首页</div>
+				<div class="f32">全部商品</div>
+				<div class="f32">品牌促销</div>
+			</div>
+
+			<div class="collect_goods_areas tab_areas">
+				<div class="collect_area active_tab_area">
+
+					<!--轮播图-->
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/Coupon_Center_02.png">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+
+					<!--swiper滑动-->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="brand_list_item">
+									<div class="brand_homeimg">
+										<img src="img/brand_homeimg.png" alt="" />
+										<span id="get_ri">立即领取</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand_list_item">
+									<div class="brand_homeimg">
+										<img src="img/brand_homeimg1.png" alt="" />
+										<span style="color: #999;">已领取</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand_list_item">
+									<div class="brand_homeimg">
+										<img src="img/brand_homeimg2.png" alt="" />
+										<span>立即领取</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand_list_item">
+									<div class="brand_homeimg">
+										<img src="img/brand_homeimg1.png" alt="" />
+										<span style="color: #999;">已领取</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand_list_item">
+									<div class="brand_homeimg">
+										<img src="img/brand_homeimg2.png" alt="" />
+										<span>立即领取</span>
+									</div>
+								</div>
+							</div>
+							<!--<div class="brand_homeimg">
+			     		<img src="img/brand_homeimg1.png" alt="" />
+			     		<span style="color: #999;">已领取</span>
+			     	</div>
+			     	<div class="brand_homeimg">
+			     		<img src="img/brand_homeimg2.png" alt="" />
+			     		<span>立即领取</span>
+			     	</div>
+			     	<div class="brand_homeimg">
+			     		<img src="img/brand_homeimg2.png" alt="" />
+			     		<span>立即领取</span>
+			     	</div>
+			     	<div class="brand_homeimg">
+			     		<img src="img/brand_homeimg2.png" alt="" />
+			     		<span>立即领取</span>
+			     	</div>
+			     	<div class="brand_homeimg">
+			     		<img src="img/brand_homeimg3.png" alt="" />
+			     		<span>立即领取</span>
+			     	</div><div class="brand_homeimg">
+			     		<img src="img/brand_homeimg3.png" alt="" />
+			     		<span>立即领取</span>
+			     	</div>-->
+						</div>
+					</div>
+
+					<div class="peomo_hei">
+						<div class="promo_list">
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="collect_area">
+
+					<!--商品排序-->
+					<div class="sort_good">
+						<div class="sort_list" id="allgoodsxz0" onclick="allgoodsxz(0)">
+							推荐
+						</div>
+						<div class="sort_list" id="allgoodsxz1" onclick="allgoodsxz(1)">
+							<span>销量</span>
+							<span class="brand_imgbox">
+	    			<i class="iconfont img_top f16 icon-sanjiao-shangla" id="allxlxz0"></i>
+	    			<i class="iconfont img_bot f16 icon-sanjiao-xiala" id="allxlxz1"></i>
+	    		</span>
+						</div>
+						<div class="sort_list" id="allgoodsxz2" onclick="allgoodsxz(2)">
+							新品
+						</div>
+						<div class="sort_list" id="allgoodsxz3" onclick="allgoodsxz(3)">
+							<span>价格</span>
+							<span class="brand_imgbox">
+	    			<i class="iconfont f16 img_top icon-sanjiao-shangla" id="allprice0"></i>
+	    			<i class="iconfont f16 img_bot icon-sanjiao-xiala" id="allprice1"></i>
+	    		</span>
+						</div>
+						<div class="sort_list">
+							<i class="f37 iconfont icon-pingpu1" id="xuanze"></i>
+						</div>
+					</div>
+
+					<div class="peomo_hei" id="lbdt">
+						<div class="promo_list">
+							<div class="promo_listitem" id="pro_detail1">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="lbxq" style="display: none;">
+						<div id="pro_detail2" class="bg_colorf fl  " style="margin-top: 0.26666rem;">
+							<div class="home_img fl">
+								<img class="home_liimg" src="img/bran_pro.png" alt="">
+								<img class="home_img2" src="img/tyree.png" alt="">
+							</div>
+							<div class="right_text fl">
+								<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+								<div class="goods_car_handle_wrapper">
+									<span class="tex_num f34">￥89.00</span>
+								</div>
+								<div class="bran_bot">
+									<span>100%好评</span>
+									<span>已售123件</span>
+								</div>
+							</div>
+							<!--<div class="delet_btn cansel_collect f26">取消收藏</div>-->
+						</div>
+					<div class="bg_colorf fl">
+						<div class="home_img fl">
+							<img class="home_liimg" src="img/bran_pro.png" alt="">
+							<img class="home_img2" src="img/tyree.png" alt="">
+						</div>
+						<div class="right_text fl">
+							<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+							<div class="goods_car_handle_wrapper">
+								<span class="tex_num f34">￥89.00</span>
+							</div>
+							<div class="bran_bot">
+								<span>100%好评</span>
+								<span>已售123件</span>
+							</div>
+						</div>
+						<!--<div class="delet_btn cansel_collect f26">取消收藏</div>-->
+					</div>
+					</div>
+
+					<div id="shanghua" style="position: fixed;z-index: 100;width: 1.17333rem;height: 1.17333rem;bottom: 1.73333rem;right: 0.4rem;border-radius: 1.33333rem;color: #fff;text-align: center;line-height: 1.33333rem;opacity:.8 ;display: none;" onclick="scrollTo()">
+						<img src="../shopping/img/icon.png" alt="" />
+					</div>
+
+				</div>
+				<div class="bra_rig">
+
+					<!--商品排序-->
+					<div class="sort_good">
+						<div class="sort_list" id="ppgoodsxz0" onclick="ppgoodsxz(0)">
+							推荐
+						</div>
+						<div class="sort_list" onclick="ppgoodsxz(1)">
+							<span id="ppgoodsxz1">销量</span>
+							<span class="brand_imgbox">
+	    			<i class="iconfont img_top f16 icon-sanjiao-shangla" id="ppxlxz0"></i>
+	    			<i class="iconfont img_bot f16 icon-sanjiao-xiala" id="ppxlxz1"></i>
+	    		</span>
+						</div>
+						<div class="sort_list" id="ppgoodsxz2" onclick="ppgoodsxz(2)">
+							新品
+						</div>
+						<div class="sort_list" onclick="ppgoodsxz(3)">
+							<span id="ppgoodsxz3">价格</span>
+							<span class="brand_imgbox">
+			    			<i class="iconfont f16 img_top icon-sanjiao-shangla" id="ppprice0"></i>
+			    			<i class="iconfont f16 img_bot icon-sanjiao-xiala" id="ppprice1"></i>
+			    		</span>
+						</div>
+						<div class="sort_list">
+							<i class="f37 iconfont icon-pingpu1" id="xuanze1"></i>
+						</div>
+					</div>
+					<div class="peomo_hei" id="lbxq1" style="display: none;">
+						<div class="promo_list">
+							<div class="promo_listitem" id="pro_detail4">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail1">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+							<div class="promo_listitem" id="pro_detail" style="margin-bottom: 1.44rem;">
+								<div class="promo_tion">
+									<img class="promo_min" src="img/bran_pro.png" alt="" />
+									<img class="promo_im" src="img/tyree.png" alt="" />
+								</div>
+								<div class="promo_text">
+									<span class="promo_txt1">回力轮胎R30 205/55R16 91V Warrior【四条套装】</span>
+									<span class="promo_txt2">￥89.00</span>
+									<span class="promo_txt3">100%好评</span>
+									<span class="promo_txt4">已售123件</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="lbdt1">
+						<div class="bg_colorf fl" id="pro_detail3"  style="margin-top: 0.26666rem;">
+						<div class="home_img fl">
+							<img class="home_liimg" src="img/bran_pro.png" alt="">
+							<img class="home_img2" src="img/tyree.png" alt="">
+						</div>
+						<div class="right_text fl">
+							<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+							<div class="goods_car_handle_wrapper">
+								<span class="tex_num f34">￥89.00</span>
+							</div>
+							<div class="bran_bot">
+								<span>100%好评</span>
+								<span>已售123件</span>
+							</div>
+						</div>
+						<!--<div class="delet_btn cansel_collect f26">取消收藏</div>-->
+					</div>
+					<div class="bg_colorf fl ">
+						<div class="home_img fl">
+							<img class="home_liimg" src="img/bran_pro.png" alt="">
+							<img class="home_img2" src="img/tyree.png" alt="">
+						</div>
+						<div class="right_text fl">
+							<div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+							<div class="goods_car_handle_wrapper">
+								<span class="tex_num f34">￥89.00</span>
+							</div>
+							<div class="bran_bot">
+								<span>100%好评</span>
+								<span>已售123件</span>
+							</div>
+						</div>
+						<!--<div class="delet_btn cansel_collect f26">取消收藏</div>-->
+					</div>
+					</div>
+				</div>
+				<!--<div class="goods_car_list for_position bg_colorf">
+                <div class="goods_car_img"><img src="img/tyree.png" alt=""></div>
+                <div class="goods_car_handle_box brand_border">
+                    <div>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</div>
+                    <div class="goods_car_handle_wrapper">
+                        <span class="goods_car_list_price f34">￥89.00</span>
+                    </div>
+                </div>
+                <div class="delet_btn cansel_collect">取消收藏</div>
+            </div>-->
+			</div>
+			<div class="promo_bootom">
+				<div class="pro_folist" id="home_detail">
+					品牌店详情
+				</div>
+				<div class="pro_folist" id="cate_go">
+					商品分类
+				</div>
+				<div class="pro_folist" id="cancat_br">
+					联系品牌商
+				</div>
+			</div>
+		</div>
+
+		<div id="motai" class="modal_con"></div>
+		<div id="tanchuang" class="modal_box">
+			<div class="modal_mian">
+				<div class="modal_title f32">
+					拨打热线
+				</div>
+				<div class="modal_ter">
+					品牌商电话：13687558899
+				</div>
+			</div>
+			<a href="tel:13687558899">
+				<div id="queren" class="determine fr f32">
+					确认
+				</div>
+			</a>
+			<div id="quxiao" class="modal_cancle fl f32">
+				取消
+			</div>
+		</div>
+	
+		<div id="tishi" class="floating_layer">收藏成功</div>
+	
+	</body>
+
+</html>
+<script>
+	$(function() {
+		var clientHeight = $(window).height();
+		$('body').css('height', clientHeight + 'px');
+		createTabs('.tabs', 'div', 'current_show');
+		starEvaluate('.stars_box', '.star_evaluate_area');
+		showDeleteBtn('.collect_goods_areas', '.for_position');
+		$(".add_to_car").on("tap", function() {
+			mui.openWindow({
+				url: 'shopping_cart_full.html',
+				id: 'shopping_cart_full'
+			})
+		});
+		//收藏
+		$('#brand_btn1').on('click',function(){
+			
+			if($(this).text()=="收藏"){
+				$(this).css({
+				'background':'#ccc',
+				'color':'#fff',
+				'width':'1.6rem',
+				'border':'1px solid #ccc'
+			});
+			$('#bran_num').html('3429人');
+			$(this).html('取消收藏');
+			$('#tishi').html('收藏成功');
+			$('#tishi').show();
+			setTimeout(function(){
+				$('#tishi').hide();
+//				mui.back();
+			},300)
+			}else{
+				$(this).css({
+				'background':'#fff',
+				'color':'#ffad2d',
+				'width':'1.306666rem',
+				'border':'1px solid #ffad2d'
+			});
+			$('#bran_num').html('3428人');
+			$(this).html('收藏');
+			$('#tishi').show();
+			$('#tishi').html('取消成功');
+			setTimeout(function(){
+				$('#tishi').hide();
+//				mui.back();
+			},300)
+			}
+		})
+		//立即领取
+		$('#get_ri').on('click',function(){
+			if($(this).text()=="立即领取"){
+				$(this).css({
+				'color':'#999'
+			});
+			$('#tishi').show();
+			$('#tishi').html('领取成功');
+			$(this).html('已领取');
+			setTimeout(function(){
+				$('#tishi').hide();
+//				mui.back();
+			},300)
+			}else{
+				
+			$(this).html('已领取');
+			$('#tishi').show();
+			$('#tishi').html('不可重复领取');
+			setTimeout(function(){
+				$('#tishi').hide();
+//				mui.back();
+			},300)
+			}
+		})
+		
+		//全部商品
+		$("#xuanze").on("tap", function() {
+			if(document.getElementById("lbxq").style.display == "none") {
+				document.getElementById("lbxq").style.display = "block";
+				document.getElementById("lbdt").style.display = "none";
+			} else {
+				document.getElementById("lbxq").style.display = "none";
+				document.getElementById("lbdt").style.display = "block";
+			}
+		})
+		//促销
+		$("#xuanze1").on("tap", function() {
+			if(document.getElementById("lbxq1").style.display == "none") {
+				document.getElementById("lbxq1").style.display = "block";
+				document.getElementById("lbdt1").style.display = "none";
+			} else {
+				document.getElementById("lbxq1").style.display = "none";
+				document.getElementById("lbdt1").style.display = "block";
+			}
+		})
+		
+		
+		$("#brand_search").focus(function() {
+			$("#search_img").css({
+				'left': '5%'
+			});
+			$("#brand_search").attr('placeholder', " ")
+		});
+		$("#brand_search").blur(function() {
+			$("#search_img").css({
+				'left': '20%'
+			});
+			$("#brand_search").attr('placeholder', "输入搜索本店商品")
+			$("#brand_search").val("")
+		});
+		$('#home_detail').on('tap', function() {
+			mui.openWindow('shop_details.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#cate_go').on('tap', function() {
+			mui.openWindow('../home/zepin/zepin.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#pro_detail').on('tap', function() {
+			mui.openWindow('../home/Commodity_details.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#pro_detail1').on('tap', function() {
+			mui.openWindow('../home/Commodity_details.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		$('#pro_detail2').on('tap', function() {
+			mui.openWindow('../home/Commodity_details_djs.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#pro_detail3').on('tap', function() {
+			mui.openWindow('../home/Commodity_details_djs.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$('#pro_detail4').on('tap', function() {
+			mui.openWindow('../home/Commodity_details_djs.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		//模态框
+		$("#cancat_br").on("tap", function() {
+			$("#motai").show();
+			$("#tanchuang").show();
+		})
+		$("#quxiao").on("tap", function() {
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+		$("#queren").on("tap", function() {
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+
+		/*swiper部分*/
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			slidesPerView: 3,
+			paginationClickable: true,
+			spaceBetween: 30,
+			freeMode: true
+		});
+
+	})
+	
+	var ppxlstate = 0;
+	var pppricestate = 0;
+	function ppgoodsxz(id){
+		for (var i=0;i<4;i++) {
+			if(id == i){
+				document.getElementById("ppgoodsxz"+i).style.color="#ffad2d";
+				if(id==1){
+					for(var j=0;j<2;j++){
+						document.getElementById("ppprice"+j).style.color="#666666";
+						if(ppxlstate==j){
+							document.getElementById("ppxlxz"+j).style.color="#ffad2d";
+						}else{
+							document.getElementById("ppxlxz"+j).style.color="#666666";
+						}
+					}
+					if(ppxlstate == 1) ppxlstate = 0;
+					else ppxlstate = 1;
+					pppricestate = 0;
+				}else if(id==3){
+					for(var j=0;j<2;j++){
+						document.getElementById("ppxlxz"+j).style.color="#666666";
+						if(pppricestate==j){
+							document.getElementById("ppprice"+j).style.color="#ffad2d";
+						}else{
+							document.getElementById("ppprice"+j).style.color="#666666";
+						}
+					}
+					if(pppricestate == 1) pppricestate = 0;
+					else pppricestate = 1;
+					ppxlstate = 0;
+				}else{
+					for(var j=0;j<2;j++){
+						document.getElementById("ppxlxz"+j).style.color="#666666";
+						document.getElementById("ppprice"+j).style.color="#666666";
+					}
+				}
+			}else{
+				document.getElementById("ppgoodsxz"+i).style.color="#666666";
+			}
+		}
+	}
+	
+	var allxlstate = 0;
+	var allpricestate = 0;
+	function allgoodsxz(id){
+		for (var i=0;i<4;i++) {
+			if(id == i){
+				document.getElementById("allgoodsxz"+i).style.color="#ffad2d";
+				if(id==1){
+					for(var j=0;j<2;j++){
+						document.getElementById("allprice"+j).style.color="#666666";
+						if(allxlstate==j){
+							document.getElementById("allxlxz"+j).style.color="#ffad2d";
+						}else{
+							document.getElementById("allxlxz"+j).style.color="#666666";
+						}
+					}
+					if(allxlstate == 1) allxlstate = 0;
+					else allxlstate = 1;
+					allpricestate = 0;
+				}else if(id==3){
+					for(var j=0;j<2;j++){
+						document.getElementById("allxlxz"+j).style.color="#666666";
+						if(allpricestate==j){
+							document.getElementById("allprice"+j).style.color="#ffad2d";
+						}else{
+							document.getElementById("allprice"+j).style.color="#666666";
+						}
+					}
+					if(allpricestate == 1) allpricestate = 0;
+					else allpricestate = 1;
+					allxlstate = 0;
+				}else{
+					for(var j=0;j<2;j++){
+						document.getElementById("ppxlxz"+j).style.color="#666666";
+						document.getElementById("ppprice"+j).style.color="#666666";
+					}
+				}
+			}else{
+				document.getElementById("allgoodsxz"+i).style.color="#666666";
+			}
+		}
+	}
+	
+	
+</script>

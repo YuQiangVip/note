@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>余额</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts_new/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar nav_bars">
+			<span class="mui-icon mui-icon-arrowleft return nav_bars_left mui-action-back"></span>
+			<span class="f37 f_colors">余额</span>
+		</div>-->
+		<div style="width: 100%;position: fixed;top: 0;">
+			<img src="../../img/bank.png" style="width:10rem;height: 5.5rem;position: fixed;margin: 0.53333rem 0 0 0;"/>
+			<span style="margin: 1.10666rem 0.97333rem;position: fixed;font-size: 0.34666rem;color: #ffe5c0;">当前账户余额(元)</span>
+			<span style="margin: 1.81333rem 0.97333rem;position: fixed;font-size: 0.77333rem;color: #fefefe;">888888.00</span>
+			<span style="margin: 4.62666rem 0 0 7.3333rem;position: fixed;font-size: 0.32rem;color: #fff5e1;">开呗账户专用</span>
+		</div>
+		<div class="balance_amount" style="position: fixed;top: 6.45333rem;">
+			<div class="balance_amount_top f26">
+				选择充值余额（充值后可使用余额进行交易支付）
+			</div>
+			<div class="balance_amount_down">
+				<div class="balance_amount_number f34" style="border: 1px solid #FFAD2D;" id="checkjine0" onclick="checkjine(0)">
+					￥50
+					<span id="checkxuan0" class="balance_amount_span"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+				<div class="balance_amount_number f34 balance_amount_bor" style="border: 1px solid #FFAD2D;" id="checkjine1" onclick="checkjine(1)">
+					￥100
+					<span id="checkxuan1" class="balance_amount_span" style="display: none;"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+				<div class="balance_amount_number f34 balance_amount_bor" style="border: 1px solid #FFAD2D;" id="checkjine2" onclick="checkjine(2)">
+					￥200
+					<span id="checkxuan2" class="balance_amount_span" style="display: none;"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+				<div class="balance_amount_number f34 balance_amount_bor" style="border: 1px solid #FFAD2D;" id="checkjine3" onclick="checkjine(3)">
+					￥300
+					<span id="checkxuan3" class="balance_amount_span" style="display: none;"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+				<div class="balance_amount_number f34 balance_amount_bor" style="border: 1px solid #FFAD2D;" id="checkjine4" onclick="checkjine(4)">
+					￥500
+					<span id="checkxuan4" class="balance_amount_span" style="display: none;"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+				<div class="balance_amount_number f34 balance_amount_bor" style="border: 1px solid #FFAD2D;" id="checkjine5" onclick="checkjine(5)">
+					￥1000
+					<span id="checkxuan5" class="balance_amount_span" style="display: none;"><i class="icon iconfont icon-gou balance_ic f24"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="cz f34" style="position: fixed;top: 11.79333rem;" id="chongzhi">充值</div>
+	</body>
+	<script>
+		function checkjine(id){
+			for (var i=0;i<6;i++) {
+				if(id==i){
+					$("#checkjine"+i).removeClass("balance_amount_bor");
+					$("#checkxuan"+i).show();
+				}else{
+					$("#checkjine"+i).addClass("balance_amount_bor");
+					$("#checkxuan"+i).hide();
+				}
+			}
+		}
+		
+		$("#chongzhi").on("tap",function(){
+			mui.openWindow("../apply/apply_method.html",{
+				waiting:{
+					autoShow:false
+				}
+			})
+		})
+	</script>
+
+</html>

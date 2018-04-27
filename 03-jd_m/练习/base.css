@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+	font-size: 14px;
+
+	margin: 0;
+	padding: 0;
+
+	-webkit-tap-highlight-color: transparent;
+    /*盒子模型*/
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+    /*设置统一文字*/
+    font-family: '微软雅黑',sans-serif;
+}
+/*去除input默认演示*/
+input {
+	border: none;
+	-webkit-appearance: none;
+}
+/*a标签的下划线*/
+a {
+	text-decoration: none;
+}
+ol,ul {
+	list-style: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: block;
+	line-height: 0;
+	height: 0;
+	wisibility:  hidden;
+	clear: both;
+}

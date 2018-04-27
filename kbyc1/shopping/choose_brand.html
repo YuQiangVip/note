@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选品牌</title>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<!--<link rel="stylesheet" href="font_diy/iconfont.css">-->
+			<link rel="stylesheet" type="text/css" href="font_diy/iconfont.css"/>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/topic.css" />
+		<!--<script src="script/mui.js"></script>-->
+		<script src="script/mui.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<script src="script/jquery.charfirst.pinyin.js"></script>
+		<script src="script/sort.js"></script>
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<div class="nav_bar">
+				<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+				<span class="f34">选品牌</span>
+				<span class="iconfont icon-gengduo f35 top_navri"></span>
+			</div>
+		</div>-->
+
+		<div class="log_bgcolor">
+			<div class="brand_box">
+				<p>热门品牌</p>
+			</div>
+			<div class=" choose_bran">
+				<div class="choose_min ">
+					<img src="img/choose_brimg.png" alt="" />
+					<span>大众</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg1.png" alt="" />
+					<span>宝马</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg3.png" alt="" />
+					<span>奥迪</span>
+				</div>
+
+				<div class="choose_min ">
+					<img src="img/choose_brimg4.png" alt="" />
+					<span>本田</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg5.png" alt="" />
+					<span>丰田</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg6.png" alt="" />
+					<span>路虎</span>
+				</div>
+
+				<div class="choose_min ">
+					<img src="img/choose_brimg7.png" alt="" />
+					<span>奔驰</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg8.png" alt="" />
+					<span>吉利</span>
+				</div>
+				<div class="choose_min ">
+					<img src="img/choose_brimg9.png" alt="" />
+					<span>熊猫</span>
+				</div>
+
+				<div class="choose_min ">
+					<img src="img/choose_brimg6.png" alt="" />
+					<span>奥特</span>
+				</div>
+
+			</div>
+
+			<div id="letter"></div>
+			<div class="sort_box">
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">张三</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">李四</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">王五</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">欧弟</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">小五</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">刘六</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">马七</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">黄八</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">莫九</div>
+				</div>
+				<div class="sort_list sort_border">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">陈十</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">查看</div>
+				</div>
+				<div class="sort_list" id="brand_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">奥迪</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">1十</div>
+				</div>
+				<div class="sort_list sort_border">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">奔驰</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>
+					<div class="num_name">本田</div>
+				</div>
+			</div>
+			<div class="initials" style="color: #ffad2d; font-size:0.29333rem; top: 3.70rem;width: 0.4rem;">
+				<ul>
+					<!-- <li><img src="dist/img/068.png"></li> -->
+				</ul>
+			</div>
+		</div>
+
+		<div style="display: none;" id="brandindex">
+			<div class="brand_index">
+				<div id="brandindex_left"></div>
+				<div id="brandindex_right">
+					<!--   国产宝马 -->
+					<div class="list_bran">
+						国产宝马
+					</div>
+					<div class="item_bran" onclick="xuanzepp(0)">
+						<span>
+							A3
+						</span>
+						<i class="icon iconfont xz0 f24" style="color: #ff9100;"></i>
+					</div>
+					<div class="item_bran" onclick="xuanzepp(1)">
+						<span>
+							A3
+						</span>
+						<i class="icon iconfont xz1 f24" style="color: #ff9100;"></i>
+					</div>
+						<!--<span>A4L</span>
+						<span style="border: none;">A4L</span>-->
+					<!--<div class="mui-input-row mui-radio">
+						<label>国产宝马</label>
+					</div>
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell xz0" onclick="xuanzepp(0)">
+							<a class="mui-navigate-right">A3</a>
+						</li>
+						<li class="mui-table-view-cell xz1" onclick="xuanzepp(1)">
+							<a class="mui-navigate-right">A4L</a>
+						</li>
+					</ul>-->
+					<!--   进口宝马 -->
+					<div class="list_bran">
+						国产宝马
+					</div>
+					<div class="item_bran" onclick="xuanzepp(2)">
+						<span>
+							A3
+						</span>
+						<i class="icon iconfont xz2 f24" style="color: #ff9100;"></i>
+					</div>
+					<div class="item_bran" onclick="xuanzepp(3)">
+						<span>
+							A3
+						</span>
+						<i class="icon iconfont xz3 f24" style="color: #ff9100;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/*选择宝马*/
+			$(".choose_min").on("click", function() {
+				$("#brandindex").show();
+
+			})
+			$("#brandindex_left").on("click", function() {
+				$("#brandindex").hide();
+			})
+
+			$('#brand_list').on('tap', function() {
+				mui.openWindow('../home/zepin/time.html#', {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			
+			var checkxz;
+			
+			function xuanzepp(id){
+				$(".xz"+id).addClass("icon-gou");
+				$(".xz"+checkxz).removeClass("icon-gou");
+				checkxz = id;
+				setTimeout(function(){
+					mui.openWindow('../home/zepin/time.html',{
+					waiting:{
+						auotoShow:false
+					}
+					})
+				},300)
+			}
+		</script>
+		
+
+	</body>
+
+</html>

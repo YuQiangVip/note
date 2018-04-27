@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>消息</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="css/mui.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/news.css">
+    <script src="js/mui.js"></script>
+</head>
+<body>
+     <!--<div class="nav_bar">
+        <span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+        <span class="f37">
+        消息
+        </span>
+     </div>-->
+<!-- 订单信息 -->
+      <div class="news_main message_top" id="dingdaninfo">
+           <div class="news_left">
+             <img src="img/xiaoxi/dingdan.png">
+           </div>
+           <!-- 圆tip -->
+           <div class="news_circle"></div>
+            <div class="news_right">
+                 <P class="news_p f28">订单消息</P>
+                 <p class="news_date f24">2017-09-77</p>
+                 <p class="news_content f26">您有订单已确认，商家正马不停蹄的为您备货, 清...</p>
+            </div>
+      </div>
+      <div class="news_main" id="huodonginfo">
+           <div class="news_left">
+               <img src="img/xiaoxi/hdong.png" class="">
+           </div>
+            <div class="news_right">
+                 <P class="news_p f28">活动促销</P>
+                 <p class="news_date f24">2017-09-77</p>
+                 <p class="news_content f26">在家看巨幕, 全球首款『影院水平』激光投影电视,在家看巨幕, 全球首款『影院水平』激光投影电视</p>
+            </div>
+      </div>
+      <div class="news_main" id="xitonginfo">
+           <div class="news_left">
+               <img src="img/xiaoxi/xtxx.png" class="">
+           </div>
+            <div class="news_right">
+                 <P class="news_p f28">系统消息</P>
+                 <p class="news_date f24">2017-09-77</p>
+                 <p class="news_content f26">感谢您对开呗养车的信任，顾客的满意就是我们..。在家看巨幕, 全球首款『影院水平』激光投影电视</p>
+            </div>
+      </div>
+</body>
+<script>
+	$("#dingdaninfo").on("tap",function(){
+		mui.openWindow("../shopping/orderinfomation.html",function(){
+			waiting:{
+				autoShow:false
+			}
+		})
+	})
+	$("#huodonginfo").on("tap",function(){
+		mui.openWindow("../shopping/activitypromotion.html",function(){
+			waiting:{
+				autoShow:false
+			}
+		})
+	})
+	$("#xitonginfo").on("tap",function(){
+		mui.openWindow("syestem_message.html",function(){
+			waiting:{
+				autoShow:false
+			}
+		})
+	})
+</script>
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>可更换产品</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/topic.css" />
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">可更换产品</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+
+		<div class="repl_top" id="shaixuan">
+			<span>筛选</span>
+			<i class="iconfont f36 icon-shaixuan"></i>
+		</div>
+
+		<div class="replace_list" onclick="checklist(0)">
+			<div class="replace_img">
+				<img src="img/tyree.png" alt="" />
+			</div>
+			<div class="replace_item">
+				<div class="replace_txt">
+					<span>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</span>
+					<span class="f34 color_ad2d">￥89.00</span>
+				</div>
+				<div class="replace_min">
+					<i class="iconfont icon-checkbox-copy f40" id="checklist0"></i>
+				</div>
+			</div>
+		</div>
+		<div class="replace_list" onclick="checklist(1)">
+			<div class="replace_img">
+				<img src="img/tyree.png" alt="" />
+			</div>
+			<div class="replace_item">
+				<div class="replace_txt">
+					<span>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</span>
+					<span class="f34 color_ad2d">￥89.00</span>
+				</div>
+				<div class="replace_min">
+					<i class="iconfont icon-checkboxblank f40" id="checklist1"></i>
+				</div>
+			</div>
+		</div>
+		<div class="replace_list" onclick="checklist(2)">
+			<div class="replace_img">
+				<img src="img/tyree.png" alt="" />
+			</div>
+			<div class="replace_item" style="border: none;">
+				<div class="replace_txt">
+					<span>回力轮胎 R30 205/55R16 91V Warrior【四条套装】</span>
+					<span class="f34 color_ad2d">￥89.00</span>
+				</div>
+				<div class="replace_min">
+					<i class="iconfont icon-checkboxblank f40" id="checklist2"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="add_address_save_wrapper">
+			<div class="f34" id="add_address_save">确定</div>
+		</div>
+		<!--筛选遮罩-->
+		<div class="zhe_acce" style="display: none;z-index: 300;height: 100%;width: 100%;top: 1.17333rem;"></div>
+		<div class="acce_shai" style="display: none;z-index: 301;">
+			<div class="acce_jia">
+				价格区间
+			</div>
+			<div class="acee_num">
+				<span style="position: relative;"><input type="number" placeholder="最低价" /></span>
+				<i>-</i>
+				<span style="position: relative;"><input type="number" placeholder="最高价" /></span>
+			</div>
+			<div class="acce_jia">
+				品牌
+			</div>
+			<div class="acce_btn acce_img">
+				<span>全部</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+				<span>
+    			<img src="img/brand_img_04.png" alt="" />
+    		</span>
+			</div>
+
+			<div class="acce_sm">
+				<span>重置</span>
+				<span id="queding">确定</span>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	$(function() {
+		var clientHeight = $(window).height();
+		$('body').css('height', clientHeight + 'px');
+		createTabs('.tabs', 'div', 'current_show');
+		starEvaluate('.stars_box', '.star_evaluate_area');
+		showDeleteBtn('.collect_goods_areas', '.for_position');
+		$(".add_to_car").on("tap", function() {
+			mui.openWindow({
+				url: 'shopping_cart_full.html',
+				id: 'shopping_cart_full'
+			})
+		});
+
+	})
+	
+	$("#shaixuan").on("tap", function() {
+		$(".zhe_acce").show();
+		$(".acce_shai").show();
+	})
+	$(".zhe_acce").on("tap", function() {
+		$(".zhe_acce").hide();
+		$(".acce_shai").hide();
+	})
+	$("#queding").on("tap", function() {
+		$(".zhe_acce").hide();
+		$(".acce_shai").hide();
+	})
+	$("#add_address_save").on("tap", function() {
+		mui.back();
+	})
+	function checklist(id){
+		for(var i=0;i<3;i++){
+			if(id==i){
+				$("#checklist"+i).addClass("icon-checkbox-copy")
+				$("#checklist"+i).removeClass("icon-checkboxblank")
+			}else{
+				$("#checklist"+i).addClass("icon-checkboxblank")
+				$("#checklist"+i).removeClass("icon-checkbox-copy")
+			}
+		}
+
+	}
+</script>

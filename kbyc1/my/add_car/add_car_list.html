@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加爱车</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="../js/flexible_css.js"></script>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="../css/mui.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/news.css">
+   <!--<link rel="stylesheet" href="../fonts/icon/iconfont.css">-->
+   	<link rel="stylesheet" type="text/css" href="../../shopping/css/layout.css"/>
+   <link rel="stylesheet" type="text/css" href="../../shopping/font_diy/iconfont.css"/>
+    <script src="../js/mui.js"></script>
+</head>
+   <style type="text/css">
+     .iconfont{
+        font-size: 0.53333rem;
+     }
+   </style>
+<body>
+<!--<div class="nav_bar">
+        	<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+	        <span class="f34">添加爱车</span>
+        	<span class="iconfont icon-gengduo f35 top_navri"></span>
+    </div>-->
+      <!-- 添加爱车 -->
+		<div class="add_car_box" style="display: none;">
+			<div class="add_car_item">
+				<div class="add_car_goods f28"> 暂未添加爱车</div>
+			</div>
+			<div class="add_car_btn" id="cart_btn" onclick="addlikecar()">添加爱车</div>
+		</div>
+		<!-- 添加爱车 --有数据-->
+		<div style="display: block;">
+			<div class="car_list" id="car_list0">
+           <div class="car_list_top">
+                <div class="car_img">
+                    <img src="../img/bmz.png">
+                </div>
+              
+                <div class="car_list_items">
+                    <p class="car_list_p f28">华晨宝马<span class="car_list_span1">520Li</span></p>
+                    <p class="car_list_d f28 fcolor">2011年款<span class="car_list_span2">2.5L</span></p>
+                </div>
+           </div>
+				<div class="car_list_down">
+					<span class="iconfont icon-checkbox-copy-copy f40" id="xuanze0" style="color: #FFAD2D;margin-left: 0.35rem;" onclick="checkfp(0)"></span>
+					<span class="car_list_down_span f28">默认车型</span>
+					<label class="car_list_x" onclick="bianjilist()"><i class="icon iconfont icon-bianji"></i></label>
+					<label class="car_list_s" onclick="deletelist(0)"><i class=" iconfont icon-shanchu2"></i></label>
+				</div>
+			</div>
+			<!-- 添加爱车 -->
+			<div class="car_list" id="car_list1">
+           <div class="car_list_top">
+                <div class="car_img">
+                    <img src="../img/bmz.png">
+                </div>
+              
+                <div class="car_list_items">
+                    <p class="car_list_p f28">华晨宝马<span class="car_list_span1">520Li</span></p>
+                    <p class="car_list_p f28 fcolor">2011年款<span class="car_list_span2">2.5L</span></p>
+                </div>
+           </div>
+           <div class="car_list_down">
+					<span class="iconfont icon-checkboxblank f40" id="xuanze1" style="color: #FFAD2D;margin-left: 0.35rem;" onclick="checkfp(1)"></span>
+					<span class="car_list_down_span f28">默认车型</span>
+					<label class="car_list_x" onclick="bianjilist()"><i class="icon iconfont icon-bianji"></i></label>
+					<label class="car_list_s" onclick="deletelist(1)"><i class="icon iconfont icon-shanchu2"></i></label>
+				</div>
+			</div>
+			<div class="car_list_btn" onclick="addlikecar()">添加爱车</div>
+		</div>
+		<div id="motai" class="modal_con"></div>
+		<div id="tanchuang" class="modal_box">
+			<div class="modal_mian">
+				<div class="modal_title f32">
+					删除我的爱车
+				</div>
+				<div class="modal_ter">
+					确定要删除吗？
+				</div>
+			</div>
+			<div id="queren" class="determine fr f32">
+				确认
+			</div>
+			<div id="quxiao" class="modal_cancle fl f32">
+				取消
+			</div>
+		</div>
+	</body>
+	<script>
+		//链接添加品牌页面
+		function addlikecar() {
+			mui.openWindow("../../shopping/choose_brand.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		}
+
+		//删除列表数据
+
+		function deletelist(id) {
+			removelist = id;
+			$("#motai").show();
+			$("#tanchuang").show();
+		}
+		
+		//编辑数据
+		function bianjilist(){
+			mui.openWindow("../../shopping/choose_brand.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		}
+		
+		//单选框
+		function checkfp(id){
+			for (var i=0;i<2;i++) {
+				if(id==i){
+					$("#xuanze"+i).addClass("icon-checkbox-copy-copy");
+					$("#xuanze"+i).removeClass("icon-checkboxblank");
+				}else{
+					$("#xuanze"+i).removeClass("icon-checkbox-copy-copy");
+					$("#xuanze"+i).addClass("icon-checkboxblank");
+				}
+
+			}
+		}
+
+		$("#quxiao").on("tap", function() {
+			removelist = "";
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+		$("#queren").on("tap", function() {
+			$("#car_list" + removelist).remove()
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+	</script>
+
+</html>
+
+

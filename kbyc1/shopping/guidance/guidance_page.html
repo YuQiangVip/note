@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="../script/flexible.js"></script>
+    <script src="../script/flexible_css.js"></script>
+    <script src='../script/jquery-2.0.3.js'></script>
+    <link rel="stylesheet" href="../css/mui.css">
+    <link rel="stylesheet" href="guidance.css">
+</head>
+
+<body>
+    <div class="first_screen"><img src="../img/first_logo.png" alt=""></div>
+    <div class="second_screen"></div>
+    <div class="ad_screen"></div>
+    <div id="slider" class="mui-slider mui-fullscreen" style="background-color: #fff;">
+        <div class="mui-slider-group">
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <div class="slider_one_wrapper">
+                    <div class="slider_one_text_box">
+                        <div class="slider_one_text_sup">汽车零配商品</div>
+                        <div class="slider_one_text_sub">专业匹配车型，一应俱全</div>
+                    </div>
+                    <div class="slider_one_bg"><img id="page1_img" src="../img/page1.png" alt=""></div>
+                </div>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <div class="slider_one_wrapper">
+                    <div class="slider_one_text_box">
+                        <div class="slider_one_text_sup">品牌强势入驻</div>
+                        <div class="slider_one_text_sub">高端品牌，正品保障</div>
+                    </div>
+                    <div class="slider_one_bg"><img id="page2_img" src="../img/page2.png" alt=""></div>
+                </div>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <div class="slider_one_wrapper">
+                    <div class="slider_one_text_box">
+                        <div class="slider_one_text_sup">专业智慧养车</div>
+                        <div class="slider_one_text_sub">精准推荐保养方案，省心无忧</div>
+                    </div>
+                    <div class="slider_one_bg"><img id="page3_img" src="../img/page3.png" alt=""></div>
+                </div>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <div class="slider_one_wrapper">
+                    <div class="slider_one_text_box">
+                        <div class="slider_one_text_sup">门店覆盖全国</div>
+                        <div class="slider_one_text_sub">200+城市，1000+门店</div>
+                    </div>
+                    <div class="slider_one_bg"><img id="page4_img" src="../img/page4.png" alt=""></div>
+                </div>
+            </div>
+            <div class="mui-slider-item">
+                <div class="slider_five_wrapper">
+                    <div class="slider_five_bg"><img id="page5_img" src="../img/page5.png" alt=""></div>
+                    <div class="slider_five_text_box">
+                        <span class="slider_five_text_sup"><span>全</span><span>新</span><span>体</span><span>验</span>
+                    </div>
+                    <div class="guidance_start_btn" id="guidance_start_btnn">立即开启</div>
+                </div>
+            </div>
+        </div>
+            <div class="mui-slider-indicator" id="reset_indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+    </div>
+    <script src="../script/mui.js"></script>
+    <script>
+    $(function() {
+        $('.first_screen').fadeOut(2000,function () {
+            $('.second_screen').fadeIn(2000,function () {
+                $('.second_screen').fadeOut(2000,function () {
+                    // body...
+                $('#slider').fadeIn(2000)
+                })
+            })    
+        });
+    })
+    mui.back = function() {};
+    mui.plusReady(function() {
+        if (mui.os.ios) {
+            plus.navigator.setFullscreen(true);
+        }
+        plus.navigator.closeSplashscreen();
+    });
+    //立即体验按钮点击事件
+    document.getElementById("guidance_start_btnn").addEventListener('tap', function(event) {
+        plus.storage.setItem("lauchFlag", "true");
+        plus.navigator.setFullscreen(false);
+        plus.webview.currentWebview().close();
+    }, false);
+    //图片切换时，触发动画
+    document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+        //注意slideNumber是从0开始的；
+        var index = event.detail.slideNumber + 1;
+        // if (index == 2 || index == 3) {
+        //     var item = document.getElementById("tips-" + index);
+        //     if (item.classList.contains("mui-hidden")) {
+        //         item.classList.remove("mui-hidden");
+        //         item.classList.add("guide-show");
+        //     }
+        // }
+        if (index==5) {
+            $('#reset_indicator').hide().addClass('disappear')
+        }
+        if (index!=5) {
+            if($('#reset_indicator').hasClass('disappear')){$('#reset_indicator').show().removeClass('disappear') }
+        }
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+html,body {
+	margin: 0;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	background: url('../images/bgi1.png') no-repeat;
+	background-size: cover;
+}
+.container {
+	padding-top: 20px;
+}
+
+.main {
+	padding: 10px 20px;
+}
+.person_img {
+	position: relative;
+	width: 100%;
+	height: 150px;
+}
+.person_img img {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.message i {
+	width: 20px;
+	height: 20px;
+	padding-right: 5px;
+}
+.message .num {
+	color: #3099b3;
+	font-size: 13px;
+	line-height: 15px;
+	text-indent: 20px;
+}
+.skill {
+	width: 100%;
+	height: 200px;
+	
+}
+p {
+		color: #3099b3; 
+}
+ul,li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.skill ul li {
+	float: left;
+	height: 20px;
+	line-height:20px;
+	border-radius: 5px;
+	border: 1px solid #1984c5;
+	padding: 5px 5px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.skill ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.skill ul li a:hver {
+
+}
+
+.time {
+	width: 160px;
+	height: 70px;
+	margin: 0 auto;
+}

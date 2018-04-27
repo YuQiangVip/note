@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ydzq</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<link rel="stylesheet" href="../shopping/css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="../shopping/css/mui.css" rel="stylesheet" />
+		<script src="../shopping/script/mui.js"></script>
+		<script src='../shopping/script/checkbox.js'></script>
+		<link rel="stylesheet" href="../shopping/css/layout.css">
+		<link rel="stylesheet" href="../shopping/css/shopping_cart.css">
+		<link rel="stylesheet" href="../shopping/font_diy/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/list/topic.css" />
+	</head>
+
+	<body>
+
+		<!--<div class="nav_bar bac_topic">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f37">
+        	中国移动专区
+        </span>
+		</div>-->
+
+		<div class="topic_top">
+			<div class="topic_img">
+				<img src="../img/ydzq/topic_img.png" />
+			</div>
+		</div>
+
+		<div class="topic_bac">
+			<div class="topic_box">
+				<img src="../img/ydzq/topic_btn.png" alt="" />
+				<!--<span>立即领取</span>-->
+			</div>
+			<div class="top_h">
+				<h3>12359人已领取</h3>
+			</div>
+			<div class=" topic_use2">
+				<img src="../img/ydzq/topic_use.png" alt="" />
+			</div>
+
+			<div class="topic_content">
+				<div class="topic_text">
+					<div class="fl topic_list1" onclick="fuwulist()">
+						<img src="../img/ydzq/top_cart1.png" />
+						<div>标准洗车</div>
+					</div>
+					<div class="fl topic_list1">
+						<img src="../img/ydzq/top_cart.png" />
+						<div>精细洗车</div>
+					</div>
+					<div class="fl topic_list1">
+						<img src="../img/ydzq/top_la.png" />
+						<div>磨泥打蜡</div>
+					</div>
+					<div class="fl topic_list1">
+						<img src="../img/ydzq//top_polishing.png" />
+						<div>漆面抛光</div>
+					</div>
+					<div class="fl topic_list">
+						<img src="../img/ydzq/top_clean.png" />
+						<div>室内清洁</div>
+					</div>
+					<div class="fl topic_list">
+						<img src="../img/ydzq/top_plating.png" />
+						<div>封釉/镀晶</div>
+					</div>
+					<div class="fl topic_list">
+						<img src="../img/ydzq/top_glass.png" />
+						<div>玻璃隔膜</div>
+					</div>
+					<div class="fl topic_list">
+						<img src="../img/ydzq/top_tires.png" />
+						<div>胎铃清洁</div>
+					</div>
+					<div class="fl topic_list" id="last">
+						<img src="../img/ydzq/top_engine.png" />
+						<div>发动机清洁</div>
+					</div>
+				</div>
+			</div>
+
+			<div class=" topic_use2">
+				<img src="../img/ydzq/topic_use2.png" alt="" />
+			</div>
+
+			<div class="top_viod">
+				<div class="topic_content">
+					<div class="topic_footer">
+						<div class="footer_text">
+							<div>1.开呗服务代金券仅限服务类商品。</div>
+						</div>
+						<div class="footer_text">
+							<div>2.开呗服务代金券绑定后，只能当前用户使用。代金券可以转让使用。</div>
+						</div>
+						<div class="footer_text">
+							<div>3.开被服务代金券为3个月有效期。</div>
+						</div>
+						<div class="footer_text">
+							<div>4.订单金额中使用开呗服务代金券支付的部分，将不开发票。</div>
+						</div>
+						<div class="footer_text">
+							<div>5.退货时，开呗服务代金券支付部分退回代金券内，不予兑换现金。</div>
+						</div>
+						<div class="footer_text">
+							<div>6.每笔订单可以使用多张代金券，代金券不可兑换现金。</div>
+						</div>
+						<div class="footer_text">
+							<div>7.最终解释权归开呗养车科技有限公司所有。</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/list/city.js"></script>
+		<script>
+			$(".topic_box").on("tap", function() {
+				mui.openWindow("http://jf.10086.cn/index.html", {
+					waiting: {
+						autoShow: false,
+						title: "正在加载..."
+					}
+
+				})
+
+			})
+
+			function fuwulist() {
+				mui.openWindow("../shopping/service_list.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>申请退款</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="css/LArea.css" />
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">申请退款</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<form action="" id="refund_state" class="bg_colorf refund_layout">
+			<div><span>收货状态</span><span class="color_g">未收到货</span></div>
+			<div><span>服务状态</span><span>未服务</span></div>
+			<div class="notice"><span>退款类型</span><span class="color_dark">我要退款（包含服务费）</span></div>
+			<div class="notice" style="position: relative;">
+				<span class="fl">退款原因</span>
+				<input id="value1" type="hidden">
+				<span id="personaddress" class="fl f28 input_refund_layout" style="height: 1.06666rem;line-height: 1.06666rem;color: #CCCCCC;">请选择退款原因</span>
+				<div class="fr mar_rism"><span class="mui-icon mui-icon-arrowright"></span></div>
+			</div>
+		</form>
+		<form action="" id="refund_money" class="bg_colorf refund_layout">
+			<div><span class="color_reset">退款金额</span></div>
+			<div class="notice clearfix" style="position: relative;">
+				<span class="fl">商品价格</span>
+				<input type="number" id="goodsprice" onKeypress="return (/[\d.]/.test(String.fromCharCode(event.keyCode)))" class="color_dark fl f28 input_refund_layout" placeholder="请输入最多不超过39.00元" style="height: 0.53333rem;margin-top: 0.29333rem; line-height: 0.53333rem;ime-mode:Disabled"></div>
+				<span id="goods" style="display: none;">39</span>
+			<div class="notice clearfix" style="position: relative;">
+				<span class="fl">服务费用</span>
+				<input type="number" id="serviceprice" onKeypress="return (/[\d.]/.test(String.fromCharCode(event.keyCode)))" class="color_dark fl f28  input_refund_layout" placeholder="请输入最多不超过20.00元" style="height: 0.53333rem;margin-top: 0.29333rem; line-height: 0.53333rem;ime-mode:Disabled"></div>
+				<span id="fuwu" style="display: none;">20</span>
+			<div class="notice clearfix" style="position: relative;">
+				<span class="fl">物流费用</span>
+				<input type="number" id="logisticsprice" onKeypress="return (/[\d.]/.test(String.fromCharCode(event.keyCode)))" class="color_dark fl f28 input_refund_layout" placeholder="请输入最多不超过15.00元" style="height: 0.53333rem;margin-top: 0.29333rem; line-height: 0.53333rem;ime-mode:Disabled"></div>
+				<span id="wuliu" style="display: none;">15</span>
+		</form>
+		<div id="refund_info_area" class="">
+			<div class="refund_title bg_colorf apply_involved_reason_box">
+				<span class="color_reset">退款说明</span>
+			</div>
+			<div class="refu_tare bg_colorf">
+				<textarea type="textarea" id="refundexplain" class="info_area f28" id="info_area" placeholder="请填写说明" style="padding-left: 0.33333rem;"></textarea>
+			</div>
+			<!--<div class="refund_voucher_area_text"><span class="color_reset">上传凭证（最多3张）</span></div>-->
+			<div class="refund_voucher_area bg_colorf store_site_linkman">
+				<div class="refund_voucher_area_text"><span class="color_reset">上传凭证（最多3张）</span></div>
+				<!--H5点击添加图片 -->
+				<div class="voucher_area">
+					<div id="inImgs0" class='voucher' style="display: block;" onClick="onFile(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs1" class='voucher' style="display: none;" onClick="onFile(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="inImgs2" class='voucher' style="display: none;" onClick="onFile(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<input type="file" name="file" id="doc" multiple="multiple" onchange="javascript:setImagePreviews();" accept="image/*" style="display: none;" />
+					<!--<input type="file" id="file_input" style="display: none;" />-->
+				</div>
+				<!--app点击添加图片 -->
+				<div class="voucher_area" style="display: none;">
+					<div id="imagesnum0" class='voucher' style="display: block;" onclick="resultapp(0)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum1" class='voucher' style="display: none;" onclick="resultapp(1)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+					<div id="imagesnum2" class='voucher' style="display: none;" onclick="resultapp(2)">
+						<img src="img/add_voucher.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="submit_btn f34" id="voucher_submit">提交</div>
+		<div id="tishi" style="" class="floating_layer1">评价成功</div>
+	</body>
+	<script src="script/mui.js"></script>
+	<script src='script/checkbox.js'></script>
+	<!--图片上传js-->
+	<script src="js/uploadingImage.js"></script>
+
+	<script src="js/tanchang.js"></script>
+	<script src="js/tanchangData.js"></script>
+	<script>
+		var btncolor = 0;
+		$("#goodsprice").on("change", function() {
+			var numyz = /^[1-9]\d*(\.(?!\d*\.)\d+)*$/;
+			var numberyz = document.getElementById("goodsprice").value;
+			var falg = numberyz.search(numyz);
+			if(falg == -1) {
+				$("#tishi").show();
+				document.getElementById("tishi").innerHTML="请正确输入价格";
+				document.getElementById("goodsprice").value="";
+				setTimeout(function(){
+					$("#tishi").hide();
+				},1000)
+				return;
+			}
+			var a = document.getElementById("goods").innerHTML;
+			if(numberyz*1>a*1){
+				document.getElementById("goodsprice").value=a;
+			}
+			btncolorcheck();
+		})
+		$("#serviceprice").on("change", function() {
+			var numyz = /^[1-9]\d*(\.(?!\d*\.)\d+)*$/;
+			var numberyz = document.getElementById("serviceprice").value;
+			var falg = numberyz.search(numyz);
+			if(falg == -1) {
+				$("#tishi").show();
+				document.getElementById("tishi").innerHTML="请正确输入价格";
+				document.getElementById("serviceprice").value="";
+				setTimeout(function(){
+					$("#tishi").hide();
+				},1000)
+				return;
+			}
+			var a = document.getElementById("fuwu").innerHTML;
+			if(numberyz*1>a*1){
+				document.getElementById("serviceprice").value=a;
+			}
+			btncolorcheck();
+		})
+		$("#logisticsprice").on("change", function() {
+			var numyz = /^[1-9]\d*(\.(?!\d*\.)\d+)*$/;
+			var numberyz = document.getElementById("logisticsprice").value;
+			var falg = numberyz.search(numyz);
+			if(falg == -1) {
+				$("#tishi").show();
+				document.getElementById("tishi").innerHTML="请正确输入价格";
+				document.getElementById("logisticsprice").value="";
+				setTimeout(function(){
+					$("#tishi").hide();
+				},1000)
+				return;
+			}
+			var a = document.getElementById("wuliu").innerHTML;
+			if(numberyz*1>a*1){
+				document.getElementById("logisticsprice").value=a;
+			}
+			btncolorcheck();
+		})
+
+		function btncolorcheck() {
+			if(document.getElementById("goodsprice").value.length != 0 && document.getElementById("serviceprice").value.length != 0 && document.getElementById("logisticsprice").value.length != 0) {
+				document.getElementById("voucher_submit").style.backgroundColor = "#ffad2d";
+				btncolor = 1;
+			} else {
+				document.getElementById("voucher_submit").style.backgroundColor = "#ffd399";
+				btncolor = 0;
+			}
+		}
+
+		$("#voucher_submit").on("tap", function() {
+			btncolorcheck();
+			if(btncolor == 1) {
+				mui.back();
+			}
+		})
+
+		//退款原因
+		var area1 = new LArea();
+		area1.init({
+			'trigger': '#personaddress',
+			'valueTo': '#value1',
+			'keys': {
+				id: 'id',
+				name: 'name'
+			},
+			'type': 1,
+			'data': LAreaData
+		});
+		area1.value = [1];
+	</script>
+
+</html>

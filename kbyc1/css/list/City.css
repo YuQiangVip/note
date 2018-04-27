@@ -1,0 +1,111 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,li,form,input,button,h1,h2,h3,h4,h5,h6,p{margin: 0 auto;padding:0;}
+ul,li,dl,dt,dd{display:block;list-style:none;}
+a{text-decoration:none;outline:none;}
+.fl{float:left;}
+.fr{float:right;}
+.none{display:none;}
+.loan_jm1{width:94%;margin:0 auto;}
+.loan_jm_spa1{width:39%;height:40px;line-height:40px;font-size:1em;color:#666;display:block;float:left;}
+.loan_jm_l1{margin-top:10px;margin-bottom:15px;height:40px;}
+.wbk_srn{width:57%;height:40px;border:1px solid #ccc;background:#FFF;float:left;padding-left:3%;line-height:40px;color:#ADADAD;
+font-size:1.1em; background-size:45%;background-position:center;background:#fff;}
+.wbk_srn b{width:30px;height:40px;border:1px solid #ccc;background:#FFF;float:left;padding-left:3%;line-height:40px;color:#ADADAD;
+font-size:1.1em;}
+/*显示点击是哪个字母*/
+
+html{width: 100%; height:100%;}
+body{width: 100%; height: 100%;}
+.mui-ios{height: auto;}
+.mui-bar-nav~.mui-content {padding-top: 1.173333rem; padding-bottom: 1.306666rem;
+overflow-y: auto;}
+
+#header{background-color:#ffad2d; color: #FFFFFF; border: none; width: 100%; height: 1.173333rem;
+line-height: 1.173333rem;}
+#header .mui-action-back{float: left;height: 100%; color: #FFFFFF;font-size:0.866666rem; font-weight: 300;}
+.mui-action-back{margin: 0; padding: 0;}
+#header .mui-title{float: left;  font-weight: 500;height: 100%;text-align: center;line-height: 1.173333rem;}
+.mui-bar .mui-icon{float: left;font-size: 0.866666rem;}
+
+
+#header #hander_left{margin-left: 80%;}
+.mui-content h3{float: left; width: 100%;text-align: justify;text-indent: 0.4rem; margin-bottom: 0.066666rem;}
+
+
+
+.mui-content{background-color: #f4f4f4;}
+.city_input{ width: 100%; height: 1.173333rem; color: black; position: relative;}
+.city_input img{width: 0.6rem; height: 0.6rem;
+ position: absolute;    left:20%;top:33%;}
+#city_search{height: 0.853333rem; width: 9.2rem;  border-radius:0.106666rem;text-indent: 0.5rem;
+  background-color: #ffffff;padding: 0; margin:0.266666rem 0.4rem; z-index: 2;}
+input::placeholder{  font-size: 0.373333rem; text-align: center;color: #cccccc;}
+
+h3{width: 3.186666rem;height: 1rem;font-family: PingFang-SC;font-size: 0.373333rem;
+  text-align: center;color: #999999; line-height: 1.36rem;}
+.now_city{float: left;width: 100%; height: 1.573333rem; background-color: #ffffff;}
+.address{width: 1.973333rem; height: 0.773333rem; border-radius:0.106666rem ;background-color: #FFFFFF;
+  border: solid 1px #ffad2d;    float: left; margin: 0.4rem;}
+.address .mui-icon:before{color: #ffad2d; font-size: 0.48rem;  margin-left: 0.16rem;}
+.address span{display: inline-block; color: #ffad2d;height: 100%;
+ line-height:0.773333rem;text-align: center;}
+.address img{float: left; width: 0.533333rem; height: 0.533333rem; margin: 0.133333rem;}
+.hot_city{float: left;height: 2.613333rem; width: 100%; background-color: #FFFFFF;}
+.hot_city ul{padding: 0.4rem; height: 100%; width: 100%;}
+.hot_city ul li{width: 1.973333rem; height: 0.773333rem; float: left;text-align: center; line-height:0.773333rem;
+  border-radius: 0.106666rem; border: solid 1px #cccccc; margin-right: 0.266666rem; margin-bottom: 0.266666rem; }
+
+.showLetter{
+    position: fixed;
+    color:#00C7C7;
+    width: 1.6rem;
+    height:1.6rem;
+    top:50%;
+    left: 40%;
+    border-radius: 0.106666rem;
+  
+    text-align: center;
+    display: none;
+    background-color: #ffad2d;
+}
+
+
+ 
+ 
+  
+.showLetter span{
+    width: 0.373333rem;
+    height:0.466666rem;
+    font-size:48px;
+    line-height:1.6rem;;
+   
+   color: #ffffff;
+   text-align: center;
+}
+
+
+  
+
+/*城市弹层*/
+.container{width:100%;}
+.letter{width:auto;position:fixed;top:20%;right:10px;text-align:center;}
+.letter ul{list-style-type:none;font-size: 0.293333rem;  font-family: PingFang-SC;
+  font-weight: 500; text-align: center;color: #ffad2d; width: 0.28rem; height:10rem; margin-right: 0.133333rem;}
+ .letter ul li{margin-top:0.46666rem;}
+.letter ul li a{text-decoration:none;color: #ffad2d;}
+.city{width:100%;overflow:hidden;}
+
+
+
+
+.city-list .city-letter{display: block; font-size:28px;height: 1.173333rem;text-indent: 0.386666rem;
+ solid #e8ecf1;width:100%;color: #999999; background-color: #f4f4f4; line-height: 1.673333rem;}
+.city-list p{color:#afafaf;width:100%;height:1.173333rem; color: #111111;font-size: 0.37333rem;
+ line-height:1.173333rem;border-bottom:1px solid #e8ecf1;cursor:pointer;}
+.UISelect{margin-top:0.066666rem}
+
+p{background-color: #FFFFFF;width: 100%; height: 1.173333rem;}
+.city-list{width: 100%; text-indent: 0.386666rem;}
+ 
+
+

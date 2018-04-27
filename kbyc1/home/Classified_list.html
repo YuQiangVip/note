@@ -1,0 +1,562 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品分类</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../fonts/icon/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/list/Classified_list.css" />
+		<link rel="stylesheet" type="text/css" href="../shopping/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../shopping/font_diy/iconfont.css" />
+	</head>
+	<style type="text/css">
+		a:hover {
+			text-decoration: none!important;
+		}
+	</style>
+
+	<body>
+
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">分类列表</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<!-----body------>
+		<div class="mui-content" style="background: #F4F4F4;">
+			<div class="mui-input-row">
+				<i id="ss" class="iconfont icon-sousuo1"></i>
+				<input id="mui-content_input" class="mui-input-speech mui-input-clear" type="search" placeholder="输入商品名称">
+			</div>
+
+			<div id="mui-content_list">
+
+				<div id="mui-content_ul">
+					<ul>
+						<a>
+							<li style="border-left: 2px solid #ffad2d;color: #ffad2d;" id="checktext0" onclick="checktext(0)">热门推荐</li>
+						</a>
+						<a>
+							<li id="checktext1" onclick="checktext(1)">油化妆品</li>
+						</a>
+						<a>
+							<li id="checktext2" onclick="checktext(2)">维修保养</li>
+						</a>
+						<a>
+							<li id="checktext3" onclick="checktext(3)">美容清洁</li>
+						</a>
+						<a>
+							<li id="checktext4" onclick="checktext(4)">车载电器</li>
+						</a>
+						<a>
+							<li id="checktext5" onclick="checktext(5)">汽车装饰</li>
+						</a>
+						<a>
+							<li id="checktext6" onclick="checktext(6)">汽车用品</li>
+						</a>
+						<a>
+							<li id="checktext7" onclick="checktext(7)">安全装备</li>
+						</a>
+						<a>
+							<li id="checktext8" onclick="checktext(8)">汽车工具</li>
+						</a>
+					</ul>
+				</div>
+				<div class="mui-content_page" id="page_black">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#"  onclick="goodslists()">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<div href="" onclick="produDetail()"><img src="../img/classification/03.png" alt="" />
+								<h2>机油</h2></div></li>
+							<li>
+								<div href="" onclick="produDetail()"><img src="../img/classification/05.png" alt="" />
+								<h2>空调制冷剂</h2></div></li>
+							<li>
+								<div href="" onclick="produDetail()"><img src="../img/classification/07.png" alt="" />
+								<h2>轮胎</h2></div></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/shouye/jly.png" alt="" />
+							<h2>机油</h2></div></li>
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/classification/05.png" alt="" />
+							<h2>空调制冷剂</h2></div></li>
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/classification/07.png" alt="" />
+							<h2>轮胎</h2></div></li>
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/classification/07.png" alt="" />
+							<h2>机油</h2></div></li>
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/classification/05.png" alt="" />
+							<h2>空调制冷剂</h2></div></li>
+						<li>
+							<div href="" onclick="goodslists()"><img src="../img/classification/07.png" alt="" />
+							<h2>轮胎</h2></div></li>
+					</div>
+				</div>
+
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>油化妆品</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>维修保养</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>美容清洁</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>车载电器</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>汽车装饰</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>汽车用品</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>安全装备</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+				<div class="mui-content_page">
+					<div class="page_list1">
+						<img src="../img/fl_top_03.png" />
+					</div>
+					<div class="page_wz">
+						<h3>推荐商品</h3>
+						<a href="#">更多<span id="page_jt" class="mui-icon mui-icon-arrowright"></span></a>
+					</div>
+					<div class="page_list2">
+						<ul>
+							<li>
+								<a href=""><img src="../img/classification/03.png" alt="" /></a>
+								<h2>机油</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/05.png" alt="" /></a>
+								<h2>空调制冷剂</h2></li>
+							<li>
+								<a href=""><img src="../img/classification/07.png" alt="" /></a>
+								<h2>轮胎</h2></li>
+						</ul>
+					</div>
+					<div class="page_wz">
+						<h3>汽车工具</h3>
+					</div>
+
+					<div class="page_list3">
+						<li>
+							<a href=""><img src="../img/shouye/jly.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>机油</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/05.png" alt="" /></a>
+							<h2>空调制冷剂</h2></li>
+						<li>
+							<a href=""><img src="../img/classification/07.png" alt="" /></a>
+							<h2>轮胎</h2></li>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+		<script>
+			$(function() {
+				var lis = $("#mui-content_ul li")
+				var divs = $(".mui-content_page")
+				for(var i = 0; i < lis.length; i++) {
+					lis[i].index = i;
+					$(lis[i]).on("tap", function() {
+						for(var i = 0; i < divs.length; i++) {
+							divs[i].style.display = "none";
+						}
+						divs[this.index].style.display = "block";
+					})
+
+				};
+
+				//顶部搜索框聚焦失焦事件
+				$change = function(i, l) {
+					$(i).focus(function() {
+						$(l).css({
+							'left': '10%'
+						});
+						$(i).attr('placeholder', "")
+					})
+					$(i).blur(function() {
+						$(l).css({
+							'left': '32%'
+						});
+						$(i).attr('placeholder', "输入商品名称")
+						$(i).val("")
+					})
+				}
+
+				$change("#mui-content_input", "#ss");
+
+				$(".mui-icon-speech").on("tap", function() {
+					mui.openWindow({
+						url: 'search.html',
+						id: 'search'
+					})
+				});
+
+			})
+
+			function checktext(id) {
+				for(var i = 0; i < 9; i++) {
+					if(id == i) {
+						document.getElementById("checktext" + i).style.borderLeft = "2px solid #ffad2d";
+						document.getElementById("checktext" + i).style.color = "#ffad2d";
+					} else {
+						document.getElementById("checktext" + i).style.borderLeft = "2px solid #fff";
+						document.getElementById("checktext" + i).style.color = "#666666";
+					}
+				}
+			}
+
+			function goodslists() {
+				mui.openWindow({
+					url: '../shopping/accessories_list.html',
+				})
+			}
+			function produDetail(){
+				mui.openWindow('Commodity_details.html',{
+					waiting:{
+						autoShow:false
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

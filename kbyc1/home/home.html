@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<!--<link href="../css/mui.min.css" rel="stylesheet" />-->
+		<link rel="stylesheet" href="../shopping/css/layout.css" />
+		<link rel="stylesheet" href="../shopping/font_diy/iconfont.css" />
+		<link rel="stylesheet" href="../css/mui.css" />
+		<link rel="stylesheet" href="../css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/list/home.css" />
+		<script src="../js/flexible.js"></script>
+		<!--百度地图api-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H4NvHakLzy4qtl9Cjjpg6WcjVwXAbjMg"></script>
+		<!--置顶-->
+		<script src="../js/zhiding.js"></script>
+	</head>
+
+	<body>
+		<!--主体-->
+		<div class="mui-content" id="body">
+			<!-- 滚动显示的头部-->
+			<header id="header" class="mui-bar mui-bar-nav">
+				<p id="hander_right" class="f26">深圳</p>
+				<span class="xiala_home f25 iconfont icon-down-trangle" style="margin-top: 0.06666rem;"></span>
+				<div class="mui-input-row" id="hander2_center">
+					<img id="g" src="../img/shouye/serooh_03.png" />
+					<input type="search" id="hander_search" placeholder="请输入商品名称" onclick="sousuo()">
+				</div>
+				<!--<span id="hander_left" onclick="xiaoxilist()"><img src="../img/shouye/xx.png" /></span></span>-->
+			</header>
+			<!--头部-->
+			<div id="hander2">
+				<div id="hander2_left">
+					<p class="f26" id="dingwei">深圳</p>
+					<span class="f25 iconfont icon-down-trangle"></span>
+				</div>
+				<div id="hander2_center">
+					<img id="t" src="../img/shouye/serooh_03.png" />
+					<input type="search" id="hander2_search" placeholder="请输入商品名称" onclick="sousuo()">
+					<span id="hander2_input" class="mui-icon mui-icon-search"></span>
+				</div>
+				<!--<span id="hander_left" onclick="xiaoxilist()"><img src="../img/shouye/xx.png" /></img></span>-->
+			</div>
+			<div id="lb">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop" >
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../img/shouye/header-1_03.png">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<div class="body_input">
+					<i id="input_cart">
+						<img src="../img/shouye/sy_car.png" />
+						<img id="input_text" src="../shopping/img/evey_wam.png" alt="" />
+						<span>车库空空，添加爱车</span>
+					</i>
+					<!--<input id="input_text" type="button" value="车库空空，添加爱车" />-->
+				</div>
+			</div>
+			<!--list-->
+			<div>
+				<ul id="body_ul">
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/jy.png" alt="" /></a><span>机油</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/lt.png" alt="" /></a><span>轮胎</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/dianp.png" alt="" /></a><span>电瓶</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/ys.png" alt="" /></a><span>雨刷</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/jly.png" alt="" /></a><span>记录仪</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/weixby.png" alt="" /></a><span>维修保养</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/qczs.png" alt="" /></a><span>汽车装修</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/mrqx.png" alt="" /></a><span>美容清洗</span></li>
+					<li class="Recorde">
+						<a href="#"><img src="../img/shouye/chezdq.png" alt="" /></a><span>车载电器</span></li>
+					<li class="more">
+						<a href="#"><img src="../img/shouye/more.png" alt="" /></a><span>更多</span></li>
+				</ul>
+			</div>
+			<!--抢购活动-->
+			<div id="buying">
+				<div class="buying_top clearfix">
+					<img id="buy_sale" class="fl" src="../img/shouye/body_buying_03.png" />
+					<!--倒计时-->
+					<div class="buying_time fr">
+						<span class="f24" style="margin-right: 0.2rem;">还剩</span>
+						<span class="buy_span">21</span>
+						<i>:</i>
+						<span class="buy_span">58</span>
+						<i>:</i>
+						<span class="buy_span">01</span>
+
+					</div>
+				</div>
+				<!--图片循环-->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide blue-slide" onclick="cuxiaogoods()">
+							<img src="../img/my/1.png" />
+							<p>¥299.00</p>
+							<h4><del>¥300.00</del></h4>
+						</div>
+						<div class="swiper-slide red-slide" onclick="cuxiaogoods()">
+							<img src="../img/my/2.png" />
+							<p>¥288.00</p>
+							<h4><del>¥199.00</del></h4>
+						</div>
+						<div class="swiper-slide orange-slide" onclick="cuxiaogoods()">
+							<img src="../img/my/3.png" />
+							<p>¥688.00</p>
+							<h4><del>¥800.00</del></h4>
+						</div>
+						<div class="swiper-slide green-slide" onclick="cuxiaogoods()">
+							<img src="../img/my/4.png" />
+							<p>¥188.00</p>
+							<h4><del>¥260.00</del></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--热门服务-->
+			<div id="body_Hot_service">
+				<h3>热门服务</h3>
+				<ul>
+					<li onclick="fuwuxiangmu()">
+						<img src="../img/shouye/anzhuang.png" alt="">
+						<dt>安装服务</dt>
+					</li>
+					<li onclick="fuwuxiangmu()">
+						<img src="../img/shouye/mrfw.png" alt="">
+						<dt>美容服务</dt>
+					</li>
+					<li onclick="fuwuxiangmu()">
+						<img src="../img/shouye/baoyang.png" alt="">
+						<dt>保养服务</dt>
+					</li>
+					<li onclick="fuwuxiangmu()">
+						<img src="../img/shouye/daibdj.png" alt="">
+						<dt>代办代缴</dt>
+					</li>
+					<li class="service" onclick="fuwuxiangmu()">
+						<img src="../img/shouye/more.png" alt="">
+						<dt>更多</dt>
+					</li>
+				</ul>
+			</div>
+			<!--优惠券-->
+			<div id="body_yhq">
+				<img src="../img/shouye/gg1.png" />
+			</div>
+			<!--推荐商品-->
+			<div id="Recommend">
+				<div id="mc">
+					<div class="Recommend_top">
+						<h5 class="fl">推荐品牌</h5>
+						<span class="fr" id="home_gen" style="margin-right: 0.4rem;">更多
+							<span class="iconfont icon-qianjin color_grey f26"></span>
+						</span>
+					</div>
+					<div class="Recommend_conter">
+						<div class="swiper-container2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide blue-slide" onclick="shoppings()">
+									<img src="../img/my/body_tuijian3_49.png" />
+								</div>
+								<div class="swiper-slide red-slide" onclick="shoppings()">
+									<img src="../img/my/body_tuijian3_52.png" />
+								</div>
+								<div class="swiper-slide orange-slide" onclick="shoppings()">
+									<img src="../img/my/body_tuijian3_55.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="Recommend_bottom">
+						<h4>系列是行业推荐的优秀汽车用品品牌，一直秉承着超凡卓越、极值绚烂的理念</h4>
+					</div>
+				</div>
+			</div>
+			<!--代金券-->
+			<div id="body_djq">
+				<img src="../img/shouye/gg2.png" />
+			</div>
+			<!--热门商品-->
+			<div id="body_hot">
+				<div class="body_hot_top">
+					<h5 class="fl">热门商品</h5>
+					<span class="fr" style="margin-right: 0.4rem;">更多<span style="margin-left: 0.13333rem;" class="iconfont icon-qianjin color_grey f26"></span></span>
+				</div>
+				<div id="commodity">
+					<ul class="commodity_ul">
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+						<li class="commodity_ul_li" onclick="peijianlist()">
+							<img class="commodity_ul_li_img" src="../img/shouye/cx1.png">
+							<div class="commodity_ul_li_bottom">
+								<p class="commodity_describe">回力轮胎正品速迈迈GG45325445325</p>
+								<h4 style="color: #ffad2d;margin-left: 0.21333rem;">¥89.00</h4>
+								<div class="Praise">
+									<span>100%好评</span>
+									<span>已售133件</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom_bar">
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<img src="../shopping/img/checkhome.png" />
+				</div>
+				<span class="bottom_txt color_dark f22">首页</span>
+			</div>
+			<div class="bot_footer" id="goodsshop">
+				<div class="bottom_box">
+					<i class="iconfont f40 icon-mendian"></i>
+				</div>
+				<span class="bottom_txt f22">门店</span>
+			</div>
+			<div class="bot_footer" id="goodscar">
+				<div class="bottom_box" style="margin-left: 0.13333rem;">
+					<i class="iconfont f40 icon-gouwuche1"></i>
+				</div>
+				<span class="bottom_txt f22">购物车</span>
+			</div>
+			<div class="bot_footer" id="personal">
+				<div class="bottom_box">
+					<i class="iconfont f40 icon-wode1"></i>
+				</div>
+				<span class="bottom_txt f22">我的</span>
+			</div>
+		</div>
+		
+		<div id="shanghua" style="position: fixed;z-index: 100;width: 1.17333rem;height: 1.17333rem;bottom: 1.73333rem;right: 0.4rem;border-radius: 1.33333rem;color: #fff;text-align: center;line-height: 1.33333rem;opacity:.8 ;display: none;" onclick="scrollTo()">
+			<img src="../shopping/img/icon.png" alt="" />
+		</div>
+		
+		<div id="motai" class="modal_con" style="z-index: 499;"></div>
+		<div id="tanchuang" class="modal_box" style="z-index: 499;height: 3.5rem;">
+			<div class="modal_mian" style="height: 2.3rem;">
+				<div class="modal_title f32">
+					<p style="color: #111111;">您的定位尚未开启</p>
+					<p style="color: #111111;">已默认定位城市为<span style="font-size: 0.4rem;font-weight: bold;">深圳</span></p>
+				</div>
+			</div>
+			<div id="queren" class="determine fr f32">
+				去选择
+			</div>
+			<div id="quxiao" class="modal_cancle fl f32">
+				先逛逛
+			</div>
+		</div>
+		<div id="allmap" style="display: none;"></div>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/list/home.js"></script>
+
+		<script>
+			var map = new BMap.Map("allmap");
+			var point = new BMap.Point(116.331398, 39.897445);
+			map.centerAndZoom(point, 12);
+
+			function myFun(result) {
+				var cityName = "";
+				cityName = result.name;
+				map.setCenter(cityName);
+				if(cityName.length==0){
+					$("#motai").show();
+					$("#tanchuang").show();
+					cityName = "深圳";
+				}
+				var a = cityName.substring(cityName.length - 1, cityName.length)
+				if(a == "市") {
+					cityName = cityName.substring(0, cityName.length - 1);
+				}
+				if(cityName.length > 3) {
+					var b = cityName.substring(cityName.length - 1, cityName.length);
+					var c = cityName.substring(0, 1);
+					cityName = c + "..." + b;
+				}
+				document.getElementById("hander_right").innerHTML = cityName;
+				document.getElementById("dingwei").innerHTML = cityName;
+			}
+			var myCity = new BMap.LocalCity();
+			myCity.get(myFun);
+			
+			//隐藏模态框
+			$("#motai").on("tap",function(){
+				$("#motai").hide();
+				$("#tanchuang").hide();
+			})
+			$("#quxiao").on("tap",function(){
+				$("#motai").hide();
+				$("#tanchuang").hide();
+			})
+			$("#queren").on("tap",function(){
+				$("#motai").hide();
+				$("#tanchuang").hide();
+				mui.openWindow({
+					url: '../home/City.html',
+					id: 'City',
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			
+			//链接个人中心
+			$("#personal").on("tap", function() {
+				mui.openWindow("../shopping/personal_center.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			//链接更多商品
+			$(".more").on("tap", function() {
+				mui.openWindow({
+					url: '../home/Classified_list.html',
+					id: 'Classified_list',
+					waiting: {
+						autoShow: false
+					}
+				})
+			});
+
+			//链接商品列表
+			$(".Recorde").on("tap", function() {
+				mui.openWindow({
+					url: '../shopping/accessories_list.html',
+					id: 'Commodity_details',
+					waiting: {
+						autoShow: false
+					}
+				})
+			});
+
+			//链接购物车
+			$("#goodscar").on("tap", function() {
+				mui.openWindow("../shopping/shopping_cart_full.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			//链接门店列表
+			$("#goodsshop").on("tap", function() {
+				mui.openWindow("../my/store/store_service.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			//链接品牌列表
+			$('#home_gen').on('tap', function() {
+				mui.openWindow("../shopping/top_brands.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			$('#input_cart').on('tap', function() {
+				mui.openWindow("../shopping/choose_brand.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			$('#hander_left').on('tap', function() {
+				mui.openWindow("../my/add_car/add_car.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			
+			//搜索链接
+			function sousuo(){
+				mui.openWindow('../my/store/search.html', {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+			
+			$('#buy_sale').on('tap', function() {
+				mui.openWindow('Flash_sale.html', {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+//			function xiaoxilist() {
+//				mui.openWindow("../my/news_message.html", {
+//					waiting: {
+//						autoShow: false
+//					}
+//				})
+//			}
+
+			function cuxiaogoods() {
+				mui.openWindow("Commodity_details_djs.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+			
+			//服务列表
+			function fuwuxiangmu() {
+				mui.openWindow("Service.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+
+			//商品店铺
+			function shoppings() {
+				mui.openWindow("../shopping/accessories_list.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+
+			//配件列表
+			function peijianlist() {
+				mui.openWindow("Commodity_details_djs.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			}
+
+			//配件列表
+			$(".body_hot_top").on("tap", function() {
+				mui.openWindow("../shopping/accessories_list.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+
+			$("#hander2_left").on("tap", function() {
+				mui.openWindow({
+					url: '../home/City.html',
+					id: 'City',
+					waiting: {
+						autoShow: false
+					}
+				})
+			});
+
+			$("#hander_right").on("tap", function() {
+				mui.openWindow({
+					url: '../home/City.html',
+					id: 'City',
+					waiting: {
+						autoShow: false
+					}
+				})
+			});
+			//限时抢购
+			$('#body_yhq').on('tap', function() {
+				mui.openWindow("../home/Flash_sale.html", {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			//活动专区
+			$("#body_djq").on("tap",function(){
+				mui.openWindow("Move_Topic.html")
+			})
+		</script>
+	</body>
+
+</html>

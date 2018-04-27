@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list/search.css"/>
+		<link rel="stylesheet" href="../../shopping/font_diy/iconfont.css">
+	</head>
+    <style>
+.search_all {
+    width: 10.0rem;
+    background: #ffffff;
+    padding-left: 0.4rem;
+}
+.search_list {
+    width: 9.6rem;
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+    color: #666666;
+    /*border-bottom: 1px solid #E0E0E0;*/
+}
+    </style>
+	<body>
+	    <!-- <header id="header" class="mui-bar mui-bar-nav">
+              <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+              <h1 class="mui-title">搜索</h1>
+              <span id="hander_left" class="mui-icon mui-icon-more"></span>
+          </header> -->
+   
+       <div class="mui-content">
+       	<div id="top">
+       
+           <div id="type" class="test">
+            <span>商品</span>
+            <i id="xia" class="iconfont icon-sanjiao-xiala"></i>
+            <ul class="dropdown">
+                <li class="li1">商品</li>
+                <li>品牌店</li>
+            </ul>
+        </div> 
+        <input id="top_input" style="text-align: left;padding-left: 1.86666rem;border:none;" type="text" class="mui-input-speech mui-input-clear" placeholder="请输入商品名称">          
+     
+        
+      
+       <span class="qx">取消</span>
+       </div>
+       <!--历史记录-->      
+       <div class="Historical_record" id="del1">
+       	<div class="Historical_top">
+       	<h3>历史记录</h3>
+       <i class="iconfont icon-delete1" id="del"></i>
+       	</div>
+       	
+       	
+       	<div class="Historical_bottom">
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>          		
+       	</div>
+     	
+       </div>
+       
+       	
+      <div class="Historical_record">
+       	<div class="Historical_top">
+       	<h3>热门搜索</h3>
+       	
+       	</div>      	     	
+       	<div class="Historical_bottom">
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span>
+       		<span style="padding: 1px 7px;float: left;border: 1px solid #E7E1CD;border-radius: 3px;color: #A9A9A9;margin: 10px 0 0 15px;">推荐内容</span> 
+       	</div>       	
+      </div>    
+      <!-- 搜索呈现内容 -->
+           
+        </div>
+       <div class="search_all" style="display:none">
+                <div style="display:none">1</div>
+                <div class="search_list f28">
+                    安庆
+                </div>
+                <div class="search_list f28">
+                    安阳
+                </div>
+                <div class="search_list f28">
+                    鞍山
+                </div>
+                <div class="search_list f28">
+                    安庆
+                </div>
+                <div class="search_list f28">
+                    安阳
+                </div>
+            </div>
+      
+    
+
+		<script src="../js/flexible_css.js"></script>
+        <script src="../js/flexible.js"></script>
+        <script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js" ></script>
+		<script type="text/javascript">
+		window.onload = function() {
+                function DropDown(el) {
+                    this.dd = el;
+                    this.span = this.dd.children('span');
+                    this.li = this.dd.find('ul.dropdown li');
+                    this.val = '';
+                }
+                DropDown.prototype.initEvents = function() {
+                    var obj = this;
+                    obj.dd.on('click', function(event) {
+                        $(this).toggleClass('active').siblings().removeClass('active');
+                        event.stopPropagation();
+                    });
+                    obj.li.on('click', function() {
+                        var opt = $(this);
+                        obj.val = opt.html();
+                        if(obj.span.html() == obj.val) return;
+                        obj.span.html(obj.val);
+                        $(document).click(function() {
+                            $('.test').removeClass('active');
+                        });
+                    })
+                }
+                var test1 = new DropDown($('#type'));
+                var test2 = new DropDown($('#kind'));
+                test1.initEvents();
+                test2.initEvents()
+            }
+            /*取消返回上一层*/
+            
+             $(".qx").on("tap",function(){
+     	 mui.openWindow("store_service.html",{
+        waiting:{
+          autoShow:false
+        }
+      })
+    })
+          /*删除*/
+          $("#del").on("click",function(){
+          	$("#del1").hide();
+          	  
+          })
+          
+		/*$("#top_input").on("tap",function(){
+			mui.openWindow("store_search.html",{
+				waiting:{
+					autoShow:false
+				}
+			})
+		})*/
+            $("#top_input").keydown(function() {
+            $(".Historical_record").hide();
+            $(".mui-content").css("height","59px")
+            $(".search_all").show();
+
+        });
+            $('#top_input').bind('input', function () {
+               var value = $(this).val();
+                if(value.length==0){
+                     $(".Historical_record").show();
+                     $(".search_all").hide();
+                      $(".mui-content").css("height","auto")
+                }
+               // todo: 处理截断 or 对比是否超出限制
+              /* console.log(value);
+               console.log(value.length);*/
+             });
+         
+         /*$("#top_input").blur(function() {
+           
+                 $(".Historical_record").show();
+                 $(".search_all").hide();
+        });*/
+             /*$('#top_input').bind('input propertychange', function() {
+                 $(".Historical_record").show();
+                 $(".search_all").hide();
+        });*/
+        
+            $(".search_list").on("tap",function(){
+            mui.openWindow("../../shopping/accessories_list.html",{
+                waiting:{
+                    autoShow:false
+                }
+            })
+        })
+		</script>
+
+	</body>
+
+</html>

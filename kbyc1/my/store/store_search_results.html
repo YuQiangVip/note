@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索结果</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../../shopping/font_diy/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+		
+		.mendian_fucen {
+			top: 3.74rem;
+		}
+		
+		.address_span {
+			margin-left: 2.626667rem !important;
+		}
+		
+		.search_img {
+			margin-left: 0.24rem;
+		}
+		
+		.search_mid input {
+			margin-left: 0.73333rem;
+			width: 5.8rem;
+			text-align: left;
+			color: #111;
+			text-indent: 0.2em;
+		}
+		
+		.address_size {
+			color: #666666;
+		}
+		
+		.search_right {
+			color: #999;
+		}
+		
+		.address_span_name {
+			color: #666;
+		}
+		
+		.sell_amount {
+			margin-top: 0.226667rem;
+		}
+	</style>
+
+	<body>
+		<div class="service_main" style="position: fixed;z-index: 100;top: 0px;background: #F4F4F4;height: 1.17333rem;height: 1.33333rem;">
+			<div class="search_result">
+
+				<!--   左边部分 -->
+				<div class="search_left">
+					<div class="f28 " id="dingwei"><label class="result_label"><i class="icon iconfont icon-weizhi1 address_size f36"></i></label><label class="address_dz result_dz">深圳</label></div>
+
+				</div>
+				<!--   中边部分 -->
+				<div class="search_mid" style="position: relative;">
+					<img src="../img/shouye/serooh_03.png" alt="" class="search_img" id="search_img">
+					<input type="text" placeholder="搜索" id="search_input" class="f28">
+				</div>
+				<!--   右边部分 -->
+				<div class="search_right f28 mui-action-back">取消</div>
+			</div>
+		</div>
+		<!--    类型部分 -->
+		<div class="service_tab service_tab_top" style="display: table;position: fixed;z-index: 100;top: 0.75rem;">
+			<div class="service_tab1 f28" style="display: table-cell;text-align: center;color: #FFAD2D;">
+				&nbsp;&nbsp;<span>深圳</span>
+				<i class="icon iconfont icon-sanjiao-xiala service_tab_size a"></i>
+			</div>
+			<div class="service_tab2 f28" style="display: table-cell;text-align: center;">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>全部类型</span>
+				<i class="icon iconfont icon-sanjiao-xiala service_tab_size a"></i>
+			</div>
+			<div class="service_tab3 f28" style="display: table-cell;text-align: center;">
+				&nbsp;&nbsp;&nbsp;&nbsp;<span>离我最近</span>
+				<i class="icon iconfont icon-sanjiao-xiala service_tab_size a"></i>
+			</div>
+		</div>
+		<!-- list -->
+		<div class="mui-table-view-cell list_border" onclick="shopxq()" style="margin-top:2.5rem;">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mui-table-view-cell list_border" onclick="shopxq()">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mui-table-view-cell list_border" onclick="shopxq()">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mui-table-view-cell list_border" onclick="shopxq()">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mui-table-view-cell list_border" onclick="shopxq()">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mui-table-view-cell list_border" onclick="shopxq()">
+			<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+				<div class="brand_store_list for_position">
+					<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+					<div class="store_info_box">
+						<div class="store_title clearfix">
+							<div class="fl f24">直营</div>
+							<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+						</div>
+						<div class="star_evaluate_box clearfix">
+							<div class="star_evaluate_area fl">
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+							</div>
+							<span class="star_point fl color_g">5.0分</span>
+						</div>
+						<div class="col_store_address_box f26">
+							<div class="col_store_address_box">美容快修店 | 科技园</div>
+							<div class="col_store_distance">0.47km</div>
+						</div>
+						<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 浮层部分 -->
+		<div class="mendian_fucen" style="margin-top:2.4rem;position: fixed;z-index: 100;top: 0.0241rem;border-top: 1px solid #E4E4E4;">
+			<div class="div_tab">
+				<!-- 位置 -->
+				<div class="mendian_fucen_content" style="overflow-x: hidden;display: none" id="weizhi">
+					<div class="search_all mendian_fucen_left">
+						<div class="search_list f28" id="dingwei0" onclick="dianji(0)" style="color: #FFAD2D;">
+							<p style="display: none;"></p>
+							<span>福田区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon-gou icon_gou_address weizhi_size" id="xuanzhong0" style="float: right;"></i>
+						</div>
+						<div class="search_list f28" id="dingwei1" onclick="dianji(1)">
+							<p style="display: none;"></p>
+							<span>南山区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;display: none;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="xuanzhong1" style="float: right;"></i>
+						</div>
+						<div class="search_list f28" id="dingwei2" onclick="dianji(2)">
+							<p style="display: none;"></p>
+							<span>龙岗区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;display: none;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="xuanzhong2" style="float: right;"></i>
+						</div>
+						<div class="search_list f28" id="dingwei3" onclick="dianji(3)">
+							<p style="display: none;"></p>
+							<span>宝安区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;display: none;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="xuanzhong3" style="float: right;"></i>
+						</div>
+						<div class="search_list f28" id="dingwei4" onclick="dianji(4)">
+							<p style="display: none;"></p>
+							<span>福田区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;display: none;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="xuanzhong4" style="float: right;"></i>
+						</div>
+						<div class="search_list f28" id="dingwei5" onclick="dianji(5)">
+							<p style="display: none;"></p>
+							<span>南山区</span>
+							<i class="color_g icon iconfont icon-weizhi1" style="margin-left: 3.3rem;display: none;"><span class="address_span_name f26">我的位置<span class="address_number f28">200</span></span></i>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="xuanzhong5" style="float: right;"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- 类型 -->
+				<div class="mendian_fucen_content" style="overflow-x: hidden;" id="leixing">
+					<div class="search_all mendian_fucen_left">
+						<div class="search_list f28" id="type0" onclick="types(0)" style="color: #FFAD2D;">
+							<span>全部类型</span>
+							<i class="color_g icon iconfont icon-gou icon_gou_address weizhi_size" id="typexz0"></i>
+						</div>
+						<div class="search_list f28" id="type1" onclick="types(1)">
+							<span>美容快修店</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="typexz1"></i>
+						</div>
+						<div class="search_list f28" id="type2" onclick="types(2)">
+							<span>美容洗车店</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="typexz2"></i>
+						</div>
+						<div class="search_list f28" id="type3" onclick="types(3)">
+							<span>4S店</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="typexz3"></i>
+						</div>
+						<div class="search_list f28" id="type4" onclick="types(4)">
+							<span>轮胎门店</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="typexz4"></i>
+						</div>
+						<div class="search_list f28" id="type5" onclick="types(5)">
+							<span>综合门店</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="typexz5"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- 距离 -->
+				<div class="mendian_fucen_content" style="display: none" id="juli">
+					<div class="search_all mendian_fucen_left">
+						<div class="search_list f28" onclick="julis(0)" id="juli0" style="color: #FFAD2D;">
+							<span>自营优先</span>
+							<i class="color_g icon iconfont icon-gou icon_gou_address weizhi_size" id="julixz0"></i>
+						</div>
+						<div class="search_list f28" onclick="julis(1)" id="juli1">
+							<span>离我最近</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="julixz1"></i>
+						</div>
+						<div class="search_list f28" onclick="julis(2)" id="juli2">
+							<span>评价最高</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="julixz2"></i>
+						</div>
+						<div class="search_list f28" onclick="julis(3)" id="juli3">
+							<span>销量最高</span>
+							<i class="color_g icon iconfont icon_gou_address weizhi_size" id="julixz3"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		/*浮层部分*/
+		$(".service_tab3,.service_tab2,.service_tab1").on("click", function() {
+			$(this).css("color", "#ffad2d");
+			$(".mendian_fucen").toggle();
+		})
+
+		/* 实现tab选项卡内容切换*/
+		$('.service_tab').children().mouseover(function() {
+			$(this).css("color", "#ffad2d");
+			$(this).siblings().css({
+				"color": "#666"
+			})
+			var id = $(this).index(); //当前操作的元素索引值  
+			$('.div_tab').children().eq(id).show().siblings().hide(); //当前显示，其他的隐藏。  
+		});
+		
+		function dianji(id){
+			var a = document.getElementById("weizhi").getElementsByTagName("p").length;
+			for(var i=0;i<a;i++){
+				if(id==i){
+					document.getElementById("dingwei"+i).style.color="#ffad2d";
+					$("#xuanzhong"+i).addClass("icon-gou");
+				}else{
+					document.getElementById("dingwei"+i).style.color="#111111";
+					$("#xuanzhong"+i).removeClass("icon-gou");
+				}
+			}
+		}
+		
+		function types(id){
+			var a = document.getElementById("leixing").getElementsByTagName("i").length;
+			for(var i=0;i<a;i++){
+				if(id==i){
+					document.getElementById("type"+i).style.color="#ffad2d";
+					$("#typexz"+i).addClass("icon-gou");
+				}else{
+					document.getElementById("type"+i).style.color="#111111";
+					$("#typexz"+i).removeClass("icon-gou");
+				}
+			}
+		}
+		
+		function julis(id){
+			var a = document.getElementById("juli").getElementsByTagName("i").length;
+			for(var i=0;i<a;i++){
+				if(id==i){
+					document.getElementById("juli"+i).style.color="#ffad2d";
+					$("#julixz"+i).addClass("icon-gou");
+				}else{
+					document.getElementById("juli"+i).style.color="#111111";
+					$("#julixz"+i).removeClass("icon-gou");
+				}
+			}
+		}
+		
+		$("#dingwei").on("tap", function() {
+			mui.openWindow("../../home/City.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		function shopxq(){
+			mui.openWindow("store_details.html")
+		}
+//		$('#search_input').on('tap',function(){
+//			mui.openWindow('store_search_mendian.html',{
+//				waiting:{
+//					autoShow:false
+//				}
+//			})
+//		})
+	</script>
+
+</html>

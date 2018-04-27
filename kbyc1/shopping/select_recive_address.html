@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加收货地址 </title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">选择收货地址</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="recive_address_box">
+			<div class="reciver_info select_reciver_info bg_colorf" id="checklist0" onclick="checkcolor(0)">
+				<div class="recive_address_item color_lgrey">收货人<span class="reciver_name">开呗</span>联系方式<span class="reciver_tell">13723724748</span>
+				</div>
+				<div class="reciver_address">
+					<span class="icon color_lgrey f32 iconfont icon-dingwei"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+				</div>
+			</div>
+			<div class="reciver_info select_reciver_info bg_colorf" id="checklist1" onclick="checkcolor(1)">
+				<div class="recive_address_item color_lgrey">收货人<span class="reciver_name">开呗</span>联系方式<span class="reciver_tell">13723724748</span>
+				</div>
+				<div class="reciver_address">
+					<span class="icon color_lgrey f32 iconfont icon-dingwei"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+				</div>
+			</div>
+		</div>
+		<div class="add_address_save_wrapper">
+			<div class="f34" id="add_address_save">添加收货地址</div>
+		</div>
+
+</html>
+<script>
+	var clientHeight = $(window).height();
+	$('body').css('height', clientHeight + 'px');
+	$("#add_address_save").on("tap", function() {
+		mui.openWindow("add_recive_address.html", {})
+	});
+
+	function checkcolor(id) {
+		document.getElementById("checklist" + id).addEventListener("touchstart", function() {
+			document.getElementById("checklist" + id).style.backgroundColor = "#E4E4E4";
+		})
+		document.getElementById("checklist" + id).addEventListener("touchend", function() {
+			document.getElementById("checklist" + id).style.backgroundColor = "";
+			mui.back();
+		})
+	}
+</script>

@@ -1,0 +1,138 @@
+
+#header{background-color:#ffad2d; color: #FFFFFF;}
+#header a{color: #FFFFFF;}
+#header .mui-title{color: #FFFFFF;}
+#header #hander_left{margin-left: 80%;}
+
+html,body{width: 100%; height: 100%;}
+.mui-ios{height: 100%; }
+#top{width: 100%; height:1.333333rem ; position: relative;}
+.mui-content{background:#f4f4f4;}
+.mui-input-row{float: left; position: relative; margin-top: 0.266666rem;width: 8rem;height: 0.853333rem;border-radius: 0.106666rem;
+ background-color: #ffffff; margin-left: 0.4rem; line-height:0.853333rem; background: #f4f4f4;}
+.mui-input-row .mui-input-speech {width: 8rem; height: 0.853333rem; box-sizing: border-box; border: none;}
+.mui-input-row .mui-input-speech~.mui-icon-speech{ top: 0.08rem;}
+#parent {overflow: hidden;position: absolute;left: 0; top: 0.026666rem; margin-left: 0.266666rem; width: 2rem;
+height:100%;text-align: center;color: #FFFFFF;}
+#parent select {  /*很关键：将默认的select选择框样式清除*/ -moz-appearance:none;-webkit-appearance:none;
+height: 0.8rem; background: url(../../img/下箭头_03.png) no-repeat ; background-position:100% 50%; background-size:25% ;
+ color: #000000;}
+#parent select option{font-size: 0.16rem;0.853333rem;}
+#top .qx{display: inline-block; width: 0.9rem;height:100%; font-size: 0.373333rem;text-align: center;color: #666666; line-height: 1.333333rem;}
+#top_input{float: left; width: 8rem; height: 0.853333rem;margin: 0;
+    padding: 0; margin: 0.266666rem 0.4rem ;}
+/*历史记录*/
+
+.Historical_record{width: 100%; height: 3.733333rem; margin-top: 0.666666rem;}
+.Historical_top{width: 100%; height: 0.666666rem;color: #999999;}
+.Historical_top h3{display: inline-block;width: 83%; margin-left: 5%;}
+.Historical_bottom{width: 100%; height: 2.133333rem;}
+.Historical_bottom ul{width: 100%; height: 100%; padding-top: 0.133333rem;}
+.Historical_bottom ul li{float: left;width: 2.053333rem; height: 0.72rem; border-radius: 0.106666rem;
+background-color: #f4f4f4;border: solid 1px #cccccc; margin: 0.2rem; text-align: center;  color: #666666;}
+
+
+
+.Historical_bottom_ul2 li{float: left;width: 2.053333rem; height: 0.72rem; border-radius: 0.106666rem;
+background-color: #f4f4f4;border: solid 1px #cccccc; margin: 0.2rem; text-align: center;  color: #666666;}
+
+#xia{font-size: 0.026666rem;   -webkit-transform: scale(0.2);
+    -moz-transform:scale(0.2);
+    -o-transform:scale(0.2);
+    transform:scale(0.2);}
+
+ ul li {
+                list-style: none;
+            }
+
+            .test {
+            	
+                position: absolute;left: 5%; top: 20%;
+                float: left;
+                width: 2rem;
+                height: 0.853333rem;
+                padding-left: 0.266666rem;
+                font-size: 0.373333rem;
+                color: #666;
+                line-height:0.853333rem;
+                cursor: pointer;                      
+                outline: none;
+            }
+
+       
+
+
+            .test .dropdown {
+                position: absolute;
+                right: 0;
+                left: 0;
+                display: none;
+                padding: 0;
+                border-radius: inherit;
+                border: 1px solid #d2d2d2;
+                /*box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);*/
+            }
+
+            .test.active .dropdown {
+                display: block;
+                margin: 10px;
+                width: 2.133333rem;
+                height: 2.373333rem;
+                background: #000;
+                opacity: 0.8;
+                border-radius: 8px;
+            }
+
+            .test .dropdown:before {
+                position: absolute;
+                left: 13px;
+                bottom: 100%;
+                width: 0;
+                height: 0;
+                content: "";
+                border-width: 0 13px 13px 13px;
+                border-style: solid;
+                border-color: #d2d2d2 transparent;
+            }
+
+            .test .dropdown:after {
+                position: absolute;
+                left: 15px;
+                bottom: 100%;
+                width: 0;
+                height: 0;
+                content: "";
+                border-width: 0 11px 11px 11px;
+                border-style: solid;
+                border-color: #000 transparent;
+            }
+
+            .test .dropdown li {
+                float: left;
+                width: 100%;
+                height: 1.066666rem;
+                line-height: 1.066666rem;
+                font-size: 0.373333rem;
+                color: #fff;
+                -webkit-transition: all .3s ease-out;
+                -moz-transition: all .3s ease-out;
+                -ms-transition: all .3s ease-out;
+                -o-transition: all .3s ease-out;
+                transition: all .3s ease-out;
+                text-align: center;
+            }
+		.li1{
+			border-bottom: 1px solid #666;
+		}
+            .test .dropdown li:first-of-type {
+                border-radius: 3px 3px 0 0;
+            }
+
+            .test .dropdown li:last-of-type {
+                border-radius: 0 0 3px 3px;
+            }
+
+            .test .dropdown li:hover {
+                /*color: #fff;*/
+                /*background: #c43c3d;*/
+            }

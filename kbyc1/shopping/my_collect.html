@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">我的收藏</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="sub_nav tabs bg_colorf">
+			<div class="current_show f32 color_lgrey" id="tab0" onclick="checklist(0)">商品</div>
+			<div class="f32 color_lgrey" id="tab1" onclick="checklist(1)">品牌店</div>
+			<div class="f32 color_lgrey" id="tab2" onclick="checklist(2)">门店</div>
+		</div>
+		<div class="collect_goods_areas tab_areas">
+			<div id="0" style="display: block;">
+				<div class="goods_box" id="goodskong" style="display: none;">
+					<div id="item_empty">
+						<div class="color_grey">暂无商品</div>
+					</div>
+					<div class="shop_btn">先去逛逛</div>
+				</div>
+				<div class="bg_colorf" id="goodscunzai" style="display: block;">
+					<div class="mui-table-view-cell " style="padding-right: 0; padding-top: 0;padding-bottom: 0;" id="goodsdatalist0">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red f28 cancel" style="width: 2.4rem;height: 2.4rem;line-height: 2.4rem;text-align: center; display: inline-block; padding: 0;text-decoration: none;" onclick="quxiaosc(0)">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle my_cellection store_xq" style="width: 100%;overflow: hidden;">
+							<div class="goods_car_img" style=""><img src="img/tyree.png" alt=""></div>
+							<div class="store_rig" style="float: left; width: 7.4rem; border-bottom: 1px solid #E5E5E5; padding: 0.2rem 0 0.26666rem 0.2rem;">
+								<div>回力轮胎 R30 205/55R16 91V Warrior</div>
+								<div class="discount_mark f22">促销</div>
+								<div class="goods_car_handle_wrapper">
+									<span class="goods_car_list_price color_g f34">￥89.00</span>
+									<div class="add_to_car color_lgrey f26" id="" style="margin-right: 0.4rem;" onclick="addgoodscarway()">加入购物车</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-table-view-cell" style="padding-right: 0; padding-top: 0;padding-bottom: 0;" id="goodsdatalist1">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red f28 cancel" style="width: 2.4rem;height: 2.4rem;line-height: 2.4rem;text-align: center; display: inline-block; padding: 0;text-decoration: none;" onclick="quxiaosc(1)">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle my_cellection store_xq" style="width: 100%;overflow: hidden;">
+							<div class="goods_car_img" style=""><img src="img/tyree.png" alt=""></div>
+							<div class="store_rig" style="float: left; width: 7.4rem; border-bottom: 1px solid #E5E5E5; padding: 0.2rem 0 0.26666rem 0.2rem;">
+								<div>回力轮胎 R30 205/55R16 91V Warrior</div>
+								<div class="discount_mark f22">促销</div>
+								<div class="goods_car_handle_wrapper">
+									<span class="goods_car_list_price color_g f34">￥89.00</span>
+									<div class="add_to_car color_lgrey f26" id="" style="margin-right: 0.4rem;" onclick="addgoodscarway()">加入购物车</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-table-view-cell" style="padding-right: 0; padding-top: 0;padding-bottom: 0;" id="goodsdatalist2">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red f28 cancel" style="width: 2.4rem;height: 2.4rem;line-height: 2.4rem;text-align: center; display: inline-block; padding: 0;text-decoration: none;" onclick="quxiaosc(2)">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle my_cellection store_xq" style="width: 100%;overflow: hidden;">
+							<div class="goods_car_img" style=""><img src="img/tyree.png" alt=""></div>
+							<div class="store_rig" style="float: left; width: 7.4rem; padding: 0.2rem 0 0.26666rem 0.2rem;">
+								<div>回力轮胎 R30 205/55R16 91V Warrior</div>
+								<div class="discount_mark f22">促销</div>
+								<div class="goods_car_handle_wrapper">
+									<span class="goods_car_list_price color_g f34">￥89.00</span>
+									<div class="add_to_car color_lgrey f26" id="" style="margin-right: 0.4rem;" onclick="addgoodscarway()">加入购物车</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cance_img">
+					<img src="img/shop_cart.png" id="goodscar" alt="" />
+					<span>9</span>
+				</div>
+
+			</div>
+			<div id="1">
+				<div class="goods_box" style="display: none;">
+					<div id="item_empty">
+						<div class="color_grey">暂无商品</div>
+					</div>
+					<div class="shop_btn">先去逛逛</div>
+				</div>
+				<div class="collect_area" style="border-bottom: 1px solid #E5E5E5;background: white;">
+					<div class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red f28 cancel_min" style="width: 2.4rem;height: 2.93333rem;line-height: 2.93333rem;display: inline-block;text-align: center;padding: 0;text-decoration: none;">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle store_mm ppd" style="width: 100%;overflow: hidden;">
+							<div class="img store_img_dd" style="float: left;"><img src="img/collect_brand.png" alt=""></div>
+							<div class="clearfix store_rig" style="float: left;margin: 0 0 0 0.26666rem;">
+								<div class="brand_store f32">轲轲西里品牌旗舰店</div>
+								<div class="brand_store_parade f24">官方自营</div>
+								<div class="">
+									<div class="fl">
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+									</div>
+									<div class="fl color_g"><span class="start_count">5.0</span>分</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red f28 cancel_min" style="width: 2.4rem;height: 2.93333rem;line-height: 2.93333rem;display: inline-block;text-align: center;padding: 0;text-decoration: none;">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle store_mm ppd" style="width: 100%;overflow: hidden;">
+							<div class="img store_img_dd" style="float: left;"><img src="img/collect_brand.png" alt=""></div>
+							<div class="clearfix store_rig" style="float: left;margin: 0 0 0 0.26666rem;">
+								<div class="brand_store f32">轲轲西里品牌旗舰店</div>
+								<div class="brand_store_parade f24">官方自营</div>
+								<div class="">
+									<div class="fl">
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+									</div>
+									<div class="fl color_g"><span class="start_count">5.0</span>分</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="2">
+				<div class="goods_box" style="display: block;">
+					<div id="item_empty">
+						<div class="color_grey">暂无门店</div>
+					</div>
+					<div class="shop_btn" id="goodslist">先去逛逛</div>
+				</div>
+				<div class="collect_area" style="border-bottom: 1px solid #E5E5E5;display: none;">
+					<div class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red" style="width: 110px;background: #FFAD2D;text-decoration: none;">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+							<div class="brand_store_list for_position">
+								<div class="img_store"><img src="img/store_img.png" alt=""></div>
+								<div class="store_info_box">
+									<div class="store_title clearfix">
+										<div class="fl f24">直营</div>
+										<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+									</div>
+									<div class="star_evaluate_box clearfix">
+										<div class="star_evaluate_area fl">
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+										</div>
+										<span class="star_point fl color_g">5.0分</span>
+									</div>
+									<div class="col_store_address_box f26">
+										<div class="col_store_address_box">美容快修店 | 科技园</div>
+										<div class="col_store_distance">0.47km</div>
+									</div>
+									<div class="sell_amount"><i class="color_g icon iconfont icon-appreciatefill"></i><span class="color_lgrey f26">消费1889单</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red" style="width: 110px;background: #FFAD2D;text-decoration: none;">取消收藏</a>
+						</div>
+						<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+							<div class="brand_store_list for_position">
+								<div class="img_store"><img src="img/store_img.png" alt=""></div>
+								<div class="store_info_box">
+									<div class="store_title clearfix">
+										<div class="fl f24">直营</div>
+										<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+									</div>
+									<div class="star_evaluate_box clearfix">
+										<div class="star_evaluate_area fl">
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color iconfont icon-star-copy"></i></div>
+										</div>
+										<span class="star_point fl color_g">5.0分</span>
+									</div>
+									<div class="col_store_address_box f26">
+										<div class="col_store_address_box">美容快修店 | 科技园</div>
+										<div class="col_store_distance">0.47km</div>
+									</div>
+									<div class="sell_amount"><i class="color_g icon iconfont icon-appreciatefill"></i><span class="color_lgrey f26">消费1889单</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="tishi" class="floating_layer"></div>
+	</body>
+
+</html>
+<script>
+	function checklist(id) {
+		for(var i = 0; i < 3; i++) {
+			document.getElementById("tab" + i).style.color = (i == id ? '#ffad2d' : '#000');
+			document.getElementById("tab" + i).style.borderBottom = (i == id ? '2px solid #ffad2d' : 'none');
+			document.getElementById(i).style.display = (i == id ? 'block' : 'none');
+		}
+	}
+
+	$("#goodscar").on("tap", function() {
+		mui.openWindow("shopping_cart_full.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+
+	$("#goodslist").on("tap", function() {
+		mui.openWindow("../my/store/store_service.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+   
+   $(".ppd").on("tap", function() {
+		mui.openWindow("../shopping/brand_home.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+   $(".store_xq").on("tap", function() {
+		mui.openWindow("../home/Commodity_details.html", {
+			waiting: {
+				autoShow: false,
+				title: '正在加载...'
+			}
+		})
+	})
+	function addgoodscarway() {
+		document.getElementById("tishi").innerHTML = "加入成功";
+		$("#tishi").show();
+		setTimeout(function() {
+			$("#tishi").hide();
+		}, 400)
+		return;
+	}
+
+	function quxiaosc(id) {
+		document.getElementById("tishi").innerHTML = "取消成功";
+		$("#goodsdatalist" + id).remove();
+		$("#tishi").show();
+		setTimeout(function() {
+			$("#tishi").hide();
+		}, 400)
+		var leng = document.getElementById("0").getElementsByTagName("a").length;
+		if(leng == 0) {
+			$("#goodskong").show();
+			$("#goodscunzai").hide();
+		}
+		return;
+	}
+</script>

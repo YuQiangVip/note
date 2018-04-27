@@ -1,0 +1,425 @@
+﻿<!--<!doctype html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../fonts/icon/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/list/City.css" />
+		<link rel="stylesheet" href="../shopping/css/layout.css" />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H4NvHakLzy4qtl9Cjjpg6WcjVwXAbjMg"></script>
+	</head>
+
+	<body>
+
+
+		<div class="mui-content">
+			<div class="city_input">
+				<img id="s" src="../img/shouye/serooh_03.png" />
+				<input type="search" id="city_search" placeholder="输入城市名称或字母查询" />
+			</div>
+
+			<h3>当前城市定位</h3>
+
+			<div class="now_city">
+				<div class="address">
+					<img src="../img/shouye/serooh_03.png" />
+					<span id="dingwei">深圳</span>
+				</div>
+			</div>
+			<div id="allmap" style="display: none;"></div>
+			<h3>热门城市</h3>
+			<div class="hot_city f28">
+				<ul>
+					<li id="checkboxss0" style="border: 1px solid #FFAD2D;" onclick="checkboxs(0)">北京</li>
+					<li id="checkboxss1" onclick="checkboxs(1)">上海</li>
+					<li id="checkboxss2" onclick="checkboxs(2)">广州</li>
+					<li id="checkboxss3" onclick="checkboxs(3)">深圳</li>
+					<li id="checkboxss4" onclick="checkboxs(4)">南京</li>
+					<li id="checkboxss5" onclick="checkboxs(5)">杭州</li>
+					<li id="checkboxss6" onclick="checkboxs(6)">武汉</li>
+					<li id="checkboxss7" onclick="checkboxs(7)">成都</li>
+				</ul>
+			</div>
+
+			<div id="showLetter" class="showLetter"><span>A</span></div>
+			<div class="letter" style="position: fixed;z-index: 100;top: 1.6rem;right: 0.13333rem;line-height: 0.13333rem;">
+				<ul>
+					<li>
+						<a href="javascript:;">#</a>
+					</li>
+					<li>
+						<a href="javascript:;">A</a>
+					</li>
+					<li>
+						<a href="javascript:;">B</a>
+					</li>
+					<li>
+						<a href="javascript:;">C</a>
+					</li>
+					<li>
+						<a href="javascript:;">D</a>
+					</li>
+					<li>
+						<a href="javascript:;">E</a>
+					</li>
+					<li>
+						<a href="javascript:;">F</a>
+					</li>
+					<li>
+						<a href="javascript:;">G</a>
+					</li>
+					<li>
+						<a href="javascript:;">H</a>
+					</li>
+					<li>
+						<a href="javascript:;">J</a>
+					</li>
+					<li>
+						<a href="javascript:;">K</a>
+					</li>
+					<li>
+						<a href="javascript:;">L</a>
+					</li>
+					<li>
+						<a href="javascript:;">M</a>
+					</li>
+					<li>
+						<a href="javascript:;">N</a>
+					</li>
+					<li>
+						<a href="javascript:;">P</a>
+					</li>
+					<li>
+						<a href="javascript:;">Q</a>
+					</li>
+					<li>
+						<a href="javascript:;">R</a>
+					</li>
+					<li>
+						<a href="javascript:;">S</a>
+					</li>
+					<li>
+						<a href="javascript:;">T</a>
+					</li>
+					<li>
+						<a href="javascript:;">W</a>
+					</li>
+					<li>
+						<a href="javascript:;">X</a>
+					</li>
+					<li>
+						<a href="javascript:;">Y</a>
+					</li>
+					<li>
+						<a href="javascript:;">Z</a>
+					</li>
+				</ul>
+			</div>
+			<div class="container f28">
+				<div class="city">
+					<div class="city-list"><span class="city-letter" id="A1">A</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/list/city.js"></script>
+
+	</body>
+	<script>
+		var map = new BMap.Map("allmap");
+		var point = new BMap.Point(116.331398, 39.897445);
+		map.centerAndZoom(point, 12);
+		
+		function myFun(result) {
+			var cityName = result.name;
+			map.setCenter(cityName);
+			var a = cityName.substring(cityName.length - 1, cityName.length)
+			if(a == "市") {
+				cityName = cityName.substring(0, cityName.length - 1);
+			}
+			alert(cityName)
+			document.getElementById("dingwei").innerHTML = cityName;
+		}
+		var myCity = new BMap.LocalCity();
+		myCity.get(myFun);
+		function checkboxs(id){
+			for(var i=0;i<8;i++){
+				if(id==i){
+					document.getElementById("checkboxss"+i).style.border="1px solid #FFAD2D";
+				}else{
+					document.getElementById("checkboxss"+i).style.border="1px solid #dddddd";
+				}
+			}
+			mui.back();
+		}
+	</script>
+</html>-->
+	
+	<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择城市</title>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+		<!--<script type="text/javascript" src="../js/zepto.js"></script>-->
+		<!--<script src="script/flexible_css.js"></script>-->
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../shopping/css/normalize.css">
+		<link rel="stylesheet" href="../shopping/css/reg.css">
+			<link rel="stylesheet" type="text/css" href="../shopping/font_diy/iconfont.css"/>
+		<link rel="stylesheet" href="../shopping/css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../shopping/css/topic.css" />
+		<script src="../shopping/script/jquery.charfirst.pinyin.js"></script>
+		<script src="../shopping/script/sort.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H4NvHakLzy4qtl9Cjjpg6WcjVwXAbjMg"></script>
+		<style type="text/css">
+			.choose_bran{
+				height: 2.61333rem;
+			}
+			.choose_min{
+				margin: 0;
+				width: 1.97333rem;
+				height: 0.8rem;
+				color: #111;
+				line-height: 0.8rem;
+				text-align: center;
+				border: 1px solid #ccc;
+				border-radius: 0.08rem;
+				/*display: flex;*/
+				align-items: center;
+			}
+			.choose_min span{
+				padding: 0;
+			}
+			.positioning{
+				background: #fff;
+				height: 1.57333rem;
+				line-height: 1.57333rem;
+			}
+			.posi_box{
+				width: 1.97333rem;
+				height: 0.8rem;
+				line-height: 0.8rem;
+				border: 1px solid #FFAD2D;
+				border-radius: 0.08rem;
+				color: #FFAD2D;
+				text-align: center;
+				float: left;
+				margin: 0.4rem 0.4rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+	
+		<div class="log_bgcolor">
+			
+			<div class="brand_input">
+				<img id="search_img" style="left: 24%;" src="../img/shouye/serooh_03.png" />
+				<div class="log_bgcolor pad_brand">
+					<input type="search" id="brand_search" placeholder="输入城市名称或字母查询" />
+				</div>
+			</div>
+			
+			<div class="log_bgcolor">
+				<div class="brand_box">
+					<p>当前城市定位</p>
+				</div>
+				<div class="positioning">
+					<div class="posi_box">
+						<i class="iconfont icon-dingwei f36"></i>
+						<span>深圳</span>
+					</div>
+				</div>
+				
+				
+				<div class="brand_box">
+					<p>热门城市</p>
+				</div>
+				<div class=" choose_bran">
+					<div class="choose_min"  id="checkboxss0" style="border: 1px solid #FFAD2D;" onclick="checkboxs(0)">
+						<span>北京</span>
+					</div>
+					<div class="choose_min "  id="checkboxss1" onclick="checkboxs(1)">
+						<span>上海</span>
+					</div>
+					<div class="choose_min "  id="checkboxss2" onclick="checkboxs(2)">
+						<span>广州</span>
+					</div>
+	
+					<div class="choose_min "  id="checkboxss3" onclick="checkboxs(3)">
+						<span>深圳</span>
+					</div>
+					<div class="choose_min "  id="checkboxss4" onclick="checkboxs(4)">
+						<span>南京</span>
+					</div>
+					<div class="choose_min "  id="checkboxss5" onclick="checkboxs(5)">
+						<span>杭州</span>
+					</div>
+	
+					<div class="choose_min "  id="checkboxss6" onclick="checkboxs(6)">
+						<span>武汉</span>
+					</div>
+					<div class="choose_min "  id="checkboxss7" onclick="checkboxs(7)">
+						<span>成都</span>
+					</div>
+	
+				</div>
+			
+			
+			<div id="letter"></div>
+			<div class="sort_box">
+				<div class="sort_list">
+					<div class="num_name">鞍山</div>
+				</div>
+				<div class="sort_list sort_border">
+					<div class="num_name">安庆</div>
+				</div>
+				<div class="sort_list sort_border">
+					<div class="num_name">福安</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_name">厦门</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_name">深圳</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_name">杭州</div>
+				</div>
+				<div class="sort_list">
+					<div class="num_name">温州</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">天津</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">大庆</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">长春</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">郑州</div>
+				</div>
+				<div class="sort_list sort_border" id="brand_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">包头</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">福州</div>
+				</div>
+				<div class="sort_list">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">北流</div>
+				</div>
+				<div class="sort_list sort_border">
+					<!--<div class="num_logo">
+						<img src="img/brand.png" alt="">
+					</div>-->
+					<div class="num_name">丹阳</div>
+				</div>
+			</div>
+			<div class="initials" style="color: #ffad2d; font-size:0.29333rem; top: 3.70rem;width: 0.4rem;">
+				<ul>
+					<!-- <li><img src="dist/img/068.png"></li> -->
+				</ul>
+			</div>
+		</div>
+
+		
+
+		<script>
+//		var map = new BMap.Map("allmap");
+//		var point = new BMap.Point(116.331398, 39.897445);
+//		map.centerAndZoom(point, 12);
+//		
+//		function myFun(result) {
+//			var cityName = result.name;
+//			map.setCenter(cityName);
+//			var a = cityName.substring(cityName.length - 1, cityName.length)
+//			if(a == "市") {
+//				cityName = cityName.substring(0, cityName.length - 1);
+//			}
+//			alert(cityName)
+//			document.getElementById("dingwei").innerHTML = cityName;
+//		}
+//		var myCity = new BMap.LocalCity();
+//		myCity.get(myFun);
+		function checkboxs(id){
+			for(var i=0;i<8;i++){
+				if(id==i){
+					document.getElementById("checkboxss"+i).style.border="1px solid #FFAD2D";
+				}else{
+					document.getElementById("checkboxss"+i).style.border="1px solid #dddddd";
+				}
+			}
+			mui.back();
+		}
+		
+		$("#brand_search").focus(function() {
+			$("#search_img").css({
+				'left': '5%'
+			});
+			$("#brand_search").attr('placeholder', " ")
+		});
+		$("#brand_search").blur(function() {
+			$("#search_img").css({
+				'left': '20%'
+			});
+			$("#brand_search").attr('placeholder', "输入搜索本店商品")
+			$("#brand_search").val("")
+		});
+		$('#home_detail').on('tap', function() {
+			mui.openWindow('shop_details.html', {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		</script>
+
+	</body>
+
+</html>

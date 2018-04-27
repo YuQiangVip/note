@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>品牌店列表</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/reg.css"> -->
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<script src="script/common.js"></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="css/mine.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<style type="text/css">
+			#top {
+				width: 100%;
+				height: 1.333333rem;
+				position: relative;
+			}
+			
+			#top .qx {
+				display: inline-block;
+				width: 0.9rem;
+				height: 100%;
+				font-size: 0.373333rem;
+				text-align: center;
+				color: #666666;
+				line-height: 1.333333rem;
+			}
+			
+			#top_input {
+				float: left;
+				width: 8rem;
+				height: 0.853333rem;
+				line-height: 0.853333rem;
+				margin: 0;
+				padding: 0;
+				font-size: 0.37333rem;
+				margin: 0.266666rem 0.4rem;
+			}
+			
+			.test {
+				position: absolute;
+				left: 5%;
+				top: 20%;
+				float: left;
+				width: 2rem;
+				height: 0.853333rem;
+				padding-left: 0.266666rem;
+				font-size: 0.373333rem;
+				color: #666;
+				line-height: 0.853333rem;
+				cursor: pointer;
+				outline: none;
+			}
+			
+			.test .dropdown {
+				position: absolute;
+				right: 0;
+				left: 0;
+				display: none;
+				padding: 0;
+				border-radius: inherit;
+				border: 1px solid #d2d2d2;
+			}
+			
+			.test.active .dropdown {
+				display: block;
+				margin: 10px;
+				width: 2.133333rem;
+				height: 2.373333rem;
+				background: #000;
+				opacity: 0.8;
+				border-radius: 8px;
+				z-index: 100;
+			}
+			
+			.test .dropdown:before {
+				position: absolute;
+				left: 13px;
+				bottom: 100%;
+				width: 0;
+				height: 0;
+				content: "";
+				border-width: 0 13px 13px 13px;
+				border-style: solid;
+				border-color: #d2d2d2 transparent;
+			}
+			
+			.test .dropdown:after {
+				position: absolute;
+				left: 15px;
+				bottom: 100%;
+				width: 0;
+				height: 0;
+				content: "";
+				border-width: 0 11px 11px 11px;
+				border-style: solid;
+				border-color: #000 transparent;
+			}
+			
+			.test .dropdown li {
+				float: left;
+				width: 100%;
+				height: 1.066666rem;
+				line-height: 1.066666rem;
+				font-size: 0.373333rem;
+				color: #fff;
+				-webkit-transition: all .3s ease-out;
+				-moz-transition: all .3s ease-out;
+				-ms-transition: all .3s ease-out;
+				-o-transition: all .3s ease-out;
+				transition: all .3s ease-out;
+				text-align: center;
+			}
+			/*::-webkit-input-placeholder { 
+			    padding-left: 1.46666rem;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">商家列表</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div id="top" style="position: relative;">
+
+			<div class="test busine_text">
+				<span>商店</span>
+				<i id="xia" style="padding-left: 0.13333rem;" class="iconfont f16 icon-sanjiao-xiala"></i>
+				<ul class="dropdown">
+					<li class="li1">商店</li>
+					<li>品牌店</li>
+				</ul>
+			</div>
+			<input id="top_input" type="text" style="padding-left: 2rem;" placeholder="请输入商家">
+
+			<span class="qx">取消</span>
+		</div>
+
+		<div class="collect_goods_areas tab_areas">
+			<div id="0" style="display: block;">
+
+				<div class="bg_colorf" id="goodscunzai" style="display: block;">
+					<div class="collect_area" style="border-bottom: 1px solid #E5E5E5;background: white;">
+						<div class="mui-table-view-cell" style="overflow: inherit;">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red f28 cancel_min" style="width: 2.4rem;height: 2.93333rem;line-height: 2.93333rem;display: inline-block;text-align: center;padding: 0;text-decoration: none;">取消收藏</a>
+							</div>
+							<div class="mui-slider-handle store_mm" id="busin_jump" style="width: 100%;overflow: hidden;">
+								<div class="img store_img_dd" style="float: left;"><img src="img/collect_brand.png" alt=""></div>
+								<div class="clearfix store_rig" style="float: left;margin: 0 0 0 0.26666rem;">
+									<div class="brand_store f32">轲轲西里品牌旗舰店</div>
+									<div class="brand_store_parade f24">官方自营</div>
+									<div class="">
+										<div class="fl">
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										</div>
+										<div class="fl color_g"><span class="start_count">5.0</span>分</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-table-view-cell">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red f28 cancel_min" style="width: 2.4rem;height: 2.93333rem;line-height: 2.93333rem;display: inline-block;text-align: center;padding: 0;text-decoration: none;">取消收藏</a>
+							</div>
+							<div class="mui-slider-handle store_mm" style="width: 100%;overflow: hidden;">
+								<div class="img store_img_dd" style="float: left;"><img src="img/collect_brand.png" alt=""></div>
+								<div class="clearfix store_rig" style="float: left;margin: 0 0 0 0.26666rem;">
+									<div class="brand_store f32">轲轲西里品牌旗舰店</div>
+									<div class="brand_store_parade f24">官方自营</div>
+									<div class="">
+										<div class="fl">
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+											<div class="evaluate_star"><i class="start_color f30 iconfont icon-star-copy"></i></div>
+										</div>
+										<div class="fl color_g"><span class="start_count">5.0</span>分</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!--<div class="cance_img">
+					<img src="img/shop_cart.png" id="goodscar" alt="" />
+					<span>9</span>
+				</div>-->
+
+			</div>
+
+		</div>
+		<div id="tishi" class="floating_layer"></div>
+	</body>
+
+</html>
+<script>
+	window.onload = function() {
+		function DropDown(el) {
+			this.dd = el;
+			this.span = this.dd.children('span');
+			this.li = this.dd.find('ul.dropdown li');
+			this.val = '';
+		}
+		DropDown.prototype.initEvents = function() {
+			var obj = this;
+			obj.dd.on('click', function(event) {
+				$(this).toggleClass('active').siblings().removeClass('active');
+				event.stopPropagation();
+			});
+			obj.li.on('click', function() {
+				var opt = $(this);
+				obj.val = opt.html();
+				if(obj.span.html() == obj.val) return;
+				obj.span.html(obj.val);
+				$(document).click(function() {
+					$('.test').removeClass('active');
+				});
+			})
+		}
+		var test1 = new DropDown($('.busine_text'));
+
+		test1.initEvents();
+		test2.initEvents()
+	}
+	$('#busin_jump').on('tap',function(){
+			mui.openWindow('brand_home.html',{
+				waiting:{
+					autoShow:false
+				}
+			})
+		})
+</script>

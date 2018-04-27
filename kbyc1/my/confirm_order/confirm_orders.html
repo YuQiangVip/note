@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>确认订单（配件&服务）</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="../js/flexible_css.js"></script>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="../css/mui.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/icon/iconfont.css">
+    <script src="../js/mui.js"></script>
+</head>
+   <style type="text/css">
+    
+   </style>
+<body class="confirm_order_body">
+<!--<div class="nav_bar">
+        <span class="mui-icon mui-icon-arrowleft return"></span>
+        <span class="f37">
+        确认订单
+        </span>
+</div>-->
+     <div class="confirm_reciver_info order_top">
+        <div>
+            <div><span class="color_lgrey">收货人</span><span class="color_darker">开呗</span><span class="reciver_tel color_lgrey">联系方式</span><span class="color_darker">13723724748</span></div>
+            <div class="confirm_reciver_address">
+                <span class="f35 color_lgrey iconfont icon-weizhi2 mui-icon-location"></span><span class="address_text f26">广东省深圳市南山区朗山路口摩比大厦701室</span>
+            </div>
+        </div>
+        <span class="arrow_r mui-icon mui-icon-arrowright"></span>
+        <div class="colours_line_wrapper">
+            <div class="colours_wrapper">
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+                <span class="color"></span>
+            </div>
+        </div>
+    </div>     
+
+ 
+  <div class="confirm_order_store">
+        <div class="confirm_order_store_name f28">开呗养车品牌旗舰店</div>
+        <div class="confirm_order_goods goods">
+        <div class="confirm_order_goods_imgs">
+            <div class="confirm_order_goods_img"></div>
+            <div class="confirm_order_goods_img"></div>
+            <div class="confirm_order_goods_img">
+               <div class="box_item_fuwu f20">赠品</div>
+            </div>
+            <div class="confirm_order_goods_img">
+                <div class="box_item_fuwu f20">服务</div>
+            </div>
+        </div>
+        <span class="arrow_r mui-icon mui-icon-arrowright"></span>
+        
+        </div>
+        <div class="confirm_order_count">共3件商品，1项服务</div>
+    </div>
+
+
+
+
+
+      <!-- <div class="store_site_box">
+        <div class='store_site_img'><img src="../img/site.png" alt=""></div>
+        <div class="store_site_detail">
+            <div class="store_site_text_box">
+                <div class="color_darker">深圳市南山科技园南山店</div>
+                <div class="color_grey f24"><img src="../img/stars.png"><img src="../img/stars.png"><img src="../img/stars.png"><img src="../img/stars.png"><img src="../img/stars.png"><span>5分</span></div>
+            </div>
+            <div class="store_site_guide clearfix"><span class="fl f24">深圳创业投资大厦的 B栋C座</span><span class="box_distance">5.0Km</span></div>
+        </div>
+          </div> -->
+    <!-- 服务项目部门部分 -->
+         <!-- <div class="box_item">
+             <div class="box_item_top">
+                 <span class="item_top_item">服务项目</span><label class="item_top_label"><i class="icon iconfont icon-wenhaokongxin f30"></i></label><span class="item_top_price f28">总计:￥200.00</span>
+             </div>
+           
+          <div class="confirm_order_goods">
+                <div class="confirm_order_goods_imgs">
+                    <div class="confirm_order_goods_img">
+                           <div class="box_item_fuwu f20">服务</div>
+                    </div>
+                    <div class="confirm_order_goods_img">
+                           <div class="box_item_fuwu f20">服务</div>
+                    </div>
+                    
+                </div>
+                <span class="sr arrow_r mui-icon mui-icon-arrowright"></span>
+                 
+         </div>
+                 <div class="confirm_order_count f24">洗车服务（共2项服务）</div>
+         </div> -->
+           <!-- 支付部分 -->
+         <div class="confirm_order_type_box">
+          <div><span>配送方式</span><span>快递￥10.00</span></div>
+        <div><span>支付方式</span><span>在线支付<span class="arrow_r mui-icon mui-icon-arrowright"></span></span></div>
+       
+        <div><span>发票</span><span>不开发票<span class="arrow_r mui-icon mui-icon-arrowright"></span></span></div>
+        <div><span>活动优惠</span><span>省1000元  满减活动<span class="arrow_r mui-icon mui-icon-arrowright"></span></span></div>
+        <div><span>优惠券</span><span>省1000元  满减活动<span class="arrow_r mui-icon mui-icon-arrowright"></span></span></div>
+       
+        <div><span id="leave_message">买家留言</span><input class="deal_info_text f28" placeholder="选填：对本次交易的说明"/></div>
+    </div>
+     <!-- 商品总价部分 -->
+      <div class="confirm_order_type_box price_top">
+        <div><span>商品总价</span><span>￥150.00</span></div>
+        <div><span>服务费用</span><span>￥50.00</span></div>
+        <div><span>活动减免<span class="color_grey">（商品满5000减1000）</span></span><span>减￥50.00</span></div>
+        <div><span>代金券<span class="color_grey">（服务类）</span></span><span>减￥50.00</span></div>
+        <div><span>优惠券</span><span>￥0.00</span></div>
+        <div><span>余额<span class="color_grey">（当前可用余额）</span></span><span>￥0.00</span></div>
+    </div>
+    <!-- 提交按钮 -->
+     <div class="confirm_account clearfix">
+        <div class="confirm_price fl f36">￥538.00</div>
+        <div class="confirm_account_btn fr">提交订单</div>
+    </div>
+    <!-- 遮罩层 -->
+      <div class="confirm_mask">
+                
+              <div class="confirm_mask_content">
+                      <p class="f26 confirm_mask_span">服务费用:平台收取的服务费用.</p>
+                      <p class="f26 confirm_mask_div">施工费用:已购买的美容、安装、
+                洗车等施工所需费用</p>
+               
+                    <div class="f34 mask_btn">确定</div>
+              </div>
+            
+      </div>
+</body>
+  <script type="text/javascript">
+       $(".confirm_account_btn").on("click",function(){
+          $(".confirm_mask").show();
+       })
+       $(".confirm_mask").on("click",function(){
+          $(".confirm_mask").hide();
+       })
+  </script>
+</html>
+
+

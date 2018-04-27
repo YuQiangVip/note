@@ -1,0 +1,63 @@
+	<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>门店-地图</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts/icon/iconfont.css">
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H4NvHakLzy4qtl9Cjjpg6WcjVwXAbjMg"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">门店-地图</span>
+		</div>-->
+		<!--<div class="service_main service_top">
+		</div>-->
+		<div id="allmap" style="width: 10rem;height: 12.74666rem;"></div>
+		<div style="width: 10rem;height: 3.33333rem;">
+			<p class="map_item_name f32">
+				深圳市海德在线（南山店）
+			</p>
+			<p class="map_item_adds f24">
+				研祥科技大厦6楼研祥科技大厦6
+			</p>
+			<p class="map_item_tel f24">
+				0755-81234567
+			</p>
+			<div class="map_dh f24">导航</div>
+			<a href="tel:075581234567"><div class="map_dh f24">拨打电话</div></a>
+		</div>
+	</body>
+	<script>
+		// 百度地图API功能
+		var map = new BMap.Map("allmap"); // 创建Map实例
+		map.centerAndZoom(new BMap.Point(114.017925, 22.646249), 11); // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+		map.setCurrentCity("深圳"); // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+	</script>
+
+</html>

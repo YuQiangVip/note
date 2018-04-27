@@ -1,0 +1,7 @@
+.color-shade {
+	
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#3462ff', endColorStr='#21ddff', gradientType='1');
+	background: -moz-linear-gradient(left, #3462ff, #21ddff);
+	background: -o-linear-gradient(left, #3462ff, #21ddff);*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffad2d), to(#ff9b00));
+}

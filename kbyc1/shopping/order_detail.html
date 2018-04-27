@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="css/mine.css">
+	</head>
+
+	<body class="for_order_bottom">
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">订单详情</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="setup_lists picks_box bg_colorf color_grey" style="margin: 0;">
+			<div class="list clearfix"><span class="fl">待付款</span>
+				<div class="fl count_down">剩余:22小时26分</div>
+				<div class="fr mar_ri">
+					<span style="color: #999;" class="iconfont icon-qianjin f24"></span>
+				</div>
+			</div>
+		</div>
+		<div class="store_site_box bg_colorf store_site_linkman">
+			<div class='store_site_img'><img src="img/site.png" alt=""></div>
+			<div class="store_site_detail">
+				<div class="store_site_text_box">
+					<div class="color_darker">深圳市南山科技园南山店</div>
+					<div class="color_grey f24">广东省深圳市南山区白石洲乔周</div>
+				</div>
+				<div class="store_site_guide clearfix"><img class='fl' src="img/navigation_icon.png" alt=""><span class="fl f24">导航至门店</span></div>
+			</div>
+    </div>
+    <div class="setup_lists bg_colorf store_site_linkman" onclick="lianxiren()">
+        <div class="list clearfix" style="border: none;">
+        	<span class="fl">李理里</span>
+            <div class="fl linkman_tell">13899002222</div>
+            <div class="fr mar_ri">
+            	<span style="color: #999;"  class="iconfont icon-qianjin f24"></span>
+            </div>
+        </div>
+    </div>
+    <div class="order_detail_title color_lgrey bg_colorf">服务</div>
+    <div class="order_detail_lists bg_colorf">
+        <div class="order_detail_list">
+            <div class="order_detail_img"><img src="img/service.png" alt=""></div>
+            <div class="order_detail_texts">
+                <div>大保养1次</div>
+                <div class="f26 color_grey">X1</div>
+                <div class="f26" style="color: #5675d6;" onclick="xiaofeima()">查看消费码</div>
+            </div>
+            <span class="f26" style="float: right;color: #FFAD2D;margin-top: 0.8rem;">￥100.00</span>
+        </div>
+        <div class="order_detail_list">
+            <div class="order_detail_img"><img src="img/service.png" alt=""></div>
+            <div class="order_detail_texts">
+                <div>
+                <span class="wait_btn">赠品</span>
+                	免费洗车一次
+                </div>
+                <div class="f26 color_grey">X1</div>
+                <div class="f26 " style="color: #5675d6;" onclick="xiaofeima()">查看消费码</div>
+            </div>
+            <span class="f26" style="float: right;color: #FFAD2D;margin-top: 0.8rem;">￥200.00</span>
+        </div>
+    </div>
+     <div class="waitpay_order_lists_box bg_colorf">
+        <div class="common_box2"><span>订单编号</span><span>112144477441113</span></div>
+        <div class="common_box2"><span>订单时间</span><span>2017-6-11  10:37:35</span></div>
+        <div class="common_box2"><span>支付方式</span><span>在线支付</span></div>
+        <!--<div class="common_box2">
+            <span>物流</span>
+            <div class="waitpay_order_express"><span class="color_dark">顺丰快递</span><span class="color_g" id="material_track">物流跟踪</span>
+            <span class="arrow_r mui-icon mui-icon-arrowright color_grey"></span>
+            </div>
+        </div>-->
+			<div class="common_box2"><span>发票</span><span>不开发票</span></div>
+			<div class="common_box2"><span id="leave_info">买家留言</span>
+				<textarea name="buyer_board" class="f28" id="buyer_board" placeholder='模糊概念和主观的评价逐渐减少。'></textarea>
+			</div>
+		</div>
+		<div class="waitpay_order_lists_box bg_colorf">
+			<div class="common_box2"><span>服务费用</span><span>￥150.00</span></div>
+			<div class="common_box2"><span>施工费用</span><span>￥50.00</span></div>
+			<div class="common_box2"><span>活动优惠</span><span>减￥50.00</span></div>
+			<div class="common_box2"><span>优惠券</span><span>减￥50.00</span></div>
+			<div class="common_box2"><span>兑换券</span><span>￥0.00</span></div>
+			<div class="common_box2"><span>余额</span><span>减￥0</span></div>
+			<div class="common_box2"><span>实付金额</span><span class="color_g">￥210.00</span></div>
+		</div>
+		<div class="waitpay_order_pay_box common_box">
+			<div class="total">
+				<span class="color_lgrey f24">合计</span>
+				<span class="total_money color_g f24">￥<span class="f36">210.00</span></span>
+			</div>
+			<div class="clearfix">
+				<div class="fl cansel_order_btn">取消订单</div>
+				<div class="fl submit_order_btn">支付订单</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="js/qrcode.js"></script>
+<script>
+	$(".submit_order_btn").on("tap", function() {
+		mui.openWindow({
+			url: '../my/apply/apply_method.html',
+			id: 'shopping_cart_full'
+		})
+	});
+	$(".cansel_order_btn").on("tap", function() {
+		mui.openWindow({
+			url: 'cancel_order.html',
+			id: 'shopping_cart_full'
+		})
+	});
+	
+	function xiaofeima(){
+		mui.openWindow("consumption.html")
+	}
+	
+	function lianxiren(){
+		mui.openWindow("add_contact.html")
+	}
+	
+	$("#daohan").on("tap",function(){
+		mui.openWindow("../my/store/store_map.html")
+	})
+</script>

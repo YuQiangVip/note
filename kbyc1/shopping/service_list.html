@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>服务列表</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/topic.css" />
+		<!--<link rel="stylesheet" href="css/shop_xq.css">-->
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">商品详情</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+
+		<div class="shop_xq">
+			<div class="shop_xq_top">
+				<!-- 遮罩部分 -->
+				<div class="shop_xq_top_zz">
+					<div class="shop_xq_top_zz_l">
+						<p class="f28 shop_xq_p">新高科汽车维修美容中心</p>
+						<p class="shop_xq_dz"><i class="iconfont icon-weizhi4 f24"></i><span class="f24 shop_xq_jl">距离 0.47KM</span></p>
+					</div>
+					<div class="shop_xq_top_zz_r">
+						<span class="shop_xq_top_zz_r_sp">
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30"></i>
+                                   </span>
+					</div>
+				</div>
+			</div>
+			<div class="shop_xq_down">
+				<div class="shop_xq_down_l">
+					<p class="shop_xq_down_l_p f28">精致洗车（5座SUV）</p>
+					<p><span class="f28 shop_xq_down_p1">开呗价</span><span class="f28 shop_xq_down_p1_price">￥40.00</span><span class="f24 shop_xq_down_md">门店价</span><span><del class="f24 shop_xq_down_m">￥58.00</del></span></p>
+				</div>
+				<div class="shop_xq_down_r">
+					<div class="shop_xq_down_gw" id="shop_ser">
+						购物
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="shop_xq">
+			<div class="shop_xq_top">
+				<!-- 遮罩部分 -->
+				<div class="shop_xq_top_zz">
+					<div class="shop_xq_top_zz_l">
+						<p class="f28 shop_xq_p">新高科汽车维修美容中心</p>
+						<p class="shop_xq_dz"><i class="iconfont icon-weizhi4 f24"></i><span class="f24 shop_xq_jl">距离 0.47KM</span></p>
+					</div>
+					<div class="shop_xq_top_zz_r">
+						<span class="shop_xq_top_zz_r_sp">
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30 shop_col"></i>
+                                   <i class="iconfont icon-star-copy-copy f30"></i>
+                                   </span>
+					</div>
+				</div>
+			</div>
+			<div class="shop_xq_down">
+				<div class="shop_xq_down_l">
+					<p class="shop_xq_down_l_p f28">精致洗车（5座SUV）</p>
+					<p><span class="f28 shop_xq_down_p1">开呗价</span><span class="f28 shop_xq_down_p1_price">￥40.00</span><span class="f24 shop_xq_down_md">门店价</span><span><del class="f24 shop_xq_down_m">￥58.00</del></span></p>
+				</div>
+				<div class="shop_xq_down_r">
+					<div class="shop_xq_down_gw">
+						购物
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('#shop_ser').on('tap',function(){
+				mui.openWindow('confirm_order_service.html',{
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+		</script>
+		
+	</body>
+
+</html>

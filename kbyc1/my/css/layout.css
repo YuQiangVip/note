@@ -1,0 +1,202 @@
+body{
+    background-color: #f4f4f4;
+}
+
+
+.mui-content{overflow: hidden;width: 100%; height: 100%;}
+.mui-action-back:hover{text-decoration: none;}
+.mui-action-back{float: left;height: 100%; color: #FFFFFF;font-size:0.866666rem; font-weight: 300;
+line-height: 1.173333rem;}
+.hander_tit{display: inline-block; width: 90%; text-align: center;}
+
+
+/*字体更改*/
+f20{
+    font-size: 10px !important;
+}
+[data-dpr="2"] .f20{
+    font-size: 20px !important;
+}
+[data-dpr="3"] .f20{
+    font-size: 30px !important;
+}
+.f22{
+	font-size: 11px !important;
+}
+[data-dpr="2"] .f22{
+	font-size: 22px !important;
+}
+[data-dpr="3"] .f22{
+	font-size: 33px !important;
+}
+.f24{
+	font-size: 12px !important;
+}
+[data-dpr="2"] .f24{
+	font-size: 24px !important;
+}
+[data-dpr="3"] .f24{
+	font-size: 36px !important;
+}
+.f26{
+	font-size: 13px !important;
+}
+[data-dpr="2"] .f26{
+	font-size: 26px !important;
+}
+[data-dpr="3"] .f26{
+	font-size: 42px !important;
+}
+/*.font-dpr(@font-size){
+    font-size:@font-size;
+    [data-dpr="2"] &{
+        font-size:@font-size*2;
+    }
+    [data-dpr="3"] &{
+        font-size:@font-size*3;
+    }
+}*/
+.f28{
+	font-size: 14px !important;
+}
+[data-dpr="2"] .f28{
+	font-size: 28px !important;
+}
+[data-dpr="3"] .f28{
+	font-size: 42px !important;
+}
+.f30{
+	font-size: 15px !important;
+}
+[data-dpr="2"] .f30{
+	font-size: 30px !important;
+}
+[data-dpr="3"] .f30{
+	font-size: 45px !important;
+}
+
+.f32{
+	font-size: 16px !important;
+}
+[data-dpr="2"] .f32{
+	font-size: 32px !important;
+}
+[data-dpr="3"] .f32{
+	font-size: 48px !important;
+}
+.f35{
+	font-size: 17.5px !important;
+}
+[data-dpr="2"] .f35{
+	font-size: 35px !important;
+}
+[data-dpr="3"] .f35{
+	font-size: 52.5px !important;
+}
+.f36{
+	font-size: 18px !important;
+}
+[data-dpr="2"] .f36{
+	font-size: 36px !important;
+}
+[data-dpr="3"] .f36{
+	font-size: 54px !important;
+}
+.f34{
+	font-size: 17px !important;
+}
+[data-dpr="2"] .f34{
+	font-size: 34px !important;
+}
+[data-dpr="3"] .f34{
+	font-size: 51px !important;
+}
+.f37{
+    font-size: 18.5px !important;
+}
+[data-dpr="2"] .f37{
+    font-size: 37px !important;
+}
+[data-dpr="3"] .f37{
+    font-size: 55.5px !important;
+}
+
+.f48{
+	font-size: 24px !important;
+}
+[data-dpr="2"] .f48{
+	font-size: 48px !important;
+}
+[data-dpr="3"] .f48{
+	font-size: 72px !important;
+}
+
+/************************************************************************************/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+/**************************************/
+#login_page{
+    padding-top: 0;
+}
+.icon-checkbox-copy{
+    color: #ffad2d;
+}
+.nav_bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1.17333rem;
+    height: 1.17333rem;
+    color: #fff;
+    background: #ffad2d;
+    z-index: 10;
+}
+
+.return {
+    position: absolute;
+    line-height: .52rem;
+    height: 0.52rem;
+    font-size: 0.6rem;
+    top: 0.32666rem;
+    left: 0.26667rem;
+}
+/*仅为了定位*/
+.for_position{
+    position: relative;
+}
+
+/*表格布局*/
+
+.reg_box {
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+    width: 100%;
+    font-size: 0.37333rem;
+}
+
+
+
+
+
+
+
+ 

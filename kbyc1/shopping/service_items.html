@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>服务项目</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<meta content="maximum-dpr=2" name="flexible" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/service_items.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="css/shopping_cart.css" />
+		<link rel="stylesheet" href="css/layout.css" />
+		<style type="text/css">
+			
+			 ::-webkit-input-placeholder {/*Chrome/Safari*/
+		    color:#fff;
+		    }
+		    : :-moz-placeholder {/*Firefox*/
+		    color:#fff;
+		    }
+		    　: :-ms-input-placeholder {/*IE*/
+		       color:#fff;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">服务项目</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="items_top" style="height: 1.73333rem;">
+			<p class="f28 items_top_p1" id="chexing">宝马 520Li 2011年款 2.5L <label class="items_top_p1_l f28"><i class="iconfont icon-down-trangle f28"></i></label></p>
+			<div class="f28 items_top_p2" id="textxs" style="float: left;margin-left: 3rem;text-align: center;width: 3rem;"><span id="xianshilic">请输入当前里程</span<label for="" class="items_top_p2_l"></label></div><i class="iconfont icon-bianji f28" id="bianjiicon" style="margin-left: 0.23333rem;float: left;color: #fff;"></i>
+			<p id="shurukuang" style="display:none; position: relative;">
+				<span style="float: left;color: #fff;margin-left: 3rem;" class="f28">当前里程</span>
+				<input type="number" id="lichengnum" style="background: #FFAD2D;height: 0.42666rem;line-height: 0.42666rem; font-size: 0.37333rem; width: 1.33333rem;float: left;color: #fff;margin-left: 0.13333rem;" placeholder="请输入"/><span style="float: left;margin-left: 0.13333rem;color: #fff;"  class="f28">KM</span>
+				<i class="iconfont icon-bianji f28" style="margin-left: 0.23333rem;float: left;color: #fff;"></i>
+			</p>
+			</div>
+			<div class="items_nav">
+				<span style="display: flex;justify-content: space-around;height: 1.17333rem; line-height: 1.17333rem;">
+				<label for="" class="itmes_select"> 
+					<i id="checkedbox0" class="iconfont icon-checkbox-copy f40" onclick="checkedbox(0)"></i> 
+			</span>
+				</label>&nbsp;小保养服务</span>
+				<span class="f28 items_nav_s1" id="service_intr">详情</span>
+				<span class="f28 items_nav_s2" id="ser_cou">优惠券</span>
+				<span class="f28 items_nav_s3" id="bianji">编辑</span>
+			</div>
+
+			<div class="left_flex">
+				<span class="checkbox_item fl">
+                            <label class="check_label">
+                            <i id="checkedbox0" class="icon iconfont icon-checkboxblank f40" style="font-size: 22px;"></i>
+                            </label>
+                       </span>
+			</div>
+			<div class="items_nav_content" id="bukebianji">
+				<div class="items_nav_sc" onclick="fwgoodslist()">
+					<div class="items_nav_sc_img">
+						<img src="img/tyre.png">
+					</div>
+					<!--加减-->
+					<div class="plus_content" style="display: none;">
+						<div class="plus_box">
+							<span><img src="img/plus_shop.png" alt="" /></span>
+							<span style="position: relative;"><input style="width: 0.8rem;" type="number" value="25" /></span>
+							<span><img src="img/minus_shop.png" alt="" /></span>
+						</div>
+						<div class="plus_right">
+							<div class="pl_min">
+								<i class="iconfont icon-shanchu2 f36"></i>
+								<p>删除</p>
+							</div>
+							<div class="pl_max">
+								<i class="iconfont icon-genghuan f36"></i>
+								<p>更换</p>
+							</div>
+						</div>
+					</div>
+					<div class="items_nav_sc_con">
+						<p class="f26 items_nav_s_p">德国马牌轮胎更长里程的精准操控体验 185/65R14 86H </p>
+						<p class="f26 items_nav_s_p1">￥262.00</p>
+						<p class="f26 items_nav_s_p2 f24">参考用量：4L<span class="items_top_p_x">X1</span></p>
+					</div>
+				</div>
+				<div class="items_nav_sc" onclick="fwgoodslist()">
+					<div class="items_nav_sc_img">
+						<img src="img/tyre.png">
+					</div>
+					<div class="items_nav_sc_con">
+						<p class="f26 items_nav_s_p">德国马牌轮胎更长里程的精准操控体验 185/65R14 86H </p>
+						<p class="f26 items_nav_s_p1">￥262.00</p>
+						<p class="f26 items_nav_s_p2 f24">参考用量：4L<span class="items_top_p_x">X1</span></p>
+					</div>
+					<!--加减-->
+					<div class="plus_content" style="display: none;">
+						<div class="plus_box">
+							<span><img src="img/plus_shop.png" alt="" /></span>
+							<span style="position: relative;"><input style="width: 0.8rem;" type="number" value="25" /></span>
+							<span><img src="img/minus_shop.png" alt="" /></span>
+						</div>
+						<div class="plus_right">
+							<div class="pl_min">
+								<i class="iconfont icon-shanchu2 f36"></i>
+								<p>删除</p>
+							</div>
+							<div class="pl_max">
+								<i class="iconfont icon-genghuan f36"></i>
+								<p>更换</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="items_nav_content" id="kebianji" style="display: none;">
+				<div class="items_nav_sc">
+					<div class="items_nav_sc_img" style="width: 2.76666rem;float: left;">
+						<img src="img/tyre.png">
+					</div>
+					<div class="items_nav_sc_con">
+						<div style="float:right;margin-right: 0.26666rem;margin-top: 0.06666rem;">
+							<span class="iconfont icon-delete1 f36" style="margin-left: 0.26666rem;float: left;"></span>
+							<span class="iconfont icon-genghuan f34" style="margin-left: 0.26666rem;float: left;" onclick="kebianji()"></span>
+						</div>
+						<div class="fr change_num clearfix" style="margin-right: 0.53333rem;">
+							<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+							<input type="number" value="1" class="fl f28 calc_num">
+							<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="items_nav_sc">
+					<div class="items_nav_sc_img" style="width: 2.76666rem;float: left;">
+						<img src="img/tyre.png">
+					</div>
+					<div class="items_nav_sc_con">
+						<div style="float:right;margin-right: 0.26666rem;margin-top: 0.06666rem;">
+							<span class="iconfont icon-delete1 f36" style="margin-left: 0.26666rem;float: left;"></span>
+							<span class="iconfont icon-genghuan f34" style="margin-left: 0.26666rem;float: left;" onclick="kebianji()"></span>
+						</div>
+						<div class="fr change_num clearfix" style="margin-right: 0.53333rem;">
+							<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+							<input type="number" value="1" class="fl f28 calc_num">
+							<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 选服务 -->
+			<div class="apply_involved_reason_box bg_colorf">
+
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox1" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(1)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox2" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(2)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">内置燃油滤</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox3" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(3)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">润滑系统养护</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox4" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(4)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">燃油系统养护</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox5" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(5)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">雨刷</span>
+				</div>
+
+			</div>
+			<!-- 空调养护系统 -->
+			<div class="kt_yh">
+				<p class="f30">空调系统养护（0/3）</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf">
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox6" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(6)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">空调滤清器</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox7" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(7)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">空调管路清洗</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox8" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(8)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">空调制冷剂</span>
+				</div>
+
+			</div>
+
+			<!-- 冷却系统养护（0/3） -->
+			<div class="kt_yh">
+				<p class="f30">制动系统养护（0/4）</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf">
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox9" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(9)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">刹车油</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox10" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(10)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">刹车片</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox11" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(11)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">刹车盘</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox12" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(12)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">刹车系统养护</span>
+				</div>
+
+			</div>
+			<!-- 冷却系统养护（0/3） -->
+			<div class="kt_yh">
+				<p class="f30">冷却系统养护（0/3)</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf">
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox13" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(13)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">更换防冻冷液</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox14" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(14)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">水箱清洗</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox15" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(15)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">水箱防锈保护</span>
+				</div>
+
+			</div>
+			<!-- 冷却系统养护（0/3） -->
+			<div class="kt_yh">
+				<p class="f30">引擎深度养护（0/6）</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf">
+
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox16" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(16)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox17" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(17)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">内置燃油滤</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox18" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(18)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">润滑系统养护</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox19" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(19)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">燃油系统养护</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox20" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(20)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">雨刷</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox21" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(21)"></i>
+                            </label>
+            </span>
+					<span class="color_dark">雨刷</span>
+				</div>
+
+			</div>
+
+			<!-- 变速箱养护0/3） -->
+			<div class="kt_yh">
+				<p class="f30">变速箱养护（0/1)</p>
+			</div>
+			<div class="bg_colorf apply_involved_reason_box">
+
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox22" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(22)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+
+			</div>
+			<div class="kt_yh">
+				<p class="f30">检查替换项目（0/2)</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf">
+
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox23" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(23)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                             <i id="checkedbox24" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(24)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+
+			</div>
+			<!-- 变速箱养护0/3） -->
+			<div class="kt_yh">
+				<p class="f30">安装项目 （0/1)
+				</p>
+			</div>
+			<div class="apply_involved_reason_box bg_colorf" style="margin-bottom: 1.57333rem; ">
+				<div class="clearfix">
+					<span class="checkbox_item fl">
+                            <input type="checkbox" />
+                            <label class="check_label">
+                            <i id="checkedbox25" class="icon iconfont f40 icon-checkboxblank color_grey" onclick="checkedbox(25)"></i>
+                            </label>
+            		</span>
+					<span class="color_dark">大保养服务</span>
+				</div>
+
+			</div>
+			<div class="footer_items">
+				<div class="footer_items_left">
+					<p class="footer_items_left_p_p f24">￥<span class="f36" class="footer_items_left_span">262.00</span></p>
+				</div>
+				<div class="footer_items_mid">
+					<p class="footer_items_mid_p f28" id="cancat_br"><span><i class="iconfont icon-kefudianhua f44"></i></span><span class="footer_items_kf">客服</span></p>
+				</div>
+				<div class="footer_items_right f28" id="service_place">下一步</div>
+			</div>
+
+			<!--模态框-->
+			<div id="motai" class="modal_con"></div>
+			<div id="tanchuang" class="modal_box">
+				<div class="modal_mian">
+					<div class="modal_title f32">
+						拨打热线
+					</div>
+					<div class="modal_ter">
+						400-805-0095
+					</div>
+				</div>
+				<a href="tel:13687558899">
+					<div id="queren" class="determine fr f32">
+						呼叫
+					</div>
+				</a>
+				<div id="quxiao" class="modal_cancle fl f32">
+					取消
+				</div>
+			</div>
+
+			<!--优惠券模态框-->
+			<div class="motai_cou" id="coupon_win"></div>
+			<div class="coupon_window" id="coupon_app">
+				<div class="mo_title">
+					领取优惠券
+				</div>
+				<div class="win_box">
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img1.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_ad2d f28" id="to_use">立即领取</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg_colorf coupon_title">
+						<div class="coupon_box">
+							<img src="img/coupon_img1.png" alt="" />
+							<div class="coupon_text">
+								<p class="f36">优惠券</p>
+								<div class="coupon_content">
+									<span class="f24">2017-6-18前使用</span>
+									<span class="color_ad2d f28" style="color: #999999;">已领取</span>
+								</div>
+								<div class="cou_btn">
+									限电器类商品
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--确定按钮-->
+					<div class="motai_btn" id="determine">
+						确定
+					</div>
+				</div>
+			</div>
+			<div id="tishi" class="floating_layer">领取成功</div>
+	</body>
+
+	<script>
+		//跳转可更换产品
+		function changecp() {
+			mui.openWindow("replace_product.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		}
+		
+		//模态框
+		$("#cancat_br").on("tap", function() {
+			$("#motai").show();
+			$("#tanchuang").show();
+		})
+		$("#quxiao").on("tap", function() {
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+		$("#queren").on("tap", function() {
+			$("#motai").hide();
+			$("#tanchuang").hide();
+		})
+		
+		//优惠券弹出
+		$('#ser_cou').on('tap',function(){
+			$('#coupon_win').show();
+			$('#coupon_app').show();
+		});
+		$("#determine").on("tap",function(){
+			$("#coupon_win").hide();
+			$("#coupon_app").hide();
+		})
+		$("#to_use").on("tap", function() {
+			document.getElementById("to_use").innerHTML="已领取";
+			document.getElementById("to_use").style.color="#999999";
+			$("#tishi").show();
+			setTimeout(function() {
+				$("#tishi").hide();
+			}, 600)
+		})
+		
+		$("#coupon_win").on("tap",function(){
+			$("#coupon_win").hide();
+			$("#coupon_app").hide();
+		})
+		
+		//下一步
+		$('#service_place').on('tap',function(){
+			mui.openWindow('confirm_order_service.html',{
+				waiting:{
+					 autoShow:false
+				}
+			})
+		})
+		//服务介绍
+		$('#service_intr').on('tap',function(){
+			mui.openWindow('service_Introduction.html',{
+				waiting:{
+					autoShow:false
+				}
+			})
+		})
+
+		function checkedbox(id) {
+			if(document.getElementById("checkedbox"+id).style.color==""){
+				$("#checkedbox"+id).removeClass("icon-checkboxblank");
+				$("#checkedbox"+id).addClass("icon-checkbox-copy");
+				document.getElementById("checkedbox"+id).style.color="#ffad2d";
+			}else{
+				document.getElementById("checkedbox"+id).style.color="";
+				$("#checkedbox"+id).addClass("icon-checkboxblank");
+				$("#checkedbox"+id).removeClass("icon-checkbox-copy");
+			}
+		}
+
+		var bjstatae = 0;
+		$("#bianji").on("tap", function() {
+			if(bjstatae == 0) {
+				document.getElementById("bianji").innerHTML = "保存";
+				$("#kebianji").show();
+				$("#bukebianji").hide();
+				bjstatae = 1;
+			} else {
+				document.getElementById("bianji").innerHTML = "编辑";
+				$("#kebianji").hide();
+				$("#bukebianji").show();
+				bjstatae = 0;
+			}
+		})
+
+		function kebianji() {
+			mui.openWindow("replace_product.html")
+		}
+
+		$("#chexing").on("tap", function() {
+			mui.openWindow("../my/add_car/add_car_list.html")
+		})
+
+		$("#bianjiicon").on("tap", function() {
+			$("#shurukuang").show();
+			$("#textxs").hide();
+			$("#bianjiicon").hide();
+		})
+		
+
+		function fwgoodslist() {
+			mui.openWindow("../home/Commodity_details.html")
+		}
+	</script>
+
+</html>

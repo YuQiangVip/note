@@ -1,0 +1,761 @@
+body{
+    background-color: #F4F4F4;
+    color: #111;
+    overflow-x: hidden;
+    max-height: 999999px;
+}
+
+.mui-content{overflow: hidden;width: 100%; height: 100%;}
+.mui-action-back:hover{text-decoration: none;}
+.mui-action-back{float: left;height: 100%; color: #FFFFFF;font-size:0.866666rem; font-weight: 300;
+line-height: 1.173333rem;}
+.hander_tit{display: inline-block; width: 90%; text-align: center;}
+
+/*底部栏*/
+.bottom_bar{
+	width: 100%;
+	height: 1.30666rem;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	background: #FFFFFF;
+	border-top: 1px solid #e5e5e5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.bot_footer{
+	width: :;px;
+	line-height: 0.45333rem;
+	align-items: center;
+	margin-top: 0.06666rem;
+	text-align: center;
+	/*padding-left: 0.13333rem;*/
+}
+.bottom_box{
+	width: 0.58666rem;
+	height: 0.58666rem;
+	line-height: 0.61333rem;
+	margin-left: 1px;
+	text-align: center;
+}
+.bottom_box i{
+	color: #666;
+}
+.bottom_box img{
+	width: 0.58666rem;
+	height: 0.58666rem;
+}
+.bottom_txt{
+	display: inline-block;
+	font-size: 0.29333rem;
+	color: #666;
+}
+
+
+/*删除按钮*/
+.delete_btn{
+	/*180*180*/
+	width: 2.4rem; 
+	height:2.4rem; 
+	background: #ff2e2e;
+	line-height: 2.4rem; 
+	text-align: center; 
+	text-decoration: none;
+}
+/*取消收藏*/
+.cancel{
+	/*180*180*/
+	width: 2.4rem; 
+	height:2.4rem; 
+	background: #ffad2d;
+	line-height:2.4rem; 
+	text-align: center; 
+	text-decoration: none;
+}
+/*取消收藏*/
+.cancel_min{
+	/*180*240*/
+	width: 2.4rem; 
+	height:2.93333rem; 
+	background: #ffad2d;
+	line-height: 2.93333rem; 
+	text-align: center; 
+	text-decoration: none;
+}
+/*字体更改*/
+.f16{
+	font-size: 8px !important;
+}
+[data-dpr="2"] .f16{
+	font-size: 16px !important;
+}
+[data-dpr="3"] .f16{
+	font-size: 24px !important;
+}
+.f22{
+	font-size: 11px !important;
+}
+[data-dpr="2"] .f22{
+	font-size: 22px !important;
+}
+[data-dpr="3"] .f22{
+	font-size: 33px !important;
+}
+.f24{
+	font-size: 12px !important;
+}
+[data-dpr="2"] .f24{
+	font-size: 24px !important;
+}
+[data-dpr="3"] .f24{
+	font-size: 36px !important;
+}
+.f25{
+	font-size: 12.5px !important;
+}
+[data-dpr="2"] .f25{
+	font-size: 25px !important;
+}
+[data-dpr="3"] .f25{
+	font-size: 37.5px !important;
+}
+.f26{
+	font-size: 13px !important;
+}
+[data-dpr="2"] .f26{
+	font-size: 26px !important;
+}
+[data-dpr="3"] .f26{
+	font-size: 42px !important;
+}
+/*.font-dpr(@font-size){
+    font-size:@font-size;
+    [data-dpr="2"] &{
+        font-size:@font-size*2;
+    }
+    [data-dpr="3"] &{
+        font-size:@font-size*3;
+    }
+}*/
+.f28{
+	font-size: 14px !important;
+}
+[data-dpr="2"] .f28{
+	font-size: 28px !important;
+}
+[data-dpr="3"] .f28{
+	font-size: 42px !important;
+}
+.f30{
+	font-size: 15px !important;
+}
+[data-dpr="2"] .f30{
+	font-size: 30px !important;
+}
+[data-dpr="3"] .f30{
+	font-size: 45px !important;
+}
+
+.f32{
+	font-size: 16px !important;
+}
+[data-dpr="2"] .f32{
+	font-size: 32px !important;
+}
+[data-dpr="3"] .f32{
+	font-size: 48px !important;
+}
+.f35{
+	font-size: 17.5px !important;
+}
+[data-dpr="2"] .f35{
+	font-size: 35px !important;
+}
+[data-dpr="3"] .f35{
+	font-size: 52.5px !important;
+}
+.f36{
+	font-size: 18px !important;
+}
+[data-dpr="2"] .f36{
+	font-size: 36px !important;
+}
+[data-dpr="3"] .f36{
+	font-size: 54px !important;
+}
+.f34{
+	font-size: 17px !important;
+}
+[data-dpr="2"] .f34{
+	font-size: 34px !important;
+}
+[data-dpr="3"] .f34{
+	font-size: 51px !important;
+}
+.f37{
+    font-size: 18.5px !important;
+}
+[data-dpr="2"] .f37{
+    font-size: 37px !important;
+}
+[data-dpr="3"] .f37{
+    font-size: 55.5px !important;
+}
+.f40{
+    font-size: 20px !important;
+}
+[data-dpr="2"] .f40{
+    font-size: 40px !important;
+}
+[data-dpr="3"] .f40{
+    font-size: 60px !important;
+}
+
+.f48{
+	font-size: 24px !important;
+}
+[data-dpr="2"] .f48{
+	font-size: 48px !important;
+}
+[data-dpr="3"] .f48{
+	font-size: 72px !important;
+}
+
+/************************************************************************************/
+
+.padd_left{
+	/*30px*/
+	padding-left: 0.4rem;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+/**************************************/
+#login_page{
+    padding-top: 0;
+}
+.icon-checkbox-copy{
+    color: #ffad2d;
+}
+.nav_bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1.17333rem;
+    height: 1.17333rem;
+    color: #fff;
+    background: #ffad2d;
+    z-index: 10;
+}
+.top_navri{
+	position: absolute;
+	top: 0;
+	right: 0.37333rem;
+}
+.return {
+    position: absolute;
+    line-height: .52rem;
+    height: 0.52rem;
+    font-size: 0.6rem;
+    top: 0.32666rem;
+    left: 0.26667rem;
+}
+/*仅为了定位*/
+.for_position{
+    position: relative;
+}
+
+/*表格布局*/
+
+.reg_box {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 0.37333rem;
+}
+
+/*******************模态框**********************/
+.modal_con{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	opacity: .5;
+	top: 0;
+	display: none;
+	z-index: 99;
+}
+.modal_box{
+	display: none;
+	width: 8.53333rem;
+	height: 4.24rem;
+	background: #fafafa;
+	position: fixed;
+	left: 0.73333rem;
+	top: 6.66666rem;
+	border-radius: 0.08rem;
+	overflow: hidden;
+	z-index: 100;
+}
+.modal_mian{
+	width: 100%;
+	height: 3.06666rem;
+	text-align: center;
+}
+.modal_title{
+	padding: 0.66666rem 0 0.42666rem 0;
+	font-weight: 500;
+	color: #111;
+}
+.modal_ter{
+	padding: 0 0.57333rem 0 0.56rem;
+	text-align: center;
+	color: #666;
+}
+.determine{
+	border-top: 1px solid #e0e0e0;
+	width: 4.26666rem;
+	height: 1.17333rem;
+	color: #ffad2d;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.17333rem;
+}
+.modal_cancle{
+	border-top: 1px solid #e0e0e0;
+	border-right: 1px solid #E0E0E0;
+	width: 4.26666rem;
+	height: 1.17333rem;
+	color: #333;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.17333rem;
+}
+
+/*************************浮层**************************************/
+.floating_layer{
+	width: 2.93333rem;
+	height: 1.04rem;
+	background: #000000;
+	position: fixed;
+	z-index: 200;
+	left: 3.66666rem;
+	top: 8.37333rem;
+	color: #fff;
+	text-align: center;
+	line-height: 1.04rem;
+	border-radius: 6px;
+	opacity: 0.8;
+	display: none;
+	padding: 0 0.13333rem;
+}
+.floating_layer1{
+	width: 3.93333rem;
+	height: 1.04rem;
+	background: #000000;
+	position: fixed;
+	z-index: 200;
+	left: 3.66666rem;
+	top: 8.37333rem;
+	color: #fff;
+	text-align: center;
+	line-height: 1.04rem;
+	border-radius: 6px;
+	opacity: 0.8;
+	display: none;
+	padding: 0 0.13333rem;
+}
+
+
+
+/***************************************************************/
+/*输入框和label的外围容器*/
+
+/*.form_item {
+    padding: 0.56rem 0;
+}*/
+
+.reg_box label {
+    margin-right: 0.4rem;
+}
+
+.reg_box input {
+    
+
+}
+
+.reg_info {
+    text-indent: 0.4rem;
+    margin-top: 0.50667rem;
+    color: #666;
+}
+
+
+
+/*获取验证码的块元素*/
+
+.get_code {
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0.25333rem 0.30666rem;
+    background: #ffad2d;
+    height: 0.82667rem;
+    color: #fff;
+    height: 0.82667rem;
+    right: 0;
+    font-size: 0.34667rem;
+    top: .15rem;
+    border-radius: 0.08rem;
+    margin-right: 0.4rem;
+}
+.get_num{
+	display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0.25333rem 0.32rem;
+    background: #fff;
+    height: 0.82667rem;
+    color: #fff;
+    height: 0.82667rem;
+    right: 0;
+    font-size: 0.34667rem;
+    top: .30rem;
+    border-radius: 0.08rem;
+    margin-right: 0.4rem;
+}
+
+/*忘记密码*/
+.get_ver{
+	display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0.25333rem 0.44rem;
+    background: #ccc;
+    height: 0.82667rem;
+    right: 0;
+    font-size: 0.34667rem;
+    top: .15rem;
+    border-radius: 0.08rem;
+    margin-right: 0.4rem;
+    /*margin-bottom: 0.26666rem;*/
+}
+
+/*常用正常色*/
+.bg_colorf{
+	background: #fff;
+}
+.color_g {
+    color: #ffad2d;
+}
+
+.color_grey {
+    color: #999999;
+}
+.color_cc{
+	color: #ccc;
+}
+.color_lgrey {
+    color: #666666 !important;
+}
+
+.color_dark{
+    color: #111 !important;
+}
+.color_dark::-ms-input-placeholder{
+	color: #111 !important;
+}
+.color_darker{
+    color: #000 !important;
+}
+.color_ser{
+	color: #0db789;
+	font-weight: 500;
+}
+
+/*提交按钮灰色*/
+
+.submit_btn {
+    box-sizing: border-box;
+    margin: 0 0.4rem;
+    border-radius: 6px;
+    line-height: 1.173rem;
+    height: 1.173rem;
+    background-color: #ffd399;
+    color: #fff5e5;
+    text-align: center;
+    margin-top: 0.773rem;
+}
+.btn_top{
+	margin-top: 1.30666rem;
+}
+
+
+/*checkbox*/
+
+i,
+em {
+    font-style: normal;
+}
+
+.checkbox_item {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.21333rem;
+    height: 100%;
+    line-height: 1.17333rem;
+}
+
+.checkbox_item input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.checkbox_item .check_label {
+    display: inline-block;
+    cursor: default;
+}
+
+.checkbox_icon {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(../images/checkbox_icon.png) 0 0;
+}
+
+.check_label.on .checkbox_icon {
+    background-position: -16px 0;
+}
+
+.checkbox_text {
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+}
+
+.checkbox_icon {
+    transition: none;
+}
+/*类型为textarea的输入框*/
+.info_area{
+    padding: .5em;
+    line-height: 1.2;
+    resize: none;
+    overflow: auto;
+    width: 100%;
+    height: 2.64rem;
+    border:1px solid #ccc;
+    margin-bottom: 0.69333rem;
+}
+
+/*购物车页面*/
+
+.store_head .icon,
+.store_goods .icon,
+.account_box .icon,
+.apply_involved_reason_box .icon-checkbox-copy {
+    font-size: 0.53333rem;
+}
+
+.store_head .icon-checkbox-copy,
+.goods_box .icon-checkbox-copy,
+.apply_involved_reason_box .icon-checkbox-copy{
+    color: #ffad2d;
+    /*font-size: 0.29333rem;*/
+   font-size: 22px;
+}
+
+.store_head {
+    height: 1.17333rem;
+    line-height: 1.17333rem;
+    padding: 0 0.4rem;
+}
+
+.store_area {}
+
+.store_head_wrapper {
+    width: 100%;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+
+
+/*计算数字*/
+
+.calc {
+    width: 0.56rem;
+    height: 0.56rem;
+    text-align: center;
+}
+.calc img{
+	width: 0.56rem;
+	height: 0.56rem;
+}
+.calc_num {
+    display: block;
+    height: 0.56rem;
+    border-radius: 0.107rem;
+    width: 1.307rem;
+    border: 1px solid #cccccc;
+    color: #ffad2d;
+    border-right: 1px solid #dbdbdb;
+    text-align: center;
+    cursor: pointer;
+}
+/*字前加*号强调*/
+.notice{
+    padding-left: 0.34667rem;
+    position: relative;
+}
+.notice:before{
+    position: absolute;
+    left: 0;
+    content: '';
+    background-image: url(../img/notice.png);
+    width: 0.34667rem;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0.18667rem 0.18667rem;
+}
+/*彩线*/
+.colours_line_wrapper {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    height: 0.08rem;
+}
+.colours_wrapper{
+    position: absolute;
+    top: 0;
+    left: -.8rem;
+    height: 0.08rem;
+    overflow: hidden;
+    width: 12rem;
+}
+.colours_line_wrapper .color{
+    width: 0.77333rem;
+    display: inline-block;
+    height: 0.08rem;
+    background: #f5bd62;
+     transform:skew(-45deg,0);
+    transform-origin: left top;
+    margin-left: 0.48rem;
+}
+.colours_line_wrapper .color:nth-child(2n-1){
+    background: #f5bd62;
+}
+.colours_line_wrapper .color:nth-child(2n){
+    background: #f5676b;
+}
+.colours_line_wrapper .color:nth-child(3n){
+    background: #70a0ee;
+}
+/*
+<div class="colours_line_wrapper">
+        <div class="colours_wrapper">
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+            <span class="color"></span>
+        </div>
+        </div>
+*/
+/*向右箭头,前进按钮*/
+.arrow_r{
+    color: #999;
+    font-size: 0.32rem;
+}
+/*88px高，两边均为30padding*/
+.common_box{
+    width: 100%;
+    display: flex;
+    padding: 0 0.4rem;
+    height: 1.17333rem;
+}
+.common_box2{
+    width: 100%;
+    display: flex;
+    padding-right: 0.4rem;
+    height: 1.17333rem;
+    border-bottom: 1px solid #E5E5E5;
+}
+.waitpay_order_lists_box{
+    margin-top: 0.26667rem;
+    padding-left: 0.4rem;
+}
+.waitpay_order_lists_box .common_box2{
+    justify-content: space-between;
+    align-items: center;
+}
+.waitpay_order_express>span+span{
+    margin-left: 0.34667rem;
+}
+.padd_reg{
+	padding-left: 0.4rem;
+}
+/*买家留言textarea区域*/
+#leave_info{
+    height: 0.34667rem;
+    line-height: 0.34667rem;
+    
+}
+#buyer_board{
+    border:0;
+    flex: 1;
+    /*font-size: smaller;*/
+    height: 0.37333rem;
+    line-height: 0.37333rem;
+    margin-left: 0.26667rem;
+}
+div.waitpay_order_pay_box{
+    height: 1.30667rem;
+   justify-content: space-between;
+   align-items: center; 
+   border-top: 1px solid #e5e5e5;
+}
+.order_submit{
+    padding-bottom: 1.30667rem;
+}
+.confirm_reciver_info .colours_line_wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*内容可提交时按钮变色*/
+.login_allow{
+  background-color: #ffad2d !important;
+}
+.notice{
+    color: #666;
+}

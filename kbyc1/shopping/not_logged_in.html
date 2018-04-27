@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>未登录</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href='font_diy/iconfont.css'>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/topic.css" />
+		<link rel="stylesheet" type="text/css" href="font_diy/font.css" />
+		<style type="text/css">
+			/*底部栏*/
+.bottom_bar{
+	width: 100%;
+	height: 1.30666rem;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	background: #FFFFFF;
+	border-top: 1px solid #e5e5e5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.bot_footer{
+	width: :;px;
+	line-height: 0.45333rem;
+	align-items: center;
+	margin-top: 0.06666rem;
+	text-align: center;
+	/*padding-left: 0.13333rem;*/
+}
+.bottom_box{
+	width: 0.58666rem;
+	height: 0.58666rem;
+	line-height: 0.61333rem;
+	margin-left: 1px;
+	text-align: center;
+}
+.bottom_box i{
+	color: #666;
+}
+.bottom_box img{
+	width: 0.58666rem;
+	height: 0.58666rem;
+}
+.bottom_txt{
+	display: inline-block;
+	font-size: 0.29333rem;
+	color: #666;
+}
+/*登陆按钮*/
+.not_loggebtn{
+	position: absolute;
+    top: 0.52rem;
+    left: 1.88rem;
+	width: 1.73333rem;
+	height: 0.61333rem;
+	border: 2px solid #fff;
+	border-radius: 0.08rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.58666rem;
+}
+
+		</style>
+	</head>
+
+	<body id="login_page">
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<div class="log_bgcolor">
+			<!--加了一个全局f4f4f4-->
+			<div class="login_header">
+				<div class="set_img">
+					<span class="iconfont icon-shezhi"></span>
+				</div>
+				<div class="log_avatar">
+					<img src="img/login_avatar.png" />
+					<div class="fl not_loggebtn">登陆</div>
+				</div>
+				<div class="clearfix login_list">
+					<div class="login_num">
+						<span>0</span>
+						<p>余额</p>
+					</div>
+					<div class="login_num">
+						<span>0</span>
+						<p>代金券</p>
+					</div>
+					<div class="login_num">
+						<span>0</span>
+						<p>优惠券</p>
+					</div>
+					<div class="login_num">
+						<span>0</span>
+						<p>车辆</p>
+					</div>
+				</div>
+			</div>
+			<div class="setup_lists log_bgc picks_box">
+				<div class="list clearfix"><span class="fl">我的订单</span>
+					<div class="fr right_ahead">
+						<span class="color_grey iconfont icon-qianjin f26"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix log_bgc login_payment">
+				<div class="login_pay log_pending">
+					<img src="img/login_payment.png" alt="" />
+					<span>待付款</span>
+					<!--<div class="pay_number">
+						9
+					</div>-->
+				</div>
+				<div class="login_pay log_daishouhuo">
+					<img src="img/login_rece.png" alt="" />
+					<span>待收货</span>
+					<!--<div class="pay_number">
+						9
+					</div>-->
+				</div>
+				<div class="login_pay log_fuwi">
+					<img src="img/login_served.png" alt="" />
+					<span>待服务</span>
+					<!--<div class="pay_number">
+						9
+					</div>-->
+				</div>
+				<div class="login_pay log_eval">
+					<img src="img/login_evel.png" alt="" />
+					<span>待评价</span>
+					<!--<div class="pay_number">
+						9
+					</div>-->
+				</div>
+
+			</div>
+
+			<div class="setup_lists log_bgc picks_box">
+				<div class="list login_addr log_addrs clearfix">
+					<i class="fl iconfont icon-shouhuodizhi color_grey f40"></i>
+					<span class="fl login_color">收货地址</span>
+					<div class="fr right_ahead">
+						<span class="iconfont icon-qianjin color_grey f26"></span>
+					</div>
+				</div>
+				<div class="list login_addr log_person clearfix">
+					<i class="fl iconfont icon-lianxiren color_grey f40"></i>
+					<span class="fl login_color">联系人</span>
+					<div class="fr right_ahead">
+						<span class="iconfont icon-qianjin color_grey f26"></span>
+					</div>
+				</div>
+				<div class="list login_addr log_collec clearfix">
+					<i class="fl iconfont icon-shoucang1 color_grey f40"></i>
+					<span class="fl login_color">我的收藏</span>
+					<div class="fr right_ahead">
+						<span class="iconfont icon-qianjin color_grey f26"></span>
+					</div>
+				</div>
+				<div class="list login_addr clearfix" tel="4008050095">
+					<i class="fl iconfont icon-kefudianhua color_grey f40"></i>
+					<span class="fl login_color">客服电话</span>
+					<div class="right_ahead">
+						<span class="log_ph">400-805-0095</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="bottom_bar">
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<!--<img src="../shopping/img/checkhome.png"/>-->
+					<i class="f40 iconfont icon-shouye1"></i>
+				</div>
+				<span class="bottom_txt color_dark f22">首页</span>
+			</div>
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<!--<img src="../shopping/img/checkshop.png"/>-->
+					<i class="f40 iconfont icon-mendian"></i>
+				</div>
+				<span class="bottom_txt f22">门店</span>
+			</div>
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box" style="margin-left: 0.24rem;">
+					<i class="f40 iconfont icon-gouwuche1"></i>
+					<!--<img src="../shopping/img/checkcar.png"/>-->
+				</div>
+				<span class="bottom_txt f22">购物车</span>
+			</div>
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<!--<i class="iconfont icon-wode1"></i>-->
+					<img src="../shopping/img/checkper.png"/>
+				</div>
+				<span class="bottom_txt f22">我的</span>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+
+</html>
+<script type="text/javascript">
+	$(function() {
+		$('.set_img').on('tap', function() {
+			mui.openWindow({
+				url: 'set_up.html',
+				id: 'set_img',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		$('.log_addrs').on('tap', function() {
+			mui.openWindow("recive_address.html", {
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		$('.log_person').on('tap', function() {
+			mui.openWindow({
+				url: 'password_change.html',
+				id: 'possword',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		$('.log_collec').on('tap', function() {
+			mui.openWindow({
+				url: 'my_collect.html',
+				id: 'log_collec',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		$('.log_pending').on('tap', function() {
+			mui.openWindow({
+				url: 'order_wait_pay.html',
+				id: 'log_pending',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		//待收货
+		$('.log_daishouhuo').on('tap', function() {
+			mui.openWindow({
+				url: 'order_wait_pay.html',
+				id: 'log_pending',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		//待服务
+		$('.log_fuwi').on('tap', function() {
+			mui.openWindow({
+				url: 'order_wait_pay.html',
+				id: 'log_pending',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+		//待评价
+		$('.log_eval').on('tap', function() {
+			mui.openWindow({
+				url: 'order_evaluate.html',
+				id: 'log_eval',
+				waiting: {
+					autoShow: false,
+				}
+			})
+		});
+
+	})
+</script>

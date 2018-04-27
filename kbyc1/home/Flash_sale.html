@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>限时抢购</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/list/flash_sale.css" />
+		<link rel="stylesheet" type="text/css" href="../shopping/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../shopping/font_diy/iconfont.css" />
+	</head>
+
+	<body>
+
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">限时抢购</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+
+		<!--body-->
+
+		<div class="mui-content">
+			<div>
+				<div class="mui-content_ul" style="display: table;line-height: 1.17333rem;">
+					<span style="display: table-cell;text-align: center;border-bottom: 2px solid #ffad2d;color: #ffad2d;" id="kongzhi0" onclick="kongzhi(0)">今日开抢</span>
+					<span style="display: table-cell;text-align: center;" id="kongzhi1" onclick="kongzhi(1)">明日预告</span>
+				</div>
+				<div class="page_1" style="display: block;">
+					<!--轮播图-->
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator slider_mu">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+
+					<div id="flash_sale">
+
+						<ul id="flash_sale_ul">
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">9点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_04.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<span  class="right_btn"onclick="goumai()" >立即抢购</span>
+												<!--<input type="button" value="去购买" />-->
+												<h4 class="buy_right_sy">2355件剩余</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">10点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_04.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<span  onclick="goumai()" class="right_btn">立即抢购</span>
+												<!--<input type="button" value="去购买" />-->
+												<h4 class="buy_right_sy">2355件剩余</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">11点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_10.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<img src="../img/falsh/meiks.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+
+				<div class="page_2">
+					<!--轮播图-->
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../img/falsh02.png">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+
+					<div id="flash_sale">
+
+						<ul id="flash_sale_ul">
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">9点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_04.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<img src="../img/falsh/meiks.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">10点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_04.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<img src="../img/falsh/meiks.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="flash_li_top">
+									<div class="flash_li_top_img">
+										<img src="../img/qgbj.png" />
+										<span class="Time_files">11点档</span>
+									</div>
+									<span class="flash">抢购未开始</span>
+									<!--倒计时-->
+									<div class="Count_down">
+										<p>距结束</p>
+										<span class="htime"></span><strong>:</strong>
+										<span class="mtime"></span><strong>:</strong>
+										<span class="stime"></span>
+									</div>
+								</div>
+								<div class="flash_li_bottom">
+									<div class="flash_li_bottom_left">
+										<img src="../img/flash_10.png" />
+									</div>
+									<div class="flash_li_bottom_right">
+										<p>回力轮胎接口线控数字耳麦耳麦耳麦 Warrior【四条套装】</p>
+										<div class="buy">
+											<div class="buy_left">
+												<p>￥289.00</p>
+												<del>￥489.00</del>
+											</div>
+											<div class="buy_right">
+												<img src="../img/falsh/meiks.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+
+			var endtime = new Date("2017/8/13");
+			setInterval(function() {
+				var nowtime = new Date();
+				var time = endtime - nowtime;
+				var hour = parseInt(time / 1000 / 60 / 60);
+				var minute = parseInt(time / 1000 / 60 % 60);
+				var seconds = parseInt(time / 1000 % 60);
+				$('.htime').html(hour);
+				$('.mtime').html(minute);
+				$('.stime').html(seconds);
+			}, 1000);
+
+			$("#kongzhi0").on("tap", function() {
+
+				$(".page_2").hide()
+				$(".page_1").show()
+
+			})
+			$("#kongzhi1").on("tap", function() {
+
+				$(".page_1").hide()
+				$(".page_2").show()
+
+			})
+
+		})
+
+		function goumai() {
+			mui.openWindow("Commodity_details_djs.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		}
+
+		function kongzhi(id) {
+			for(var i = 0; i < 2; i++) {
+				if(id == i) {
+					document.getElementById("kongzhi" + i).style.borderBottom = "2px solid #ffad2d";
+					document.getElementById("kongzhi" + i).style.color = "#ffad2d";
+				} else {
+					document.getElementById("kongzhi" + i).style.borderBottom = "2px solid #fff";
+					document.getElementById("kongzhi" + i).style.color = "#111";
+				}
+			}
+		}
+	</script>
+
+</html>

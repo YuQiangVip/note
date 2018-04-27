@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>代金券详情</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts_new/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">
+        代金券详情
+        </span>
+		</div>-->
+		<!-- 占位div -->
+		<!--<div class="store_top">
+		</div>-->
+		<!-- 代金券部分 -->
+		<div class="couponts_main couponts_high">
+			<div class="couponts_top">
+				<div class="couponts_top_left">
+					<p class="f37">￥200</p>
+				</div>
+				<div class="couponts_top_right">
+					<p class="f32 couponts_top_right_p1">中移动代金券</p>
+					<p class="f28 couponts_top_right_p2">余额:￥180.00</p>
+					<p class="f24 couponts_top_right_p3">2017-5-29至2017-8-28</p>
+					<span class="f22 couponts_top_right_span">服务类</span>
+				</div>
+				<div class="couponts_top_null">
+
+				</div>
+
+			</div>
+		</div>
+		<!-- 代金券详情部分 -->
+		<div class="djq_item">
+			<div class="djq_top">
+				<div class="djq_top_left f32">
+					代金券信息
+				</div>
+				<div id="transfer" class="djq_top_right">
+					转让
+				</div>
+			</div>
+			<div class="djq_content">
+				<p class="djq_content_p1 f28"> 状态： <span class="djq_content_span1 f28"> 未使用 </span></p>
+				<p class="djq_content_p2 f28"> 卡号： <span class="djq_content_span2 f28"> 2233445656666 </span></p>
+				<p class="djq_content_p3 f28"> 密码： <span class="djq_content_span3 f28"> 24jn455430jmk1 </span></p>
+			</div>
+		</div>
+		<!-- 代金券消费记录 -->
+		<div class="djq_item">
+			<div class="djq_top">
+				<div class="djq_top_left f32">
+					消费券记录
+				</div>
+			</div>
+			<div class="djq_content">
+				<table class="f26">
+					<tr>
+						<th>订单号</th>
+						<th>消费时间</th>
+						<th>消费金额</th>
+						<th>余额</th>
+					</tr>
+					<tr>
+						<th>323344565</th>
+						<th>2017-5-30</th>
+						<th>20.00</th>
+						<th>余额</th>
+					</tr>
+					<tr>
+						<th>323344565</th>
+						<th>2017-5-30</th>
+						<th>20.00</th>
+						<th>余额</th>
+					</tr>
+					<tr>
+						<th>323344565</th>
+						<th>2017-5-30</th>
+						<th>20.00</th>
+						<th>余额</th>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+		<!-- 使用说明 -->
+		<div class="djq_item">
+			<div class="djq_top">
+				<div class="djq_top_left f32">
+					使用说明
+				</div>
+			</div>
+			<div class="djq_content">
+				<div class="example_c f26">
+
+					1.代金券仅限服务类商品。<br> 2.代金券绑定账户后，只能当前账户使用。代金券可转让他人使用，转让后将失去代金券使用权；
+					<br> 3.代金券为非记名卡，3个月有效期；
+					<br> 4.订单金额中使用代金券支付的部分，将不开出发票；
+					<br> 5.退货时，代金券支付部分退回原代金券内，不予兑换；
+					<br> 6. 单张代金券可分多次使用；每笔订单可以使用多张代金券，代金券不可兑换现金。<br> 7.最终解释权归开呗养车科技有限公司所有。
+				</div>
+
+			</div>
+		</div>
+		<script>
+			$('#transfer').on('tap', function() {
+				mui.openWindow('../../shopping/transfer_voucher.html', {
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

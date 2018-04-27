@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title> 商品详情 -门店</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../../shopping/css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../../shopping/font_diy/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+       
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input_colors{
+            width:3.373333rem !important;
+		}
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+		.add_to_car a{
+			color: white !important;
+		}
+		.brand_div{
+			width: 7.373333rem !important;
+		    background: #fff;
+		    opacity: 0.2 !important;
+		    border-radius: 0.106667rem;
+		}
+		.s_size{
+			position: absolute;
+		    margin-left: 0.86667rem;
+		    color: rgb(255, 255, 255);
+		    margin-top: 0.58633rem;
+		    left: 20%;
+		}
+     
+		/*底部栏*/
+		
+		.bottom_bar {
+			width: 100%;
+			height: 1.30666rem;
+			position: fixed;
+			z-index: 100;
+			bottom: 0;
+			background: #FFFFFF;
+			border-top: 1px solid #e5e5e5;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.bot_footer {
+			width: :;
+			px;
+			line-height: 0.45333rem;
+			align-items: center;
+			margin-top: 0.06666rem;
+			text-align: center;
+			/*padding-left: 0.13333rem;*/
+		}
+		
+		.bottom_box {
+			width: 0.58666rem;
+			height: 0.58666rem;
+			line-height: 0.61333rem;
+			margin-left: 1px;
+			text-align: center;
+		}
+		
+		.bottom_box i {
+			color: #666;
+		}
+		
+		.bottom_box img {
+			width: 0.58666rem;
+			height: 0.58666rem;
+		}
+		
+		.bottom_txt {
+			display: inline-block;
+			font-size: 0.29333rem;
+			color: #666;
+		}
+		.i_s{
+			margin-left:0.093333rem;
+		}
+		.address_span{
+			margin-left: 2.626667rem;
+		}
+		.store_title_name{
+			color: #111111;
+			font-weight: 500;
+		}
+		.mendian_address{
+			height: 0.853333rem;
+			line-height: 0.753333rem;
+			margin-top: -1.05667rem;
+		}
+		.mendian_fucen{
+			top: 2.34rem;
+		}
+		.ss_all{
+			width: 10.0rem;
+			height: 1.173333rem;
+			background: #ffad2d;
+		    padding:0.2rem 0; 
+}
+.ss_all_l{
+	width: 10.0rem;
+	margin-left: 0.4rem;
+	height: 0.773333rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.ss_all_right_d{
+	color: #fff;
+}
+.ss_all_left_input{
+	height: 0.773333rem !important;
+	line-height: 0.773333rem;
+	/* opacity: 0.2; */
+	background: #FFBE57!important;
+	outline: none !important;
+	border:none !important; 
+	margin-left: 1.086667rem;
+    width:80% !important;
+
+}
+.ss_all_left{
+	width: 7.373333rem;
+	height: 0.773333rem;
+	border-radius: 0.106667rem;
+	background: #FFBE57;
+	display:flex;
+	align-items: center;
+	
+}
+.ss_all_right{
+	height: 0.773333rem;
+	line-height: 0.773333rem;
+	margin-right: 0.893333rem;
+}
+.ss_all_left_la{
+	color: #fff;
+	width:32px;
+	height:32px;
+}
+.ss_all_right_label i{
+	color: #fff;
+	vertical-align: -0.013333rem;
+}
+input::-webkit-input-placeholder{
+    color: #fff;
+}
+.w_input{
+	height:0.773333rem;
+    line-height: 0.773333rem;
+    margin-left: -1.0rem;
+}
+.w_i{
+	margin-left: 0.333333rem;
+}
+.on{
+    color:#ffad2d;
+}
+ /* 位置部分*/
+
+     .search_list1,.search_list2,.search_list3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1.173333rem;
+        line-height: 1.173333rem;
+        border-bottom: 1px solid #e5e5e5;
+     }
+     .search_r{
+        min-width: 2.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1.173333rem;
+        line-height: 1.173333rem;
+     }
+     .search_r_m{
+        margin:0 0.733333rem 0 0.786667rem ;
+        color: #999;
+        width: 0;
+        text-align: left;
+     }
+     .search_l｛
+      color:#111111;
+     ｝
+
+ .wz{
+        vertical-align: middle !important;
+     }
+	</style>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+
+		<div class="service_main" style=";">
+			<!-- 搜索部分 -->
+             <div class="ss_all">
+                  <div class="ss_all_l">
+                     <div class="ss_all_left"> 
+                          <div class="w_i"><label for="" class="ss_all_left_la"><i class="icon iconfont icon-icon"></i></label></div> 
+                          <div class="w_input"> <input type="text" placeholder="搜索" class="ss_all_left_input" id="brand_search1"></div>
+                                                        
+											
+                     </div>
+                     <div class="ss_all_right" id="dingwei">
+                         <label for="" class="ss_all_right_label"><i class="icon iconfont icon-weizhi1 address_size f36 "></i></label>
+                         <label for="" class="f28 ss_all_right_d">深圳</label>
+                     </div>
+                  </div>
+             </div>
+
+			<!--    类型部分 -->
+			<div class="service_tab">
+				<div class="service_tab1 f28">
+                     <span class="service_tab1_dz">深圳</span><span><i class="icon iconfont icon-sanjiao-xiala service_tab_size a" style="margin-left: 7px;" id="a"></i><i class="icon iconfont icon-sanjiao-shangla service_tab_size b" style="margin-left: 7px;display: none" id="b"></i></span>
+                 </div>
+                 <div class="service_tab2 f28">
+                     <span class="service_tab2_lx">全部类型</span><span><i class="icon iconfont icon-sanjiao-xiala service_tab_size a" style="margin-left: 7px;"></i><i class="icon iconfont icon-sanjiao-shangla service_tab_size b" style="margin-left: 7px;display: none"></i></span>
+                 </div>
+                  <div class="service_tab3 f28">
+                      <span class="service_tab3_jl">离我最近</span><span><i class="icon iconfont icon-sanjiao-xiala service_tab_size a" style="margin-left: 7px;"></i><i class="icon iconfont icon-sanjiao-shangla service_tab_size b" style="margin-left: 7px;display: none"></i></span>
+                  </div>
+			</div>
+			<!-- list -->
+			<div class="mui-table-view-cell list_border" onclick="mendianlist()">
+				<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+					<div class="brand_store_list for_position">
+						<div class="img_store"><img src="../img/store_img.png" alt=""></div>
+						<div class="store_info_box">
+							<div class="store_title clearfix">
+								<div class="fl f24">直营</div>
+								<span class="store_title_name fl f28">新高科汽车维修美容中心</span>
+							</div>
+							<div class="star_evaluate_box clearfix">
+								<div class="star_evaluate_area fl">
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								</div>
+								<span class="star_point fl color_g">5.0分</span>
+							</div>
+							<div class="col_store_address_box f26">
+								<div class="col_store_address_box">美容快修店 | 科技园</div>
+								<div class="col_store_distance f24">0.47km</div>
+							</div>
+							<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-table-view-cell list_border" onclick="mendianlist()">
+				<div class="mui-slider-handle" style="width: 100%;overflow: hidden;">
+					<div class="brand_store_list for_position">
+						<div class="img_store"><img src="../img/mendian/mendian05.png" alt=""></div>
+						<div class="store_info_box">
+							<div class="store_title clearfix">
+								<div class="fl f24" style="background:#ff4470">加盟</div>
+								<span class="store_title_name fl f28">米其林汽车轮胎旗舰店</span>
+							</div>
+							<div class="star_evaluate_box clearfix">
+								<div class="star_evaluate_area fl">
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color  f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+									<div class="evaluate_star"><i class="start_color iconfont icon-star dianzan_color f30"></i></div>
+								</div>
+								<span class="star_point fl color_g">5.0分</span>
+							</div>
+							<div class="col_store_address_box f26">
+								<div class="col_store_address_box ">轮胎门店 | 西丽</div>
+								<div class="col_store_distance f24 ">1.26km</div>
+							</div>
+							<div class="sell_amount"><i class="color_g icon iconfont icon-zan dianzan_color f22"></i><span class="color_lgrey f26" style="vertical-align: middle;">消费1889单</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 浮层部分 -->
+		<div class="mendian_fucen">
+			<div class="div_tab">
+				<!-- 位置 -->
+				<div class="mendian_fucen_content" style="overflow-x: hidden;display: none" id="weizhi">
+					<div class="search_all mendian_fucen_left">
+					       <div class="search_list1 f28" id="dingwei0" onclick="dianji(0)" style="color: #FFAD2D;">
+                                                       <div class="search_l f24" id="search_l1">  <p class="display:none"></p> 福田区</div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" id="xz0"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l1">我的位置</span></div>
+                                                              <div class="search_r_m f24">200</div>
+                                                              <div class="search_r_r" style="" id="x0"><i class="color_g icon iconfont icon-gou  weizhi_size f24"　id="xuanzhong0"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei1" onclick="dianji(1)">
+                                                     
+                                                       <div class="search_l f24" id="search_l2"> 南山区  <p class="display:none"></p></div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz1"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l2">我的位置</span></div>
+                                                              <div class="search_r_m f24">200</div>
+                                                              <div class="search_r_r" style="display:none" id="x1"><i class="color_g icon iconfont icon-gou weizhi_size  f24"　id="xuanzhong1"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei2" onclick="dianji(2)">
+                                                       <div class="search_l f24" id="search_l3"> 南山区  </div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz2"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l3">我的位置</span></div>
+                                                              <div class="search_r_m f24">200</div>
+                                                              <div class="search_r_r" style="display: none;" id="x2"><i class="color_g icon iconfont icon-gou weizhi_size f24"　id="xuanzhong2"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei3" onclick="dianji(3)">
+                                                       <div class="search_l f24" id="search_l4"> 南山区 <p class="display:none"></p></div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz3"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l4">我的位置</span></div>
+                                                              <div class="search_r_m f24">200</div>
+                                                              <div class="search_r_r" style="display: none;" id="x3"><i class="color_g icon iconfont icon-gou weizhi_size f24"　id="xuanzhong3"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei4" onclick="dianji(4)">
+                                                       <div class="search_l f24" id="search_l5"> 南山区 <p class="display:none"></p></div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz4"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l5">我的位置</span></div>
+                                                              <div class="search_r_m f24">56</div>
+                                                              <div class="search_r_r" style="display: none;" id="x4"><i class="color_g icon iconfont icon-gou weizhi_size f24"　id="xuanzhong4"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei5" onclick="dianji(5)">
+                                                       <div class="search_l f24" id="search_l6"> 南山区 <p class="display:none"></p></div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz5"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l6">我的位置</span></div>
+                                                              <div class="search_r_m f24">0</div>
+                                                              <div class="search_r_r" style="display:none" id="x5">
+                                                              <i class="color_g icon iconfont icon-gou weizhi_size" id="xuanzhong5"></i>
+                                                              </div>
+                                                       </div>
+                                                
+                                       </div>
+                                       <div class="search_list1 f28" id="dingwei6" onclick="dianji(6)">
+                                                       <div class="search_l f24" id="search_l7"> 南山区<p class="display:none"></p></div>
+                                                       <div class="search_r">
+                                                              <div class="search_r_l" style="display: none;" id="xz6"><label for=""></label><i class="color_g icon iconfont icon-weizhi1 f26"></i><span class="wz" style="margin-left:  0.146667rem;vertical-align: middle" id="search_r_l7">我的位置</span></div>
+                                                              <div class="search_r_m f24">200</div>
+                                                              <div class="search_r_r" style="display: none;" id="x6"><i class="color_g icon iconfont icon-gou weizhi_size f24"　id="xuanzhong6"></i></div>
+                                                       </div>
+                                                
+                                       </div>
+					</div>
+				</div>
+
+				<!-- 类型 -->
+				<div class="mendian_fucen_content" style="overflow-x: hidden;" id="leixing">
+					<div class="search_all mendian_fucen_left">
+                                      <div class="search_list2 f28" id="type0" onclick="types(0)" style="color: #FFAD2D;">
+                                            <span class="search_sspan" id="search_sspan1">全部类型</span>
+                                            <i class="color_g icon iconfont icon-gou icon_gou_address weizhi_size" id="typexz0"></i>
+                                     </div>
+                                     <div class="search_list2 f28" id="type1" onclick="types(1)">
+                                            <span class="search_sspan" id="search_sspan2">美容快修店</span>
+                                             <i class="color_g icon iconfont  icon_gou_address weizhi_size" id="typexz1"></i>
+                                     </div>
+                                     <div class="search_list2 f28 " id="type2" onclick="types(2)">
+                                            <span class="search_sspan" id="search_sspan3">美容洗车店</span>
+                                             <i class="color_g icon iconfont  icon_gou_address weizhi_size" id="typexz2"></i>
+                                     </div>
+                                     <div class="search_list2 f28" id="type3" onclick="types(3)">
+                                           <span class="search_sspan" id="search_sspan4">4S店</span>
+                                             <i class="color_g icon iconfont  icon_gou_address weizhi_size" id="typexz3"></i>
+                                     </div>
+                                     <div class="search_list2 f28" id="type4" onclick="types(4)">
+                                           <span class="search_sspan" id="search_sspan5"> 轮胎门店</span>
+                                            <i class="color_g icon iconfont  icon_gou_address weizhi_size" id="typexz4"></i>
+                                     </div>
+                                     <div class="search_list2 f28" id="type5" onclick="types(5)">
+                                           <span class="search_sspan" id="search_sspan6">综合门店</span>
+                                            <i class="color_g icon iconfont  icon_gou_address weizhi_size" id="typexz5"></i>
+                                     </div>
+                              </div>
+				</div>
+
+				<!-- 距离 -->
+				<div class="mendian_fucen_content" style="display: none" id="juli">
+					<div class="search_all mendian_fucen_left">
+                                      <div class="search_list f28" onclick="julis(0)" id="juli0">
+                                            <span class="search_l_span" id="search_l_span1">自营优先</span>
+                                             <i class="color_g icon iconfont icon_gou_address  weizhi_size " id="julixz0"></i>
+                                     </div>
+                                     <div class="search_list f28" onclick="julis(1)" id="juli1" style="color: #FFAD2D;">
+                                            <span class="search_l_span" id="search_l_span2">离我最近</span>
+                                              <i class="color_g icon iconfont icon_gou_address icon-gou weizhi_size " id="julixz1"></i>
+                                     </div>
+                                     <div class="search_list f28" onclick="julis(2)" id="juli2">
+                                           <span class="search_l_span" id="search_l_span3">评价最高</span> 
+                                             <i class="color_g icon iconfont icon_gou_address  weizhi_size " id="julixz2"></i>
+                                     </div>
+                                     <div class="search_list f28" onclick="julis(3)" id="juli3">
+                                            <span class="search_l_span" id="search_l_span4">销量最高</span>
+                                              <i class="color_g icon iconfont icon_gou_address  weizhi_size " id="julixz3"></i>
+                                     </div>
+                                       
+                              </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom_bar">
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<!--<img src="../shopping/img/checkhome.png"/>-->
+					<i class="f40 iconfont icon-shouye1"></i>
+				</div>
+				<span class="bottom_txt f22">首页</span>
+			</div>
+			<div class="bot_footer" id="goodsshop">
+				<div class="bottom_box">
+					<img src="../../shopping/img/checkshop.png" />
+					<!--<i class="f40 iconfont icon-mendian"></i>-->
+				</div>
+				<span class="bottom_txt f22 color_dark">门店</span>
+			</div>
+			<div class="bot_footer" id="goodscar">
+				<div class="bottom_box" style="margin-left: 0.13333rem;">
+					<i class="f40 iconfont icon-gouwuche1"></i>
+					<!--<img src="../shopping/img/checkcar.png"/>-->
+				</div>
+				<span class="bottom_txt f22">购物车</span>
+			</div>
+			<div class="bot_footer" id="personal">
+				<div class="bottom_box">
+					<i class="f40 iconfont icon-wode1"></i>
+					<!--<img src="../shopping/img/checkper.png"/>-->
+				</div>
+				<span class="bottom_txt f22">我的</span>
+			</div>
+
+		</div>
+
+	</body>
+	<script>
+		$("#brand_search1").focus(function() {
+			$(".ss_all_left_la").css({
+				'margin-left': '-2.06667rem'
+			});
+			$("#brand_search1").css({'margin-left':"70px","width":"80%"})
+			$("#brand_search1").attr('placeholder', " ")
+		});
+		$("#brand_search1").blur(function() {
+			$(".ss_all_left_la").css({
+				'margin-left': '10%'
+			});
+			$("#brand_search1").attr('placeholder', "搜索")
+			$("#brand_search1").val("")
+			$("#brand_search1").css('margin-left', "60%")
+		});
+		$("#brand_search1").on("tap",function() {
+			mui.openWindow("store_search_mendian.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		});
+		/*浮层部分*/
+         var n=0;
+         var d;
+         var e;
+         var f;
+		/*$(".service_tab3,.service_tab2,.service_tab1").on("tap", function() {
+			n++;
+              if(n%2==0){
+                  $(this).css("color","#666");
+                  
+              }else{
+                    $(this).css("color","#ffad2d");
+              }
+           var index=$(this).index();
+            $(".mendian_fucen").eq(index).toggle();
+            $(".a").eq(index).toggle();
+            $(".b").eq(index).toggle();
+             })*/
+        $(".service_tab1").on("tap", function() {
+            n++;
+              if(n%2==0){
+                  $(this).css("color","#666");
+                  
+              }else{
+                    $(this).css("color","#ffad2d");
+              }
+           var index=$(this).index();
+            $(".mendian_fucen").toggle();
+            $(".a").eq(index).toggle();
+            $(".b").eq(index).toggle();
+             })
+        $(".service_tab2").on("tap", function() {
+            n++;
+              if(n%2==0){
+                  $(this).css("color","#666");
+                  
+              }else{
+                    $(this).css("color","#ffad2d");
+              }
+           var index=$(this).index();
+            $(".mendian_fucen").toggle();
+            $(".a").eq(index).toggle();
+            $(".b").eq(index).toggle();
+             })
+        $(".service_tab3").on("tap", function() {
+            n++;
+              if(n%2==0){
+                  $(this).css("color","#666");
+                  
+              }else{
+                    $(this).css("color","#ffad2d");
+              }
+           var index=$(this).index();
+            $(".mendian_fucen").toggle();
+            $(".a").eq(index).toggle();
+            $(".b").eq(index).toggle();
+             })
+		 /*距离部分*/
+        function julis(id){
+            var a = document.getElementById("juli").getElementsByTagName("i").length;
+            for(var i=0;i<a;i++){
+                if(id==i){
+                      var fz3=$(".search_l_span").eq(i).html();
+                       $(".service_tab3_jl").html(fz3);
+                    document.getElementById("juli"+i).style.color="#ffad2d";
+                    $("#julixz"+i).addClass("icon-gou");
+                }else{
+                    document.getElementById("juli"+i).style.color="#111111";
+                    $("#julixz"+i).removeClass("icon-gou");
+                }
+            }
+        }
+        
+         /*类型部分*/
+          function types(id){
+            var a = document.getElementById("leixing").getElementsByTagName("i").length;
+            for(var i=0;i<a;i++){
+                if(id==i){
+                    var fz2=$(".search_sspan").eq(i).html();
+                    $(".service_tab2_lx").html(fz2);
+                    document.getElementById("type"+i).style.color="#ffad2d";
+                    $("#typexz"+i).addClass("icon-gou");
+                }else{
+                    document.getElementById("type"+i).style.color="#111111";
+                    $("#typexz"+i).removeClass("icon-gou");
+                }
+            }
+        }
+         /*地址部分*/
+          function dianji(id){
+            var a = document.getElementById("weizhi").getElementsByTagName("p").length;
+            for(var i=0;i<=a;i++){
+                if(id==i){
+                    document.getElementById("dingwei"+i).style.color="#ffad2d";
+                    $("#xuanzhong"+i).addClass("icon-gou");
+                     $("#xz"+i).show();
+                     $("#x"+i).show();
+                }else{
+                    document.getElementById("dingwei"+i).style.color="#111111";
+                    $("#xz"+i).hide();
+                     $("#x"+i).hide();
+                }
+            }
+        }
+         
+		/* 实现tab选项卡内容切换*/
+		$('.service_tab').children().mouseover(function() {
+			$(this).css("color", "#ffad2d");
+			$(this).siblings().css({
+				"color": "#666"
+			})
+			var id = $(this).index(); //当前操作的元素索引值  
+			$('.div_tab').children().eq(id).show().siblings().hide(); //当前显示，其他的隐藏。  
+		});
+
+		$("#homePage").on("tap", function() {
+			mui.openWindow("../../home/home.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+
+		$("#goodscar").on("tap", function() {
+			mui.openWindow("../../shopping/shopping_cart_full.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		$("#personal").on("tap", function() {
+			mui.openWindow("../../shopping/personal_center.html", {
+				waiting: {
+					autoShow: false
+				}
+			})
+		})
+		
+		function mendianlist(){
+			mui.openWindow("store_details.html",{
+				waiting:{
+					autoShow:false
+				}
+			})
+		}
+		
+		$("#dingwei").on("tap",function(){
+			mui.openWindow("../../home/City.html",{
+				waiting:{
+					autoShow:false
+				}
+			})
+		})
+	</script>
+
+</html>

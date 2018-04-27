@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>门店详情</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../../shopping/css/layout.css" />
+		<link rel="stylesheet" href="../../shopping/font_diy/iconfont.css">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<script src="../js/mui.js"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.4rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+		
+		.adds_size {
+			font-size: 0.48rem;
+			vertical-align: -3px;
+		}
+		
+		.store_car_car {
+			margin-top: 0.22rem !important;
+		}
+		
+		.add_to_car {
+			margin-top: -0.9rem;
+		}
+		
+		.dh {
+			margin-left: 9px;
+		}
+		
+		.store_name_title {
+			height: 1.986667rem;
+		}
+		
+		.sotre_dingdan {
+			display: inline-flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.all_store {
+			height: auto;
+		}
+		
+		.store_adds {
+			height: auto;
+		}
+		
+		.adds_mid1 {
+			margin-left: 1.093333rem;
+		}
+		
+		.adds_mid2 {
+			margin-left: 1.16rem;
+		}
+		
+		.adds_right1 {
+			margin-left: 0.226667rem;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<a href="store_service.html" style="color: #fff!important"><span class="mui-icon mui-icon-arrowleft return"></span></a>
+			<span class="f37">
+        门店详情
+        </span>
+		</div>-->
+		<!-- 门店照片 -->
+		<a href="store_index.html">
+			<div class="store_main store_top store_details">
+				<img src="../../shopping/img/store_img0.png" alt="">
+				<div class="store_photo f24 details_photo">直营</div>
+				<div class="store_photo f24 details_photo1">快修店</div>
+				<div class="store_photo f24 details_photo2">1/6</div>
+			</div>
+		</a>
+		<div class="all_store">
+			<div class="store_name">
+				<div class="store_name_title">
+					<div class="store_name_title_left">
+						<p class="store_name_p f30">深圳市海德在线（南山店）</p>
+						<div class="fl star_evaluate_area store_star">
+							<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+							<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+							<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+							<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+							<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+						</div>
+						<span class="store_name_title_count f24">4.0分</span>
+					</div>
+					<div class="store_name_title_right">
+						<p class="store_name_title_right_p f24" id="num_store">128人</p>
+						<div class="store_name_title_div f24">收藏本店</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="zhan_left">
+				<div class="sotre_dingdan">
+					<span class="all_dingdan f24">
+                           总订单556
+                      </span>
+					<span class="all_pjia f24">
+                           总评价56
+                      </span>
+					<span class="all_date f24">
+                            09:00-18:00
+                      </span>
+				</div>
+			</div>
+			<div class="store_adds">
+				<div class="store_adds_left">
+					<p class="f26 adds_p1">祥西路研祥科技大厦6楼</p>
+					<p class="f26 adds_p2">0755-81234567</p>
+				</div>
+				<div class="store_adds_mid">
+					<!--<a href="store_map.html" style="text-decoration: none !important">-->
+					<p class="f24 adds_mid1" id="daohan"><i class="adds_size iconfont icon-daohang f39"></i><span class="dh f24">导航</span></p>
+					<p class="f24 adds_mid2">0.47km</p>
+					<!--</a>-->
+				</div>
+				<div class="store_adds_right" id="shop_phone">
+					<p class="adds_right1">
+						<i class="adds_size iconfont icon-dianhua f36"></i>
+					</p>
+					<p class="f24 adds_right2">
+
+						联系商家
+					</p>
+
+				</div>
+			</div>
+		</div>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper" style="">
+				<div class="swiper-slide">
+					<div class="yhq1" id="get_now">
+						<!--<a href="" style="color: #ffad2d;">-->
+						<p class="yhq1_price f48">￥50</p>
+						<p class="yhq1_content f28" id="get_ri" onclick="getbtn(1)">立即领取</p>
+						<!--</a>-->
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="yhq2">
+						<!--<a href="" style="color: #999;">-->
+						<p class="yhq2_price f48">￥150</p>
+						<p class="yhq2_content f28">已领取</p>
+						<!--</a>-->
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="yhq3">
+						<!--<a href="" style="color: #ffad2d;">-->
+						<p class="yhq3_price f48">￥200</p>
+						<p class="yhq3_content f28" id="get_ri2" onclick="getbtn(2)">立即领取</p>
+						<!--</a>-->
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="yhq4">
+						<!--<a href="" style="color: #ffad2d;">-->
+						<p class="yhq4_price f48">￥50</p>
+						<p class="yhq4_content f28" id="get_ri3" onclick="getbtn(3)">立即领取</p>
+						<!--</a>-->
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="yhq5">
+						<!--<a href="../../home/Coupon_Center.html" style="color: #999;">-->
+						<p class="yhq5_price f48">￥150</p>
+						<p class="yhq5_content f28">已领取</p>
+						<!--</a>-->
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="yhq5">
+						<!--<a href="" style="color: #999;">-->
+						<p class="yhq5_price f48">￥150</p>
+						<p class="yhq5_content f28">已领取</p>
+						<!--</a>-->
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- tab部分 -->
+
+		<!-- <div class="sub_nav tabs log_bgc brand_bor">
+            <div class="current_show f32">快速洗车</div>
+            <div class="f32">磨泥打蜡</div>
+            <div class="f32">漆面护理</div>
+            <div class="f32">室内清洗</div>
+            
+        </div> -->
+		<div class="store_details_tab">
+			<span class="f30 xi_car" style="border-bottom: 2px solid #ffad2d;color: #ffad2d;" id="checktext0" onclick="checktext(0)">快速洗车</span>
+			<span class="f30 xi_car" id="checktext1" onclick="checktext(1)">磨泥打蜡</span>
+			<span class="f30 xi_car" id="checktext2" onclick="checktext(2)">漆面护理</span>
+			<span class="f30 xi_car" id="checktext3" onclick="checktext(3)">室内清洗</span>
+			<span class="f30 xi_car" id="checktext4" onclick="checktext(4)">快速洗车</span>
+			<span class="f30 xi_car" id="checktext5" onclick="checktext(5)">快速洗车</span>
+		</div>
+		<!-- 洗车部分 -->
+		<div class="mui-slider-handle" style="width: 100%;overflow: hidden;background: #ffffff;display: flex;height: 3.333333rem;">
+			<div class="goods_car_img spin" style="float: left;"><img src="../img/shouye/cx1.png" alt=""></div>
+			<div style="margin: 10px 0 0 0.413333rem;border-bottom: 1px solid #e5e5e5;">
+				<div class="goods_p f32 store_car_car">精致洗车</div>
+				<div class="discount_mark f28 store_car_mark">纯手工打蜡，焕发车漆光泽</div>
+				<div class="goods_car_list_price f26 store_car_price"><span>开呗价</span>￥89.00</div>
+				<div class="goods_car_list_price f24 f_color store_car_price_jia"><span>门店价</span><del>￥189.00</del></div>
+				<div class="add_to_car f28">
+					<a href="../../home/Commodity_details.html" style="color: #fff!important">购买</a>
+				</div>
+			</div>
+		</div>
+		<!-- 洗车部分 -->
+		<!-- 洗车部分 -->
+		<div class="mui-slider-handle" style="width: 100%;overflow: hidden;background: #ffffff;display: flex;height: 3.333333rem;">
+			<div class="goods_car_img spin" style="float: left;"><img src="../img/shouye/cx1.png" alt=""></div>
+			<div style="margin: 10px 0 0 0.413333rem;border-bottom: 1px solid #e5e5e5;">
+				<div class="goods_p f32 store_car_car">精致洗车</div>
+				<div class="discount_mark f28 store_car_mark">纯手工打蜡，焕发车漆光泽</div>
+				<div class="goods_car_list_price f26 store_car_price"><span>开呗价</span>￥89.00</div>
+				<div class="goods_car_list_price f24 f_color store_car_price_jia"><span>门店价</span><del>￥189.00</del></div>
+				<div class="add_to_car f28">
+					<a href="../../home/Commodity_details.html" style="color: #fff!important">购买</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 评论部分 -->
+		<div class="all_comment">
+			<div class="all_comment_top">
+				<div class="all_comment_top_left f30"> 车主评论 (3847)</div>
+				<div class="all_comment_top_right f28" id="more"> 更多<span class="mui-icon mui-icon-arrowright"></span></div>
+			</div>
+			<div class="all_comment_top all_comment_img">
+				<div class="all_comment_top_left f30">
+					<img src="../img/sp/user.png" alt="">
+
+					<p class="all_comment_left_tel f28">138****9802</p>
+					<p class="all_comment_left_date f24">2017-5-22</p>
+
+				</div>
+				<div class="all_comment_top_right all_comment_star">
+					<div class="fl star_evaluate_area store_star all_comment_comment_star">
+						<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+						<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+						<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+						<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+						<div class="evaluate_star"><i class="icon iconfont icon-star"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="all_comment_comment">
+				<div class="all_comment_content f28">
+					gps模块外置的太大要走两根线，自己买了个微型陶瓷天线替换了。总体满意。希望能再增强些，比如开机后自动熄屏功能。还有绑带换成魔术贴或者支持后视镜完全替换，目前这种硅胶的扣带时间长肯定会松动。
+				</div>
+				<div class="all_comment_content_item">
+					<div class="all_comment_item_img">
+						<img src="../img/sp/tup01.png" alt="">
+					</div>
+					<div class="all_comment_item_img">
+						<img src="../img/sp/tup01.png" alt="">
+					</div>
+					<div class="all_comment_item_img">
+						<img src="../img/sp/tup01.png" alt="">
+					</div>
+				</div>
+				<div class="all_comment_comment_p f24">
+					全合成5W-30 SN级，4L
+				</div>
+			</div>
+
+		</div>
+
+		<!--拨打电话-->
+		<div id="motai" class="modal_con"></div>
+		<div id="tanchuang" class="modal_box">
+			<div class="modal_mian">
+				<div class="modal_title f32">
+					拨打热线
+				</div>
+				<div class="modal_ter" style="margin-top: 0.26666rem;">
+					商家电话：400-555-8888
+				</div>
+			</div>
+			<a href="tel:400-555-8888">
+				<div id="queren" class="determine fr f32">
+					确认
+				</div>
+			</a>
+			<div id="quxiao" class="modal_cancle fl f32">
+				取消
+			</div>
+		</div>
+
+		<div id="tishi" class="floating_layer">收藏成功</div>
+		<!--立即领取-->
+		<!--浮层-->
+		<div class="linqu" style="display: none; width: 2.6rem;height: 1.17333rem;position: fixed;top: 50%;left: 37%;background: #000;opacity: .6;color: #fff;text-align: center;line-height: 1.17333rem;border-radius: 0.10666rem;">
+			领取成功
+		</div>
+		<script>
+			var evaluateStar = function() {
+				var index = $(this).index();
+				var starBox = $(this).parents('.star_evaluate_area');
+				var i = 0,
+					_thisStars = starBox.find('.evaluate_star');
+				_thisStars.each(function() {
+					$(this).css({
+						'color': "#ccc"
+					})
+				})
+				_thisStars.each(function() {
+					if(i <= index) {
+						$(this).css({
+							'color': "#ffad2d"
+						})
+						i += 1;
+					}
+					return;
+				})
+			}
+			mui(".store_name").on('tap', '.evaluate_star', evaluateStar);
+			/*swiper部分*/
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				slidesPerView: 3,
+				paginationClickable: true,
+				spaceBetween: 30,
+				freeMode: true
+			});
+			/*tab部分*/
+			$(".xi_car").on("click", function() {
+				$(this).css({
+					"color": "#ffad2d",
+					"border-bottom": "2px solid #ffad2d"
+				});
+				$(this).siblings().css({
+					"color": "#111111",
+					"border-bottom": "none"
+				})
+			})
+
+			//		/*点击收藏本店的时候，在次点击变成取消收藏*/
+			$('.store_name_title_div').on('click', function() {
+
+				if($(this).text() == "收藏") {
+					$(this).css({
+						'background': '#ccc',
+						'color': '#fff',
+						'width': '1.6rem',
+						'border': '1px solid #ccc'
+					});
+					$('#num_store').html('129人');
+					$('#tishi').show();
+					$('#tishi').html('收藏成功');
+					$(this).html('取消收藏');
+					setTimeout(function() {
+						$('#tishi').hide();
+//						mui.back();
+					}, 300)
+				} else {
+					$(this).css({
+						'background': '#fff',
+						'color': '#ffad2d',
+						'width': '1.306666rem',
+						'border': '1px solid #ffad2d'
+					});
+					$('#num_store').html('128人');
+					$(this).html('收藏');
+					$('#tishi').show();
+					$('#tishi').html('取消成功');
+					setTimeout(function() {
+						$('#tishi').hide();
+//						mui.back();
+					}, 300)
+				}
+			})
+
+//			function getbtn(id) {
+//				for(var i = 0; i < 7; i++) {
+//					if($('#get_ri'+i).text() == "立即领取") {
+//						$('#get_ri'+i).css({
+//							'color': '#999'
+//						});
+//						$('#tishi').html('领取成功');
+//						$('#tishi').show();
+//						$('#get_ri'+i).html('已领取');
+//						setTimeout(function() {
+//							$('#tishi').hide();
+//							mui.back();
+//						}, 300)
+//					} else {
+//
+//						$('#get_ri'+i).html('已领取');
+//						$('#tishi').show();
+//						$('#tishi').html('不可重复领取');
+//						setTimeout(function() {
+//							$('#tishi').hide();
+//							mui.back();
+//						}, 300)
+//					}
+//				}
+//			}
+
+//			立即领取
+			$('#get_ri').on('click', function() {
+				if($(this).text() == "立即领取") {
+					$(this).css({
+						'color': '#999'
+					});
+					$('#tishi').show();
+					$('#tishi').html('领取成功');
+					$(this).html('已领取');
+					setTimeout(function() {
+						$('#tishi').hide();
+//						mui.back();
+					}, 300)
+				} else {
+
+					$(this).html('已领取');
+					$('#tishi').show();
+					$('#tishi').html('不可重复领取');
+					setTimeout(function() {
+						$('#tishi').hide();
+//						mui.back();
+					}, 300)
+				}
+			})
+
+			$("#daohan").on("tap", function() {
+				mui.openWindow("store_map.html", {
+					autoShow: false
+				})
+			})
+			$("#more").on("tap", function() {
+				mui.openWindow("../../shopping/pingjia.html")
+			})
+
+			function checktext(id) {
+				for(var i = 0; i < 7; i++) {
+					if(id == i) {
+						document.getElementById("checktext" + i).style.borderBottom = "2px solid #ffad2d";
+						document.getElementById("checktext" + i).style.color = "#ffad2d";
+					} else {
+						document.getElementById("checktext" + i).style.borderBottom = "2px solid #fff";
+						document.getElementById("checktext" + i).style.color = "#666666";
+					}
+				}
+			}
+
+			//		模态框
+			$("#shop_phone").on("tap", function() {
+				$("#motai").show();
+				$("#tanchuang").show();
+			})
+			$("#quxiao").on("tap", function() {
+				$("#motai").hide();
+				$("#tanchuang").hide();
+			})
+			$("#queren").on("tap", function() {
+				$("#motai").hide();
+				$("#tanchuang").hide();
+			})
+
+		</script>
+	</body>
+
+</html>

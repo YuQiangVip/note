@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改昵称</title>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<script src="script/mui.js"></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/layout.css">
+	</head>
+
+	<body>
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+        	<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+	        <span class="f34">修改昵称</span>
+        	<span class="iconfont icon-gengduo f35 top_navri"></span>
+    	</div>-->
+		<div class="reg_box bg_colorf shop_bo padd_reg" id="foget_possword">
+			<div style="position: relative;border: none;" class="form_item clearfix">
+				<label for="" class="fl f28" type="">昵称</label>
+				<input type="text" name="" class="fl f28"  placeholder="4-20个字符，可中英文、数字组合" id="nicheninput" style="height: 0.53333rem;width: 5.73333rem; line-height: 0.53333rem;">
+				<div id="cansel_phone_number" class="fr"><i class="iconfont icon-close"></i></div>
+			</div>
+		</div>
+		<div class="submit_btn f34" style="margin-top: 1.30666rem;"  id="submit">保存</div>
+		<!--<div id="tishi" class="floating_layer">手机号码有误</div>-->
+		<script>
+		$("#nicheninput").on("change", function() {
+			checkcolor();
+		})
+
+		var checkcolornum = 0;
+
+		function checkcolor() {
+			var a = document.getElementById("nicheninput").value.length;
+			if(a > 0) {
+				document.getElementById("submit").style.background = "#ffad2d";
+				checkcolornum = 1;
+			} else {
+				document.getElementById("submit").style.background = "#ffd399";
+				checkcolornum = 0;
+			}
+		}
+
+		$("#submit").on("tap", function() {
+			checkcolor();
+			if(checkcolornum == 1) {
+				mui.back();
+			}
+		})
+	</script>
+	</body>
+</html>
+

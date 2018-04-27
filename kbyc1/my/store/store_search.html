@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>门店-搜索 -输入</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<script src="../js/flexible_css.js"></script>
+		<script src="../js/flexible.js"></script>
+		<script src="../js/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/news.css">
+		<link rel="stylesheet" href="../fonts/icon/iconfont.css">
+		<script src="../js/mui.js"></script>
+	</head>
+	<style type="text/css">
+		.iconfont {
+			font-size: 0.533333rem;
+		}
+		
+		.input[type='text'] {
+			border: none;
+			outline: none;
+		}
+		 .mendian_address{
+	      height: 0.853333rem !important;
+	      line-height: 0.853333rem !important;
+	      margin-top: -1.06667rem !important;
+     }
+     .service_top{
+     	margin-bottom: 0.5rem;
+     }
+     .mendian_search_input input{
+     	width: 6.8rem !important;
+     }
+     .search_list{
+     	border-bottom:2px solid #f4f4f4;
+     }
+	</style>
+
+	<body>
+		<!--<div class="nav_bar">
+			<span class="mui-icon mui-icon-arrowleft return mui-action-back"></span>
+			<span class="f37">
+       搜索
+        </span>
+		</div>-->
+
+		<div class="service_main service_top">
+			<!--     搜索 -->
+      <div class="service_main service_top">
+			<div class="search_result">
+				
+				<!--   中边部分 -->
+				<div class="search_mid mendian_search_input" style="position: relative;">
+					<img src="../img/shouye/serooh_03.png" alt="" class="search_img" style="width: 0.8rem;height: 0.7rem;margin-top: 1%">
+					<input type="text" placeholder="搜索" id="brand_search" class="f28">
+				</div>
+				<!--   右边部分 -->
+				<div class="search_right f28 mui-action-back" style="color: #666;">
+					取消
+				</div>
+
+			</div>
+
+		</div>
+		
+			<!-- <div class="log_bgcolor">
+				搜索部分
+				<div class="brand_input mendian_search">
+					<img id="search_img" src="../img/shouye/serooh_03.png" / style="top: 35%;">
+					<div class="log_bgcolor pad_brand f28">
+						<input type="search" id="brand_search" placeholder="搜索" class="f28 input_color_search input_col_search" />
+						<div class="mendian_address f28 qx">取消</div>
+					</div>
+				</div>
+			</div> -->
+			<!-- 搜索列表 -->
+			<div class="search_all">
+				<div class="search_list f28">
+					鞍山
+				</div>
+				<div class="search_list f28">
+					安庆
+				</div>
+				<div class="search_list f28">
+					安阳
+				</div>
+			</div>
+
+	</body>
+	<script>
+		$("#brand_search").focus(function() {
+			$("#search_img").css({
+				'left': '5%'
+			});
+			$("#brand_search").attr('placeholder', " ")
+		});
+		$("#brand_search").blur(function() {
+			$("#search_img").css({
+				'left': '20%'
+			});
+			$("#brand_search").attr('placeholder', "搜索")
+			$("#brand_search").val("")
+		});
+		$("#brand_search").on("tap",function() {
+			mui.openWindow("store_search_results.html",{
+				waiting:{
+					autoShow:false
+				}
+			})
+		});
+	</script>
+
+</html>

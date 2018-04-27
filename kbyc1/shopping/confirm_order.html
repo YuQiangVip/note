@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确认订单(配件&服务)</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/checkbox.js'></script>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+	</head>
+
+	<body id="confirm_order">
+		<script>
+			var clientHeight = $(window).height();
+			$('body').css('min-height', clientHeight + 'px');
+		</script>
+		<!--<div class="nav_bar">
+			<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+			<span class="f34">确认订单</span>
+			<span class="iconfont icon-gengduo f35 top_navri"></span>
+		</div>-->
+		<div class="confirm_reciver_info bg_colorf">
+			<div id="address_lianjie">
+				<div class="recive_info">
+					<div class="name f28"><span class="color_lgrey">收货人</span><span class="name_content color_dark">开呗杨</span></div>
+					<div class="tel f28"><span class="color_lgrey">联系方式</span><span class="tel_content color_dark">13723724748</span></div>
+				</div>
+				<div class="confirm_reciver_address">
+					<span class="icon iconfont f32 icon-weizhi1"></span><span class="address_text f26 color_dark">广东省深圳市南山区朗山路口摩比大厦701室</span>
+				</div>
+			</div>
+			<span style="color: #999;" class="iconfont icon-qianjin f26"></span>
+			<div class="colours_line_wrapper">
+				<div class="colours_wrapper">
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+					<span class="color"></span>
+				</div>
+			</div>
+		</div>
+		<div class="confirm_order_store bg_colorf" id="goodszhanshi">
+			<div class="confirm_order_store_name">开呗养车品牌旗舰店</div>
+			<div class="confirm_order_goods">
+				<div class="service_title">
+					<div class="service_img">
+						<img style="width: 1.6rem;height: 1.6rem;" src="img/service.png" alt="" />
+					</div>
+					<div class="service_img">
+						<img style="width: 1.6rem;height: 1.6rem;" src="img/service.png" alt="" />
+					</div>
+					<div class="service_img">
+						<img style="width: 1.6rem;height: 1.6rem;" src="img/service.png" alt="" />
+						<span>赠品</span>
+					</div>
+					<div class="service_img">
+						<img src="img/service_cart.png" alt="" />
+						<span>服务</span>
+					</div>
+				</div>
+				<span id="lists_of" style="color: #999;" class="iconfont icon-qianjin f26"></span>
+
+			</div>
+			<div class="confirm_order_count">共3件商品，1项服务</div>
+		</div>
+		<div class="confirm_order_type_box padd_left bg_colorf">
+			<div class="padd_confrim"><span>配送方式</span><span>快递￥10.00</span></div>
+			<div class="padd_confrim" id="zhifuway"><span>支付方式</span><span>在线支付&nbsp;&nbsp;<span class="iconfont icon-qianjin f26"></span></span>
+			</div>
+			<div class="padd_confrim"><span>服务门店</span><span>新高科汽车维修美容中心</span></div>
+			<div class="padd_confrim" id="piaoinvoce"><span>发票</span><span>不开发票&nbsp;&nbsp;<span class="iconfont icon-qianjin f26"></span></span>
+			</div>
+			<div class="padd_confrim" id="huodongyouhui"><span>活动优惠</span><span>省1000元  满减活动&nbsp;&nbsp;<span class="iconfont icon-qianjin f26"></span></span>
+			</div>
+			<div class="padd_confrim"  id="daijinjuan"><span>代金券</span><span>中国移动代金券&nbsp;&nbsp;<span class="iconfont icon-qianjin f26"></span></span>
+			</div>
+			<div class="padd_confrim" id="youhuijuan"><span>优惠券</span><span>省1000元  满减活动&nbsp;&nbsp;<span class="iconfont icon-qianjin f26"></span></span>
+			</div>
+			<div class="padd_confrim"><span id="leave_message">买家留言</span><input class="deal_info_text f28" placeholder="选填：对本次交易的说明"></input>
+			</div>
+		</div>
+		<div class="confirm_order_type_box padd_left bg_colorf shop_po">
+			<div class="padd_confrim"><span>商品总价</span><span>￥150.00</span></div>
+			<div class="padd_confrim"><span>服务费用</span><span>￥50.00</span></div>
+			<div class="padd_confrim"><span>物流费用</span><span>￥20.00</span></div>
+			<div class="padd_confrim"><span>活动减免<span class="color_grey f24">（商品满5000减1000）</span></span><span>减￥50.00</span></div>
+			<div class="padd_confrim"><span>代金券<span class="color_grey f24">（服务类）</span></span><span>减￥50.00</span></div>
+			<div class="padd_confrim"><span>优惠券</span><span>￥0.00</span></div>
+			<div class="padd_confrim"><span>余额<span class="color_grey f24">（当前可用余额）</span></span><span>￥0.00</span></div>
+		</div>
+		<div class="confirm_account clearfix">
+			<div class="confirm_price fl f24">￥<span class="f36">538.00</span></div>
+			<div class="confirm_account_btn fr">提交订单</div>
+		</div>
+		<div id="motai" style="width: 100%;height: 100%;position: fixed;z-index: 99;top: 0;left: 0;background: #000000;opacity: 0.5;display: none;"></div>
+		<div id="tanchuang" style="position: fixed;z-index: 100;width: 100%;height: 5.6rem;background: #FFFFFF;overflow: hidden;bottom: 0;display: none;">
+			<p style="font-size: 0.37333rem;letter-spacing: 0.00933rem;margin: 0.50666rem 0.38666rem;color: #999999;" id="tanchuangtitle">支付方式</p>
+			<div style="margin: 0.4rem 0.38666rem;">
+				<span style="font-size: 0.37333rem;letter-spacing: 0.00933rem;padding: 0.17333rem 0.41333rem;color: #FFFFFF;border: none;border-radius: 0.10666rem;background: #FFAD2D;" id="checktype0" onclick="checktype(0)"></span>
+				<span style="font-size: 0.37333rem;letter-spacing: 0.00933rem;padding: 0.17333rem 0.41333rem;color: #111111;border: 1px solid #CCCCCC;border-radius: 0.10666rem;margin-left: 0.68rem;" id="checktype1" onclick="checktype(1)"></span>
+			</div>
+			<button style="width: 100%;height: 1.17333rem;color: #FFFFFF;background: #FFAD2D;font-size: 0.42666rem;letter-spacing: 0.01066rem;position: fixed;bottom: 0;border-radius: 0;" id="queren">确认</button>
+		</div>
+	</body>
+
+</html>
+
+<script>
+	$("#queren").on("tap",function(){
+		$("#motai").hide();
+		$("#tanchuang").hide();
+	})
+	
+	$("#zhifuway").on("tap",function(){
+		document.getElementById("tanchuangtitle").innerHTML="支付方式";
+		document.getElementById("checktype0").innerHTML="在线支付";
+		document.getElementById("checktype1").innerHTML="到店支付";
+		$("#motai").show();
+		$("#tanchuang").show();
+	})
+	
+	$("#huodongyouhui").on("tap",function(){
+		document.getElementById("tanchuangtitle").innerHTML="活动优惠";
+		document.getElementById("checktype0").innerHTML="不使用优惠";
+		document.getElementById("checktype1").innerHTML="满5000减1000";
+		$("#motai").show();
+		$("#tanchuang").show();
+	})
+	
+	$("#daijinjuan").on("tap",function(){
+		document.getElementById("tanchuangtitle").innerHTML="代金券";
+		document.getElementById("checktype0").innerHTML="不使用代金券";
+		document.getElementById("checktype1").innerHTML="中国移动代金券";
+		$("#motai").show();
+		$("#tanchuang").show();
+	})
+	$("#motai").on("tap",function(){
+		$("#motai").hide();
+		$("#tanchuang").hide();
+	})
+	$("#youhuijuan").on("tap",function(){
+		document.getElementById("tanchuangtitle").innerHTML="优惠劵";
+		document.getElementById("checktype0").innerHTML="不使用优惠劵";
+		document.getElementById("checktype1").innerHTML="商家优惠劵";
+		$("#motai").show();
+		$("#tanchuang").show();
+	})
+	
+	$("#goodszhanshi").on("tap",function(){
+		mui.openWindow("list_of_goods.html",{
+			waiting:{
+				autoShow:false
+			}
+		})
+	})
+	
+	function checktype(id) {
+		for(var i = 0; i < 2; i++) {
+			if(id == i) {
+				document.getElementById("checktype" + i).style.backgroundColor = "#ffad2d";
+				document.getElementById("checktype" + i).style.color = "#ffffff";
+				document.getElementById("checktype"+i).style.border="none";
+			} else {
+				document.getElementById("checktype" + i).style.backgroundColor = "#ffffff";
+				document.getElementById("checktype" + i).style.color = "#111111";
+				document.getElementById("checktype"+i).style.border="1px solid #CCCCCC";
+			}
+
+		}
+	}
+	$(".confirm_account_btn").on("tap", function() {
+		mui.openWindow({
+			url: 'order_wait_pay.html',
+			id: 'order_wait_pay'
+		})
+	});
+	$("#address_lianjie").on("tap", function() {
+		mui.openWindow("select_recive_address.html", {
+			waiting:{
+				atuoShow:false
+			}
+		})
+	});
+	$('#piaoinvoce').on('tap',function(){
+		mui.openWindow('invoice.html',{
+			waiting:{
+				autoShow:false
+			}
+		})
+	});
+	
+</script>

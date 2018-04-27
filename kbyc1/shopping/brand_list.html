@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>更多品牌</title>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />    
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="script/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/mui.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="font_diy/iconfont.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/topic.css"/>
+    <script src="script/mui.js"></script>
+    <script src="script/mui.js"></script>
+    <script src="script/flexible.js"></script>
+    <script src="script/jquery-2.0.3.js"></script>
+    <script src="script/jquery.charfirst.pinyin.js"></script>
+    <script src="script/sort.js"></script>
+</head>
+
+<body>
+    <!--<div class="nav_bar">
+        	<span class="f36 iconfont icon-fanhuijiantou return mui-action-back"></span>
+	        <span class="f34">品牌列表</span>
+        	<span class="iconfont icon-gengduo f35 top_navri"></span>
+    	</div>-->
+    
+    <div class="log_bgcolor">
+    	<!--搜索部分-->
+    	<div class="brand_input">
+	      <img id="search_img" src="../img/shouye/serooh_03.png"/>
+	      <div class="log_bgcolor pad_brand">	
+	      	 <input type="search"  id="brand_search" placeholder="搜索品牌" />
+	      </div>
+	    </div>
+    	
+    	<div id="letter" ></div>
+<div class="sort_box">
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<p class="num_name">张三</p>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">李四</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">王五</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">欧弟</div>
+	</div>
+	<div class="sort_list">		
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">小五</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">刘六</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">马七</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">黄八</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">莫九</div>
+	</div>
+	<div class="sort_list sort_border">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">陈十</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">查看</div>
+	</div>
+	<div class="sort_list" id="gen_a">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">a九</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">1十</div>
+	</div>
+	<div class="sort_list sort_border">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">奔驰</div>
+	</div>
+	<div class="sort_list">
+		<div class="num_logo">
+			<img src="img/brand.png" alt="">
+		</div>
+		<div class="num_name">本田</div>
+	</div>
+</div>
+<div class="initials" style="color: #ffad2d; font-size:0.29333rem; top: 3.70rem;width: 0.4rem;">
+	<ul>
+		<!-- <li><img src="dist/img/068.png"></li> -->
+	</ul>
+</div>
+    	
+    	
+    </div>
+    
+</body>
+
+</html>
+<script>
+	$("#brand_search").focus(function(){		
+	    $("#search_img").css({'left':'5%'}); 	 
+	    $("#brand_search").attr('placeholder'," ")
+	  });	
+      $("#brand_search").blur(function(){ 
+    	$("#search_img").css({'left':'20%'}); 
+	    $("#brand_search").attr('placeholder',"输入搜索本店商品") 
+	     $("#brand_search").val("")
+      });
+      $('#gen_a').on('tap',function(){
+      	mui.openWindow('brand_home.html',{
+      		waiting:{
+      			autoShow:false
+      		}
+      	})
+      })
+</script>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+		<script src="script/flexible_css.js"></script>
+		<script src="script/flexible.js"></script>
+		<script src="script/jquery-2.0.3.js"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reg.css">
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="script/mui.js"></script>
+		<script src='script/common.js'></script>
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/shopping_cart.css">
+		<link rel="stylesheet" href="font_diy/iconfont.css">
+		<link rel="stylesheet" href="css/mine.css">
+	</head>
+
+	<body>
+		<!--<div class="nav_bar" id="hander">
+			<span class="hander_tit f37">购物车</span>
+		</div>-->
+		<div class="goods_box" style="display: none;">
+			<div id="item_empty">
+				<div class="color_grey">暂无商品</div>
+			</div>
+			<div class="shop_btn">去购物</div>
+		</div>
+		<div style="display: block;margin-bottom: 2.8rem;">
+			<div class="goods_box">
+				<div class="store_area bg_colorf shop_po">
+					<div class="store_head_wrapper">
+						<div class="store_head clearfix">
+							<div style="width: 9%;float: left;height: 20px;" onclick="goodscarcheck(10)">
+								<i id="goodsyixuan10" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+								<i id="goodsweixuan10" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+							</div>
+							<span class="fl" onclick="brandStore()">开呗养车品牌旗舰店</span>
+							<span class="favorable fr color_g" onclick="youhuijuan()">优惠券</span>
+						</div>
+					</div>
+					<div class="store_goods">
+						<div class="mui-table-view-cell shop_pad" onclick="goodslists()">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red" style="width: 90px;background: #ff2e2e;text-decoration: none;">删除</a>
+							</div>
+							<div class="mui-slider-handle" style="width: 100%;">
+								<div style="width: 9%;float: left;margin-top: 0.77333rem;height: 0.26666rem;" onclick="goodscarcheck(1010)">
+									<i id="goodsyixuan1010" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+									<i id="goodsweixuan1010" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+								</div>
+								<div class="item_img fl"><img src="img/tyre.png" alt=""></div>
+								<div class="fr item_buy_detail">
+									<div class="item_short_info f26 padd_txt">金装超强5合1燃油系统清洁添加剂 296ML PN20018</div>
+									<div class="price_clac clearfix">
+										<div class="fl f26 item_price padd_txt color_g">￥<span id="price1010">328.00</span></div>
+										<div class="fr change_num clearfix">
+											<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+											<input type="number" value="1" class="fl f28 calc_num" id="goodsnum1010">
+											<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-table-view-cell shop_pad" onclick="goodslists()">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red" style="width: 90px;background: #ff2e2e;text-decoration: none;">删除</a>
+							</div>
+							<div class="mui-slider-handle" style="width: 100%;">
+								<div style="width: 9%;float: left;margin-top: 0.77333rem;height: 0.26666rem;" onclick="goodscarcheck(1011)">
+									<i id="goodsyixuan1011" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+									<i id="goodsweixuan1011" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+								</div>
+								<div class="item_img fl"><img src="img/tyre.png" alt=""></div>
+								<div class="fr item_buy_detail">
+									<div class="item_short_info f26 padd_txt">金装超强5合1燃油系统清洁添加剂 296ML PN20018</div>
+									<div class="price_clac clearfix">
+										<div class="fl item_price f26 padd_txt color_g">￥<span id="price1011">328.00</span></div>
+										<div class="fr change_num clearfix">
+											<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+											<input type="number" value="1" class="fl f28 calc_num" id="goodsnum1011">
+											<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="full_reduction clearfix">
+						<span class="discount_info_item f22">满减</span>
+						<span class="discount_info_text f26 color_grey">购物满5000元，立减1000元</span>
+						<span class="color_g add_on fr f26" onclick="coudan()">去凑单</span>
+					</div>
+				</div>
+				<div class="store_area shop_po bg_colorf">
+					<div class="store_head_wrapper">
+						<div class="store_head clearfix">
+							<div style="width: 9%;float: left;height: 0.26666rem;" onclick="goodscarcheck(11)">
+								<i id="goodsyixuan11" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+								<i id="goodsweixuan11" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+							</div>
+							<span class="fl" onclick="brandStore()">开呗养车品牌旗舰店</span>
+							<span class="favorable fr color_g" onclick="youhuijuan()">优惠券</span>
+						</div>
+					</div>
+					<div class="store_goods">
+						<div class="mui-table-view-cell shop_pad">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red" style="width: 90px;background: #ff2e2e;text-decoration: none;">删除</a>
+							</div>
+							<div class="mui-slider-handle" style="width: 100%;">
+								<div style="width: 9%;float: left;margin-top: 0.77333rem;height: 0.26666rem;" onclick="goodscarcheck(1110)">
+									<i id="goodsyixuan1110" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+									<i id="goodsweixuan1110" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+								</div>
+								<div class="item_img fl"><img src="img/tyre.png" alt=""></div>
+								<div class="fr item_buy_detail">
+									<div class="item_short_info f26 padd_txt">金装超强5合1燃油系统清洁添加剂 296ML PN20018</div>
+									<div class="price_clac clearfix">
+										<div class="fl item_price f26 color_g padd_txt">￥<span id="price1110">111.11</span></div>
+										<div class="fr change_num clearfix">
+											<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+											<input type="number" value="1" class="fl f28 calc_num" id="goodsnum1110">
+											<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="full_reduction clearfix">
+						<span class="discount_info_item f22">满减</span>
+						<span class="discount_info_text f26 color_grey">购物满5000元，立减1000元</span>
+						<span class="color_g add_on fr f26" onclick="coudan()">去凑单</span>
+					</div>
+				</div>
+				<div class="store_area bg_colorf shop_po">
+					<div class="store_head_wrapper">
+						<div class="store_head clearfix">
+							<div style="width: 9%;float: left;height: 0.26666rem;" onclick="goodscarcheck(12)">
+								<i id="goodsyixuan12" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+								<i id="goodsweixuan12" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+							</div>
+							<span class="fl" id="service_open">新高科汽车维修美容中心</span>
+							<span class="favorable fr color_g" onclick="youhuijuan()">优惠券</span>
+						</div>
+					</div>
+					<div class="store_goods">
+						<div class="mui-table-view-cell shop_pad">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red" style="width: 90px;background: #ff2e2e;text-decoration: none;">删除</a>
+							</div>
+							<div class="mui-slider-handle" style="width: 100%;">
+								<div style="width: 9%;float: left;margin-top:0.77333rem;height: 0.26666rem;" onclick="goodscarcheck(1210)">
+									<i id="goodsyixuan1210" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+									<i id="goodsweixuan1210" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+								</div>
+								<div class="item_img fl"><img src="img/tyre.png" alt=""></div>
+								<div class="fr item_buy_detail">
+									<div class="item_short_info f26 padd_txt">小保养服务</div>
+									<div class="price_clac clearfix">
+										<div class="fl item_price f26 color_g padd_txt">￥<span id="price1210">328.10</span></div>
+										<div class="fr change_num clearfix">
+											<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+											<input type="number" value="1" class="fl f28 calc_num" id="goodsnum1210">
+											<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="full_reduction clearfix">
+						<span class="discount_info_item f22">满减</span>
+						<span class="discount_info_text f26 color_grey">购物满5000元，立减1000元</span>
+						<span class="color_g add_on fr f26" onclick="coudan()">去凑单</span>
+					</div>
+				</div>
+				<div class="store_area bg_colorf shop_po">
+					<div class="store_head_wrapper">
+						<div class="store_head clearfix">
+							<div style="width: 9%;float: left;height: 0.26666rem;" onclick="goodscarcheck(13)">
+								<i id="goodsyixuan13" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+								<i id="goodsweixuan13" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+							</div>
+							<span class="fl" onclick="brandStore()">开呗养车品牌旗舰店</span>
+							<span class="favorable fr color_g" onclick="youhuijuan()">优惠券</span>
+						</div>
+					</div>
+					<div class="store_goods">
+						<div class="mui-table-view-cell shop_pad">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red" style="width: 90px;background: #ff2e2e;text-decoration: none;">删除</a>
+							</div>
+							<div class="mui-slider-handle" style="width: 100%;">
+								<div style="width: 9%;float: left;margin-top: 0.77333rem;height: 0.26666rem;" onclick="goodscarcheck(1310)">
+									<i id="goodsyixuan1310" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+									<i id="goodsweixuan1310" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+								</div>
+								<div class="item_img fl"><img src="img/tyre.png" alt=""></div>
+								<div class="fr item_buy_detail">
+									<div class="item_short_info f26 padd_txt">金装超强5合1燃油系统清洁添加剂 296ML PN20018</div>
+									<div class="price_clac clearfix">
+										<div class="fl item_price f26 color_g padd_txt">￥<span id="price1310">328.00</span></div>
+										<div class="fr change_num clearfix">
+											<div class="fl calc calc_reduce"><img src="img/minus_shop.png" alt="" /></div>
+											<input type="number" value="1" class="fl f28 calc_num" id="goodsnum1310">
+											<div class="fl calc calc_add"><img src="img/plus_shop.png" alt="" /></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="full_reduction clearfix">
+						<span class="discount_info_item f22">满减</span>
+						<span class="discount_info_text f26 color_grey">购物满5000元，立减1000元</span>
+						<span class="color_g add_on fr f26" onclick="coudan()">去凑单</span>
+					</div>
+				</div>
+			</div>
+			<div class="account_box clearfix reset_this_padding">
+				<div id="quanxuan" style="width: 8%;float: left;height: 0.26666rem;margin-top: 0.28rem;" onclick="goodscarcheck(0)">
+					<i id="yiquanxuan" class="icon iconfont f40 icon-checkbox-copy" style="display: none;"></i>
+					<i id="weiquanxuan" class="icon iconfont f40 icon-checkboxblank" style="font-size: 22px;color: #e0e0e0;"></i>
+				</div>
+				<span>全选</span>
+				<span class="account_btn fr">去结算</span>
+				<span class="fr f24 color_grey">合计
+        	<span class="color_g">￥</span>
+				<span class="color_g f36" id="price_end">0.00</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="bottom_bar">
+			<div class="bot_footer" id="homePage">
+				<div class="bottom_box">
+					<!--<img src="../shopping/img/checkhome.png"/>-->
+					<i class="f40 iconfont icon-shouye1"></i>
+				</div>
+				<span class="bottom_txt f22">首页</span>
+			</div>
+			<div class="bot_footer" id="goodsshop">
+				<div class="bottom_box">
+					<!--<img src="../shopping/img/checkshop.png"/>-->
+					<i class="f40 iconfont icon-mendian"></i>
+				</div>
+				<span class="bottom_txt f22">门店</span>
+			</div>
+			<div class="bot_footer" id="goodscar">
+				<div class="bottom_box" style="margin-left: 0.13333rem;">
+					<!--<i class="f40 iconfont icon-gouwuche1"></i>-->
+					<img src="../shopping/img/checkcar.png" />
+				</div>
+				<span class="bottom_txt f22 color_dark">购物车</span>
+			</div>
+			<div class="bot_footer" id="personal">
+				<div class="bottom_box">
+					<i class="f40 iconfont icon-wode1"></i>
+					<!--<img src="../shopping/img/checkper.png"/>-->
+				</div>
+				<span class="bottom_txt f22">我的</span>
+			</div>
+
+		</div>
+		<div id="zhedang" style="width: 100%;height: 100%;position: fixed;z-index: 99;background: #000000;opacity: 0.4;top: 0;left: 0;display: none;"></div>
+		<div id="motai" style="width: 100%;height: 9.6rem;position: fixed;z-index: 100;bottom: 0;left: 0;background: #e5e5e5;display: none;">
+			<div style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #666666;text-align: center;line-height: 1.17333rem;border-bottom: 1px solid #e5e5e5;background: white;margin-bottom: 0.13333rem;">领取优惠劵</div>
+			<div class="bg_colorf coupon_title" style="margin-top: 0.4rem;">
+				<div class="coupon_box">
+					<img src="img/coupon_img1.png" alt="" />
+					<div class="coupon_text">
+						<p class="f36">优惠券</p>
+						<div class="coupon_content">
+							<span class="f24">2017-6-18前使用</span>
+							<span class="color_ad2d f28" id="to_use" id="lingqu">立即领取</span>
+						</div>
+						<div class="cou_btn">
+							限电器类商品
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg_colorf coupon_title" style="margin-bottom: 0.6rem;">
+				<div class="coupon_box">
+					<img src="img/coupon_img1.png" alt="" />
+					<div class="coupon_text">
+						<p class="f36">优惠券</p>
+						<div class="coupon_content">
+							<span class="f24">2017-6-18前使用</span>
+							<span class=" f28" id="to_use">已领取</span>
+						</div>
+						<div class="cou_btn">
+							限电器类商品
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="queding" style="width: 100%;height: 1.17333rem;font-size: 0.37333rem;color: #fff;text-align: center;line-height: 1.17333rem;background: #FFAD2D;margin-bottom: 0.13333rem;">确定</div>
+		</div>
+		<div id="tishi" class="floating_layer" style="display: none;z-index: 500;">领取成功</div>
+	</body>
+
+</html>
+<script>
+	$("#personal").on("tap", function() {
+		mui.openWindow("../shopping/personal_center.html", {
+			waiting: {
+				autoShow: false
+			}
+		})
+	})
+
+	$("#homePage").on("tap", function() {
+		mui.openWindow("../home/home.html", {
+			waiting: {
+				autoShow: false
+			}
+		})
+	})
+	$("#goodsshop").on("tap", function() {
+		mui.openWindow("../my/store/store_service.html", {
+			waiting: {
+				autoShow: false
+			}
+		})
+	})
+	$('#service_open').on('tap',function(){
+		mui.openWindow('service_items.html',{
+			waiting:{
+				autoShow:false
+			}
+		})
+	})
+	
+	$(document).ready(function() {
+		var clientHeight = $(window).height();
+		$('body').css('min-height', clientHeight + 'px');
+		// 加减计算
+		mui('body').on('tap', '.calc_add', function() {
+			var currentInput = $(this).siblings('input')
+			var currentNum = parseInt(currentInput.val());
+			currentNum += 1;
+			currentInput.val(currentNum);
+			funcountprice();
+		});
+		mui('body').on('tap', '.calc_reduce', function() {
+			var currentInput = $(this).siblings('input')
+			var currentNum = parseInt(currentInput.val());
+			currentNum = (currentNum == 0) ? 0 : (currentNum - 1);
+			currentInput.val(currentNum);
+			funcountprice();
+		});
+		$(".account_btn").on("tap", function() {
+			mui.openWindow({
+				url: 'order_wait_pay.html',
+				id: 'order_wait_pay'
+			})
+		});
+	})
+	var countprice = 0.00;
+
+	function goodscarcheck(id) {
+		if(id > 99) {
+			if(document.getElementById("goodsweixuan" + id).style.display == "none") {
+				document.getElementById("goodsweixuan" + id).style.display = "block";
+				document.getElementById("goodsyixuan" + id).style.display = "none";
+				document.getElementById("weiquanxuan").style.display = "block";
+				document.getElementById("yiquanxuan").style.display = "none";
+			} else {
+				document.getElementById("goodsweixuan" + id).style.display = "none";
+				document.getElementById("goodsyixuan" + id).style.display = "block";
+			}
+		} else if(id < 10) {
+			if(document.getElementById("weiquanxuan").style.display == "none") {
+				document.getElementById("weiquanxuan").style.display = "block";
+				document.getElementById("yiquanxuan").style.display = "none";
+				for(var i = 10; i < 99; i++) {
+					if(document.getElementById("goodsweixuan" + i) == null) {
+						continue;
+					}
+					document.getElementById("goodsweixuan" + i).style.display = "block";
+					document.getElementById("goodsyixuan" + i).style.display = "none";
+					for(var j = 10; j < 99; j++) {
+						if(document.getElementById("goodsweixuan" + i + "" + j) == null) {
+							continue;
+						}
+						document.getElementById("goodsweixuan" + i + "" + j).style.display = "block";
+						document.getElementById("goodsyixuan" + i + "" + j).style.display = "none";
+					}
+				}
+				document.getElementById("price_end").innerText = countprice;
+			} else {
+				document.getElementById("weiquanxuan").style.display = "none";
+				document.getElementById("yiquanxuan").style.display = "block";
+				for(var i = 10; i < 99; i++) {
+					if(document.getElementById("goodsweixuan" + i) == null) {
+						continue;
+					}
+					document.getElementById("goodsweixuan" + i).style.display = "none";
+					document.getElementById("goodsyixuan" + i).style.display = "block";
+					for(var j = 10; j < 99; j++) {
+						if(document.getElementById("goodsweixuan" + i + "" + j) == null) {
+							continue;
+						}
+						document.getElementById("goodsweixuan" + i + "" + j).style.display = "none";
+						document.getElementById("goodsyixuan" + i + "" + j).style.display = "block";
+					}
+				}
+			}
+		} else {
+			if(document.getElementById("goodsweixuan" + id).style.display == "none") {
+				document.getElementById("goodsweixuan" + id).style.display = "block";
+				document.getElementById("goodsyixuan" + id).style.display = "none";
+				document.getElementById("weiquanxuan").style.display = "block";
+				document.getElementById("yiquanxuan").style.display = "none";
+				for(var i = 10; i < 12; i++) {
+					if(document.getElementById("goodsweixuan" + id + "" + i) == null) {
+						continue;
+					}
+					document.getElementById("goodsweixuan" + id + "" + i).style.display = "block";
+					document.getElementById("goodsyixuan" + id + "" + i).style.display = "none";
+				}
+			} else {
+				document.getElementById("goodsweixuan" + id).style.display = "none";
+				document.getElementById("goodsyixuan" + id).style.display = "block";
+				for(var i = 10; i < 12; i++) {
+					if(document.getElementById("goodsweixuan" + id + "" + i) == null) {
+						continue;
+					}
+					document.getElementById("goodsweixuan" + id + "" + i).style.display = "none";
+					document.getElementById("goodsyixuan" + id + "" + i).style.display = "block";
+				}
+			}
+		}
+		funcountprice();
+	}
+
+	function funcountprice() {
+		for(var i = 10; i < 99; i++) {
+			if(document.getElementById("goodsweixuan" + i) == null) {
+				continue;
+			}
+			for(var j = 10; j < 99; j++) {
+				if(document.getElementById("goodsweixuan" + i + "" + j) == null) {
+					continue;
+				}
+				if(document.getElementById("goodsyixuan" + i + "" + j).style.display != "none") {
+					var goodsprice = $("#price" + i + "" + j).text();
+					var goodsnum = $("#goodsnum" + i + "" + j).val();
+					countprice = goodsprice * goodsnum + countprice;
+				}
+			}
+		}
+		countprice = countprice + "";
+		if(countprice.indexOf(".") == -1) {
+			countprice = countprice + ".00";
+			countprice = countprice.substring(0, countprice.indexOf(".") + 3);
+			document.getElementById("price_end").innerText = countprice;
+		} else {
+			var leng = countprice.substring(countprice.indexOf(".")).length;
+			if(leng == 2) {
+				countprice = countprice + "0";
+				document.getElementById("price_end").innerText = countprice;
+			} else {
+				countprice = countprice.substring(0, countprice.indexOf(".") + 3);
+				document.getElementById("price_end").innerText = countprice;
+			}
+		}
+
+		countprice = 0;
+	}
+	
+	
+	function coudan(){
+		mui.openWindow("brand_home.html",{
+			waiting:{
+				autoShow:false
+			}
+		})
+	}
+	
+	function goodslists(){
+		mui.openWindow("../home/Commodity_details.html",{
+			waiting:{
+				autoShow:false
+			}
+		})
+	}
+	
+	function brandStore(){
+		mui.openWindow('brand_home.html',{
+			waiting:{
+				autoShow:false
+			}
+		})
+	}
+	
+	
+	
+	function youhuijuan(){
+		$("#zhedang").show();
+		$("#motai").show();
+	}
+	
+	$("#queding").on("tap",function(){
+		$("#zhedang").hide();
+		$("#motai").hide();
+	})
+	$("#zhedang").on("tap",function(){
+		$("#zhedang").hide();
+		$("#motai").hide();
+	})
+	
+	$("#lingqu").on("tap",function(){
+		document.getElementById("lingqu").innerHTML="已领取";
+		document.getElementById("lingqu").style.color="#999999";
+		$("#tishi").show();
+		setTimeout(function() {
+			$("#tishi").hide();
+		}, 600)
+		return;
+	})
+	
+	//品牌
+	function pinpai(){
+		
+	}
+</script>
